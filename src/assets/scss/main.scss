@@ -2,7 +2,10 @@
 
 
 @import "abstract/settings",
-"abstract/mixins";
+"abstract/mixins",
+"base/legends";
 
 @import "base/theme_default",
 "base/animations";
+
+@import "components/timeline";

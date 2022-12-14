@@ -1,32 +1,410 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Rubik", sans-serif;
+.lgnd1_p {
+  color: #FDF4E7 !important;
+  background-color: #FF0000;
+}
+
+.lgnd1_s {
+  color: #FF0000;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.lgnd2_p {
+  color: #FDF4E7 !important;
+  background-color: #DB6262;
+}
+
+.lgnd2_s {
+  color: #DB6262;
+  background-color: rgba(219, 98, 98, 0.1);
+}
+
+.lgnd3_p {
+  color: #77716A !important;
+  background-color: #61DC4D;
+}
+
+.lgnd3_s {
+  color: #61DC4D;
+  background-color: rgba(80, 181, 64, 0.1);
+}
+
+.lgnd4_p {
+  color: #FDF4E7 !important;
+  background-color: #4FAE3F;
+}
+
+.lgnd4_s {
+  color: #4FAE3F;
+  background-color: rgba(64, 150, 51, 0.1);
+}
+
+.lgnd5_p {
+  color: #FDF4E7 !important;
+  background-color: #2E7823;
+}
+
+.lgnd5_s {
+  color: #2E7823;
+  background-color: rgba(46, 120, 35, 0.1);
+}
+
+.lgnd6_p {
+  color: #FDF4E7 !important;
+  background-color: #0A4900;
+}
+
+.lgnd6_s {
+  color: #0A4900;
+  background-color: rgba(10, 73, 0, 0.1);
+}
+
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
+html,
 body {
   width: 100vw;
   height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
   background-color: #FDF4E7;
-}
-body .top {
-  width: 100%;
-  height: 75px;
-  margin-top: 8px;
-  background-color: aqua;
-}
-body .top .selection_boxes {
-  width: 716px;
-  height: 36px;
-  background-color: orange;
 }
 body .wrapper {
   width: 100%;
-  height: calc(100% - 83px);
+  height: 100%;
+}
+body .wrapper .top_bar {
+  width: 100%;
+  height: 83px;
+  padding: 8px 16px 0;
+  border-bottom: 0.5px solid #77716A;
+}
+body .wrapper .top_bar__ln1 {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+  gap: 8px 0px;
+  grid-template-areas: "lbl cntrls";
   background-color: orange;
+}
+body .wrapper .top_bar__ln1 .lbl {
+  align-self: end;
+  grid-area: lbl;
+  color: #77716A;
+}
+body .wrapper .top_bar__ln1 .cntrls {
+  align-self: end;
+  grid-area: cntrls;
+}
+body .wrapper .top_bar__ln2 {
+  width: 100%;
+  height: 36px;
+  float: right;
+  background-color: rgb(0, 255, 0);
+}
+body .wrapper .content {
+  padding: 8px 16px 0;
+  width: 100%;
+  height: calc(100% - 83px);
+}
+
+.timeline_section {
+  width: auto;
+  height: 100%;
+  overflow-y: auto;
+}
+.timeline_section .timeline {
+  display: grid;
+  grid-template-columns: 218px 218px 218px 218px 218px 218px 218px 218px 218px 218px 218px 218px 218px;
+  grid-template-rows: 1fr auto 1fr;
+  grid-auto-columns: 218px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "tp_yr tp01 tp02 tp03 tp04 tp05 tp06 tp07 tp08 tp09 tp10 tp11 tp12" "line line line line line line line line line line line line line" "btm_yr btm01 btm02 btm03 btm04 btm05 btm06 btm07 btm08 btm09 btm10 btm11 btm12";
+  height: 100%;
+}
+.timeline_section .timeline .tp_yr {
+  grid-area: tp_yr;
+  background-color: aqua;
+}
+.timeline_section .timeline .tp01 {
+  grid-area: tp01;
+  background-color: rgb(19, 160, 160);
+}
+.timeline_section .timeline .tp02 {
+  grid-area: tp02;
+}
+.timeline_section .timeline .tp03 {
+  grid-area: tp03;
+}
+.timeline_section .timeline .tp04 {
+  grid-area: tp04;
+}
+.timeline_section .timeline .tp05 {
+  grid-area: tp05;
+}
+.timeline_section .timeline .tp06 {
+  grid-area: tp06;
+}
+.timeline_section .timeline .tp07 {
+  grid-area: tp07;
+}
+.timeline_section .timeline .tp08 {
+  grid-area: tp08;
+}
+.timeline_section .timeline .tp09 {
+  grid-area: tp09;
+}
+.timeline_section .timeline .tp10 {
+  grid-area: tp10;
+}
+.timeline_section .timeline .tp11 {
+  grid-area: tp11;
+}
+.timeline_section .timeline .tp12 {
+  grid-area: tp12;
+}
+.timeline_section .timeline .line {
+  grid-area: line;
+  position: relative;
+}
+.timeline_section .timeline .line .start_end_month_year {
+  float: left;
+  width: 236px;
+  height: auto;
+  background-color: cadetblue;
+}
+.timeline_section .timeline .line .start_end_month_year .cntr_top {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: orange;
+}
+.timeline_section .timeline .line .start_end_month_year .cntr_top .activ {
+  position: absolute;
+  left: 68px;
+  top: -7px;
+  width: 100px;
+  height: 16px;
+  background-color: #77716A;
+  border-radius: 7px;
+  padding: 2px 2px 0 8px;
+}
+.timeline_section .timeline .line .start_end_month_year .cntr_top .activ .lbl {
+  float: left;
+  width: min-content;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #FDF4E7;
+}
+.timeline_section .timeline .line .start_end_month_year .cntr_top .activ .dot {
+  width: min-content;
+  float: right;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: #FDF4E7;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  color: #77716A;
+}
+.timeline_section .timeline .line .start_end_month_year .cnt {
+  max-width: 235px;
+  height: 43px;
+  background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' preserveAspectRatio='none' viewBox='0 0 235 43' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 17.419 20.976 L 17.659 20.661 L 17.407 20.355 L 1.059 0.5 H 217.467 L 234.358 20.685 L 217.455 42.5 H 1.01 L 17.419 20.976 Z' stroke='%2377716A'%3E%3C/path%3E%3C/svg%3E");
+}
+.timeline_section .timeline .line .start_end_month_year .cnt .lbl {
+  float: left;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 43px;
+  color: #77716A;
+  text-align: center;
+  text-transform: uppercase;
+}
+.timeline_section .timeline .line .start_end_month_year .cntr_bttm {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: orange;
+}
+.timeline_section .timeline .line .start_end_month_year .cntr_bttm .activ {
+  position: absolute;
+  left: 48px;
+  bottom: -7px;
+  width: 140px;
+  height: 16px;
+  background-color: #77716A;
+  border-radius: 7px;
+  padding: 2px 2px 0 8px;
+}
+.timeline_section .timeline .line .start_end_month_year .cntr_bttm .activ .lbl {
+  float: left;
+  width: min-content;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #FDF4E7;
+}
+.timeline_section .timeline .line .start_end_month_year .cntr_bttm .activ .dot {
+  width: min-content;
+  float: right;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
+  text-align: center;
+  color: #77716A;
+  margin-left: 2px;
+}
+.timeline_section .timeline .line .other_months {
+  float: left;
+  width: 236px;
+  height: auto;
+  background-color: cadetblue;
+}
+.timeline_section .timeline .line .other_months .cntr_top {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: orange;
+}
+.timeline_section .timeline .line .other_months .cntr_top .activ {
+  position: absolute;
+  left: 68px;
+  top: -7px;
+  width: 100px;
+  height: 16px;
+  background-color: #77716A;
+  border-radius: 7px;
+  padding: 2px 2px 0 8px;
+}
+.timeline_section .timeline .line .other_months .cntr_top .activ .lbl {
+  float: left;
+  width: min-content;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #FDF4E7;
+}
+.timeline_section .timeline .line .other_months .cntr_top .activ .dot {
+  width: min-content;
+  float: right;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: #FDF4E7;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  color: #77716A;
+}
+.timeline_section .timeline .line .other_months .cnt {
+  max-width: 235px;
+  height: 43px;
+  background-image: url("data:image/svg+xml,%3Csvg width='222' height='44' viewBox='0 0 222 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.399414 1.91699H1.02217L17.408 21.483L1.17261 42.9504H0.399414V43.9504H1.42136H1.67011L1.82016 43.752L18.4457 21.7688L18.6857 21.4513L18.4302 21.1461L1.63895 1.09597L1.48906 0.916992H1.25562H0.399414V1.91699ZM3.71362 0.919922H2.64131L3.33061 1.74133L19.8592 21.4376L3.59857 43.1505L2.99967 43.9502H3.99878H221.413V42.9502H4.99789L20.8973 21.7196L21.135 21.4023L20.8801 21.0985L4.78594 1.91992H221.414V0.919922H3.71362Z' fill='%2377716A'/%3E%3C/svg%3E");
+}
+.timeline_section .timeline .line .other_months .cnt .lbl {
+  float: left;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 43px;
+  color: #77716A;
+  text-align: center;
+  text-transform: uppercase;
+}
+.timeline_section .timeline .line .other_months .cntr_bttm {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: orange;
+}
+.timeline_section .timeline .line .other_months .cntr_bttm .activ {
+  position: absolute;
+  left: 48px;
+  bottom: -7px;
+  width: 140px;
+  height: 16px;
+  background-color: #77716A;
+  border-radius: 7px;
+  padding: 2px 2px 0 8px;
+}
+.timeline_section .timeline .line .other_months .cntr_bttm .activ .lbl {
+  float: left;
+  width: min-content;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #FDF4E7;
+}
+.timeline_section .timeline .line .other_months .cntr_bttm .activ .dot {
+  width: min-content;
+  float: right;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
+  text-align: center;
+  color: #77716A;
+  margin-left: 2px;
+}
+.timeline_section .timeline .btm_yr {
+  grid-area: btm_yr;
+}
+.timeline_section .timeline .btm01 {
+  grid-area: btm01;
+}
+.timeline_section .timeline .btm02 {
+  grid-area: btm02;
+}
+.timeline_section .timeline .btm03 {
+  grid-area: btm03;
+}
+.timeline_section .timeline .btm04 {
+  grid-area: btm04;
+}
+.timeline_section .timeline .btm05 {
+  grid-area: btm05;
+}
+.timeline_section .timeline .btm06 {
+  grid-area: btm06;
+}
+.timeline_section .timeline .btm07 {
+  grid-area: btm07;
+}
+.timeline_section .timeline .btm08 {
+  grid-area: btm08;
+}
+.timeline_section .timeline .btm09 {
+  grid-area: btm09;
+}
+.timeline_section .timeline .btm10 {
+  grid-area: btm10;
+}
+.timeline_section .timeline .btm11 {
+  grid-area: btm11;
+}
+.timeline_section .timeline .btm12 {
+  grid-area: btm12;
 }
 
 /*# sourceMappingURL=main.css.map */
