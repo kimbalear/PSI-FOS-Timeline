@@ -140,7 +140,7 @@
                         width: 100%;
                         height: auto;
 
-                        .activ {
+                        .activ_c {
                             position: absolute;
                             left: 68px;
                             top: -7px;
@@ -173,6 +173,7 @@
                                 color: $clr1;
                             }
                         }
+
                     }
 
                     .cnt {
@@ -197,7 +198,176 @@
                         width: 100%;
                         height: auto;
 
-                        .activ {
+                        .activ_1 {
+                            position: absolute;
+                            left:75px;
+                            top: -7px;
+                            width: 70px;
+                            height: 16px;
+                            background-color: $clr1;
+                            border-radius: 7px;
+                            padding: 2px 2px 0 8px;
+
+                            .lbl {
+                                float: left;
+                                width: min-content;
+                                font-size: 10px;
+                                font-weight: 600;
+                                line-height: 12px;
+                                color: $clr2;
+                            }
+
+                            .dot {
+                                width: min-content;
+                                float: right;
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 6px;
+                                font-size: 10px;
+                                font-weight: 400;
+                                line-height: 12px;
+                                text-align: center;
+                                color: $clr1;
+                            }
+                        }
+
+                        .activ_2 {
+                            position: absolute;
+                            left:70px;
+                            top: -7px;
+                            width: 80px;
+                            height: 16px;
+                            background-color: $clr1;
+                            border-radius: 7px;
+                            padding: 2px 2px 0 8px;
+
+                            .lbl {
+                                float: left;
+                                width: min-content;
+                                font-size: 10px;
+                                font-weight: 600;
+                                line-height: 12px;
+                                color: $clr2;
+                            }
+
+                            .dot {
+                                width: min-content;
+                                float: right;
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 6px;
+                                font-size: 10px;
+                                font-weight: 400;
+                                line-height: 12px;
+                                text-align: center;
+                                color: $clr1;
+                                margin-left: 2px;
+                            }
+                        }
+
+                        .activ_3 {
+                            position: absolute;
+                            left:60px;
+                            top: -7px;
+                            width: 100px;
+                            height: 16px;
+                            background-color: $clr1;
+                            border-radius: 7px;
+                            padding: 2px 2px 0 8px;
+
+                            .lbl {
+                                float: left;
+                                width: min-content;
+                                font-size: 10px;
+                                font-weight: 600;
+                                line-height: 12px;
+                                color: $clr2;
+                            }
+
+                            .dot {
+                                width: min-content;
+                                float: right;
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 6px;
+                                font-size: 10px;
+                                font-weight: 400;
+                                line-height: 12px;
+                                text-align: center;
+                                color: $clr1;
+                                margin-left: 2px;
+                            }
+                        }
+
+                        .activ_4 {
+                            position: absolute;
+                            left:60px;
+                            top: -7px;
+                            width: 105px;
+                            height: 16px;
+                            background-color: $clr1;
+                            border-radius: 7px;
+                            padding: 2px 2px 0 8px;
+
+                            .lbl {
+                                float: left;
+                                width: min-content;
+                                font-size: 10px;
+                                font-weight: 600;
+                                line-height: 12px;
+                                color: $clr2;
+                            }
+
+                            .dot {
+                                width: min-content;
+                                float: right;
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 6px;
+                                font-size: 10px;
+                                font-weight: 400;
+                                line-height: 12px;
+                                text-align: center;
+                                color: $clr1;
+                                margin-left: 2px;
+                            }
+                        }
+
+                        .activ_5 {
+                            position: absolute;
+                            left:50px;
+                            top: -7px;
+                            width: 116px;
+                            height: 16px;
+                            background-color: $clr1;
+                            border-radius: 7px;
+                            padding: 2px 2px 0 8px;
+
+                            .lbl {
+                                float: left;
+                                width: min-content;
+                                font-size: 10px;
+                                font-weight: 600;
+                                line-height: 12px;
+                                color: $clr2;
+                            }
+
+                            .dot {
+                                width: min-content;
+                                float: right;
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 6px;
+                                font-size: 10px;
+                                font-weight: 400;
+                                line-height: 12px;
+                                text-align: center;
+                                color: $clr1;
+                                margin-left: 2px;
+                            }
+                        }
+
+                        .activ_6 {
                             position: absolute;
                             left: 48px;
                             bottom: -7px;
@@ -244,7 +414,41 @@
                         width: 100%;
                         height: auto;
 
-                        .activ {
+                        .activ_c {
+                            position: absolute;
+                            left: 68px;
+                            top: -7px;
+                            width: 100px;
+                            height: 16px;
+                            background-color: $clr1;
+                            border-radius: 7px;
+                            padding: 2px 2px 0 8px;
+
+                            .lbl {
+                                float: left;
+                                width: min-content;
+                                font-size: 10px;
+                                font-weight: 600;
+                                line-height: 12px;
+                                color: $clr2;
+                            }
+
+                            .dot {
+                                width: min-content;
+                                float: right;
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 6px;
+                                background-color: $clr2;
+                                font-size: 10px;
+                                font-weight: 400;
+                                line-height: 12px;
+                                text-align: center;
+                                color: $clr1;
+                            }
+                        }
+
+                        .activ_6 {
                             position: absolute;
                             left: 68px;
                             top: -7px;
@@ -301,7 +505,176 @@
                         width: 100%;
                         height: auto;
 
-                        .activ {
+                        .activ_1 {
+                            position: absolute;
+                            left:75px;
+                            top: -7px;
+                            width: 70px;
+                            height: 16px;
+                            background-color: $clr1;
+                            border-radius: 7px;
+                            padding: 2px 2px 0 8px;
+
+                            .lbl {
+                                float: left;
+                                width: min-content;
+                                font-size: 10px;
+                                font-weight: 600;
+                                line-height: 12px;
+                                color: $clr2;
+                            }
+
+                            .dot {
+                                width: min-content;
+                                float: right;
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 6px;
+                                font-size: 10px;
+                                font-weight: 400;
+                                line-height: 12px;
+                                text-align: center;
+                                color: $clr1;
+                            }
+                        }
+
+                        .activ_2 {
+                            position: absolute;
+                            left:70px;
+                            top: -7px;
+                            width: 80px;
+                            height: 16px;
+                            background-color: $clr1;
+                            border-radius: 7px;
+                            padding: 2px 2px 0 8px;
+
+                            .lbl {
+                                float: left;
+                                width: min-content;
+                                font-size: 10px;
+                                font-weight: 600;
+                                line-height: 12px;
+                                color: $clr2;
+                            }
+
+                            .dot {
+                                width: min-content;
+                                float: right;
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 6px;
+                                font-size: 10px;
+                                font-weight: 400;
+                                line-height: 12px;
+                                text-align: center;
+                                color: $clr1;
+                                margin-left: 2px;
+                            }
+                        }
+
+                        .activ_3 {
+                            position: absolute;
+                            left:60px;
+                            top: -7px;
+                            width: 100px;
+                            height: 16px;
+                            background-color: $clr1;
+                            border-radius: 7px;
+                            padding: 2px 2px 0 8px;
+
+                            .lbl {
+                                float: left;
+                                width: min-content;
+                                font-size: 10px;
+                                font-weight: 600;
+                                line-height: 12px;
+                                color: $clr2;
+                            }
+
+                            .dot {
+                                width: min-content;
+                                float: right;
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 6px;
+                                font-size: 10px;
+                                font-weight: 400;
+                                line-height: 12px;
+                                text-align: center;
+                                color: $clr1;
+                                margin-left: 2px;
+                            }
+                        }
+
+                        .activ_4 {
+                            position: absolute;
+                            left:60px;
+                            top: -7px;
+                            width: 105px;
+                            height: 16px;
+                            background-color: $clr1;
+                            border-radius: 7px;
+                            padding: 2px 2px 0 8px;
+
+                            .lbl {
+                                float: left;
+                                width: min-content;
+                                font-size: 10px;
+                                font-weight: 600;
+                                line-height: 12px;
+                                color: $clr2;
+                            }
+
+                            .dot {
+                                width: min-content;
+                                float: right;
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 6px;
+                                font-size: 10px;
+                                font-weight: 400;
+                                line-height: 12px;
+                                text-align: center;
+                                color: $clr1;
+                                margin-left: 2px;
+                            }
+                        }
+
+                        .activ_5 {
+                            position: absolute;
+                            left:50px;
+                            top: -7px;
+                            width: 116px;
+                            height: 16px;
+                            background-color: $clr1;
+                            border-radius: 7px;
+                            padding: 2px 2px 0 8px;
+
+                            .lbl {
+                                float: left;
+                                width: min-content;
+                                font-size: 10px;
+                                font-weight: 600;
+                                line-height: 12px;
+                                color: $clr2;
+                            }
+
+                            .dot {
+                                width: min-content;
+                                float: right;
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 6px;
+                                font-size: 10px;
+                                font-weight: 400;
+                                line-height: 12px;
+                                text-align: center;
+                                color: $clr1;
+                                margin-left: 2px;
+                            }
+                        }
+
+                        .activ_6 {
                             position: absolute;
                             left: 48px;
                             bottom: -7px;
@@ -348,7 +721,7 @@
                         width: 100%;
                         height: auto;
 
-                        .activ {
+                        .activ_c {
                             position: absolute;
                             left: 68px;
                             top: -7px;
@@ -407,7 +780,176 @@
                         width: 100%;
                         height: auto;
 
-                        .activ {
+                        .activ_1 {
+                            position: absolute;
+                            left:75px;
+                            top: -7px;
+                            width: 70px;
+                            height: 16px;
+                            background-color: $clr1;
+                            border-radius: 7px;
+                            padding: 2px 2px 0 8px;
+
+                            .lbl {
+                                float: left;
+                                width: min-content;
+                                font-size: 10px;
+                                font-weight: 600;
+                                line-height: 12px;
+                                color: $clr2;
+                            }
+
+                            .dot {
+                                width: min-content;
+                                float: right;
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 6px;
+                                font-size: 10px;
+                                font-weight: 400;
+                                line-height: 12px;
+                                text-align: center;
+                                color: $clr1;
+                            }
+                        }
+
+                        .activ_2 {
+                            position: absolute;
+                            left:70px;
+                            top: -7px;
+                            width: 80px;
+                            height: 16px;
+                            background-color: $clr1;
+                            border-radius: 7px;
+                            padding: 2px 2px 0 8px;
+
+                            .lbl {
+                                float: left;
+                                width: min-content;
+                                font-size: 10px;
+                                font-weight: 600;
+                                line-height: 12px;
+                                color: $clr2;
+                            }
+
+                            .dot {
+                                width: min-content;
+                                float: right;
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 6px;
+                                font-size: 10px;
+                                font-weight: 400;
+                                line-height: 12px;
+                                text-align: center;
+                                color: $clr1;
+                                margin-left: 2px;
+                            }
+                        }
+
+                        .activ_3 {
+                            position: absolute;
+                            left:60px;
+                            top: -7px;
+                            width: 100px;
+                            height: 16px;
+                            background-color: $clr1;
+                            border-radius: 7px;
+                            padding: 2px 2px 0 8px;
+
+                            .lbl {
+                                float: left;
+                                width: min-content;
+                                font-size: 10px;
+                                font-weight: 600;
+                                line-height: 12px;
+                                color: $clr2;
+                            }
+
+                            .dot {
+                                width: min-content;
+                                float: right;
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 6px;
+                                font-size: 10px;
+                                font-weight: 400;
+                                line-height: 12px;
+                                text-align: center;
+                                color: $clr1;
+                                margin-left: 2px;
+                            }
+                        }
+
+                        .activ_4 {
+                            position: absolute;
+                            left:60px;
+                            top: -7px;
+                            width: 105px;
+                            height: 16px;
+                            background-color: $clr1;
+                            border-radius: 7px;
+                            padding: 2px 2px 0 8px;
+
+                            .lbl {
+                                float: left;
+                                width: min-content;
+                                font-size: 10px;
+                                font-weight: 600;
+                                line-height: 12px;
+                                color: $clr2;
+                            }
+
+                            .dot {
+                                width: min-content;
+                                float: right;
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 6px;
+                                font-size: 10px;
+                                font-weight: 400;
+                                line-height: 12px;
+                                text-align: center;
+                                color: $clr1;
+                                margin-left: 2px;
+                            }
+                        }
+
+                        .activ_5 {
+                            position: absolute;
+                            left:50px;
+                            top: -7px;
+                            width: 116px;
+                            height: 16px;
+                            background-color: $clr1;
+                            border-radius: 7px;
+                            padding: 2px 2px 0 8px;
+
+                            .lbl {
+                                float: left;
+                                width: min-content;
+                                font-size: 10px;
+                                font-weight: 600;
+                                line-height: 12px;
+                                color: $clr2;
+                            }
+
+                            .dot {
+                                width: min-content;
+                                float: right;
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 6px;
+                                font-size: 10px;
+                                font-weight: 400;
+                                line-height: 12px;
+                                text-align: center;
+                                color: $clr1;
+                                margin-left: 2px;
+                            }
+                        }
+
+                        .activ_6 {
                             position: absolute;
                             left: 48px;
                             bottom: -7px;

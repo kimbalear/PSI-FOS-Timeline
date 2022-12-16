@@ -260,7 +260,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   width: 100%;
   height: auto;
 }
-.timeline_section .timelines .timeline .line .start_month_year .cntr_top .activ {
+.timeline_section .timelines .timeline .line .start_month_year .cntr_top .activ_c {
   position: absolute;
   left: 68px;
   top: -7px;
@@ -270,7 +270,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .line .start_month_year .cntr_top .activ .lbl {
+.timeline_section .timelines .timeline .line .start_month_year .cntr_top .activ_c .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -278,7 +278,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .line .start_month_year .cntr_top .activ .dot {
+.timeline_section .timelines .timeline .line .start_month_year .cntr_top .activ_c .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -311,7 +311,161 @@ body .wrapper .content ::-webkit-scrollbar-button {
   width: 100%;
   height: auto;
 }
-.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ {
+.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ_1 {
+  position: absolute;
+  left: 75px;
+  top: -7px;
+  width: 70px;
+  height: 16px;
+  background-color: #77716A;
+  border-radius: 7px;
+  padding: 2px 2px 0 8px;
+}
+.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ_1 .lbl {
+  float: left;
+  width: min-content;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #FDF4E7;
+}
+.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ_1 .dot {
+  width: min-content;
+  float: right;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  color: #77716A;
+}
+.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ_2 {
+  position: absolute;
+  left: 70px;
+  top: -7px;
+  width: 80px;
+  height: 16px;
+  background-color: #77716A;
+  border-radius: 7px;
+  padding: 2px 2px 0 8px;
+}
+.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ_2 .lbl {
+  float: left;
+  width: min-content;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #FDF4E7;
+}
+.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ_2 .dot {
+  width: min-content;
+  float: right;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  color: #77716A;
+  margin-left: 2px;
+}
+.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ_3 {
+  position: absolute;
+  left: 60px;
+  top: -7px;
+  width: 100px;
+  height: 16px;
+  background-color: #77716A;
+  border-radius: 7px;
+  padding: 2px 2px 0 8px;
+}
+.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ_3 .lbl {
+  float: left;
+  width: min-content;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #FDF4E7;
+}
+.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ_3 .dot {
+  width: min-content;
+  float: right;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  color: #77716A;
+  margin-left: 2px;
+}
+.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ_4 {
+  position: absolute;
+  left: 60px;
+  top: -7px;
+  width: 105px;
+  height: 16px;
+  background-color: #77716A;
+  border-radius: 7px;
+  padding: 2px 2px 0 8px;
+}
+.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ_4 .lbl {
+  float: left;
+  width: min-content;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #FDF4E7;
+}
+.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ_4 .dot {
+  width: min-content;
+  float: right;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  color: #77716A;
+  margin-left: 2px;
+}
+.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ_5 {
+  position: absolute;
+  left: 50px;
+  top: -7px;
+  width: 116px;
+  height: 16px;
+  background-color: #77716A;
+  border-radius: 7px;
+  padding: 2px 2px 0 8px;
+}
+.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ_5 .lbl {
+  float: left;
+  width: min-content;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #FDF4E7;
+}
+.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ_5 .dot {
+  width: min-content;
+  float: right;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  color: #77716A;
+  margin-left: 2px;
+}
+.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ_6 {
   position: absolute;
   left: 48px;
   bottom: -7px;
@@ -321,7 +475,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ .lbl {
+.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ_6 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -329,7 +483,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ .dot {
+.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ_6 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -352,7 +506,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   width: 100%;
   height: auto;
 }
-.timeline_section .timelines .timeline .line .other_months .cntr_top .activ {
+.timeline_section .timelines .timeline .line .other_months .cntr_top .activ_c {
   position: absolute;
   left: 68px;
   top: -7px;
@@ -362,7 +516,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .line .other_months .cntr_top .activ .lbl {
+.timeline_section .timelines .timeline .line .other_months .cntr_top .activ_c .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -370,7 +524,38 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .line .other_months .cntr_top .activ .dot {
+.timeline_section .timelines .timeline .line .other_months .cntr_top .activ_c .dot {
+  width: min-content;
+  float: right;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: #FDF4E7;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  color: #77716A;
+}
+.timeline_section .timelines .timeline .line .other_months .cntr_top .activ_6 {
+  position: absolute;
+  left: 68px;
+  top: -7px;
+  width: 100px;
+  height: 16px;
+  background-color: #77716A;
+  border-radius: 7px;
+  padding: 2px 2px 0 8px;
+}
+.timeline_section .timelines .timeline .line .other_months .cntr_top .activ_6 .lbl {
+  float: left;
+  width: min-content;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #FDF4E7;
+}
+.timeline_section .timelines .timeline .line .other_months .cntr_top .activ_6 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -403,7 +588,161 @@ body .wrapper .content ::-webkit-scrollbar-button {
   width: 100%;
   height: auto;
 }
-.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ {
+.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ_1 {
+  position: absolute;
+  left: 75px;
+  top: -7px;
+  width: 70px;
+  height: 16px;
+  background-color: #77716A;
+  border-radius: 7px;
+  padding: 2px 2px 0 8px;
+}
+.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ_1 .lbl {
+  float: left;
+  width: min-content;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #FDF4E7;
+}
+.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ_1 .dot {
+  width: min-content;
+  float: right;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  color: #77716A;
+}
+.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ_2 {
+  position: absolute;
+  left: 70px;
+  top: -7px;
+  width: 80px;
+  height: 16px;
+  background-color: #77716A;
+  border-radius: 7px;
+  padding: 2px 2px 0 8px;
+}
+.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ_2 .lbl {
+  float: left;
+  width: min-content;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #FDF4E7;
+}
+.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ_2 .dot {
+  width: min-content;
+  float: right;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  color: #77716A;
+  margin-left: 2px;
+}
+.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ_3 {
+  position: absolute;
+  left: 60px;
+  top: -7px;
+  width: 100px;
+  height: 16px;
+  background-color: #77716A;
+  border-radius: 7px;
+  padding: 2px 2px 0 8px;
+}
+.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ_3 .lbl {
+  float: left;
+  width: min-content;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #FDF4E7;
+}
+.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ_3 .dot {
+  width: min-content;
+  float: right;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  color: #77716A;
+  margin-left: 2px;
+}
+.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ_4 {
+  position: absolute;
+  left: 60px;
+  top: -7px;
+  width: 105px;
+  height: 16px;
+  background-color: #77716A;
+  border-radius: 7px;
+  padding: 2px 2px 0 8px;
+}
+.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ_4 .lbl {
+  float: left;
+  width: min-content;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #FDF4E7;
+}
+.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ_4 .dot {
+  width: min-content;
+  float: right;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  color: #77716A;
+  margin-left: 2px;
+}
+.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ_5 {
+  position: absolute;
+  left: 50px;
+  top: -7px;
+  width: 116px;
+  height: 16px;
+  background-color: #77716A;
+  border-radius: 7px;
+  padding: 2px 2px 0 8px;
+}
+.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ_5 .lbl {
+  float: left;
+  width: min-content;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #FDF4E7;
+}
+.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ_5 .dot {
+  width: min-content;
+  float: right;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  color: #77716A;
+  margin-left: 2px;
+}
+.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ_6 {
   position: absolute;
   left: 48px;
   bottom: -7px;
@@ -413,7 +752,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ .lbl {
+.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ_6 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -421,7 +760,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ .dot {
+.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ_6 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -444,7 +783,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   width: 100%;
   height: auto;
 }
-.timeline_section .timelines .timeline .line .end_month_year .cntr_top .activ {
+.timeline_section .timelines .timeline .line .end_month_year .cntr_top .activ_c {
   position: absolute;
   left: 68px;
   top: -7px;
@@ -454,7 +793,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .line .end_month_year .cntr_top .activ .lbl {
+.timeline_section .timelines .timeline .line .end_month_year .cntr_top .activ_c .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -462,7 +801,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .line .end_month_year .cntr_top .activ .dot {
+.timeline_section .timelines .timeline .line .end_month_year .cntr_top .activ_c .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -495,7 +834,161 @@ body .wrapper .content ::-webkit-scrollbar-button {
   width: 100%;
   height: auto;
 }
-.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ {
+.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ_1 {
+  position: absolute;
+  left: 75px;
+  top: -7px;
+  width: 70px;
+  height: 16px;
+  background-color: #77716A;
+  border-radius: 7px;
+  padding: 2px 2px 0 8px;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ_1 .lbl {
+  float: left;
+  width: min-content;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #FDF4E7;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ_1 .dot {
+  width: min-content;
+  float: right;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  color: #77716A;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ_2 {
+  position: absolute;
+  left: 70px;
+  top: -7px;
+  width: 80px;
+  height: 16px;
+  background-color: #77716A;
+  border-radius: 7px;
+  padding: 2px 2px 0 8px;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ_2 .lbl {
+  float: left;
+  width: min-content;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #FDF4E7;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ_2 .dot {
+  width: min-content;
+  float: right;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  color: #77716A;
+  margin-left: 2px;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ_3 {
+  position: absolute;
+  left: 60px;
+  top: -7px;
+  width: 100px;
+  height: 16px;
+  background-color: #77716A;
+  border-radius: 7px;
+  padding: 2px 2px 0 8px;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ_3 .lbl {
+  float: left;
+  width: min-content;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #FDF4E7;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ_3 .dot {
+  width: min-content;
+  float: right;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  color: #77716A;
+  margin-left: 2px;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ_4 {
+  position: absolute;
+  left: 60px;
+  top: -7px;
+  width: 105px;
+  height: 16px;
+  background-color: #77716A;
+  border-radius: 7px;
+  padding: 2px 2px 0 8px;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ_4 .lbl {
+  float: left;
+  width: min-content;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #FDF4E7;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ_4 .dot {
+  width: min-content;
+  float: right;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  color: #77716A;
+  margin-left: 2px;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ_5 {
+  position: absolute;
+  left: 50px;
+  top: -7px;
+  width: 116px;
+  height: 16px;
+  background-color: #77716A;
+  border-radius: 7px;
+  padding: 2px 2px 0 8px;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ_5 .lbl {
+  float: left;
+  width: min-content;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #FDF4E7;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ_5 .dot {
+  width: min-content;
+  float: right;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  color: #77716A;
+  margin-left: 2px;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ_6 {
   position: absolute;
   left: 48px;
   bottom: -7px;
@@ -505,7 +998,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ .lbl {
+.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ_6 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -513,7 +1006,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ .dot {
+.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ_6 .dot {
   width: min-content;
   float: right;
   width: 12px;
