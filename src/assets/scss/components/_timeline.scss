@@ -28,13 +28,13 @@
 
             .tp_yr {
                 grid-area: tp_yr;
-                align-self: end;
+                background: rgba(119, 113, 106, 0.06);
             }
 
             .tp01 {
                 grid-area: tp01;
                 padding: 0 4px 0 23px;
-                align-self: end; 
+                align-self: end;
             }
 
             .tp02 {
@@ -447,6 +447,7 @@
 
             .btm_yr {
                 grid-area: btm_yr;
+                background: rgba(119, 113, 106, 0.06);
             }
 
             .btm01 {

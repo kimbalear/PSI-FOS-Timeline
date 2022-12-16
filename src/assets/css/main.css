@@ -164,7 +164,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
 }
 .timeline_section .timelines .timeline .tp_yr {
   grid-area: tp_yr;
-  align-self: end;
+  background: rgba(119, 113, 106, 0.06);
 }
 .timeline_section .timelines .timeline .tp01 {
   grid-area: tp01;
@@ -528,6 +528,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
 }
 .timeline_section .timelines .timeline .btm_yr {
   grid-area: btm_yr;
+  background: rgba(119, 113, 106, 0.06);
 }
 .timeline_section .timelines .timeline .btm01 {
   grid-area: btm01;
