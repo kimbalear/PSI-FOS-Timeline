@@ -1,0 +1,67 @@
+.card {
+    width: 100%;
+    height: auto;
+    padding-bottom: 8px;
+    //background-color: aqua;
+
+    .title {
+        width: 100%;
+        padding: 0 8px;
+        background-color: $clr1;
+        border-radius: 6px 6px 0 0;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 16px;
+        color: $clr2;
+    }
+
+    .subtitle {
+        width: 100%;
+        padding: 0 8px;
+    }
+
+    .content {
+        width: 100%;
+        padding: 8px;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+
+.card_contr {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: column;
+    grid-template-areas:
+        "title"
+        "cont";
+
+    border: 1px solid $clr1;
+    border-radius: 6px;
+    margin: 4px 0;
+    background: rgba(119, 113, 106, 0.06);
+
+    .title {
+        grid-area: title;
+        padding: 0 8px;
+        background-color: $clr1;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 16px;
+        color: $clr2;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .cont {
+        grid-area: cont;
+        font-weight: 300;
+        font-size: 11px;
+        line-height: 12px;
+        padding: 8px;
+    }
+}

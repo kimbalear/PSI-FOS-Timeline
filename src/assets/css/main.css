@@ -115,81 +115,152 @@ body .wrapper .content {
   padding: 8px 16px 0;
   width: 100%;
   height: calc(100% - 83px);
+  padding-bottom: 8px;
+  /* total width */
+  /* background of the scrollbar except button or resizer */
+  /* scrollbar itself */
+  /* set button(top and bottom of the scrollbar) */
+}
+body .wrapper .content ::-webkit-scrollbar {
+  background-color: #FDF4E7;
+  height: 4px;
+  border-radius: 2px;
+}
+body .wrapper .content ::-webkit-scrollbar-track {
+  background-color: #FDF4E7;
+  border-radius: 4px;
+}
+body .wrapper .content ::-webkit-scrollbar-thumb {
+  background-color: #77716A;
+  border-radius: 4px;
+}
+body .wrapper .content ::-webkit-scrollbar-button {
+  display: none;
 }
 
 .timeline_section {
   width: auto;
   height: 100%;
   overflow-y: auto;
+  display: flex;
 }
-.timeline_section .timeline {
+.timeline_section .timelines {
   display: grid;
-  grid-template-columns: 218px 218px 218px 218px 218px 218px 218px 218px 218px 218px 218px 218px 218px;
-  grid-template-rows: 1fr auto 1fr;
-  grid-auto-columns: 218px;
+  grid-template-columns: min-content min-content;
+  grid-template-rows: 1fr;
+  grid-auto-columns: min-content;
+  gap: 0px 0px;
+  grid-auto-flow: column;
+  grid-template-areas: ". .";
+}
+.timeline_section .timelines .timeline {
+  display: grid;
+  grid-template-columns: 60px 220px 220px 220px 220px 220px 220px 220px 220px 220px 220px 220px 220px;
+  grid-template-rows: 1fr 44px 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas: "tp_yr tp01 tp02 tp03 tp04 tp05 tp06 tp07 tp08 tp09 tp10 tp11 tp12" "line line line line line line line line line line line line line" "btm_yr btm01 btm02 btm03 btm04 btm05 btm06 btm07 btm08 btm09 btm10 btm11 btm12";
   height: 100%;
 }
-.timeline_section .timeline .tp_yr {
+.timeline_section .timelines .timeline .tp_yr {
   grid-area: tp_yr;
-  background-color: aqua;
+  align-self: end;
 }
-.timeline_section .timeline .tp01 {
+.timeline_section .timelines .timeline .tp01 {
   grid-area: tp01;
-  background-color: rgb(19, 160, 160);
+  padding: 0 4px 0 23px;
+  align-self: end;
 }
-.timeline_section .timeline .tp02 {
+.timeline_section .timelines .timeline .tp02 {
   grid-area: tp02;
+  padding: 0 4px 0 23px;
+  align-self: end;
 }
-.timeline_section .timeline .tp03 {
+.timeline_section .timelines .timeline .tp03 {
   grid-area: tp03;
+  padding: 0 4px 0 23px;
+  align-self: end;
 }
-.timeline_section .timeline .tp04 {
+.timeline_section .timelines .timeline .tp04 {
   grid-area: tp04;
+  padding: 0 4px 0 23px;
+  align-self: end;
 }
-.timeline_section .timeline .tp05 {
+.timeline_section .timelines .timeline .tp05 {
   grid-area: tp05;
+  padding: 0 4px 0 23px;
+  align-self: end;
 }
-.timeline_section .timeline .tp06 {
+.timeline_section .timelines .timeline .tp06 {
   grid-area: tp06;
+  padding: 0 4px 0 23px;
+  align-self: end;
 }
-.timeline_section .timeline .tp07 {
+.timeline_section .timelines .timeline .tp07 {
   grid-area: tp07;
+  padding: 0 4px 0 23px;
+  align-self: end;
 }
-.timeline_section .timeline .tp08 {
+.timeline_section .timelines .timeline .tp08 {
   grid-area: tp08;
+  padding: 0 4px 0 23px;
+  align-self: end;
 }
-.timeline_section .timeline .tp09 {
+.timeline_section .timelines .timeline .tp09 {
   grid-area: tp09;
+  padding: 0 4px 0 23px;
+  align-self: end;
 }
-.timeline_section .timeline .tp10 {
+.timeline_section .timelines .timeline .tp10 {
   grid-area: tp10;
+  padding: 0 4px 0 23px;
+  align-self: end;
 }
-.timeline_section .timeline .tp11 {
+.timeline_section .timelines .timeline .tp11 {
   grid-area: tp11;
+  padding: 0 4px 0 23px;
+  align-self: end;
 }
-.timeline_section .timeline .tp12 {
+.timeline_section .timelines .timeline .tp12 {
   grid-area: tp12;
+  padding: 0 4px 0 23px;
+  align-self: end;
 }
-.timeline_section .timeline .line {
+.timeline_section .timelines .timeline .line {
   grid-area: line;
   position: relative;
 }
-.timeline_section .timeline .line .start_end_month_year {
+.timeline_section .timelines .timeline .line .yr_start {
   float: left;
-  width: 236px;
-  height: auto;
-  background-color: cadetblue;
+  width: 60px;
+  height: 44px;
+  background-color: #77716A;
 }
-.timeline_section .timeline .line .start_end_month_year .cntr_top {
+.timeline_section .timelines .timeline .line .yr_start .lbl {
+  float: left;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 44px;
+  color: #FDF4E7;
+  text-align: center;
+  text-transform: uppercase;
+}
+.timeline_section .timelines .timeline .line .next_yr {
+  background-color: #FDF4E7;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='44' viewBox='0 0 60 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 0H60V44H2V0Z' fill='%2377716A'/%3E%3C/svg%3E");
+}
+.timeline_section .timelines .timeline .line .start_month_year {
+  float: left;
+  width: 220px;
+  height: auto;
+}
+.timeline_section .timelines .timeline .line .start_month_year .cntr_top {
   position: relative;
   width: 100%;
   height: auto;
-  background-color: orange;
 }
-.timeline_section .timeline .line .start_end_month_year .cntr_top .activ {
+.timeline_section .timelines .timeline .line .start_month_year .cntr_top .activ {
   position: absolute;
   left: 68px;
   top: -7px;
@@ -199,7 +270,7 @@ body .wrapper .content {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timeline .line .start_end_month_year .cntr_top .activ .lbl {
+.timeline_section .timelines .timeline .line .start_month_year .cntr_top .activ .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -207,7 +278,7 @@ body .wrapper .content {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timeline .line .start_end_month_year .cntr_top .activ .dot {
+.timeline_section .timelines .timeline .line .start_month_year .cntr_top .activ .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -220,28 +291,27 @@ body .wrapper .content {
   text-align: center;
   color: #77716A;
 }
-.timeline_section .timeline .line .start_end_month_year .cnt {
-  max-width: 235px;
-  height: 43px;
-  background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' preserveAspectRatio='none' viewBox='0 0 235 43' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 17.419 20.976 L 17.659 20.661 L 17.407 20.355 L 1.059 0.5 H 217.467 L 234.358 20.685 L 217.455 42.5 H 1.01 L 17.419 20.976 Z' stroke='%2377716A'%3E%3C/path%3E%3C/svg%3E");
+.timeline_section .timelines .timeline .line .start_month_year .cnt {
+  max-width: 220px;
+  height: 44px;
+  background-image: url("data:image/svg+xml,%3Csvg width='220' height='44' viewBox='0 0 220 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_60_2829)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0V44H0.995475L17.9186 21L0.995475 0H0ZM19.9094 21L2.98633 0H220L220 1H5L21.0748 21L5 43H220L220 44H2.98633L19.9094 21Z' fill='%2377716A'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_60_2829'%3E%3Crect width='220' height='44' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
 }
-.timeline_section .timeline .line .start_end_month_year .cnt .lbl {
+.timeline_section .timelines .timeline .line .start_month_year .cnt .lbl {
   float: left;
   width: 100%;
   font-size: 16px;
   font-weight: 600;
-  line-height: 43px;
+  line-height: 44px;
   color: #77716A;
   text-align: center;
   text-transform: uppercase;
 }
-.timeline_section .timeline .line .start_end_month_year .cntr_bttm {
+.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm {
   position: relative;
   width: 100%;
   height: auto;
-  background-color: orange;
 }
-.timeline_section .timeline .line .start_end_month_year .cntr_bttm .activ {
+.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ {
   position: absolute;
   left: 48px;
   bottom: -7px;
@@ -251,7 +321,7 @@ body .wrapper .content {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timeline .line .start_end_month_year .cntr_bttm .activ .lbl {
+.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -259,7 +329,7 @@ body .wrapper .content {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timeline .line .start_end_month_year .cntr_bttm .activ .dot {
+.timeline_section .timelines .timeline .line .start_month_year .cntr_bttm .activ .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -272,19 +342,17 @@ body .wrapper .content {
   color: #77716A;
   margin-left: 2px;
 }
-.timeline_section .timeline .line .other_months {
+.timeline_section .timelines .timeline .line .other_months {
   float: left;
-  width: 236px;
+  width: 220px;
   height: auto;
-  background-color: greenyellow;
 }
-.timeline_section .timeline .line .other_months .cntr_top {
+.timeline_section .timelines .timeline .line .other_months .cntr_top {
   position: relative;
   width: 100%;
   height: auto;
-  background-color: orange;
 }
-.timeline_section .timeline .line .other_months .cntr_top .activ {
+.timeline_section .timelines .timeline .line .other_months .cntr_top .activ {
   position: absolute;
   left: 68px;
   top: -7px;
@@ -294,7 +362,7 @@ body .wrapper .content {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timeline .line .other_months .cntr_top .activ .lbl {
+.timeline_section .timelines .timeline .line .other_months .cntr_top .activ .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -302,7 +370,7 @@ body .wrapper .content {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timeline .line .other_months .cntr_top .activ .dot {
+.timeline_section .timelines .timeline .line .other_months .cntr_top .activ .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -315,28 +383,27 @@ body .wrapper .content {
   text-align: center;
   color: #77716A;
 }
-.timeline_section .timeline .line .other_months .cnt {
-  max-width: 235px;
-  height: 43px;
-  background-image: url("data:image/svg+xml,%3Csvg width='222' height='44' viewBox='0 0 222 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.399414 1.91699H1.02217L17.408 21.483L1.17261 42.9504H0.399414V43.9504H1.42136H1.67011L1.82016 43.752L18.4457 21.7688L18.6857 21.4513L18.4302 21.1461L1.63895 1.09597L1.48906 0.916992H1.25562H0.399414V1.91699ZM3.71362 0.919922H2.64131L3.33061 1.74133L19.8592 21.4376L3.59857 43.1505L2.99967 43.9502H3.99878H221.413V42.9502H4.99789L20.8973 21.7196L21.135 21.4023L20.8801 21.0985L4.78594 1.91992H221.414V0.919922H3.71362Z' fill='%2377716A'/%3E%3C/svg%3E");
+.timeline_section .timelines .timeline .line .other_months .cnt {
+  max-width: 220px;
+  height: 44px;
+  background-image: url("data:image/svg+xml,%3Csvg width='220' height='44' viewBox='0 0 220 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_60_2838)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 43.0039V44H0.995475L17.9186 21L0.995475 0H0V0.996094H0.671875L16.8652 21.0137L0.734375 43.0039H0Z' fill='%2377716A'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.98633 0L19.9094 21L2.98633 44H220L220 43H5L21.0748 21L5 1H220L220 0H2.98633Z' fill='%2377716A'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_60_2838'%3E%3Crect width='220' height='44' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
 }
-.timeline_section .timeline .line .other_months .cnt .lbl {
+.timeline_section .timelines .timeline .line .other_months .cnt .lbl {
   float: left;
   width: 100%;
   font-size: 16px;
   font-weight: 600;
-  line-height: 43px;
+  line-height: 44px;
   color: #77716A;
   text-align: center;
   text-transform: uppercase;
 }
-.timeline_section .timeline .line .other_months .cntr_bttm {
+.timeline_section .timelines .timeline .line .other_months .cntr_bttm {
   position: relative;
   width: 100%;
   height: auto;
-  background-color: orange;
 }
-.timeline_section .timeline .line .other_months .cntr_bttm .activ {
+.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ {
   position: absolute;
   left: 48px;
   bottom: -7px;
@@ -346,7 +413,7 @@ body .wrapper .content {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timeline .line .other_months .cntr_bttm .activ .lbl {
+.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -354,7 +421,7 @@ body .wrapper .content {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timeline .line .other_months .cntr_bttm .activ .dot {
+.timeline_section .timelines .timeline .line .other_months .cntr_bttm .activ .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -367,44 +434,244 @@ body .wrapper .content {
   color: #77716A;
   margin-left: 2px;
 }
-.timeline_section .timeline .btm_yr {
+.timeline_section .timelines .timeline .line .end_month_year {
+  float: left;
+  width: 220px;
+  height: auto;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_top {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_top .activ {
+  position: absolute;
+  left: 68px;
+  top: -7px;
+  width: 100px;
+  height: 16px;
+  background-color: #77716A;
+  border-radius: 7px;
+  padding: 2px 2px 0 8px;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_top .activ .lbl {
+  float: left;
+  width: min-content;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #FDF4E7;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_top .activ .dot {
+  width: min-content;
+  float: right;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: #FDF4E7;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  color: #77716A;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cnt {
+  max-width: 220px;
+  height: 44px;
+  background-image: url("data:image/svg+xml,%3Csvg width='220' height='45' viewBox='0 0 220 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_60_2845)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 43.5039V44.5H0.995475L17.9186 21.5L0.995475 0.5H0V1.49609H0.671875L16.8652 21.5137L0.734375 43.5039H0Z' fill='%2377716A'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.98633 0.5L19.9094 21.5L2.98633 44.5H220V0.5H2.98633ZM5 1.5L21 21.5L5 43.5H219V1.5H5Z' fill='%2377716A'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_60_2845'%3E%3Crect width='220' height='44' fill='white' transform='translate(0 0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+}
+.timeline_section .timelines .timeline .line .end_month_year .cnt .lbl {
+  float: left;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 44px;
+  color: #77716A;
+  text-align: center;
+  text-transform: uppercase;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ {
+  position: absolute;
+  left: 48px;
+  bottom: -7px;
+  width: 140px;
+  height: 16px;
+  background-color: #77716A;
+  border-radius: 7px;
+  padding: 2px 2px 0 8px;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ .lbl {
+  float: left;
+  width: min-content;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #FDF4E7;
+}
+.timeline_section .timelines .timeline .line .end_month_year .cntr_bttm .activ .dot {
+  width: min-content;
+  float: right;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
+  text-align: center;
+  color: #77716A;
+  margin-left: 2px;
+}
+.timeline_section .timelines .timeline .btm_yr {
   grid-area: btm_yr;
 }
-.timeline_section .timeline .btm01 {
+.timeline_section .timelines .timeline .btm01 {
   grid-area: btm01;
 }
-.timeline_section .timeline .btm02 {
+.timeline_section .timelines .timeline .btm02 {
   grid-area: btm02;
 }
-.timeline_section .timeline .btm03 {
+.timeline_section .timelines .timeline .btm03 {
   grid-area: btm03;
 }
-.timeline_section .timeline .btm04 {
+.timeline_section .timelines .timeline .btm04 {
   grid-area: btm04;
 }
-.timeline_section .timeline .btm05 {
+.timeline_section .timelines .timeline .btm05 {
   grid-area: btm05;
 }
-.timeline_section .timeline .btm06 {
+.timeline_section .timelines .timeline .btm06 {
   grid-area: btm06;
 }
-.timeline_section .timeline .btm07 {
+.timeline_section .timelines .timeline .btm07 {
   grid-area: btm07;
 }
-.timeline_section .timeline .btm08 {
+.timeline_section .timelines .timeline .btm08 {
   grid-area: btm08;
 }
-.timeline_section .timeline .btm09 {
+.timeline_section .timelines .timeline .btm09 {
   grid-area: btm09;
 }
-.timeline_section .timeline .btm10 {
+.timeline_section .timelines .timeline .btm10 {
   grid-area: btm10;
 }
-.timeline_section .timeline .btm11 {
+.timeline_section .timelines .timeline .btm11 {
   grid-area: btm11;
 }
-.timeline_section .timeline .btm12 {
+.timeline_section .timelines .timeline .btm12 {
   grid-area: btm12;
+}
+
+.panel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 19px;
+  gap: 0px 0px;
+  grid-template-areas: "contributions" "line";
+}
+.panel .contributions {
+  grid-area: contributions;
+  border: 1px solid #77716A;
+  border-radius: 10px;
+  padding: 8px 4px 8px 8px;
+  max-height: 320px;
+  background: rgba(119, 113, 106, 0.04);
+  /* total width */
+  /* background of the scrollbar except button or resizer */
+  /* scrollbar itself */
+  /* set button(top and bottom of the scrollbar) */
+}
+.panel .contributions ::-webkit-scrollbar {
+  background-color: #FDF4E7;
+  width: 4px;
+  border-radius: 2px;
+}
+.panel .contributions ::-webkit-scrollbar-track {
+  background-color: #FDF4E7;
+  border-radius: 4px;
+}
+.panel .contributions ::-webkit-scrollbar-thumb {
+  background-color: #77716A;
+  border-radius: 4px;
+}
+.panel .contributions ::-webkit-scrollbar-button {
+  display: none;
+}
+.panel .contributions .cards {
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  padding-right: 4px;
+}
+.panel .line {
+  grid-area: line;
+  background: linear-gradient(#77716A, #77716A) no-repeat center/1px 100%;
+}
+
+.card {
+  width: 100%;
+  height: auto;
+  padding-bottom: 8px;
+}
+.card .title {
+  width: 100%;
+  padding: 0 8px;
+  background-color: #77716A;
+  border-radius: 6px 6px 0 0;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FDF4E7;
+}
+.card .subtitle {
+  width: 100%;
+  padding: 0 8px;
+}
+.card .content {
+  width: 100%;
+  padding: 8px;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.card_contr {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: column;
+  grid-template-areas: "title" "cont";
+  border: 1px solid #77716A;
+  border-radius: 6px;
+  margin: 4px 0;
+  background: rgba(119, 113, 106, 0.06);
+}
+.card_contr .title {
+  grid-area: title;
+  padding: 0 8px;
+  background-color: #77716A;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FDF4E7;
+  border-radius: 5px 5px 0 0;
+}
+.card_contr .cont {
+  grid-area: cont;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 12px;
+  padding: 8px;
 }
 
 /*# sourceMappingURL=main.css.map */
