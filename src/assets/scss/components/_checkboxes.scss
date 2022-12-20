@@ -12,29 +12,30 @@ $border-radius: 3px;
 label.checkbox {
     font-size: 1rem;
     line-height: 1rem;
-  @include checkbox($clr2);
-  
-  &.lgnd1 {
-    @include checkbox($clrbk_lgnd1_p);
-  }
+    cursor: pointer;
+    @include checkbox($clr2);
 
-  &.lgnd2 {
-    @include checkbox($clrbk_lgnd2_p);
-  }
+    &.lgnd1 {
+        @include checkbox($clrbk_lgnd1_p);
+    }
 
-  &.lgnd3 {
-    @include checkbox($clrbk_lgnd3_p);
-  }
+    &.lgnd2 {
+        @include checkbox($clrbk_lgnd2_p);
+    }
 
-  &.lgnd4 {
-    @include checkbox($clrbk_lgnd4_p);
-  }
+    &.lgnd3 {
+        @include checkbox($clrbk_lgnd3_p);
+    }
 
-  &.lgnd5 {
-    @include checkbox($clrbk_lgnd5_p);
-  }
+    &.lgnd4 {
+        @include checkbox($clrbk_lgnd4_p);
+    }
 
-  &.lgnd6 {
-    @include checkbox($clrbk_lgnd6_p);
-  }
+    &.lgnd5 {
+        @include checkbox($clrbk_lgnd5_p);
+    }
+
+    &.lgnd6 {
+        @include checkbox($clrbk_lgnd6_p);
+    }
 }

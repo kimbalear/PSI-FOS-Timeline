@@ -1578,15 +1578,11 @@ label {
   margin-top: 2rem;
 }
 
-.my-checkbox {
-  transform: scale(1.5);
-  margin-right: 11px;
-}
-
 /* Checkbox styles */
 label.checkbox {
   font-size: 1rem;
   line-height: 1rem;
+  cursor: pointer;
   margin-left: 1rem;
   padding-left: 21px;
   position: relative;
