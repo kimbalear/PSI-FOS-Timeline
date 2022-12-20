@@ -1,4 +1,3 @@
-// Anti-rights introduced
 .lgnd1_p {
     color: $clr2!important;
     background-color: $clrbk_lgnd1_p;
@@ -9,8 +8,6 @@
     color: $clrbk_lgnd1_p;
     background-color: $clrbk_lgnd1_s;
 }
-
-// Loss
 
 .lgnd2_p {
     color: $clr2!important;
@@ -23,10 +20,8 @@
     background-color: $clrbk_lgnd2_s;
 }
 
-// Introduced
-
 .lgnd3_p {
-    color: $clr1!important;
+    color: $clr2!important;
     background-color: $clrbk_lgnd3_p;
 
 }
@@ -35,8 +30,6 @@
     color: $clrbk_lgnd3_p;
     background-color: $clrbk_lgnd3_s;
 }
-
-// Advanced
 
 .lgnd4_p {
     color: $clr2!important;
@@ -49,12 +42,9 @@
     background-color: $clrbk_lgnd4_s;
 }
 
-// Defended
-
 .lgnd5_p {
     color: $clr2!important;
     background-color: $clrbk_lgnd5_p;
-
 }
 
 .lgnd5_s {
@@ -62,15 +52,32 @@
     background-color: $clrbk_lgnd5_s;
 }
 
-// Aproved/Enacted
-
 .lgnd6_p {
     color: $clr2!important;
     background-color: $clrbk_lgnd6_p;
-
 }
 
 .lgnd6_s {
     color: $clrbk_lgnd6_p;
     background-color: $clrbk_lgnd6_s;
+}
+
+.lgnd7_p {
+    color: $clr2!important;
+    background-color: $clrbk_lgnd7_p;
+}
+
+.lgnd7_s {
+    color: $clrbk_lgnd7_p;
+    background-color: $clrbk_lgnd7_s;
+}
+
+.lgnd8_p {
+    color: $clr2!important;
+    background-color: $clrbk_lgnd8_p;
+}
+
+.lgnd8_s {
+    color: $clrbk_lgnd7_p;
+    background-color: $clrbk_lgnd8_s;
 }

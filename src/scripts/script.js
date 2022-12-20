@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    $('#lgnd0').click(function () {
+        $(".card_contr").toggle(this.checked);
+    });
+
     $('#lgnd1').click(function () {
         $(".card_lgnd1").toggle(this.checked);
     });
@@ -22,6 +26,14 @@ $(document).ready(function () {
 
     $('#lgnd6').click(function () {
         $(".card_lgnd6").toggle(this.checked);
+    });
+
+    $('#lgnd7').click(function () {
+        $(".card_lgnd7").toggle(this.checked);
+    });
+
+    $('#lgnd8').click(function () {
+        $(".card_lgnd8").toggle(this.checked);
     });
 
 });

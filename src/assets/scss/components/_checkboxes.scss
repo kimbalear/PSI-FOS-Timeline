@@ -13,7 +13,7 @@ label.checkbox {
     font-size: 1rem;
     line-height: 1rem;
     cursor: pointer;
-    @include checkbox($clr2);
+    @include checkbox($clr1);
 
     &.lgnd1 {
         @include checkbox($clrbk_lgnd1_p);
@@ -37,5 +37,13 @@ label.checkbox {
 
     &.lgnd6 {
         @include checkbox($clrbk_lgnd6_p);
+    }
+
+    &.lgnd7 {
+        @include checkbox($clrbk_lgnd7_p);
+    }
+
+    &.lgnd8 {
+        @include checkbox($clrbk_lgnd8_p);
     }
 }
