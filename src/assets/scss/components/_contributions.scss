@@ -15,7 +15,7 @@
         border: 1px solid $clr1;
         border-radius: 10px;
         padding: 8px 4px 8px 8px;
-        max-height: 320px;
+        max-height: 35vh;
         background: rgba(119, 113, 106, 0.04);
 
         /* total width */
@@ -67,14 +67,14 @@
     gap: 0px 0px;
     grid-template-areas:
         "line"
-        "contributions";
+        "impacts";
 
     .impacts {
-        grid-area: contributions;
+        grid-area: impacts;
         border: 1px solid $clr1;
         border-radius: 10px;
         padding: 8px 4px 8px 8px;
-        max-height: 320px;
+        max-height: 35vh;
         background: rgba(119, 113, 106, 0.04);
 
         /* total width */

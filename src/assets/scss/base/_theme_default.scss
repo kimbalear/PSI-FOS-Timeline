@@ -27,70 +27,77 @@ body {
         height: 100%;
 
         .top_bar {
-            width: 100%;
-            height: 83px;
-            padding: 8px 16px 0;
-            border-bottom: 0.5px solid $clr1;
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: max-content;
+            grid-auto-rows: 1fr;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: 36px 36px;
+            gap: 0px 0px;
+            margin: 0 16px;
+            padding: 8px 0;
+            border-bottom: 1px solid $clr3;
+            grid-template-areas:
+                "top_left top_ctrs"
+                "top_left top_lgnds";
 
-            &__ln1 {
+            .top_left {
                 display: grid;
-                grid-auto-columns: 1fr;
-                grid-template-columns: auto 1fr;
-                grid-template-rows: auto;
-                gap: 8px 0px;
+                grid-template-columns: auto;
+                grid-template-rows: 1fr 1fr 1fr;
+                gap: 0px 0px;
                 grid-template-areas:
-                    "lbl cntrls";
+                    "l1"
+                    "l2"
+                    "l3";
+                grid-area: top_left;
 
-                .lbl {
-                    align-self: end;
-                    grid-area: lbl;
+                .l1 {
+                    align-self: start;
+                    grid-area: l1;
+                    font-weight: 700;
                     color: $clr1;
                 }
 
-                .cntrls {
-                    justify-self: end;
+                .l2 {
                     align-self: end;
-                    grid-area: cntrls;
+                    grid-area: l2;
+                    color: $clr3;
+                    font-weight: 700;
+                    font-size: 16px;
+                }
 
-                    div {
-                        float: left;
-                        margin-left: 8px;
+                .l3 {
+                    align-self: end;
+                    grid-area: l3;
+                    color: $clr1;
+                    font-weight: 700;
+                    font-size: 16px;
+
+                    span {
+                        font-weight: 400;
                     }
                 }
             }
 
-            &__ln2 {
-                display: grid;
-                grid-auto-columns: 1fr;
-                grid-template-columns: auto 1fr;
-                grid-template-rows: auto;
-                gap: 8px 0px;
-                grid-template-areas:
-                    "lbl cntrls";
-                min-height: 36px;
+            .top_ctrs {
+                justify-self: end;
+                align-self: center;
+                grid-area: top_ctrs;
 
-                .lbl {
-                    align-self: end;
-                    grid-area: lbl;
-                    color: $clr1;
+                .select {
+                    float: left;
+                    margin-left: 8px;
                 }
+            }
 
-                .cntrls {
-                    justify-self: end;
-                    align-self: end;
-                    grid-area: cntrls;
+            .top_lgnds {
+                justify-self: end;
+                align-self: end;
+                grid-area: top_lgnds;
 
-                    div {
-                        float: left;
-                        margin-left: 8px;
-                    }
-
-                    .lbl {
-                        text-transform: uppercase;
-                        font-size: 16px;
-                        line-height: 19px;
-                        font-weight: 600;
-                    }
+                div {
+                    float: left;
                 }
             }
         }
@@ -98,10 +105,10 @@ body {
         .content {
             padding: 8px 16px 0;
             width: 100%;
-            height: calc(100% - 83px);
+            height: calc(100% - 91px);
             padding-bottom: 8px;
-        
-            
+
+
 
             /* total width */
             ::-webkit-scrollbar {
