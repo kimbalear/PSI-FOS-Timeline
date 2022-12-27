@@ -32,7 +32,7 @@ body {
             grid-auto-columns: max-content;
             grid-auto-rows: 1fr;
             grid-template-columns: auto 1fr;
-            grid-template-rows: 36px 36px;
+            grid-template-rows: 36px min-max(36px, auto);
             gap: 0px 0px;
             margin: 0 16px;
             padding: 8px 0;
@@ -95,10 +95,15 @@ body {
                 justify-self: end;
                 align-self: end;
                 grid-area: top_lgnds;
+                padding-left: 50px;
 
-                div {
-                    float: left;
+                .list_lgnds {
+                    div {
+                        float: left;
+                    }
                 }
+
+
             }
         }
 
