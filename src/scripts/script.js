@@ -241,12 +241,15 @@ $(document).ready(function () {
 
     // dialog cta
 
+    $(".scrim").hide();
+
     $('.btn-lgnd-inf').click(function () {
-        $(".Scrim").toggle(this.show);
+        $(".scrim").show();
+        console.log("click");
     });
 
     $('.btn-sys-close').click(function () {
-        $(".Scrim").hide();
+        $(".scrim").hide();
     });
 
     $('.dlg_bar').children().html("color");
