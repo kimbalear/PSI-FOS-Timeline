@@ -10,6 +10,7 @@
     z-index: 999;
     display: flex;
     align-items: center;
+    visibility: hidden;
 
     .dlg {
         width: 100%;
@@ -45,6 +46,7 @@
                 font-weight: 300;
                 font-size: 21px;
                 color: $clr2;
+                text-transform: capitalize;
             }
         }
 
