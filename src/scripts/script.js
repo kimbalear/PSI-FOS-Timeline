@@ -2,25 +2,25 @@ $(document).ready(function () {
 
     $('.msbx-ou').each(function (e) {
         var self = $(this);
-        var field = self.find('.multiSelect_field');
+        var field = self.find('.msbx-ou_field');
         var fieldOption = field.find('option');
         var placeholder = field.attr('data-placeholder');
 
-        field.hide().after(`<div class="multiSelect_dropdown"></div>
-                            <span class="multiSelect_placeholder">` + placeholder + `</span>
-                            <ul class="multiSelect_list"></ul>
-                            <span class="multiSelect_arrow"></span>`);
+        field.hide().after(`<div class="msbx-ou_dropdown"></div>
+                            <span class="msbx-ou_placeholder">` + placeholder + `</span>
+                            <ul class="msbx-ou_list"></ul>
+                            <span class="msbx-ou_arrow"></span>`);
 
         fieldOption.each(function (e) {
-            $('.multiSelect_list').append(`<li class="multiSelect_option" data-value="` + $(this).val() + `">
-                                                <a class="multiSelect_text">`+ $(this).text() + `</a>
+            $('.msbx-ou_list').append(`<li class="msbx-ou_option" data-value="` + $(this).val() + `">
+                                                <a class="msbx-ou_text">`+ $(this).text() + `</a>
                                               </li>`);
         });
 
-        var dropdown = self.find('.multiSelect_dropdown');
-        var list = self.find('.multiSelect_list');
-        var option = self.find('.multiSelect_option');
-        var optionText = self.find('.multiSelect_text');
+        var dropdown = self.find('.msbx-ou_dropdown');
+        var list = self.find('.msbx-ou_list');
+        var option = self.find('.msbx-ou_option');
+        var optionText = self.find('.msbx-ou_text');
 
         dropdown.attr('data-multiple', 'true');
         list.css('top', dropdown.height() + 5);
@@ -31,12 +31,12 @@ $(document).ready(function () {
             self.addClass('-selected');
             field.find('option:contains(' + self.children().text() + ')').prop('selected', true);
             dropdown.append(function (e) {
-                return $('<span class="multiSelect_choice">' + self.children().text() + '<svg class="multiSelect_deselect -iconX"><use href="#iconX"></use></svg></span>').click(function (e) {
+                return $('<span class="msbx-ou_choice">' + self.children().text() + '<svg class="msbx-ou_deselect -iconX"><use href="#iconX"></use></svg></span>').click(function (e) {
                     var self = $(this);
                     e.stopPropagation();
                     self.remove();
-                    list.find('.multiSelect_option:contains(' + self.text() + ')').removeClass('-selected');
-                    list.css('top', dropdown.height() + 5).find('.multiSelect_noselections').remove();
+                    list.find('.msbx-ou_option:contains(' + self.text() + ')').removeClass('-selected');
+                    list.css('top', dropdown.height() + 5).find('.msbx-ou_noselections').remove();
                     field.find('option:contains(' + self.text() + ')').prop('selected', false);
                     if (dropdown.children(':visible').length === 0) {
                         dropdown.removeClass('-hasValue');
@@ -45,7 +45,7 @@ $(document).ready(function () {
             }).addClass('-hasValue');
             list.css('top', dropdown.height() + 5);
             if (!option.not('.-selected').length) {
-                list.append('<h5 class="multiSelect_noselections">No Selections</h5>');
+                list.append('<h5 class="msbx-ou_noselections">No Selections</h5>');
             }
         });
 
@@ -66,25 +66,25 @@ $(document).ready(function () {
 
     $('.msbx-srv').each(function (e) {
         var self = $(this);
-        var field = self.find('.multiSelect_field');
+        var field = self.find('.msbx-srv_field');
         var fieldOption = field.find('option');
         var placeholder = field.attr('data-placeholder');
 
-        field.hide().after(`<div class="multiSelect_dropdown"></div>
-                            <span class="multiSelect_placeholder">` + placeholder + `</span>
-                            <ul class="multiSelect_list"></ul>
-                            <span class="multiSelect_arrow"></span>`);
+        field.hide().after(`<div class="msbx-srv_dropdown"></div>
+                            <span class="msbx-srv_placeholder">` + placeholder + `</span>
+                            <ul class="msbx-srv_list"></ul>
+                            <span class="msbx-srv_arrow"></span>`);
 
         fieldOption.each(function (e) {
-            $('.multiSelect_list').append(`<li class="multiSelect_option" data-value="` + $(this).val() + `">
-                                                <a class="multiSelect_text">`+ $(this).text() + `</a>
+            $('.msbx-srv_list').append(`<li class="msbx-srv_option" data-value="` + $(this).val() + `">
+                                                <a class="msbx-srv_text">`+ $(this).text() + `</a>
                                               </li>`);
         });
 
-        var dropdown = self.find('.multiSelect_dropdown');
-        var list = self.find('.multiSelect_list');
-        var option = self.find('.multiSelect_option');
-        var optionText = self.find('.multiSelect_text');
+        var dropdown = self.find('.msbx-srv_dropdown');
+        var list = self.find('.msbx-srv_list');
+        var option = self.find('.msbx-srv_option');
+        var optionText = self.find('.msbx-srv_text');
 
         dropdown.attr('data-multiple', 'true');
         list.css('top', dropdown.height() + 5);
@@ -95,12 +95,12 @@ $(document).ready(function () {
             self.addClass('-selected');
             field.find('option:contains(' + self.children().text() + ')').prop('selected', true);
             dropdown.append(function (e) {
-                return $('<span class="multiSelect_choice">' + self.children().text() + '<svg class="multiSelect_deselect -iconX"><use href="#iconX"></use></svg></span>').click(function (e) {
+                return $('<span class="msbx-srv_choice">' + self.children().text() + '<svg class="msbx-srv_deselect -iconX"><use href="#iconX"></use></svg></span>').click(function (e) {
                     var self = $(this);
                     e.stopPropagation();
                     self.remove();
-                    list.find('.multiSelect_option:contains(' + self.text() + ')').removeClass('-selected');
-                    list.css('top', dropdown.height() + 5).find('.multiSelect_noselections').remove();
+                    list.find('.msbx-srv_option:contains(' + self.text() + ')').removeClass('-selected');
+                    list.css('top', dropdown.height() + 5).find('.msbx-srv_noselections').remove();
                     field.find('option:contains(' + self.text() + ')').prop('selected', false);
                     if (dropdown.children(':visible').length === 0) {
                         dropdown.removeClass('-hasValue');
@@ -109,7 +109,7 @@ $(document).ready(function () {
             }).addClass('-hasValue');
             list.css('top', dropdown.height() + 5);
             if (!option.not('.-selected').length) {
-                list.append('<h5 class="multiSelect_noselections">No Selections</h5>');
+                list.append('<h5 class="msbx-srv_noselections">No Selections</h5>');
             }
         });
 
@@ -130,41 +130,41 @@ $(document).ready(function () {
 
     $('.msbx-yrs').each(function (e) {
         var self = $(this);
-        var field = self.find('.multiSelect_field');
+        var field = self.find('.msbx-yrs_field');
         var fieldOption = field.find('option');
         var placeholder = field.attr('data-placeholder');
-
-        field.hide().after(`<div class="multiSelect_dropdown"></div>
-                            <span class="multiSelect_placeholder">` + placeholder + `</span>
-                            <ul class="multiSelect_list"></ul>
-                            <span class="multiSelect_arrow"></span>`);
-
+    
+        field.hide().after(`<div class="msbx-yrs_dropdown"></div>
+                            <span class="msbx-yrs_placeholder">` + placeholder + `</span>
+                            <ul class="msbx-yrs_list"></ul>
+                            <span class="msbx-yrs_arrow"></span>`);
+    
         fieldOption.each(function (e) {
-            $('.multiSelect_list').append(`<li class="multiSelect_option" data-value="` + $(this).val() + `">
-                                                <a class="multiSelect_text">`+ $(this).text() + `</a>
+            $('.msbx-yrs_list').append(`<li class="msbx-yrs_option" data-value="` + $(this).val() + `">
+                                                <a class="msbx-yrs_text">`+ $(this).text() + `</a>
                                               </li>`);
         });
-
-        var dropdown = self.find('.multiSelect_dropdown');
-        var list = self.find('.multiSelect_list');
-        var option = self.find('.multiSelect_option');
-        var optionText = self.find('.multiSelect_text');
-
+    
+        var dropdown = self.find('.msbx-yrs_dropdown');
+        var list = self.find('.msbx-yrs_list');
+        var option = self.find('.msbx-yrs_option');
+        var optionText = self.find('.msbx-yrs_text');
+    
         dropdown.attr('data-multiple', 'true');
         list.css('top', dropdown.height() + 5);
-
+    
         option.click(function (e) {
             var self = $(this);
             e.stopPropagation();
             self.addClass('-selected');
             field.find('option:contains(' + self.children().text() + ')').prop('selected', true);
             dropdown.append(function (e) {
-                return $('<span class="multiSelect_choice">' + self.children().text() + '<svg class="multiSelect_deselect -iconX"><use href="#iconX"></use></svg></span>').click(function (e) {
+                return $('<span class="msbx-yrs_choice">' + self.children().text() + '<svg class="msbx-yrs_deselect -iconX"><use href="#iconX"></use></svg></span>').click(function (e) {
                     var self = $(this);
                     e.stopPropagation();
                     self.remove();
-                    list.find('.multiSelect_option:contains(' + self.text() + ')').removeClass('-selected');
-                    list.css('top', dropdown.height() + 5).find('.multiSelect_noselections').remove();
+                    list.find('.msbx-yrs_option:contains(' + self.text() + ')').removeClass('-selected');
+                    list.css('top', dropdown.height() + 5).find('.msbx-yrs_noselections').remove();
                     field.find('option:contains(' + self.text() + ')').prop('selected', false);
                     if (dropdown.children(':visible').length === 0) {
                         dropdown.removeClass('-hasValue');
@@ -173,17 +173,17 @@ $(document).ready(function () {
             }).addClass('-hasValue');
             list.css('top', dropdown.height() + 5);
             if (!option.not('.-selected').length) {
-                list.append('<h5 class="multiSelect_noselections">No Selections</h5>');
+                list.append('<h5 class="msbx-yrs_noselections">No Selections</h5>');
             }
         });
-
+    
         dropdown.click(function (e) {
             e.stopPropagation();
             e.preventDefault();
             dropdown.toggleClass('-open');
             list.toggleClass('-open').scrollTop(0).css('top', dropdown.height() + 5);
         });
-
+    
         $(document).on('click touch', function (e) {
             if (dropdown.hasClass('-open')) {
                 dropdown.toggleClass('-open');
