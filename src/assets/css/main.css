@@ -194,7 +194,7 @@ body .wrapper .top_bar .top_lgnds .list_lgnds div {
 body .wrapper .content {
   padding: 8px 16px 0;
   width: 100%;
-  height: calc(100% - 91px);
+  height: calc(100% - 130px);
   padding-bottom: 8px;
   /* total width */
   /* background of the scrollbar except button or resizer */

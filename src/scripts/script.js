@@ -133,26 +133,26 @@ $(document).ready(function () {
         var field = self.find('.msbx-yrs_field');
         var fieldOption = field.find('option');
         var placeholder = field.attr('data-placeholder');
-    
+
         field.hide().after(`<div class="msbx-yrs_dropdown"></div>
                             <span class="msbx-yrs_placeholder">` + placeholder + `</span>
                             <ul class="msbx-yrs_list"></ul>
                             <span class="msbx-yrs_arrow"></span>`);
-    
+
         fieldOption.each(function (e) {
             $('.msbx-yrs_list').append(`<li class="msbx-yrs_option" data-value="` + $(this).val() + `">
                                                 <a class="msbx-yrs_text">`+ $(this).text() + `</a>
                                               </li>`);
         });
-    
+
         var dropdown = self.find('.msbx-yrs_dropdown');
         var list = self.find('.msbx-yrs_list');
         var option = self.find('.msbx-yrs_option');
         var optionText = self.find('.msbx-yrs_text');
-    
+
         dropdown.attr('data-multiple', 'true');
         list.css('top', dropdown.height() + 5);
-    
+
         option.click(function (e) {
             var self = $(this);
             e.stopPropagation();
@@ -176,14 +176,14 @@ $(document).ready(function () {
                 list.append('<h5 class="msbx-yrs_noselections">No Selections</h5>');
             }
         });
-    
+
         dropdown.click(function (e) {
             e.stopPropagation();
             e.preventDefault();
             dropdown.toggleClass('-open');
             list.toggleClass('-open').scrollTop(0).css('top', dropdown.height() + 5);
         });
-    
+
         $(document).on('click touch', function (e) {
             if (dropdown.hasClass('-open')) {
                 dropdown.toggleClass('-open');
@@ -202,42 +202,157 @@ $(document).ready(function () {
     $('#lgnd1').click(function () {
         $(".card_lgnd1").toggle(this.checked);
         //$(".card_lgnd1").parent().parent().parent().toggle(this.show);
+        impactCounterMonth(21, 1);
     });
 
     $('#lgnd2').click(function () {
         $(".card_lgnd2").toggle(this.checked);
-        //$(".card_lgnd2").parent().parent().parent().toggle(this.show);
+        impactCounterMonth(21, 2);
     });
 
     $('#lgnd3').click(function () {
         $(".card_lgnd3").toggle(this.checked);
-        //$(".card_lgnd3").parent().parent().parent().toggle(this.show);
+        impactCounterMonth(21, 3);
     });
 
     $('#lgnd4').click(function () {
         $(".card_lgnd4").toggle(this.checked);
-        //$(".card_lgnd4").parent().parent().parent().toggle(this.show);
+        impactCounterMonth(21, 4);
     });
 
     $('#lgnd5').click(function () {
         $(".card_lgnd5").toggle(this.checked);
-        //$(".card_lgnd5").parent().parent().parent().toggle(this.show);
+        impactCounterMonth(21, 5);
     });
 
     $('#lgnd6').click(function () {
         $(".card_lgnd6").toggle(this.checked);
-        //$(".card_lgnd6").parent().parent().parent().toggle(this.show);
+        impactCounterMonth(21, 6);
     });
 
     $('#lgnd7').click(function () {
         $(".card_lgnd7").toggle(this.checked);
-        //$(".card_lgnd7").parent().parent().parent().toggle(this.show);
+        impactCounterMonth(21, 7);
     });
 
     $('#lgnd8').click(function () {
         $(".card_lgnd8").toggle(this.checked);
-        //$(".card_lgnd8").parent().parent().parent().toggle(this.show);
+        impactCounterMonth(21, 8);
     });
+
+    function impactCounterMonth(yrs, lgnd) {
+
+        var mxl1, mxl2, mxl3, mxl4, mxl5, mxl6, mxl7, mxl8, mxl9, mxl10, mxl11, mxl12;
+
+        const M = 12, N = 8;
+
+        var arr = new Array(M);            // crea una array vacía de longitud `M`
+        for (var i = 0; i < M; i++) {
+            arr[i] = new Array(N);        // hacer de cada elemento una array
+        }
+
+        console.log(arr);
+
+        for (mnt = 0; mnt <= 11; mnt++) {
+
+            for (x = 0; x <= 7; x++) {
+                arr[mnt, x], // lgnd 1
+                arr[mnt, x], // lgnd 2
+                arr[mnt, x], // lgnd 3
+                arr[mnt, x], // lgnd 4
+                arr[mnt, x], // lgnd 5
+                arr[mnt, x], // lgnd 6
+                arr[mnt, x], // lgnd 7
+                arr[mnt, x] // lgnd 8
+            }
+
+        }
+
+        for (i = 0; i <= 11; i++) {
+            switch (i) {
+                case 0:
+                    break;
+
+                case 1:
+                    var month = "#feb-" + yrs;
+                    var cardserv = ".card_lgnd" + lgnd;
+                    // calculo cantidad total y le resto la de los servicios
+                    var plgnd = $(month).find(".cntr_bttm > div .lgnd" + lgnd + "_p").length;
+                    var mxl1 = $(month).find(".cntr_bttm > div .dot").length;
+
+                    arr[i, 0] = mxl1;
+
+                    if ($(cardserv).css('display') == 'none' || $(cardserv).css("visibility") == "hidden") {
+                        console.log("is hidden");
+                        if (arr[i, 0] < mxl1) {
+                            var mxl1 = $(month).find(".cntr_bttm > div .dot").length + plgnd;
+                            arr[i, 0] = mxl1;
+                            console.log("paso 1")
+                        }
+
+                        console.log("paso 1")
+
+                    } else {
+                        console.log("is visible");
+                        if (arr[i, 0] == mxl1) {
+                            var mxl1 = $(month).find(".cntr_bttm > div .dot").length - plgnd;
+                            arr[i, 0] = mxl1;
+
+                        }
+                        console.log("paso 2")
+                    }
+
+                    if (mxl1 == 0) {
+                        console.log("paso 3")
+                        $(cardserv).parent().parent().parent().toggle(this.show);
+                    }
+
+                    // oculto dot
+                    $(month).find(".cntr_bttm > div .lgnd1_p").hide();
+
+                    console.log("year: " + yrs);
+                    console.log("mes: " + i);
+                    console.log("ID: " + month);
+                    console.log("lgnd: " + lgnd);
+                    console.log("a restar: " + plgnd);
+                    console.log("arr[0]: " + arr[0]);
+                    console.log("mxl1: " + mxl1);
+                    console.log(arr);
+                    console.log("/////////////////////////////////////////////////");
+                case 2:
+                    var month = "#mar-" + yrs;
+                    break;
+                case 3:
+                    var month = "#apr-" + yrs;
+                    break;
+                case 4:
+                    var month = "#may-" + yrs;
+                    break;
+                case 5:
+                    var month = "#jun-" + yrs;
+                    break;
+                case 6:
+                    var month = "#jul-" + yrs;
+                    break;
+                case 7:
+                    var month = "#aug-" + yrs;
+                    break;
+                case 8:
+                    var month = "#sep-" + yrs;
+                    break;
+                case 9:
+                    var month = "#oct-" + yrs;
+                    break;
+                case 10:
+                    var month = "#nov-" + yrs;
+                    break;
+                case 11:
+                    var month = "#dic-" + yrs;
+                    break;
+            }
+        };
+    }
+
 
     // dialog cta
 
