@@ -247,59 +247,51 @@ $(document).ready(function () {
         const M = 12, N = 8;
 
         var arr = new Array(M);            // crea una array vacía de longitud `M`
-        for (var i = 0; i < M; i++) {
-            arr[i] = new Array(N);        // hacer de cada elemento una array
+        for (ar = 0; ar < M; ar++) {
+            arr[ar] = new Array(N);        // hacer de cada elemento una array
         }
-
-        console.log(arr);
 
         for (mnt = 0; mnt <= 11; mnt++) {
 
             for (x = 0; x <= 7; x++) {
                 arr[mnt, x], // lgnd 1
-                arr[mnt, x], // lgnd 2
-                arr[mnt, x], // lgnd 3
-                arr[mnt, x], // lgnd 4
-                arr[mnt, x], // lgnd 5
-                arr[mnt, x], // lgnd 6
-                arr[mnt, x], // lgnd 7
-                arr[mnt, x] // lgnd 8
+                    arr[mnt, x], // lgnd 2
+                    arr[mnt, x], // lgnd 3
+                    arr[mnt, x], // lgnd 4
+                    arr[mnt, x], // lgnd 5
+                    arr[mnt, x], // lgnd 6
+                    arr[mnt, x], // lgnd 7
+                    arr[mnt, x] // lgnd 8
             }
-
         }
 
         for (i = 0; i <= 11; i++) {
             switch (i) {
                 case 0:
-                    break;
-
-                case 1:
                     var month = "#feb-" + yrs;
                     var cardserv = ".card_lgnd" + lgnd;
                     // calculo cantidad total y le resto la de los servicios
                     var plgnd = $(month).find(".cntr_bttm > div .lgnd" + lgnd + "_p").length;
                     var mxl1 = $(month).find(".cntr_bttm > div .dot").length;
 
-                    arr[i, 0] = mxl1;
+                    arr[i, 0] = plgnd;
 
                     if ($(cardserv).css('display') == 'none' || $(cardserv).css("visibility") == "hidden") {
                         console.log("is hidden");
                         if (arr[i, 0] < mxl1) {
-                            var mxl1 = $(month).find(".cntr_bttm > div .dot").length + plgnd;
+                            mxl1 = $(month).find(".cntr_bttm > div .dot").length + plgnd;
                             arr[i, 0] = mxl1;
-                            console.log("paso 1")
+                            console.log("paso 1.1 " + arr[i, 0] + " Totals:" + mxl1)
                         }
-
-                        console.log("paso 1")
 
                     } else {
                         console.log("is visible");
                         if (arr[i, 0] == mxl1) {
-                            var mxl1 = $(month).find(".cntr_bttm > div .dot").length - plgnd;
+                            mxl1 = $(month).find(".cntr_bttm > div .dot").length - plgnd;
                             arr[i, 0] = mxl1;
+                            console.log("paso 2.1 " + arr[i, 0] + " Totals:" + mxl1);
 
                         }
-                        console.log("paso 2")
                     }
 
                     if (mxl1 == 0) {
@@ -319,6 +311,10 @@ $(document).ready(function () {
                     console.log("mxl1: " + mxl1);
                     console.log(arr);
                     console.log("/////////////////////////////////////////////////");
+                    break;
+
+                case 1:
+                    
                 case 2:
                     var month = "#mar-" + yrs;
                     break;
