@@ -268,35 +268,37 @@ $(document).ready(function () {
         for (i = 0; i <= 11; i++) {
             switch (i) {
                 case 0:
-                    var month = "#feb-" + yrs;
-                    var cardserv = ".card_lgnd" + lgnd;
+                    var month = "#jan-" + yrs;
+                    var card_impact = ".card_lgnd" + lgnd;
                     // calculo cantidad total y le resto la de los servicios
                     var plgnd = $(month).find(".cntr_bttm > div .lgnd" + lgnd + "_p").length;
                     var mxl1 = $(month).find(".cntr_bttm > div .dot").length;
 
                     arr[i, 0] = plgnd;
 
-                    if ($(cardserv).css('display') == 'none' || $(cardserv).css("visibility") == "hidden") {
+                    if ($(card_impact).css('display') == 'none' || $(card_impact).css("visibility") == "hidden") {
                         console.log("is hidden");
-                        if (arr[i, 0] < mxl1) {
-                            mxl1 = $(month).find(".cntr_bttm > div .dot").length + plgnd;
+                        if (arr[i, 0] <= mxl1) {
+                            mxl1 = $(month).find(".cntr_bttm > div .dot").length + 1;
                             arr[i, 0] = mxl1;
                             console.log("paso 1.1 " + arr[i, 0] + " Totals:" + mxl1)
+                            $(".cntr_bttm > div .dot").show();
                         }
 
                     } else {
                         console.log("is visible");
                         if (arr[i, 0] == mxl1) {
-                            mxl1 = $(month).find(".cntr_bttm > div .dot").length - plgnd;
+                            mxl1 = $(month).find(".cntr_bttm > div .dot").length - 1;
                             arr[i, 0] = mxl1;
                             console.log("paso 2.1 " + arr[i, 0] + " Totals:" + mxl1);
+                            $(".cntr_bttm > div .dot").hide();
 
                         }
                     }
 
                     if (mxl1 == 0) {
                         console.log("paso 3")
-                        $(cardserv).parent().parent().parent().toggle(this.show);
+                        $(card_impact).parent().parent().parent().toggle(this.show);
                     }
 
                     // oculto dot
@@ -347,6 +349,93 @@ $(document).ready(function () {
                     break;
             }
         };
+
+/*
+        for (i = 0; i <= 11; i++) {
+            switch (i) {
+                case 0:
+                    var month = "#feb-" + yrs;
+                    var card_impact = ".card_lgnd" + lgnd;
+                    // calculo cantidad total y le resto la de los servicios
+                    var plgnd = $(month).find(".cntr_bttm > div .lgnd" + lgnd + "_p").length;
+                    var mxl1 = $(month).find(".cntr_bttm > div .dot").length;
+
+                    arr[i, 0] = plgnd;
+
+                    if ($(card_impact).css('display') == 'none' || $(card_impact).css("visibility") == "hidden") {
+                        console.log("is hidden");
+                        if (arr[i, 0] <= mxl1) {
+                            mxl1 = $(month).find(".cntr_bttm > div .dot").length + 1;
+                            arr[i, 0] = mxl1;
+                            console.log("paso 1.1 " + arr[i, 0] + " Totals:" + mxl1)
+                            $(".cntr_bttm > div .dot").show();
+                        }
+
+                    } else {
+                        console.log("is visible");
+                        if (arr[i, 0] == mxl1) {
+                            mxl1 = $(month).find(".cntr_bttm > div .dot").length - 1;
+                            arr[i, 0] = mxl1;
+                            console.log("paso 2.1 " + arr[i, 0] + " Totals:" + mxl1);
+                            $(".cntr_bttm > div .dot").hide();
+
+                        }
+                    }
+
+                    if (mxl1 == 0) {
+                        console.log("paso 3")
+                        $(card_impact).parent().parent().parent().toggle(this.show);
+                    }
+
+                    // oculto dot
+                    $(month).find(".cntr_bttm > div .lgnd1_p").hide();
+
+                    console.log("year: " + yrs);
+                    console.log("mes: " + i);
+                    console.log("ID: " + month);
+                    console.log("lgnd: " + lgnd);
+                    console.log("a restar: " + plgnd);
+                    console.log("arr[0]: " + arr[0]);
+                    console.log("mxl1: " + mxl1);
+                    console.log(arr);
+                    console.log("/////////////////////////////////////////////////");
+                    break;
+
+                case 1:
+                    
+                case 2:
+                    var month = "#mar-" + yrs;
+                    break;
+                case 3:
+                    var month = "#apr-" + yrs;
+                    break;
+                case 4:
+                    var month = "#may-" + yrs;
+                    break;
+                case 5:
+                    var month = "#jun-" + yrs;
+                    break;
+                case 6:
+                    var month = "#jul-" + yrs;
+                    break;
+                case 7:
+                    var month = "#aug-" + yrs;
+                    break;
+                case 8:
+                    var month = "#sep-" + yrs;
+                    break;
+                case 9:
+                    var month = "#oct-" + yrs;
+                    break;
+                case 10:
+                    var month = "#nov-" + yrs;
+                    break;
+                case 11:
+                    var month = "#dic-" + yrs;
+                    break;
+            }
+        };
+        */
     }
 
 
