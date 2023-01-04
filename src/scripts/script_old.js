@@ -360,7 +360,7 @@ $(document).ready(function () {
 
     // dialog cta
 
-    $(".scrim").hide();
+    //$(".scrim").hide();
 
     $('.btn-lgnd-inf').click(function () {
         $(".scrim").show();

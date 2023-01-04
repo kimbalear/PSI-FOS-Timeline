@@ -24,7 +24,7 @@
         gap: 0px 0px;
         grid-auto-flow: column;
         background-color: $clr2;
-        border: 2px solid $clr1;
+        border: 2px solid;
         border-radius: 12px;
         grid-template-areas:
             "dlg_bar dlg_cta"
@@ -32,9 +32,7 @@
 
         .dlg_bar {
             grid-area: dlg_bar;
-            background-color: $clr1;
             padding: 0 8px 0 16px;
-            background-color: $clr1;
             border-radius: 9.5px 0 0 0;
             display: flex;
             align-items: center;
@@ -44,14 +42,12 @@
                 height: auto;
                 font-weight: 300;
                 font-size: 21px;
-                color: $clr2;
                 text-transform: capitalize;
             }
         }
 
         .dlg_cta {
             grid-area: dlg_cta;
-            background-color: $clr1;
             border-radius: 0 9.5px 0 0;
         }
 

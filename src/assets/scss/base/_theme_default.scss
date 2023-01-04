@@ -96,11 +96,13 @@ body {
 
             .top_lgnds {
                 align-self: start;
+                justify-self: flex-end;
                 grid-area: top_lgnds;
 
                 .list_lgnds {
+
                     div {
-                        float: right;
+                        float: left;
                     }
                 }
 
