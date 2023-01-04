@@ -430,7 +430,7 @@ $(document).ready(function () {
             if (i >= 1) {
 
                 //years = lastTwo.substring(lastTwo.length - 4);
-                lastTwo = lastTwo + "/" + st[i].slice(-2);
+                lastTwo = " " + lastTwo + "/" + st[i].slice(-2);
 
                 console.log("***lastTwo:" + lastTwo)
             } else {
