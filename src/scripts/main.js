@@ -34,10 +34,10 @@ $(document).ready(function () {
 
     function readJson() {
         $.ajax({
-            type: "GET",
+            method: "GET",
             url: "data.json",
             success: function (response) {
-                console.log(response)
+                //console.log(response)
 
                 // Selectores
                 orgUnits.push(response.OUs);
@@ -78,65 +78,65 @@ $(document).ready(function () {
 
                 // Selectores
                 /*
-                console.log("orgUnits:" + orgUnits + "\nservices: " + services + "\nyears: " + years);
+                //console.log("orgUnits:" + orgUnits + "\nservices: " + services + "\nyears: " + years);
                 */
 
                 //timeline
 
                 /*
-                console.log("tLtpYr: " + tLtpYr);
+                //console.log("tLtpYr: " + tLtpYr);
 
-                console.log("tLtp01");
-                console.log(tLtp01);
-                console.log("tLtp02");
-                console.log(tLtp02);
-                console.log("tLtp03");
-                console.log(tLtp03);
-                console.log("tLtp04");
-                console.log(tLtp04);
-                console.log("tLtp05");
-                console.log(tLtp05);
-                console.log("tLtp06");
-                console.log(tLtp06);
-                console.log("tLtp07");
-                console.log(tLtp07);
-                console.log("tLtp08");
-                console.log(tLtp08);
-                console.log("tLtp09");
-                console.log(tLtp09);
-                console.log("tLtp10");
-                console.log(tLtp10);
-                console.log("tLtp11");
-                console.log(tLtp11);
-                console.log("tLtp12");
-                console.log(tLtp12);
+                //console.log("tLtp01");
+                //console.log(tLtp01);
+                //console.log("tLtp02");
+                //console.log(tLtp02);
+                //console.log("tLtp03");
+                //console.log(tLtp03);
+                //console.log("tLtp04");
+                //console.log(tLtp04);
+                //console.log("tLtp05");
+                //console.log(tLtp05);
+                //console.log("tLtp06");
+                //console.log(tLtp06);
+                //console.log("tLtp07");
+                //console.log(tLtp07);
+                //console.log("tLtp08");
+                //console.log(tLtp08);
+                //console.log("tLtp09");
+                //console.log(tLtp09);
+                //console.log("tLtp10");
+                //console.log(tLtp10);
+                //console.log("tLtp11");
+                //console.log(tLtp11);
+                //console.log("tLtp12");
+                //console.log(tLtp12);
 
-                console.log("tL");
-                console.log(tL);
+                //console.log("tL");
+                //console.log(tL);
 
-                console.log(tLbtm01);
-                console.log("tLbtm02");
-                console.log(tLbtm02);
-                console.log("tLbtm03");
-                console.log(tLbtm03);
-                console.log("tLbtm04");
-                console.log(tLbtm04);
-                console.log("tLbtm05");
-                console.log(tLbtm05);
-                console.log("tLbtm06");
-                console.log(tLbtm06);
-                console.log("tLbtm07");
-                console.log(tLbtm07);
-                console.log("tLbtm08");
-                console.log(tLbtm08);
-                console.log("tLbtm09");
-                console.log(tLbtm09);
-                console.log("tLbtm10");
-                console.log(tLbtm10);
-                console.log("tLbtm11");
-                console.log(tLbtm11);
-                console.log("tLbtm12");
-                console.log(tLbtm12);
+                //console.log(tLbtm01);
+                //console.log("tLbtm02");
+                //console.log(tLbtm02);
+                //console.log("tLbtm03");
+                //console.log(tLbtm03);
+                //console.log("tLbtm04");
+                //console.log(tLbtm04);
+                //console.log("tLbtm05");
+                //console.log(tLbtm05);
+                //console.log("tLbtm06");
+                //console.log(tLbtm06);
+                //console.log("tLbtm07");
+                //console.log(tLbtm07);
+                //console.log("tLbtm08");
+                //console.log(tLbtm08);
+                //console.log("tLbtm09");
+                //console.log(tLbtm09);
+                //console.log("tLbtm10");
+                //console.log(tLbtm10);
+                //console.log("tLbtm11");
+                //console.log(tLbtm11);
+                //console.log("tLbtm12");
+                //console.log(tLbtm12);
                 */
             }
         });
@@ -167,7 +167,7 @@ $(document).ready(function () {
                 SetServices(result)
                 break;
             case "yrs":
-                console.log("Years: " + result + " \ntyp: " + typ)
+                //console.log("Years: " + result + " \ntyp: " + typ)
                 SetYears(result)
                 break;
             default:
@@ -390,10 +390,10 @@ $(document).ready(function () {
 
             if (i >= 1) {
                 nameOu = nameOu + ", " + st[i];
-                console.log("nameOu2:" + nameOu)
+                //console.log("nameOu2:" + nameOu)
             } else {
                 nameOu = nameOu + st[i];
-                console.log("nameOu1:" + nameOu)
+                //console.log("nameOu1:" + nameOu)
             }
 
         }
@@ -407,10 +407,10 @@ $(document).ready(function () {
 
             if (i >= 1) {
                 nameSrv = nameSrv + ", " + st[i];
-                console.log("nameSrv:" + nameSrv)
+                //console.log("nameSrv:" + nameSrv)
             } else {
                 nameSrv = nameSrv + st[i];
-                console.log("nameSrv:" + nameSrv)
+                //console.log("nameSrv:" + nameSrv)
             }
 
         }
@@ -430,20 +430,20 @@ $(document).ready(function () {
                 //years = lastTwo.substring(lastTwo.length - 4);
                 lastTwo = lastTwo + "/" + st[i].slice(-2);
 
-                console.log("***lastTwo:" + lastTwo)
+                //console.log("***lastTwo:" + lastTwo)
             } else {
                 firstYear = firstYear + st[i];
-                console.log("firstYear:" + firstYear)
+                //console.log("firstYear:" + firstYear)
             }
         }
 
-        console.log("FIRST" + firstYear)
-        console.log("LAST" + lastTwo)
+        //console.log("FIRST" + firstYear)
+        //console.log("LAST" + lastTwo)
 
         years = firstYear + lastTwo;
 
         //var years = firstYear + lastTwo;
-        console.log("YEARS:" + years)
+        //console.log("YEARS:" + years)
 
         $("#top_yrs").text(years);
     };
