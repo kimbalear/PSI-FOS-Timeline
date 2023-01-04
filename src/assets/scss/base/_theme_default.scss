@@ -74,7 +74,7 @@ body {
                         padding: 2px 0;
                         font-weight: 400;
                     }
-                
+
                     #top_srv {
                         color: $clr1;
                         align-self: flex-end;
@@ -88,7 +88,7 @@ body {
                 grid-area: top_ctrs;
                 padding: 6px 0 0;
 
-                .select {
+                .multiSelect, .btn_plus {
                     float: left;
                     margin-left: 8px;
                 }
@@ -96,14 +96,14 @@ body {
 
             .top_lgnds {
                 align-self: start;
-                justify-self: flex-end;
                 grid-area: top_lgnds;
 
                 .list_lgnds {
 
                     div {
-                        float: left;
+                        float: right;
                     }
+
                 }
 
 
