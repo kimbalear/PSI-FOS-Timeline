@@ -319,54 +319,54 @@ body .wrapper .content ::-webkit-scrollbar-button {
   grid-template-rows: 1fr 44px 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "tp_yr tp01 tp02 tp03 tp04 tp05 tp06 tp07 tp08 tp09 tp10 tp11 tp12" "line line line line line line line line line line line line line" "btm_yr btm01 btm02 btm03 btm04 btm05 btm06 btm07 btm08 btm09 btm10 btm11 btm12";
+  grid-template-areas: "tp_yr tp1 tp2 tp3 tp4 tp5 tp6 tp7 tp8 tp9 tp10 tp11 tp12" "line line line line line line line line line line line line line" "btm_yr btm1 btm2 btm3 btm4 btm5 btm6 btm7 btm8 btm9 btm10 btm11 btm12";
 }
 .timeline_section .timelines .timeline .tp_yr {
   grid-area: tp_yr;
   background: rgba(119, 113, 106, 0.06);
 }
-.timeline_section .timelines .timeline .tp01 {
-  grid-area: tp01;
+.timeline_section .timelines .timeline .tp1 {
+  grid-area: tp1;
   padding: 0 4px 0 23px;
   align-self: end;
 }
-.timeline_section .timelines .timeline .tp02 {
-  grid-area: tp02;
+.timeline_section .timelines .timeline .tp2 {
+  grid-area: tp2;
   padding: 0 4px 0 23px;
   align-self: end;
 }
-.timeline_section .timelines .timeline .tp03 {
-  grid-area: tp03;
+.timeline_section .timelines .timeline .tp3 {
+  grid-area: tp3;
   padding: 0 4px 0 23px;
   align-self: end;
 }
-.timeline_section .timelines .timeline .tp04 {
-  grid-area: tp04;
+.timeline_section .timelines .timeline .tp4 {
+  grid-area: tp4;
   padding: 0 4px 0 23px;
   align-self: end;
 }
-.timeline_section .timelines .timeline .tp05 {
-  grid-area: tp05;
+.timeline_section .timelines .timeline .tp5 {
+  grid-area: tp5;
   padding: 0 4px 0 23px;
   align-self: end;
 }
-.timeline_section .timelines .timeline .tp06 {
-  grid-area: tp06;
+.timeline_section .timelines .timeline .tp6 {
+  grid-area: tp6;
   padding: 0 4px 0 23px;
   align-self: end;
 }
-.timeline_section .timelines .timeline .tp07 {
-  grid-area: tp07;
+.timeline_section .timelines .timeline .tp7 {
+  grid-area: tp7;
   padding: 0 4px 0 23px;
   align-self: end;
 }
-.timeline_section .timelines .timeline .tp08 {
-  grid-area: tp08;
+.timeline_section .timelines .timeline .tp8 {
+  grid-area: tp8;
   padding: 0 4px 0 23px;
   align-self: end;
 }
-.timeline_section .timelines .timeline .tp09 {
-  grid-area: tp09;
+.timeline_section .timelines .timeline .tp9 {
+  grid-area: tp9;
   padding: 0 4px 0 23px;
   align-self: end;
 }
@@ -409,17 +409,17 @@ body .wrapper .content ::-webkit-scrollbar-button {
   background-color: #FDF4E7;
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='44' viewBox='0 0 60 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 0H60V44H2V0Z' fill='%2377716A'/%3E%3C/svg%3E");
 }
-.timeline_section .timelines .timeline .t_line .start_month_year {
+.timeline_section .timelines .timeline .t_line .tl_jan {
   float: left;
   width: 220px;
   height: auto;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_top {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_top {
   position: relative;
   width: 100%;
   height: auto;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_top .activ_c {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_top .activ_c {
   position: absolute;
   left: 68px;
   top: -7px;
@@ -429,7 +429,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_top .activ_c .lbl {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_top .activ_c .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -437,7 +437,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_top .activ_c .dot {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_top .activ_c .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -450,12 +450,12 @@ body .wrapper .content ::-webkit-scrollbar-button {
   text-align: center;
   color: #77716A;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cnt {
+.timeline_section .timelines .timeline .t_line .tl_jan .cnt {
   max-width: 220px;
   height: 44px;
   background-image: url("data:image/svg+xml,%3Csvg width='220' height='44' viewBox='0 0 220 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_60_2829)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0V44H0.995475L17.9186 21L0.995475 0H0ZM19.9094 21L2.98633 0H220L220 1H5L21.0748 21L5 43H220L220 44H2.98633L19.9094 21Z' fill='%2377716A'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_60_2829'%3E%3Crect width='220' height='44' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cnt .lbl {
+.timeline_section .timelines .timeline .t_line .tl_jan .cnt .lbl {
   float: left;
   width: 100%;
   font-size: 16px;
@@ -465,12 +465,12 @@ body .wrapper .content ::-webkit-scrollbar-button {
   text-align: center;
   text-transform: uppercase;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm {
   position: relative;
   width: 100%;
   height: auto;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_1 {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_1 {
   position: absolute;
   left: 75px;
   top: -7px;
@@ -480,7 +480,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_1 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_1 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -488,7 +488,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_1 .dot {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_1 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -500,7 +500,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   text-align: center;
   color: #77716A;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_2 {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_2 {
   position: absolute;
   left: 70px;
   top: -7px;
@@ -510,7 +510,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_2 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_2 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -518,7 +518,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_2 .dot {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_2 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -531,7 +531,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   color: #77716A;
   margin-left: 2px;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_3 {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_3 {
   position: absolute;
   left: 60px;
   top: -7px;
@@ -541,7 +541,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_3 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_3 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -549,7 +549,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_3 .dot {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_3 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -562,7 +562,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   color: #77716A;
   margin-left: 2px;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_4 {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_4 {
   position: absolute;
   left: 60px;
   top: -7px;
@@ -572,7 +572,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_4 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_4 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -580,7 +580,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_4 .dot {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_4 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -593,7 +593,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   color: #77716A;
   margin-left: 2px;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_5 {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_5 {
   position: absolute;
   left: 50px;
   top: -7px;
@@ -603,7 +603,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_5 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_5 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -611,7 +611,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_5 .dot {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_5 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -624,7 +624,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   color: #77716A;
   margin-left: 2px;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_6 {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_6 {
   position: absolute;
   left: 48px;
   bottom: -7px;
@@ -634,7 +634,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_6 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_6 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -642,7 +642,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_6 .dot {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_6 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -655,7 +655,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   color: #77716A;
   margin-left: 2px;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_7 {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_7 {
   position: absolute;
   left: 40px;
   bottom: -7px;
@@ -665,7 +665,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_7 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_7 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -673,7 +673,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_7 .dot {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_7 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -686,7 +686,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   color: #77716A;
   margin-left: 2px;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_8 {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_8 {
   position: absolute;
   left: 32px;
   bottom: -7px;
@@ -696,7 +696,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_8 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_8 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -704,7 +704,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .start_month_year .cntr_bttm .activ_8 .dot {
+.timeline_section .timelines .timeline .t_line .tl_jan .cntr_bttm .activ_8 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -717,17 +717,17 @@ body .wrapper .content ::-webkit-scrollbar-button {
   color: #77716A;
   margin-left: 2px;
 }
-.timeline_section .timelines .timeline .t_line .other_months {
+.timeline_section .timelines .timeline .t_line .tl_feb, .timeline_section .timelines .timeline .t_line .tl_mar, .timeline_section .timelines .timeline .t_line .tl_apr, .timeline_section .timelines .timeline .t_line .tl_may, .timeline_section .timelines .timeline .t_line .tl_jun, .timeline_section .timelines .timeline .t_line .tl_jul, .timeline_section .timelines .timeline .t_line .tl_aug, .timeline_section .timelines .timeline .t_line .tl_sep, .timeline_section .timelines .timeline .t_line .tl_oct, .timeline_section .timelines .timeline .t_line .tl_nov {
   float: left;
   width: 220px;
   height: auto;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_top {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_top, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_top, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_top, .timeline_section .timelines .timeline .t_line .tl_may .cntr_top, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_top, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_top, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_top, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_top, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_top, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_top {
   position: relative;
   width: 100%;
   height: auto;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_top .activ_c {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_top .activ_c, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_top .activ_c, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_top .activ_c, .timeline_section .timelines .timeline .t_line .tl_may .cntr_top .activ_c, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_top .activ_c, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_top .activ_c, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_top .activ_c, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_top .activ_c, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_top .activ_c, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_top .activ_c {
   position: absolute;
   left: 68px;
   top: -7px;
@@ -737,7 +737,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_top .activ_c .lbl {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_top .activ_c .lbl, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_top .activ_c .lbl, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_top .activ_c .lbl, .timeline_section .timelines .timeline .t_line .tl_may .cntr_top .activ_c .lbl, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_top .activ_c .lbl, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_top .activ_c .lbl, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_top .activ_c .lbl, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_top .activ_c .lbl, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_top .activ_c .lbl, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_top .activ_c .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -745,7 +745,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_top .activ_c .dot {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_top .activ_c .dot, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_top .activ_c .dot, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_top .activ_c .dot, .timeline_section .timelines .timeline .t_line .tl_may .cntr_top .activ_c .dot, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_top .activ_c .dot, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_top .activ_c .dot, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_top .activ_c .dot, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_top .activ_c .dot, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_top .activ_c .dot, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_top .activ_c .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -758,7 +758,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   text-align: center;
   color: #77716A;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_top .activ_6 {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_top .activ_6, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_top .activ_6, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_top .activ_6, .timeline_section .timelines .timeline .t_line .tl_may .cntr_top .activ_6, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_top .activ_6, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_top .activ_6, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_top .activ_6, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_top .activ_6, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_top .activ_6, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_top .activ_6 {
   position: absolute;
   left: 68px;
   top: -7px;
@@ -768,7 +768,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_top .activ_6 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_top .activ_6 .lbl, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_top .activ_6 .lbl, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_top .activ_6 .lbl, .timeline_section .timelines .timeline .t_line .tl_may .cntr_top .activ_6 .lbl, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_top .activ_6 .lbl, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_top .activ_6 .lbl, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_top .activ_6 .lbl, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_top .activ_6 .lbl, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_top .activ_6 .lbl, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_top .activ_6 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -776,7 +776,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_top .activ_6 .dot {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_top .activ_6 .dot, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_top .activ_6 .dot, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_top .activ_6 .dot, .timeline_section .timelines .timeline .t_line .tl_may .cntr_top .activ_6 .dot, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_top .activ_6 .dot, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_top .activ_6 .dot, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_top .activ_6 .dot, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_top .activ_6 .dot, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_top .activ_6 .dot, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_top .activ_6 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -789,12 +789,12 @@ body .wrapper .content ::-webkit-scrollbar-button {
   text-align: center;
   color: #77716A;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cnt {
+.timeline_section .timelines .timeline .t_line .tl_feb .cnt, .timeline_section .timelines .timeline .t_line .tl_mar .cnt, .timeline_section .timelines .timeline .t_line .tl_apr .cnt, .timeline_section .timelines .timeline .t_line .tl_may .cnt, .timeline_section .timelines .timeline .t_line .tl_jun .cnt, .timeline_section .timelines .timeline .t_line .tl_jul .cnt, .timeline_section .timelines .timeline .t_line .tl_aug .cnt, .timeline_section .timelines .timeline .t_line .tl_sep .cnt, .timeline_section .timelines .timeline .t_line .tl_oct .cnt, .timeline_section .timelines .timeline .t_line .tl_nov .cnt {
   max-width: 220px;
   height: 44px;
   background-image: url("data:image/svg+xml,%3Csvg width='220' height='44' viewBox='0 0 220 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_60_2838)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 43.0039V44H0.995475L17.9186 21L0.995475 0H0V0.996094H0.671875L16.8652 21.0137L0.734375 43.0039H0Z' fill='%2377716A'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.98633 0L19.9094 21L2.98633 44H220L220 43H5L21.0748 21L5 1H220L220 0H2.98633Z' fill='%2377716A'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_60_2838'%3E%3Crect width='220' height='44' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
 }
-.timeline_section .timelines .timeline .t_line .other_months .cnt .lbl {
+.timeline_section .timelines .timeline .t_line .tl_feb .cnt .lbl, .timeline_section .timelines .timeline .t_line .tl_mar .cnt .lbl, .timeline_section .timelines .timeline .t_line .tl_apr .cnt .lbl, .timeline_section .timelines .timeline .t_line .tl_may .cnt .lbl, .timeline_section .timelines .timeline .t_line .tl_jun .cnt .lbl, .timeline_section .timelines .timeline .t_line .tl_jul .cnt .lbl, .timeline_section .timelines .timeline .t_line .tl_aug .cnt .lbl, .timeline_section .timelines .timeline .t_line .tl_sep .cnt .lbl, .timeline_section .timelines .timeline .t_line .tl_oct .cnt .lbl, .timeline_section .timelines .timeline .t_line .tl_nov .cnt .lbl {
   float: left;
   width: 100%;
   font-size: 16px;
@@ -804,12 +804,12 @@ body .wrapper .content ::-webkit-scrollbar-button {
   text-align: center;
   text-transform: uppercase;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm {
   position: relative;
   width: 100%;
   height: auto;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_1 {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_1, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_1, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_1, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_1, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_1, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_1, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_1, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_1, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_1, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_1 {
   position: absolute;
   left: 75px;
   top: -7px;
@@ -819,7 +819,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_1 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_1 .lbl, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_1 .lbl, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_1 .lbl, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_1 .lbl, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_1 .lbl, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_1 .lbl, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_1 .lbl, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_1 .lbl, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_1 .lbl, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_1 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -827,7 +827,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_1 .dot {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_1 .dot, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_1 .dot, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_1 .dot, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_1 .dot, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_1 .dot, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_1 .dot, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_1 .dot, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_1 .dot, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_1 .dot, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_1 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -839,7 +839,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   text-align: center;
   color: #77716A;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_2 {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_2, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_2, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_2, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_2, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_2, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_2, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_2, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_2, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_2, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_2 {
   position: absolute;
   left: 70px;
   top: -7px;
@@ -849,7 +849,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_2 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_2 .lbl, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_2 .lbl, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_2 .lbl, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_2 .lbl, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_2 .lbl, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_2 .lbl, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_2 .lbl, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_2 .lbl, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_2 .lbl, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_2 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -857,7 +857,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_2 .dot {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_2 .dot, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_2 .dot, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_2 .dot, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_2 .dot, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_2 .dot, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_2 .dot, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_2 .dot, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_2 .dot, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_2 .dot, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_2 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -870,7 +870,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   color: #77716A;
   margin-left: 2px;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_3 {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_3, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_3, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_3, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_3, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_3, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_3, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_3, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_3, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_3, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_3 {
   position: absolute;
   left: 60px;
   top: -7px;
@@ -880,7 +880,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_3 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_3 .lbl, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_3 .lbl, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_3 .lbl, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_3 .lbl, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_3 .lbl, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_3 .lbl, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_3 .lbl, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_3 .lbl, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_3 .lbl, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_3 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -888,7 +888,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_3 .dot {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_3 .dot, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_3 .dot, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_3 .dot, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_3 .dot, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_3 .dot, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_3 .dot, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_3 .dot, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_3 .dot, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_3 .dot, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_3 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -901,7 +901,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   color: #77716A;
   margin-left: 2px;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_4 {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_4, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_4, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_4, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_4, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_4, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_4, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_4, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_4, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_4, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_4 {
   position: absolute;
   left: 60px;
   top: -7px;
@@ -911,7 +911,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_4 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_4 .lbl, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_4 .lbl, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_4 .lbl, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_4 .lbl, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_4 .lbl, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_4 .lbl, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_4 .lbl, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_4 .lbl, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_4 .lbl, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_4 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -919,7 +919,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_4 .dot {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_4 .dot, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_4 .dot, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_4 .dot, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_4 .dot, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_4 .dot, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_4 .dot, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_4 .dot, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_4 .dot, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_4 .dot, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_4 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -932,7 +932,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   color: #77716A;
   margin-left: 2px;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_5 {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_5, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_5, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_5, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_5, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_5, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_5, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_5, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_5, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_5, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_5 {
   position: absolute;
   left: 50px;
   top: -7px;
@@ -942,7 +942,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_5 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_5 .lbl, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_5 .lbl, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_5 .lbl, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_5 .lbl, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_5 .lbl, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_5 .lbl, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_5 .lbl, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_5 .lbl, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_5 .lbl, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_5 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -950,7 +950,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_5 .dot {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_5 .dot, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_5 .dot, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_5 .dot, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_5 .dot, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_5 .dot, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_5 .dot, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_5 .dot, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_5 .dot, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_5 .dot, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_5 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -963,7 +963,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   color: #77716A;
   margin-left: 2px;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_6 {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_6, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_6, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_6, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_6, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_6, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_6, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_6, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_6, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_6, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_6 {
   position: absolute;
   left: 48px;
   bottom: -7px;
@@ -973,7 +973,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_6 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_6 .lbl, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_6 .lbl, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_6 .lbl, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_6 .lbl, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_6 .lbl, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_6 .lbl, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_6 .lbl, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_6 .lbl, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_6 .lbl, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_6 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -981,7 +981,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_6 .dot {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_6 .dot, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_6 .dot, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_6 .dot, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_6 .dot, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_6 .dot, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_6 .dot, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_6 .dot, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_6 .dot, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_6 .dot, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_6 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -994,7 +994,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   color: #77716A;
   margin-left: 2px;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_7 {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_7, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_7, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_7, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_7, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_7, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_7, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_7, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_7, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_7, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_7 {
   position: absolute;
   left: 40px;
   bottom: -7px;
@@ -1004,7 +1004,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_7 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_7 .lbl, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_7 .lbl, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_7 .lbl, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_7 .lbl, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_7 .lbl, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_7 .lbl, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_7 .lbl, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_7 .lbl, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_7 .lbl, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_7 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -1012,7 +1012,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_7 .dot {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_7 .dot, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_7 .dot, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_7 .dot, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_7 .dot, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_7 .dot, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_7 .dot, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_7 .dot, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_7 .dot, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_7 .dot, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_7 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -1025,7 +1025,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   color: #77716A;
   margin-left: 2px;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_8 {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_8, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_8, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_8, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_8, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_8, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_8, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_8, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_8, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_8, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_8 {
   position: absolute;
   left: 32px;
   bottom: -7px;
@@ -1035,7 +1035,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_8 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_8 .lbl, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_8 .lbl, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_8 .lbl, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_8 .lbl, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_8 .lbl, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_8 .lbl, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_8 .lbl, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_8 .lbl, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_8 .lbl, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_8 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -1043,7 +1043,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .other_months .cntr_bttm .activ_8 .dot {
+.timeline_section .timelines .timeline .t_line .tl_feb .cntr_bttm .activ_8 .dot, .timeline_section .timelines .timeline .t_line .tl_mar .cntr_bttm .activ_8 .dot, .timeline_section .timelines .timeline .t_line .tl_apr .cntr_bttm .activ_8 .dot, .timeline_section .timelines .timeline .t_line .tl_may .cntr_bttm .activ_8 .dot, .timeline_section .timelines .timeline .t_line .tl_jun .cntr_bttm .activ_8 .dot, .timeline_section .timelines .timeline .t_line .tl_jul .cntr_bttm .activ_8 .dot, .timeline_section .timelines .timeline .t_line .tl_aug .cntr_bttm .activ_8 .dot, .timeline_section .timelines .timeline .t_line .tl_sep .cntr_bttm .activ_8 .dot, .timeline_section .timelines .timeline .t_line .tl_oct .cntr_bttm .activ_8 .dot, .timeline_section .timelines .timeline .t_line .tl_nov .cntr_bttm .activ_8 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -1056,17 +1056,17 @@ body .wrapper .content ::-webkit-scrollbar-button {
   color: #77716A;
   margin-left: 2px;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year {
+.timeline_section .timelines .timeline .t_line .tl_dic {
   float: left;
   width: 220px;
   height: auto;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_top {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_top {
   position: relative;
   width: 100%;
   height: auto;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_top .activ_c {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_top .activ_c {
   position: absolute;
   left: 68px;
   top: -7px;
@@ -1076,7 +1076,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_top .activ_c .lbl {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_top .activ_c .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -1084,7 +1084,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_top .activ_c .dot {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_top .activ_c .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -1097,12 +1097,12 @@ body .wrapper .content ::-webkit-scrollbar-button {
   text-align: center;
   color: #77716A;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cnt {
+.timeline_section .timelines .timeline .t_line .tl_dic .cnt {
   max-width: 220px;
   height: 44px;
   background-image: url("data:image/svg+xml,%3Csvg width='220' height='45' viewBox='0 0 220 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_60_2845)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 43.5039V44.5H0.995475L17.9186 21.5L0.995475 0.5H0V1.49609H0.671875L16.8652 21.5137L0.734375 43.5039H0Z' fill='%2377716A'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.98633 0.5L19.9094 21.5L2.98633 44.5H220V0.5H2.98633ZM5 1.5L21 21.5L5 43.5H219V1.5H5Z' fill='%2377716A'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_60_2845'%3E%3Crect width='220' height='44' fill='white' transform='translate(0 0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cnt .lbl {
+.timeline_section .timelines .timeline .t_line .tl_dic .cnt .lbl {
   float: left;
   width: 100%;
   font-size: 16px;
@@ -1112,12 +1112,12 @@ body .wrapper .content ::-webkit-scrollbar-button {
   text-align: center;
   text-transform: uppercase;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm {
   position: relative;
   width: 100%;
   height: auto;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_1 {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_1 {
   position: absolute;
   left: 75px;
   top: -7px;
@@ -1127,7 +1127,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_1 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_1 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -1135,7 +1135,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_1 .dot {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_1 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -1147,7 +1147,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   text-align: center;
   color: #77716A;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_2 {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_2 {
   position: absolute;
   left: 70px;
   top: -7px;
@@ -1157,7 +1157,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_2 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_2 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -1165,7 +1165,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_2 .dot {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_2 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -1178,7 +1178,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   color: #77716A;
   margin-left: 2px;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_3 {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_3 {
   position: absolute;
   left: 60px;
   top: -7px;
@@ -1188,7 +1188,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_3 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_3 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -1196,7 +1196,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_3 .dot {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_3 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -1209,7 +1209,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   color: #77716A;
   margin-left: 2px;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_4 {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_4 {
   position: absolute;
   left: 60px;
   top: -7px;
@@ -1219,7 +1219,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_4 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_4 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -1227,7 +1227,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_4 .dot {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_4 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -1240,7 +1240,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   color: #77716A;
   margin-left: 2px;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_5 {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_5 {
   position: absolute;
   left: 50px;
   top: -7px;
@@ -1250,7 +1250,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_5 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_5 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -1258,7 +1258,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_5 .dot {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_5 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -1271,7 +1271,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   color: #77716A;
   margin-left: 2px;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_6 {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_6 {
   position: absolute;
   left: 48px;
   bottom: -7px;
@@ -1281,7 +1281,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_6 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_6 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -1289,7 +1289,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_6 .dot {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_6 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -1302,7 +1302,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   color: #77716A;
   margin-left: 2px;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_7 {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_7 {
   position: absolute;
   left: 40px;
   bottom: -7px;
@@ -1312,7 +1312,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_7 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_7 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -1320,7 +1320,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_7 .dot {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_7 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -1333,7 +1333,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   color: #77716A;
   margin-left: 2px;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_8 {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_8 {
   position: absolute;
   left: 32px;
   bottom: -7px;
@@ -1343,7 +1343,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   border-radius: 7px;
   padding: 2px 2px 0 8px;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_8 .lbl {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_8 .lbl {
   float: left;
   width: min-content;
   font-size: 10px;
@@ -1351,7 +1351,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   line-height: 12px;
   color: #FDF4E7;
 }
-.timeline_section .timelines .timeline .t_line .end_month_year .cntr_bttm .activ_8 .dot {
+.timeline_section .timelines .timeline .t_line .tl_dic .cntr_bttm .activ_8 .dot {
   width: min-content;
   float: right;
   width: 12px;
@@ -1368,40 +1368,40 @@ body .wrapper .content ::-webkit-scrollbar-button {
   grid-area: btm_yr;
   background: rgba(119, 113, 106, 0.06);
 }
-.timeline_section .timelines .timeline .btm01 {
-  grid-area: btm01;
+.timeline_section .timelines .timeline .btm1 {
+  grid-area: btm1;
   padding: 0 4px 0 23px;
 }
-.timeline_section .timelines .timeline .btm02 {
-  grid-area: btm02;
+.timeline_section .timelines .timeline .btm2 {
+  grid-area: btm2;
   padding: 0 4px 0 23px;
 }
-.timeline_section .timelines .timeline .btm03 {
-  grid-area: btm03;
+.timeline_section .timelines .timeline .btm3 {
+  grid-area: btm3;
   padding: 0 4px 0 23px;
 }
-.timeline_section .timelines .timeline .btm04 {
-  grid-area: btm04;
+.timeline_section .timelines .timeline .btm4 {
+  grid-area: btm4;
   padding: 0 4px 0 23px;
 }
-.timeline_section .timelines .timeline .btm05 {
-  grid-area: btm05;
+.timeline_section .timelines .timeline .btm5 {
+  grid-area: btm5;
   padding: 0 4px 0 23px;
 }
-.timeline_section .timelines .timeline .btm06 {
-  grid-area: btm06;
+.timeline_section .timelines .timeline .btm6 {
+  grid-area: btm6;
   padding: 0 4px 0 23px;
 }
-.timeline_section .timelines .timeline .btm07 {
-  grid-area: btm07;
+.timeline_section .timelines .timeline .btm7 {
+  grid-area: btm7;
   padding: 0 4px 0 23px;
 }
-.timeline_section .timelines .timeline .btm08 {
-  grid-area: btm08;
+.timeline_section .timelines .timeline .btm8 {
+  grid-area: btm8;
   padding: 0 4px 0 23px;
 }
-.timeline_section .timelines .timeline .btm09 {
-  grid-area: btm09;
+.timeline_section .timelines .timeline .btm9 {
+  grid-area: btm9;
   padding: 0 4px 0 23px;
 }
 .timeline_section .timelines .timeline .btm10 {

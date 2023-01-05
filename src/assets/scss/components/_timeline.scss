@@ -21,65 +21,65 @@
             gap: 0px 0px;
             grid-auto-flow: row;
             grid-template-areas:
-                "tp_yr tp01 tp02 tp03 tp04 tp05 tp06 tp07 tp08 tp09 tp10 tp11 tp12"
+                "tp_yr tp1 tp2 tp3 tp4 tp5 tp6 tp7 tp8 tp9 tp10 tp11 tp12"
                 "line line line line line line line line line line line line line"
-                "btm_yr btm01 btm02 btm03 btm04 btm05 btm06 btm07 btm08 btm09 btm10 btm11 btm12";
+                "btm_yr btm1 btm2 btm3 btm4 btm5 btm6 btm7 btm8 btm9 btm10 btm11 btm12";
 
             .tp_yr {
                 grid-area: tp_yr;
                 background: rgba(119, 113, 106, 0.06);
             }
 
-            .tp01 {
-                grid-area: tp01;
+            .tp1 {
+                grid-area: tp1;
                 padding: 0 4px 0 23px;
                 align-self: end;
             }
 
-            .tp02 {
-                grid-area: tp02;
+            .tp2 {
+                grid-area: tp2;
                 padding: 0 4px 0 23px;
                 align-self: end;
             }
 
-            .tp03 {
-                grid-area: tp03;
+            .tp3 {
+                grid-area: tp3;
                 padding: 0 4px 0 23px;
                 align-self: end;
             }
 
-            .tp04 {
-                grid-area: tp04;
+            .tp4 {
+                grid-area: tp4;
                 padding: 0 4px 0 23px;
                 align-self: end;
             }
 
-            .tp05 {
-                grid-area: tp05;
+            .tp5 {
+                grid-area: tp5;
                 padding: 0 4px 0 23px;
                 align-self: end;
             }
 
-            .tp06 {
-                grid-area: tp06;
+            .tp6 {
+                grid-area: tp6;
                 padding: 0 4px 0 23px;
                 align-self: end;
             }
 
-            .tp07 {
-                grid-area: tp07;
+            .tp7 {
+                grid-area: tp7;
                 padding: 0 4px 0 23px;
                 align-self: end;
             }
 
-            .tp08 {
-                grid-area: tp08;
+            .tp8 {
+                grid-area: tp8;
                 padding: 0 4px 0 23px;
                 align-self: end;
             }
 
-            .tp09 {
-                grid-area: tp09;
+            .tp9 {
+                grid-area: tp9;
                 padding: 0 4px 0 23px;
                 align-self: end;
             }
@@ -129,7 +129,7 @@
                     background-image: url("data:image/svg+xml,%3Csvg width='60' height='44' viewBox='0 0 60 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 0H60V44H2V0Z' fill='%2377716A'/%3E%3C/svg%3E");
                 }
 
-                .start_month_year {
+                .tl_jan {
                     float: left;
                     width: 220px;
                     height: auto;
@@ -471,7 +471,7 @@
 
                 }
 
-                .other_months {
+                .tl_feb, .tl_mar, .tl_apr, .tl_may, .tl_jun, .tl_jul, .tl_aug, .tl_sep, .tl_oct, .tl_nov {
                     float: left;
                     width: 220px;
                     height: auto;
@@ -846,7 +846,7 @@
 
                 }
 
-                .end_month_year {
+                .tl_dic {
                     float: left;
                     width: 220px;
                     height: auto;
@@ -1195,48 +1195,48 @@
                 background: rgba(119, 113, 106, 0.06);
             }
 
-            .btm01 {
-                grid-area: btm01;
+            .btm1 {
+                grid-area: btm1;
                 padding: 0 4px 0 23px;
             }
 
-            .btm02 {
-                grid-area: btm02;
+            .btm2 {
+                grid-area: btm2;
                 padding: 0 4px 0 23px;
             }
 
-            .btm03 {
-                grid-area: btm03;
+            .btm3 {
+                grid-area: btm3;
                 padding: 0 4px 0 23px;
             }
 
-            .btm04 {
-                grid-area: btm04;
+            .btm4 {
+                grid-area: btm4;
                 padding: 0 4px 0 23px;
             }
 
-            .btm05 {
-                grid-area: btm05;
+            .btm5 {
+                grid-area: btm5;
                 padding: 0 4px 0 23px;
             }
 
-            .btm06 {
-                grid-area: btm06;
+            .btm6 {
+                grid-area: btm6;
                 padding: 0 4px 0 23px;
             }
 
-            .btm07 {
-                grid-area: btm07;
+            .btm7 {
+                grid-area: btm7;
                 padding: 0 4px 0 23px;
             }
 
-            .btm08 {
-                grid-area: btm08;
+            .btm8 {
+                grid-area: btm8;
                 padding: 0 4px 0 23px;
             }
 
-            .btm09 {
-                grid-area: btm09;
+            .btm9 {
+                grid-area: btm9;
                 padding: 0 4px 0 23px;
             }
 

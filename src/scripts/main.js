@@ -256,30 +256,30 @@ $(document).ready(function () {
 
                 //timeline
 
-                tLtp01.push(response.time_lines1[0].tp01)
-                tLtp02.push(response.time_lines1[0].tp02)
-                tLtp03.push(response.time_lines1[0].tp03)
-                tLtp04.push(response.time_lines1[0].tp04)
-                tLtp05.push(response.time_lines1[0].tp05)
-                tLtp06.push(response.time_lines1[0].tp06)
-                tLtp07.push(response.time_lines1[0].tp07)
-                tLtp08.push(response.time_lines1[0].tp08)
-                tLtp09.push(response.time_lines1[0].tp09)
+                tLtp01.push(response.time_lines1[0].tp1)
+                tLtp02.push(response.time_lines1[0].tp2)
+                tLtp03.push(response.time_lines1[0].tp3)
+                tLtp04.push(response.time_lines1[0].tp4)
+                tLtp05.push(response.time_lines1[0].tp5)
+                tLtp06.push(response.time_lines1[0].tp6)
+                tLtp07.push(response.time_lines1[0].tp7)
+                tLtp08.push(response.time_lines1[0].tp8)
+                tLtp09.push(response.time_lines1[0].tp9)
                 tLtp10.push(response.time_lines1[0].tp10)
                 tLtp11.push(response.time_lines1[0].tp11)
                 tLtp12.push(response.time_lines1[0].tp12)
 
                 tL.push(response.time_lines1[0].t_line)
 
-                tLbtm01.push(response.time_lines1[0].btm01)
-                tLbtm02.push(response.time_lines1[0].btm02)
-                tLbtm03.push(response.time_lines1[0].btm03)
-                tLbtm04.push(response.time_lines1[0].btm04)
-                tLbtm05.push(response.time_lines1[0].btm05)
-                tLbtm06.push(response.time_lines1[0].btm06)
-                tLbtm07.push(response.time_lines1[0].btm07)
-                tLbtm08.push(response.time_lines1[0].btm08)
-                tLbtm09.push(response.time_lines1[0].btm09)
+                tLbtm01.push(response.time_lines1[0].btm1)
+                tLbtm02.push(response.time_lines1[0].btm2)
+                tLbtm03.push(response.time_lines1[0].btm3)
+                tLbtm04.push(response.time_lines1[0].btm4)
+                tLbtm05.push(response.time_lines1[0].btm5)
+                tLbtm06.push(response.time_lines1[0].btm6)
+                tLbtm07.push(response.time_lines1[0].btm7)
+                tLbtm08.push(response.time_lines1[0].btm8)
+                tLbtm09.push(response.time_lines1[0].btm9)
                 tLbtm10.push(response.time_lines1[0].btm10)
                 tLbtm11.push(response.time_lines1[0].btm11)
                 tLbtm12.push(response.time_lines1[0].btm12)
@@ -444,11 +444,6 @@ $(document).ready(function () {
             yrs = stns;
         }
 
-        createTimeline(ou, srv, yrs);
-    };
-
-    function createTimeline(ou, srv, yrs) {
-
         if (typeof ou === 'undefined') {
         } else {
             qry1 = ou
@@ -470,12 +465,12 @@ $(document).ready(function () {
                 console.log("qry1-qry3 hay datos: " + qry1 + "-" + qry3)
                 console.log("OU s: " + qry1)
                 console.log("Year s: " + qry3)
+                createTimeline()
 
-                $('<div class="timeline">').appendTo('.timelines')
-                
+                //log
                 $('.timeline').css("background-color", "yellow")
 
-            }else {
+            } else {
                 $('.timeline').remove()
             }
         } else {
@@ -485,4 +480,114 @@ $(document).ready(function () {
 
     }
 
+    function createTimeline() {
+
+        $('.timeline').remove()
+        $('<div class="timeline">').appendTo('.timelines')
+        $('<div class="tp_yr">').appendTo('.timeline')
+
+        for (itp = 1; itp <= 12; itp++) {
+            var numl = itp.length
+            console.log("numl: " + numl)
+            var tp = '<div class="tp' + itp + '">'
+            $(tp).appendTo('.timeline')
+        }
+
+        $('<div class="t_line">').appendTo('.timeline')
+        $('<div class="btm_yr">').appendTo('.timeline')
+
+        for (ibtm = 1; ibtm <= 12; ibtm++) {
+            var btm = '<div class="btm' + ibtm + '">'
+            $(btm).appendTo('.timeline')
+        }
+
+        $('<div class="yr_start">').appendTo('.t_line')
+
+        const tlJan = `
+                        <div class="tl_jan">
+                          <div class="cntr_top"></div>
+                          <div class="cnt"></div>
+                          <div class="cntr_bttm"></div>
+                        </div>
+        `;
+        const tlFeb = `
+                        <div class="tl_feb">
+                          <div class="cntr_top"></div>
+                          <div class="cnt"></div>
+                          <div class="cntr_bttm"></div>
+                        </div>
+        `;
+        const tlMar = `
+                      <div class="tl_mar">
+                        <div class="cntr_top"></div>
+                        <div class="cnt"></div>
+                        <div class="cntr_bttm"></div>
+                      </div>
+        `;
+        const tlApr = `
+                    <div class="tl_apr">
+                      <div class="cntr_top"></div>
+                      <div class="cnt"></div>
+                      <div class="cntr_bttm"></div>
+                    </div>
+        `;
+        const tlMay = `
+                  <div class="tl_may">
+                    <div class="cntr_top"></div>
+                    <div class="cnt"></div>
+                    <div class="cntr_bttm"></div>
+                  </div>
+        `;
+        const tlJun = `
+                  <div class="tl_jun">
+                    <div class="cntr_top"></div>
+                    <div class="cnt"></div>
+                    <div class="cntr_bttm"></div>
+                  </div>
+        `;
+        const tlJul = `
+                  <div class="tl_jul">
+                    <div class="cntr_top"></div>
+                    <div class="cnt"></div>
+                    <div class="cntr_bttm"></div>
+                  </div>
+        `;
+        const tlAug = `
+                  <div class="tl_aug">
+                    <div class="cntr_top"></div>
+                    <div class="cnt"></div>
+                    <div class="cntr_bttm"></div>
+                  </div>
+        `;
+        const tlSep = `
+                  <div class="tl_sep">
+                    <div class="cntr_top"></div>
+                    <div class="cnt"></div>
+                    <div class="cntr_bttm"></div>
+                  </div>
+        `;
+        const tlOct = `
+                  <div class="tl_oct">
+                    <div class="cntr_top"></div>
+                    <div class="cnt"></div>
+                    <div class="cntr_bttm"></div>
+                  </div>
+        `;
+        const tlNov = `
+                        <div class="tl_nov">
+                            <div class="cntr_top"></div>
+                            <div class="cnt"></div>
+                            <div class="cntr_bttm"></div>
+                        </div>
+        `;
+        const tlDic = `
+                        <div class="tl_dic">
+                            <div class="cntr_top"></div>
+                            <div class="cnt"></div>
+                            <div class="cntr_bttm"></div>
+                        </div>
+        `;
+
+        $('.t_line').append(tlJan, tlFeb, tlMar, tlApr, tlMay, tlJun, tlJul, tlAug, tlSep, tlOct, tlNov, tlDic);
+    }
 })
