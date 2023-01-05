@@ -31,6 +31,7 @@ $(document).ready(function () {
     let tLbtm10 = [];
     let tLbtm11 = [];
     let tLbtm12 = [];
+    let qry1, qry2, qry3
 
     $('.msbx-ou').each(function (e) {
         var self = $(this)
@@ -245,7 +246,6 @@ $(document).ready(function () {
             method: "GET",
             url: "data.json",
             success: function (response) {
-                //console.log(response)
 
                 // Selectores
                 orgUnits.push(response.OUs)
@@ -284,68 +284,6 @@ $(document).ready(function () {
                 tLbtm11.push(response.time_lines1[0].btm11)
                 tLbtm12.push(response.time_lines1[0].btm12)
 
-                // Selectores
-                /*
-                //console.log("orgUnits:" + orgUnits + "\nservices: " + services + "\nyears: " + years)
-                */
-
-                //timeline
-
-                /*
-                //console.log("tLtpYr: " + tLtpYr)
-
-                //console.log("tLtp01")
-                //console.log(tLtp01)
-                //console.log("tLtp02")
-                //console.log(tLtp02)
-                //console.log("tLtp03")
-                //console.log(tLtp03)
-                //console.log("tLtp04")
-                //console.log(tLtp04)
-                //console.log("tLtp05")
-                //console.log(tLtp05)
-                //console.log("tLtp06")
-                //console.log(tLtp06)
-                //console.log("tLtp07")
-                //console.log(tLtp07)
-                //console.log("tLtp08")
-                //console.log(tLtp08)
-                //console.log("tLtp09")
-                //console.log(tLtp09)
-                //console.log("tLtp10")
-                //console.log(tLtp10)
-                //console.log("tLtp11")
-                //console.log(tLtp11)
-                //console.log("tLtp12")
-                //console.log(tLtp12)
-
-                //console.log("tL")
-                //console.log(tL)
-
-                //console.log(tLbtm01)
-                //console.log("tLbtm02")
-                //console.log(tLbtm02)
-                //console.log("tLbtm03")
-                //console.log(tLbtm03)
-                //console.log("tLbtm04")
-                //console.log(tLbtm04)
-                //console.log("tLbtm05")
-                //console.log(tLbtm05)
-                //console.log("tLbtm06")
-                //console.log(tLbtm06)
-                //console.log("tLbtm07")
-                //console.log(tLbtm07)
-                //console.log("tLbtm08")
-                //console.log(tLbtm08)
-                //console.log("tLbtm09")
-                //console.log(tLbtm09)
-                //console.log("tLbtm10")
-                //console.log(tLbtm10)
-                //console.log("tLbtm11")
-                //console.log(tLbtm11)
-                //console.log("tLbtm12")
-                //console.log(tLbtm12)
-                */
             }
         })
     };
@@ -362,14 +300,13 @@ $(document).ready(function () {
 
         switch (typ) {
             case "ou":
-                SetOrgUnits(result)
+                SetOrgUnits(result, typ)
                 break;
             case "srv":
-                SetServices(result)
+                SetServices(result, typ)
                 break;
             case "yrs":
-                //console.log("Years: " + result + " \ntyp: " + typ)
-                SetYears(result)
+                SetYears(result, typ)
                 break;
             default:
                 break;
@@ -377,76 +314,52 @@ $(document).ready(function () {
 
     };
 
-    function SetOrgUnits(st) {
+    function SetOrgUnits(st, typ) {
         var nameOu = ""
         for (var i = 0; i < st.length; i++) {
 
             if (i >= 1) {
                 nameOu = nameOu + ", " + st[i];
-                //console.log("nameOu2:" + nameOu)
             } else {
                 nameOu = nameOu + st[i];
-                //console.log("nameOu1:" + nameOu)
             }
-
         }
-
         $("#top_ou").text(nameOu)
+        setTimeline(nameOu, typ)
     };
 
-    function SetServices(st) {
+    function SetServices(st, typ) {
         var nameSrv = ""
         for (var i = 0; i < st.length; i++) {
-
             if (i >= 1) {
                 nameSrv = nameSrv + ", " + st[i];
-                //console.log("nameSrv:" + nameSrv)
             } else {
                 nameSrv = nameSrv + st[i];
-                //console.log("nameSrv:" + nameSrv)
             }
-
         }
-
         $("#top_srv").text(nameSrv)
+        setTimeline(nameSrv, typ)
     };
 
-    function SetYears(st) {
+    function SetYears(st, typ) {
         var firstYear = ""
         var lastTwo = ""
         var years = ""
-
         for (var i = 0; i < st.length; i++) {
-
             if (i >= 1) {
-
-                //years = lastTwo.substring(lastTwo.length - 4)
                 lastTwo = lastTwo + "/" + st[i].slice(-2)
-
-                //console.log("***lastTwo:" + lastTwo)
             } else {
                 firstYear = firstYear + st[i];
-                //console.log("firstYear:" + firstYear)
             }
         }
-
-        //console.log("FIRST" + firstYear)
-        //console.log("LAST" + lastTwo)
-
         years = firstYear + lastTwo;
-
-        //var years = firstYear + lastTwo;
-        //console.log("YEARS:" + years)
-
         $("#top_yrs").text(years)
+        setTimeline(years, typ)
     };
-
-
 
     $('.btn-lgnd-inf').on('click', function () {
         var lgnd_text = $(this).parent().parent().find(".checkbox").text()
         var lgnd = $(this).parent().parent().find("input").attr('id')
-        console.log(lgnd)
 
         $('<div class="scrim">').appendTo('body')
 
@@ -512,9 +425,64 @@ $(document).ready(function () {
 
     })
 
-
     $(document).on('click', '.btn-sys-close', function () {
         $('div.scrim').remove()
     })
+
+    $(document).on('click', '.scrim', function () {
+        $('div.scrim').remove()
+    })
+
+    function setTimeline(stns, typ) {
+        let ou, srv, yrs;
+
+        if (typ === "ou") {
+            ou = stns;
+        } else if (typ === "srv") {
+            srv = stns;
+        } else if (typ === "yrs") {
+            yrs = stns;
+        }
+
+        createTimeline(ou, srv, yrs);
+    };
+
+    function createTimeline(ou, srv, yrs) {
+
+        if (typeof ou === 'undefined') {
+        } else {
+            qry1 = ou
+        }
+
+        if (typeof srv === 'undefined') {
+        } else {
+            qry2 = srv
+        }
+
+        if (typeof yrs === 'undefined') {
+        } else {
+            qry3 = yrs
+        }
+
+        if (typeof qry1 === 'string' && qry1 != "") {
+            if (typeof qry3 === 'string' && qry3 != "") {
+
+                console.log("qry1-qry3 hay datos: " + qry1 + "-" + qry3)
+                console.log("OU s: " + qry1)
+                console.log("Year s: " + qry3)
+
+                $('<div class="timeline">').appendTo('.timelines')
+                
+                $('.timeline').css("background-color", "yellow")
+
+            }else {
+                $('.timeline').remove()
+            }
+        } else {
+            console.log("qry1-qry3: " + typeof qry1);
+            $('.timeline').remove()
+        }
+
+    }
 
 })
