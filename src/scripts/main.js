@@ -1172,4 +1172,52 @@ $(document).ready(function () {
             }
         }
     }
+
+    // Legends cta
+
+    $('#lgnd0').click(function () {
+        $(".card_contr").toggle(this.checked);
+        $(".card_contr").parent().parent().parent().toggle(this.show);
+    });
+
+    $('#lgnd1').click(function () {
+        $(".card_lgnd1").toggle(this.checked);
+        //$(".card_lgnd1").parent().parent().parent().toggle(this.show);
+        impactCounterMonth(21, 1);
+    });
+
+    $('#lgnd2').click(function () {
+        $(".card_lgnd2").toggle(this.checked);
+        impactCounterMonth(21, 2);
+    });
+
+    $('#lgnd3').click(function () {
+        $(".card_lgnd3").toggle(this.checked);
+        impactCounterMonth(21, 3);
+    });
+
+    $('#lgnd4').click(function () {
+        $(".card_lgnd4").toggle(this.checked);
+        impactCounterMonth(21, 4);
+    });
+
+    $('#lgnd5').click(function () {
+        $(".card_lgnd5").toggle(this.checked);
+        impactCounterMonth(21, 5);
+    });
+
+    $('#lgnd6').click(function () {
+        $(".card_lgnd6").toggle(this.checked);
+        impactCounterMonth(21, 6);
+    });
+
+    $('#lgnd7').click(function () {
+        $(".card_lgnd7").toggle(this.checked);
+        impactCounterMonth(21, 7);
+    });
+
+    $('#lgnd8').click(function () {
+        $(".card_lgnd8").toggle(this.checked);
+        impactCounterMonth(21, 8);
+    });
 })
