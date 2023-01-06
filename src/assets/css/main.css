@@ -1455,7 +1455,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
 .panel_top .contributions ::-webkit-scrollbar-button {
   display: none;
 }
-.panel_top .contributions .cards {
+.panel_top .contributions .contrs1, .panel_top .contributions .contrs2, .panel_top .contributions .contrs3, .panel_top .contributions .contrs4, .panel_top .contributions .contrs5, .panel_top .contributions .contrs6, .panel_top .contributions .contrs7, .panel_top .contributions .contrs8, .panel_top .contributions .contrs9, .panel_top .contributions .contrs10, .panel_top .contributions .contrs11, .panel_top .contributions .contrs12 {
   width: 100%;
   height: 100%;
   overflow-x: auto;
@@ -1504,7 +1504,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
 .panel_bottom .impacts ::-webkit-scrollbar-button {
   display: none;
 }
-.panel_bottom .impacts .cards {
+.panel_bottom .impacts .cards1, .panel_bottom .impacts .cards2, .panel_bottom .impacts .cards3, .panel_bottom .impacts .cards4, .panel_bottom .impacts .cards5, .panel_bottom .impacts .cards6, .panel_bottom .impacts .cards7, .panel_bottom .impacts .cards8, .panel_bottom .impacts .cards9, .panel_bottom .impacts .cards10, .panel_bottom .impacts .cards11, .panel_bottom .impacts .cards12 {
   width: 100%;
   height: 100%;
   overflow-x: auto;

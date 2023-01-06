@@ -3,34 +3,93 @@ $(document).ready(function () {
     let services = [];
     let years = [];
 
-    let tLtpYr;
-    let tLtp01 = [];
-    let tLtp02 = [];
-    let tLtp03 = [];
-    let tLtp04 = [];
-    let tLtp05 = [];
-    let tLtp06 = [];
-    let tLtp07 = [];
-    let tLtp08 = [];
-    let tLtp09 = [];
-    let tLtp10 = [];
-    let tLtp11 = [];
-    let tLtp12 = [];
-    let tL = [];
+    let tL1Ou;
+    let tL1tp01 = [];
+    let tL1tp02 = [];
+    let tL1tp03 = [];
+    let tL1tp04 = [];
+    let tL1tp05 = [];
+    let tL1tp06 = [];
+    let tL1tp07 = [];
+    let tL1tp08 = [];
+    let tL1tp09 = [];
+    let tL1tp10 = [];
+    let tL1tp11 = [];
+    let tL1tp12 = [];
+    let tL1 = [];
 
-    let tLbtmYr;
-    let tLbtm01 = [];
-    let tLbtm02 = [];
-    let tLbtm03 = [];
-    let tLbtm04 = [];
-    let tLbtm05 = [];
-    let tLbtm06 = [];
-    let tLbtm07 = [];
-    let tLbtm08 = [];
-    let tLbtm09 = [];
-    let tLbtm10 = [];
-    let tLbtm11 = [];
-    let tLbtm12 = [];
+    let tL1btmYr;
+    let tL1btm01 = [];
+    let tL1btm02 = [];
+    let tL1btm03 = [];
+    let tL1btm04 = [];
+    let tL1btm05 = [];
+    let tL1btm06 = [];
+    let tL1btm07 = [];
+    let tL1btm08 = [];
+    let tL1btm09 = [];
+    let tL1btm10 = [];
+    let tL1btm11 = [];
+    let tL1btm12 = [];
+
+    let tL2Ou;
+    let tL2tp01 = [];
+    let tL2tp02 = [];
+    let tL2tp03 = [];
+    let tL2tp04 = [];
+    let tL2tp05 = [];
+    let tL2tp06 = [];
+    let tL2tp07 = [];
+    let tL2tp08 = [];
+    let tL2tp09 = [];
+    let tL2tp10 = [];
+    let tL2tp11 = [];
+    let tL2tp12 = [];
+    let tL2 = [];
+
+    let tL2btmYr;
+    let tL2btm01 = [];
+    let tL2btm02 = [];
+    let tL2btm03 = [];
+    let tL2btm04 = [];
+    let tL2btm05 = [];
+    let tL2btm06 = [];
+    let tL2btm07 = [];
+    let tL2btm08 = [];
+    let tL2btm09 = [];
+    let tL2btm10 = [];
+    let tL2btm11 = [];
+    let tL2btm12 = [];
+
+    let tL3Ou;
+    let tL3tp01 = [];
+    let tL3tp02 = [];
+    let tL3tp03 = [];
+    let tL3tp04 = [];
+    let tL3tp05 = [];
+    let tL3tp06 = [];
+    let tL3tp07 = [];
+    let tL3tp08 = [];
+    let tL3tp09 = [];
+    let tL3tp10 = [];
+    let tL3tp11 = [];
+    let tL3tp12 = [];
+    let tL3 = [];
+
+    let tL3btmYr;
+    let tL3btm01 = [];
+    let tL3btm02 = [];
+    let tL3btm03 = [];
+    let tL3btm04 = [];
+    let tL3btm05 = [];
+    let tL3btm06 = [];
+    let tL3btm07 = [];
+    let tL3btm08 = [];
+    let tL3btm09 = [];
+    let tL3btm10 = [];
+    let tL3btm11 = [];
+    let tL3btm12 = [];
+
     let qry1, qry2, qry3
 
     $('.msbx-ou').each(function (e) {
@@ -248,41 +307,102 @@ $(document).ready(function () {
             success: function (response) {
 
                 // Selectores
-                orgUnits.push(response.OUs)
+                orgUnits.push(response.Ous)
                 services.push(response.services)
                 years.push(response.years)
 
-                tLtpYr = response.time_lines1[0].t_line[0].yr;
+                //timeline1
+                tL1Ou = response.time_lines1[0].t_line[0].ou;
 
-                //timeline
+                tL1tp01.push(response.time_lines1[0].tp1.length)
+                tL1tp02.push(response.time_lines1[0].tp2.length)
+                tL1tp03.push(response.time_lines1[0].tp3.length)
+                tL1tp04.push(response.time_lines1[0].tp4.length)
+                tL1tp05.push(response.time_lines1[0].tp5.length)
+                tL1tp06.push(response.time_lines1[0].tp6.length)
+                tL1tp07.push(response.time_lines1[0].tp7.length)
+                tL1tp08.push(response.time_lines1[0].tp8.length)
+                tL1tp09.push(response.time_lines1[0].tp9.length)
+                tL1tp10.push(response.time_lines1[0].tp10.length)
+                tL1tp11.push(response.time_lines1[0].tp11.length)
+                tL1tp12.push(response.time_lines1[0].tp12.length)
 
-                tLtp01.push(response.time_lines1[0].tp1)
-                tLtp02.push(response.time_lines1[0].tp2)
-                tLtp03.push(response.time_lines1[0].tp3)
-                tLtp04.push(response.time_lines1[0].tp4)
-                tLtp05.push(response.time_lines1[0].tp5)
-                tLtp06.push(response.time_lines1[0].tp6)
-                tLtp07.push(response.time_lines1[0].tp7)
-                tLtp08.push(response.time_lines1[0].tp8)
-                tLtp09.push(response.time_lines1[0].tp9)
-                tLtp10.push(response.time_lines1[0].tp10)
-                tLtp11.push(response.time_lines1[0].tp11)
-                tLtp12.push(response.time_lines1[0].tp12)
+                tL1.push(response.time_lines1[0].t_line)
 
-                tL.push(response.time_lines1[0].t_line)
+                tL1btm01.push(response.time_lines1[0].btm1.length)
+                tL1btm02.push(response.time_lines1[0].btm2.length)
+                tL1btm03.push(response.time_lines1[0].btm3.length)
+                tL1btm04.push(response.time_lines1[0].btm4.length)
+                tL1btm05.push(response.time_lines1[0].btm5.length)
+                tL1btm06.push(response.time_lines1[0].btm6.length)
+                tL1btm07.push(response.time_lines1[0].btm7.length)
+                tL1btm08.push(response.time_lines1[0].btm8.length)
+                tL1btm09.push(response.time_lines1[0].btm9.length)
+                tL1btm10.push(response.time_lines1[0].btm10.length)
+                tL1btm11.push(response.time_lines1[0].btm11.length)
+                tL1btm12.push(response.time_lines1[0].btm12.length)
 
-                tLbtm01.push(response.time_lines1[0].btm1)
-                tLbtm02.push(response.time_lines1[0].btm2)
-                tLbtm03.push(response.time_lines1[0].btm3)
-                tLbtm04.push(response.time_lines1[0].btm4)
-                tLbtm05.push(response.time_lines1[0].btm5)
-                tLbtm06.push(response.time_lines1[0].btm6)
-                tLbtm07.push(response.time_lines1[0].btm7)
-                tLbtm08.push(response.time_lines1[0].btm8)
-                tLbtm09.push(response.time_lines1[0].btm9)
-                tLbtm10.push(response.time_lines1[0].btm10)
-                tLbtm11.push(response.time_lines1[0].btm11)
-                tLbtm12.push(response.time_lines1[0].btm12)
+                //timeline2
+                tL2Ou = response.time_lines2[0].t_line[0].ou;
+
+                tL2tp01.push(response.time_lines2[0].tp1.length)
+                tL2tp02.push(response.time_lines2[0].tp2.length)
+                tL2tp03.push(response.time_lines2[0].tp3.length)
+                tL2tp04.push(response.time_lines2[0].tp4.length)
+                tL2tp05.push(response.time_lines2[0].tp5.length)
+                tL2tp06.push(response.time_lines2[0].tp6.length)
+                tL2tp07.push(response.time_lines2[0].tp7.length)
+                tL2tp08.push(response.time_lines2[0].tp8.length)
+                tL2tp09.push(response.time_lines2[0].tp9.length)
+                tL2tp10.push(response.time_lines2[0].tp10.length)
+                tL2tp11.push(response.time_lines2[0].tp11.length)
+                tL2tp12.push(response.time_lines2[0].tp12.length)
+
+                tL2.push(response.time_lines2[0].t_line)
+
+                tL2btm01.push(response.time_lines2[0].btm1.length)
+                tL2btm02.push(response.time_lines2[0].btm2.length)
+                tL2btm03.push(response.time_lines2[0].btm3.length)
+                tL2btm04.push(response.time_lines2[0].btm4.length)
+                tL2btm05.push(response.time_lines2[0].btm5.length)
+                tL2btm06.push(response.time_lines2[0].btm6.length)
+                tL2btm07.push(response.time_lines2[0].btm7.length)
+                tL2btm08.push(response.time_lines2[0].btm8.length)
+                tL2btm09.push(response.time_lines2[0].btm9.length)
+                tL2btm10.push(response.time_lines2[0].btm10.length)
+                tL2btm11.push(response.time_lines2[0].btm11.length)
+                tL2btm12.push(response.time_lines2[0].btm12.length)
+
+                //timeline3
+                tL3Ou = response.time_lines3[0].t_line[0].ou;
+
+                tL3tp01.push(response.time_lines3[0].tp1.length)
+                tL3tp02.push(response.time_lines3[0].tp2.length)
+                tL3tp03.push(response.time_lines3[0].tp3.length)
+                tL3tp04.push(response.time_lines3[0].tp4.length)
+                tL3tp05.push(response.time_lines3[0].tp5.length)
+                tL3tp06.push(response.time_lines3[0].tp6.length)
+                tL3tp07.push(response.time_lines3[0].tp7.length)
+                tL3tp08.push(response.time_lines3[0].tp8.length)
+                tL3tp09.push(response.time_lines3[0].tp9.length)
+                tL3tp10.push(response.time_lines3[0].tp10.length)
+                tL3tp11.push(response.time_lines3[0].tp11.length)
+                tL3tp12.push(response.time_lines3[0].tp12.length)
+
+                tL3.push(response.time_lines3[0].t_line)
+
+                tL3btm01.push(response.time_lines3[0].btm1.length)
+                tL3btm02.push(response.time_lines3[0].btm2.length)
+                tL3btm03.push(response.time_lines3[0].btm3.length)
+                tL3btm04.push(response.time_lines3[0].btm4.length)
+                tL3btm05.push(response.time_lines3[0].btm5.length)
+                tL3btm06.push(response.time_lines3[0].btm6.length)
+                tL3btm07.push(response.time_lines3[0].btm7.length)
+                tL3btm08.push(response.time_lines3[0].btm8.length)
+                tL3btm09.push(response.time_lines3[0].btm9.length)
+                tL3btm10.push(response.time_lines3[0].btm10.length)
+                tL3btm11.push(response.time_lines3[0].btm11.length)
+                tL3btm12.push(response.time_lines3[0].btm12.length)
 
             }
         })
@@ -357,6 +477,7 @@ $(document).ready(function () {
         setTimeline(years, typ)
     };
 
+
     $('.btn-lgnd-inf').on('click', function () {
         var lgnd_text = $(this).parent().parent().find(".checkbox").text()
         var lgnd = $(this).parent().parent().find("input").attr('id')
@@ -421,7 +542,7 @@ $(document).ready(function () {
 
         $('.dlg_bar').children().html(lgnd_text)
 
-        $('.dlg_cnt').html("This is just a test text, we are developing it. This is just a test text, we are developing it. This is just a test text, we are developing it. This is just a test text, we are developing it. This is just a test text, we are developing it. This is just a test text, we are developing it. This is just a test text, we are developing it. This is just a test text, we are developing it. This is just a test text, we are developing it. This is just a test text, we are developing it. This is just a test text, we are developing it. This is just a test text, we are developing it. This is just a test text, we are developing it. This is just a test text, we are developing it.")
+        $('.dlg_cnt').html("This is")
 
     })
 
@@ -461,15 +582,9 @@ $(document).ready(function () {
 
         if (typeof qry1 === 'string' && qry1 != "") {
             if (typeof qry3 === 'string' && qry3 != "") {
-
-                console.log("qry1-qry3 hay datos: " + qry1 + "-" + qry3)
-                console.log("OU s: " + qry1)
-                console.log("Year s: " + qry3)
                 createTimeline()
-
-                //log
-                $('.timeline').css("background-color", "yellow")
-
+                // log
+                //$('.timeline').css("background-color", "yellow")
             } else {
                 $('.timeline').remove()
             }
@@ -487,8 +602,6 @@ $(document).ready(function () {
         $('<div class="tp_yr">').appendTo('.timeline')
 
         for (itp = 1; itp <= 12; itp++) {
-            var numl = itp.length
-            console.log("numl: " + numl)
             var tp = '<div class="tp' + itp + '">'
             $(tp).appendTo('.timeline')
         }
@@ -503,91 +616,560 @@ $(document).ready(function () {
 
         $('<div class="yr_start">').appendTo('.t_line')
 
+        // Top
+        const tlTp1 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs1"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlTp2 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs2"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlTp3 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs3"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlTp4 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs4"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlTp5 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs5"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlTp6 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs6"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlTp7 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs7"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlTp8 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs8"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlTp9 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs9"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlTp10 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs10"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlTp11 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs11"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlTp12 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs12"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+
+        const contrs = `
+        <div class="card_contr">
+            <div class="title">Service</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
+            ipsum, cond (MAX 100 caracters).</div>
+        </div>
+        `;
+
+        // Top
+
+        if (tL1tp01 >= 1) {
+            $('.tp1').append(tlTp1);
+            for (i = 1; i <= tL1tp01; i++) {
+                $('.contrs1').append(contrs);
+            }
+        }
+        if (tL1tp02 >= 1) {
+            $('.tp2').append(tlTp2);
+            for (i = 1; i <= tL1tp02; i++) {
+                $('.contrs2').append(contrs);
+            }
+        }
+        if (tL1tp03 >= 1) {
+            $('.tp3').append(tlTp3);
+            for (i = 1; i <= tL1tp03; i++) {
+                $('.contrs3').append(contrs);
+            }
+        }
+        if (tL1tp04 >= 1) {
+            $('.tp4').append(tlTp4);
+            for (i = 1; i <= tL1tp04; i++) {
+                $('.contrs4').append(contrs);
+            }
+        }
+        if (tL1tp05 >= 1) {
+            $('.tp5').append(tlTp5);
+            for (i = 1; i <= tL1tp05; i++) {
+                $('.contrs5').append(contrs);
+            }
+        }
+        if (tL1tp06 >= 1) {
+            $('.tp6').append(tlTp6);
+            for (i = 1; i <= tL1tp06; i++) {
+                $('.contrs6').append(contrs);
+            }
+        }
+        if (tL1tp07 >= 1) {
+            $('.tp7').append(tlTp7);
+            for (i = 1; i <= tL1tp07; i++) {
+                $('.contrs7').append(contrs);
+            }
+        }
+        if (tL1tp08 >= 1) {
+            $('.tp8').append(tlTp8);
+            for (i = 1; i <= tL1tp08; i++) {
+                $('.contrs8').append(contrs);
+            }
+        }
+        if (tL1tp09 >= 1) {
+            $('.tp9').append(tlTp9);
+            for (i = 1; i <= tL1tp09; i++) {
+                $('.contrs9').append(contrs);
+            }
+        }
+        if (tL1tp10 >= 1) {
+            $('.tp10').append(tlTp10);
+            for (i = 1; i <= tL1tp10; i++) {
+                $('.contrs10').append(contrs);
+            }
+        }
+        if (tL1tp11 >= 1) {
+            $('.tp11').append(tlTp11);
+            for (i = 1; i <= tL1tp11; i++) {
+                $('.contrs11').append(contrs);
+            }
+        }
+        if (tL1tp12 >= 1) {
+            $('.tp12').append(tlTp12);
+            for (i = 1; i <= tL1tp12; i++) {
+                $('.contrs12').append(contrs);
+            }
+        }
+
+        // Line
+
         const tlJan = `
                         <div class="tl_jan">
                           <div class="cntr_top"></div>
-                          <div class="cnt"></div>
+                          <div class="cnt">
+                          <div class="lbl">jan</div>
+                          </div>
                           <div class="cntr_bttm"></div>
                         </div>
         `;
         const tlFeb = `
                         <div class="tl_feb">
                           <div class="cntr_top"></div>
-                          <div class="cnt"></div>
+                          <div class="cnt">
+                          <div class="lbl">feb</div>
+                          </div>
                           <div class="cntr_bttm"></div>
                         </div>
         `;
         const tlMar = `
                       <div class="tl_mar">
                         <div class="cntr_top"></div>
-                        <div class="cnt"></div>
+                        <div class="cnt">
+                        <div class="lbl">mar</div>
+                        </div>
                         <div class="cntr_bttm"></div>
                       </div>
         `;
         const tlApr = `
                     <div class="tl_apr">
                       <div class="cntr_top"></div>
-                      <div class="cnt"></div>
+                      <div class="cnt">
+                      <div class="lbl">apr</div></div>
                       <div class="cntr_bttm"></div>
                     </div>
         `;
         const tlMay = `
                   <div class="tl_may">
                     <div class="cntr_top"></div>
-                    <div class="cnt"></div>
+                    <div class="cnt">
+                    <div class="lbl">may</div></div>
                     <div class="cntr_bttm"></div>
                   </div>
         `;
         const tlJun = `
                   <div class="tl_jun">
                     <div class="cntr_top"></div>
-                    <div class="cnt"></div>
+                    <div class="cnt">
+                    <div class="lbl">jun</div>
+                    </div>
                     <div class="cntr_bttm"></div>
                   </div>
         `;
         const tlJul = `
                   <div class="tl_jul">
                     <div class="cntr_top"></div>
-                    <div class="cnt"></div>
+                    <div class="cnt">
+                    <div class="lbl">jul</div>
+                    </div>
                     <div class="cntr_bttm"></div>
                   </div>
         `;
         const tlAug = `
                   <div class="tl_aug">
                     <div class="cntr_top"></div>
-                    <div class="cnt"></div>
+                    <div class="cnt">
+                    <div class="lbl">aug</div>
+                    </div>
                     <div class="cntr_bttm"></div>
                   </div>
         `;
         const tlSep = `
                   <div class="tl_sep">
                     <div class="cntr_top"></div>
-                    <div class="cnt"></div>
+                    <div class="cnt">
+                    <div class="lbl">sep</div>
+                    </div>
                     <div class="cntr_bttm"></div>
                   </div>
         `;
         const tlOct = `
                   <div class="tl_oct">
                     <div class="cntr_top"></div>
-                    <div class="cnt"></div>
+                    <div class="cnt">
+                    <div class="lbl">oct</div>
+                    </div>
                     <div class="cntr_bttm"></div>
                   </div>
         `;
         const tlNov = `
                         <div class="tl_nov">
                             <div class="cntr_top"></div>
-                            <div class="cnt"></div>
+                            <div class="cnt">
+                            <div class="lbl">nov</div>
+                            </div>
                             <div class="cntr_bttm"></div>
                         </div>
         `;
         const tlDic = `
                         <div class="tl_dic">
                             <div class="cntr_top"></div>
-                            <div class="cnt"></div>
+                            <div class="cnt">
+                            <div class="lbl">dic</div>
+                            </div>
                             <div class="cntr_bttm"></div>
                         </div>
         `;
 
         $('.t_line').append(tlJan, tlFeb, tlMar, tlApr, tlMay, tlJun, tlJul, tlAug, tlSep, tlOct, tlNov, tlDic);
+        console.log(tL1tp01, tL1tp02, tL1tp03)
+
+        // Bottom
+
+        const tlBttm1 = `
+        <div class="panel_bottom">
+        <div class="impacts">
+            <div class="cards1">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlBttm2 = `
+        <div class="panel_bottom">
+        <div class="impacts">
+            <div class="cards2">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlBttm3 = `
+        <div class="panel_bottom">
+        <div class="impacts">
+            <div class="cards3">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlBttm4 = `
+        <div class="panel_bottom">
+        <div class="impacts">
+            <div class="cards4">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlBttm5 = `
+        <div class="panel_bottom">
+        <div class="impacts">
+            <div class="cards5">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlBttm6 = `
+        <div class="panel_bottom">
+        <div class="impacts">
+            <div class="cards6">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlBttm7 = `
+        <div class="panel_bottom">
+        <div class="impacts">
+            <div class="cards7">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlBttm8 = `
+        <div class="panel_bottom">
+        <div class="impacts">
+            <div class="cards8">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlBttm9 = `
+        <div class="panel_bottom">
+        <div class="impacts">
+            <div class="cards9">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlBttm10 = `
+        <div class="panel_bottom">
+        <div class="impacts">
+            <div class="cards10">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlBttm11 = `
+        <div class="panel_bottom">
+        <div class="impacts">
+            <div class="cards11">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlBttm12 = `
+        <div class="panel_bottom">
+        <div class="impacts">
+            <div class="cards12">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+
+        const tlcard1 = `
+        <div class="card_lgnd1">
+            <div class="title">Service</div>
+            <div class="subtitle">Advocacy Stage</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
+            ipsum, cond (MAX 100 caracters).</div>
+        </div>
+        `;
+        const tlcard2 = `
+        <div class="card_lgnd2">
+            <div class="title">Service</div>
+            <div class="subtitle">Regression Introduced</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
+            ipsum, cond (MAX 100 caracters).</div>
+        </div>
+        `;
+        const tlcard3 = `
+        <div class="card_lgnd3">
+            <div class="title">Service</div>
+            <div class="subtitle">Loss</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
+            ipsum, cond (MAX 100 caracters).</div>
+        </div>
+        `;
+        const tlcard4 = `
+        <div class="card_lgnd4">
+            <div class="title">Service</div>
+            <div class="subtitle">Defended</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
+            ipsum, cond (MAX 100 caracters).</div>
+        </div>
+        `;
+        const tlcard5 = `
+        <div class="card_lgnd5">
+            <div class="title">Service</div>
+            <div class="subtitle">Reform Introduced</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
+            ipsum, cond (MAX 100 caracters).</div>
+        </div>
+        `;
+        const tlcard6 = `
+        <div class="card_lgnd6">
+            <div class="title">Service</div>
+            <div class="subtitle">Advanced</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
+            ipsum, cond (MAX 100 caracters).</div>
+        </div>
+        `;
+        const tlcard7 = `
+        <div class="card_lgnd7">
+            <div class="title">Service</div>
+            <div class="subtitle">Approved</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
+            ipsum, cond (MAX 100 caracters).</div>
+        </div>
+        `;
+        const tlcard8 = `
+        <div class="card_lgnd8">
+            <div class="title">Service</div>
+            <div class="subtitle">Implemented</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
+            ipsum, cond (MAX 100 caracters).</div>
+        </div>
+        `;
+
+        var random_lgnd = [tlcard1, tlcard2, tlcard3, tlcard4, tlcard5, tlcard6, tlcard7, tlcard8];
+
+        if (tL1btm01 >= 1) {
+            $('.btm1').append(tlBttm1);
+            for (i = 1; i <= tL1btm01; i++) {
+                var randomBtm1 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
+                $('.cards1').append(randomBtm1);
+            }
+        }
+        if (tL1btm02 >= 1) {
+            $('.btm2').append(tlBttm2);
+            for (i = 1; i <= tL1btm02; i++) {
+                var randomBtm2 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
+                $('.cards2').append(randomBtm2);
+            }
+        }
+        if (tL1btm03 >= 1) {
+            $('.btm3').append(tlBttm3);
+            for (i = 1; i <= tL1btm03; i++) {
+                var randomBtm3 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
+                $('.cards3').append(randomBtm3);
+            }
+        }
+        if (tL1btm04 >= 1) {
+            $('.btm4').append(tlBttm4);
+            for (i = 1; i <= tL1btm04; i++) {
+                var randomBtm4 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
+                $('.cards4').append(randomBtm4);
+            }
+        }
+        if (tL1btm05 >= 1) {
+            $('.btm5').append(tlBttm5);
+            for (i = 1; i <= tL1btm05; i++) {
+                var randomBtm5 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
+                $('.cards5').append(randomBtm5);
+            }
+        }
+        if (tL1btm06 >= 1) {
+            $('.btm6').append(tlBttm6);
+            for (i = 1; i <= tL1btm06; i++) {
+                var randomBtm6 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
+                $('.cards6').append(randomBtm6);
+            }
+        }
+        if (tL1btm07 >= 1) {
+            $('.btm7').append(tlBttm7);
+            for (i = 1; i <= tL1btm07; i++) {
+                var randomBtm7 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
+                $('.cards7').append(randomBtm7);
+            }
+        }
+        if (tL1btm08 >= 1) {
+            $('.btm8').append(tlBttm8);
+            for (i = 1; i <= tL1btm08; i++) {
+                var randomBtm8 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
+                $('.cards8').append(randomBtm8);
+            }
+        }
+        if (tL1btm09 >= 1) {
+            $('.btm9').append(tlBttm9);
+            for (i = 1; i <= tL1btm09; i++) {
+                var randomBtm9 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
+                $('.cards9').append(randomBtm9);
+            }
+        }
+        if (tL1btm10 >= 1) {
+            $('.btm10').append(tlBttm10);
+            for (i = 1; i <= tL1btm10; i++) {
+                var randomBtm10 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
+                $('.cards10').append(randomBtm10);
+            }
+        }
+        if (tL1btm11 >= 1) {
+            $('.btm11').append(tlBttm11);
+            for (i = 1; i <= tL1btm11; i++) {
+                var randomBtm11 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
+                $('.cards11').append(randomBtm10);
+            }
+        }
+        if (tL1btm12 >= 1) {
+            $('.btm12').append(tlBttm12);
+            for (i = 1; i <= tL1btm12; i++) {
+                var randomBtm12 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
+                $('.cards12').append(randomBtm12);
+            }
+        }
     }
 })

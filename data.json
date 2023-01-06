@@ -1,5 +1,5 @@
 {
-  "OUs": [
+  "Ous": [
     "CDD - Colombia",
     "OU Name 2",
     "OU Name 3"
@@ -34,7 +34,7 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "tp2": [{}],
+    "tp2": [],
     "tp3": [{
       "title": "Title",
       "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
@@ -48,12 +48,12 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "tp5": [{}],
+    "tp5": [],
     "tp6": [{
       "title": "Title",
       "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
     }],
-    "tp7": [{}],
+    "tp7": [],
     "tp8": [{
         "title": "Title",
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
@@ -67,9 +67,9 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "tp9": [{}],
-    "tp10": [{}],
-    "tp11": [{}],
+    "tp9": [],
+    "tp10": [],
+    "tp11": [],
     "tp12": [{
       "title": "Title",
       "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
@@ -140,7 +140,6 @@
       }]
 
     }],
-    "btm_yr": "",
     "btm1": [{
         "title": "Service",
         "subtitle": "Advocacy Stage",
@@ -198,7 +197,7 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "btm4": [{}],
+    "btm4": [],
     "btm5": [
       {
         "title": "Service",
@@ -216,8 +215,8 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "btm6": [{}],
-    "btm7": [{}],
+    "btm6": [],
+    "btm7": [],
     "btm8": [
       {
         "title": "Service",
@@ -255,7 +254,7 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "btm9": [{}],
+    "btm9": [],
     "btm10": [
       {
         "title": "Service",
@@ -273,16 +272,12 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "btm11": [{}],
+    "btm11": [],
     "btm12": [{}]
   }],
   "time_lines2": [{
-    "ou": "CDD - Colombia",
+    "ou": "OU Name 2",
     "tp1": [{
-        "title": "Title",
-        "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
-      },
-      {
         "title": "Title",
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       },
@@ -295,7 +290,7 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "tp2": [{}],
+    "tp2": [],
     "tp3": [{
       "title": "Title",
       "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
@@ -309,12 +304,12 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "tp5": [{}],
+    "tp5": [],
     "tp6": [{
       "title": "Title",
       "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
     }],
-    "tp7": [{}],
+    "tp7": [],
     "tp8": [{
         "title": "Title",
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
@@ -328,9 +323,9 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "tp9": [{}],
-    "tp10": [{}],
-    "tp11": [{}],
+    "tp9": [],
+    "tp10": [],
+    "tp11": [],
     "tp12": [{
       "title": "Title",
       "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
@@ -401,7 +396,6 @@
       }]
 
     }],
-    "btm_yr": "",
     "btm1": [{
         "title": "Service",
         "subtitle": "Advocacy Stage",
@@ -459,7 +453,7 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "btm4": [{}],
+    "btm4": [],
     "btm5": [
       {
         "title": "Service",
@@ -477,8 +471,8 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "btm6": [{}],
-    "btm7": [{}],
+    "btm6": [],
+    "btm7": [],
     "btm8": [
       {
         "title": "Service",
@@ -516,7 +510,7 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "btm9": [{}],
+    "btm9": [],
     "btm10": [
       {
         "title": "Service",
@@ -534,11 +528,11 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "btm11": [{}],
+    "btm11": [],
     "btm12": [{}]
   }],
   "time_lines3": [{
-    "ou": "CDD - Colombia",
+    "ou": "OU Name 3",
     "tp1": [{
         "title": "Title",
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
@@ -556,7 +550,7 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "tp2": [{}],
+    "tp2": [],
     "tp3": [{
       "title": "Title",
       "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
@@ -570,12 +564,12 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "tp5": [{}],
+    "tp5": [],
     "tp6": [{
       "title": "Title",
       "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
     }],
-    "tp7": [{}],
+    "tp7": [],
     "tp8": [{
         "title": "Title",
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
@@ -589,9 +583,9 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "tp9": [{}],
-    "tp10": [{}],
-    "tp11": [{}],
+    "tp9": [],
+    "tp10": [],
+    "tp11": [],
     "tp12": [{
       "title": "Title",
       "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
@@ -662,7 +656,6 @@
       }]
 
     }],
-    "btm_yr": "",
     "btm1": [{
         "title": "Service",
         "subtitle": "Advocacy Stage",
@@ -720,7 +713,7 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "btm4": [{}],
+    "btm4": [],
     "btm5": [
       {
         "title": "Service",
@@ -738,8 +731,8 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "btm6": [{}],
-    "btm7": [{}],
+    "btm6": [],
+    "btm7": [],
     "btm8": [
       {
         "title": "Service",
@@ -777,7 +770,7 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "btm9": [{}],
+    "btm9": [],
     "btm10": [
       {
         "title": "Service",
@@ -795,7 +788,7 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "btm11": [{}],
+    "btm11": [],
     "btm12": [{}]
   }]
 }
