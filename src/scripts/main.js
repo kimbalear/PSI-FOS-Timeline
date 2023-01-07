@@ -1181,45 +1181,45 @@ $(document).ready(function () {
     $('#lgnd1').click(function () {
         $(".card_lgnd1").toggle(this.checked)
         //$(".card_lgnd1").parent().parent().parent().toggle(this.show);
-        pnlLgnds(1);
+        pnlLgnds();
     });
 
     $('#lgnd2').click(function () {
         $(".card_lgnd2").toggle(this.checked)
-        pnlLgnds(2);
+        pnlLgnds();
     });
 
     $('#lgnd3').click(function () {
         $(".card_lgnd3").toggle(this.checked)
-        pnlLgnds(3);
+        pnlLgnds();
     });
 
     $('#lgnd4').click(function () {
         $(".card_lgnd4").toggle(this.checked)
-        pnlLgnds(4);
+        pnlLgnds();
     });
 
     $('#lgnd5').click(function () {
         $(".card_lgnd5").toggle(this.checked)
-        pnlLgnds(5);
+        pnlLgnds();
     });
 
     $('#lgnd6').click(function () {
         $(".card_lgnd6").toggle(this.checked)
-        pnlLgnds(6);
+        pnlLgnds();
     });
 
     $('#lgnd7').click(function () {
         $(".card_lgnd7").toggle(this.checked)
-        pnlLgnds(7);
+        pnlLgnds();
     });
 
     $('#lgnd8').click(function () {
         $(".card_lgnd8").toggle(this.checked)
-        pnlLgnds(8);
+        pnlLgnds();
     });
 
-    function pnlLgnds(lgnd) {
+    function pnlLgnds() {
 
         for (i = 1; i <= 12; i++) {
             var panel = '.pnl_bttm' + i
@@ -1227,22 +1227,18 @@ $(document).ready(function () {
             var lngtCards = $(cards).children().length;
             var lngtCardsHide = $(cards).children().filter(':hidden').length;
             var isCardshow = $(cards).children().is(':visible')
-            var hasChildren = $(panel).has('*').length > 0;
-
+            var hasChildren = $(panel).has('*').length > 0
 
             if (hasChildren == true) { // tiene hijos el mes
-
                 if (lngtCardsHide < lngtCards) {
                     $(panel).css("visibility", "visible")
                 }
-
                 if (lngtCards != 0 && $(panel).is(':visible') == true) {
-
                     if ((lngtCards - lngtCardsHide) == 0 && isCardshow == false) {
                         $(panel).css("visibility", "hidden")
                     }
                 }
-            }// no tiene hijos -----
+            }
         }
     }
 })
