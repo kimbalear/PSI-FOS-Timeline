@@ -1221,13 +1221,22 @@ $(document).ready(function () {
         pnlLgnds(8);
     });
 
-    function pnlLgnds(lgnd){
-        var panel = '$(".pnl_bttm'
-/*
-        for(i=1; i<=12;i++){
-            if(tL1btm1)
+    function pnlLgnds(lgnd) {
 
+        for (i = 1; i <= 12; i++) {
+            //panel = '$(".pnl_bttm'
+            var cards = '.cards' + i
+            var hiddenCards = $(cards).children().filter(':hidden').length;
 
-        }*/
+            if ($(cards).children().is(":hidden")) {
+                console.log("El elemento está oculto - cards: " + cards + " lgnd: " + lgnd)
+                console.log(cards + " El total de card ocultas: " + hiddenCards)
+                // 
+            } else {
+                console.log("El elemento está mostrado - cards: " + cards + " lgnd: " + lgnd)
+                // 
+            }
+
+        }
     }
 })
