@@ -7,85 +7,85 @@ $(document).ready(function () {
     let tL1tp1 = [];
     let tL1tp2 = [];
     let tL1tp3 = [];
-    let tL1tp04 = [];
-    let tL1tp05 = [];
-    let tL1tp06 = [];
-    let tL1tp07 = [];
-    let tL1tp08 = [];
-    let tL1tp09 = [];
+    let tL1tp4 = [];
+    let tL1tp5 = [];
+    let tL1tp6 = [];
+    let tL1tp7 = [];
+    let tL1tp8 = [];
+    let tL1tp9 = [];
     let tL1tp10 = [];
     let tL1tp11 = [];
     let tL1tp12 = [];
     let tL1 = [];
 
     let tL1btmYr;
-    let tL1btm01 = [];
-    let tL1btm02 = [];
-    let tL1btm03 = [];
-    let tL1btm04 = [];
-    let tL1btm05 = [];
-    let tL1btm06 = [];
-    let tL1btm07 = [];
-    let tL1btm08 = [];
-    let tL1btm09 = [];
+    let tL1btm1 = [];
+    let tL1btm2 = [];
+    let tL1btm3 = [];
+    let tL1btm4 = [];
+    let tL1btm5 = [];
+    let tL1btm6 = [];
+    let tL1btm7 = [];
+    let tL1btm8 = [];
+    let tL1btm9 = [];
     let tL1btm10 = [];
     let tL1btm11 = [];
     let tL1btm12 = [];
 
     let tL2Ou;
-    let tL2tp01 = [];
-    let tL2tp02 = [];
-    let tL2tp03 = [];
-    let tL2tp04 = [];
-    let tL2tp05 = [];
-    let tL2tp06 = [];
-    let tL2tp07 = [];
-    let tL2tp08 = [];
-    let tL2tp09 = [];
+    let tL2tp1 = [];
+    let tL2tp2 = [];
+    let tL2tp3 = [];
+    let tL2tp4 = [];
+    let tL2tp5 = [];
+    let tL2tp6 = [];
+    let tL2tp7 = [];
+    let tL2tp8 = [];
+    let tL2tp9 = [];
     let tL2tp10 = [];
     let tL2tp11 = [];
     let tL2tp12 = [];
     let tL2 = [];
 
     let tL2btmYr;
-    let tL2btm01 = [];
-    let tL2btm02 = [];
-    let tL2btm03 = [];
-    let tL2btm04 = [];
-    let tL2btm05 = [];
-    let tL2btm06 = [];
-    let tL2btm07 = [];
-    let tL2btm08 = [];
-    let tL2btm09 = [];
+    let tL2btm1 = [];
+    let tL2btm2 = [];
+    let tL2btm3 = [];
+    let tL2btm4 = [];
+    let tL2btm5 = [];
+    let tL2btm6 = [];
+    let tL2btm7 = [];
+    let tL2btm8 = [];
+    let tL2btm9 = [];
     let tL2btm10 = [];
     let tL2btm11 = [];
     let tL2btm12 = [];
 
     let tL3Ou;
-    let tL3tp01 = [];
-    let tL3tp02 = [];
-    let tL3tp03 = [];
-    let tL3tp04 = [];
-    let tL3tp05 = [];
-    let tL3tp06 = [];
-    let tL3tp07 = [];
-    let tL3tp08 = [];
-    let tL3tp09 = [];
+    let tL3tp1 = [];
+    let tL3tp2 = [];
+    let tL3tp3 = [];
+    let tL3tp4 = [];
+    let tL3tp5 = [];
+    let tL3tp6 = [];
+    let tL3tp7 = [];
+    let tL3tp8 = [];
+    let tL3tp9 = [];
     let tL3tp10 = [];
     let tL3tp11 = [];
     let tL3tp12 = [];
     let tL3 = [];
 
     let tL3btmYr;
-    let tL3btm01 = [];
-    let tL3btm02 = [];
-    let tL3btm03 = [];
-    let tL3btm04 = [];
-    let tL3btm05 = [];
-    let tL3btm06 = [];
-    let tL3btm07 = [];
-    let tL3btm08 = [];
-    let tL3btm09 = [];
+    let tL3btm1 = [];
+    let tL3btm2 = [];
+    let tL3btm3 = [];
+    let tL3btm4 = [];
+    let tL3btm5 = [];
+    let tL3btm6 = [];
+    let tL3btm7 = [];
+    let tL3btm8 = [];
+    let tL3btm9 = [];
     let tL3btm10 = [];
     let tL3btm11 = [];
     let tL3btm12 = [];
@@ -317,27 +317,27 @@ $(document).ready(function () {
                 tL1tp1.push(response.time_lines1[0].tp1.length)
                 tL1tp2.push(response.time_lines1[0].tp2.length)
                 tL1tp3.push(response.time_lines1[0].tp3.length)
-                tL1tp04.push(response.time_lines1[0].tp4.length)
-                tL1tp05.push(response.time_lines1[0].tp5.length)
-                tL1tp06.push(response.time_lines1[0].tp6.length)
-                tL1tp07.push(response.time_lines1[0].tp7.length)
-                tL1tp08.push(response.time_lines1[0].tp8.length)
-                tL1tp09.push(response.time_lines1[0].tp9.length)
+                tL1tp4.push(response.time_lines1[0].tp4.length)
+                tL1tp5.push(response.time_lines1[0].tp5.length)
+                tL1tp6.push(response.time_lines1[0].tp6.length)
+                tL1tp7.push(response.time_lines1[0].tp7.length)
+                tL1tp8.push(response.time_lines1[0].tp8.length)
+                tL1tp9.push(response.time_lines1[0].tp9.length)
                 tL1tp10.push(response.time_lines1[0].tp10.length)
                 tL1tp11.push(response.time_lines1[0].tp11.length)
                 tL1tp12.push(response.time_lines1[0].tp12.length)
 
                 tL1.push(response.time_lines1[0].t_line)
 
-                tL1btm01.push(response.time_lines1[0].btm1.length)
-                tL1btm02.push(response.time_lines1[0].btm2.length)
-                tL1btm03.push(response.time_lines1[0].btm3.length)
-                tL1btm04.push(response.time_lines1[0].btm4.length)
-                tL1btm05.push(response.time_lines1[0].btm5.length)
-                tL1btm06.push(response.time_lines1[0].btm6.length)
-                tL1btm07.push(response.time_lines1[0].btm7.length)
-                tL1btm08.push(response.time_lines1[0].btm8.length)
-                tL1btm09.push(response.time_lines1[0].btm9.length)
+                tL1btm1.push(response.time_lines1[0].btm1.length)
+                tL1btm2.push(response.time_lines1[0].btm2.length)
+                tL1btm3.push(response.time_lines1[0].btm3.length)
+                tL1btm4.push(response.time_lines1[0].btm4.length)
+                tL1btm5.push(response.time_lines1[0].btm5.length)
+                tL1btm6.push(response.time_lines1[0].btm6.length)
+                tL1btm7.push(response.time_lines1[0].btm7.length)
+                tL1btm8.push(response.time_lines1[0].btm8.length)
+                tL1btm9.push(response.time_lines1[0].btm9.length)
                 tL1btm10.push(response.time_lines1[0].btm10.length)
                 tL1btm11.push(response.time_lines1[0].btm11.length)
                 tL1btm12.push(response.time_lines1[0].btm12.length)
@@ -345,30 +345,30 @@ $(document).ready(function () {
                 //timeline2
                 tL2Ou = response.time_lines2[0].t_line[0].ou;
 
-                tL2tp01.push(response.time_lines2[0].tp1.length)
-                tL2tp02.push(response.time_lines2[0].tp2.length)
-                tL2tp03.push(response.time_lines2[0].tp3.length)
-                tL2tp04.push(response.time_lines2[0].tp4.length)
-                tL2tp05.push(response.time_lines2[0].tp5.length)
-                tL2tp06.push(response.time_lines2[0].tp6.length)
-                tL2tp07.push(response.time_lines2[0].tp7.length)
-                tL2tp08.push(response.time_lines2[0].tp8.length)
-                tL2tp09.push(response.time_lines2[0].tp9.length)
+                tL2tp1.push(response.time_lines2[0].tp1.length)
+                tL2tp2.push(response.time_lines2[0].tp2.length)
+                tL2tp3.push(response.time_lines2[0].tp3.length)
+                tL2tp4.push(response.time_lines2[0].tp4.length)
+                tL2tp5.push(response.time_lines2[0].tp5.length)
+                tL2tp6.push(response.time_lines2[0].tp6.length)
+                tL2tp7.push(response.time_lines2[0].tp7.length)
+                tL2tp8.push(response.time_lines2[0].tp8.length)
+                tL2tp9.push(response.time_lines2[0].tp9.length)
                 tL2tp10.push(response.time_lines2[0].tp10.length)
                 tL2tp11.push(response.time_lines2[0].tp11.length)
                 tL2tp12.push(response.time_lines2[0].tp12.length)
 
                 tL2.push(response.time_lines2[0].t_line)
 
-                tL2btm01.push(response.time_lines2[0].btm1.length)
-                tL2btm02.push(response.time_lines2[0].btm2.length)
-                tL2btm03.push(response.time_lines2[0].btm3.length)
-                tL2btm04.push(response.time_lines2[0].btm4.length)
-                tL2btm05.push(response.time_lines2[0].btm5.length)
-                tL2btm06.push(response.time_lines2[0].btm6.length)
-                tL2btm07.push(response.time_lines2[0].btm7.length)
-                tL2btm08.push(response.time_lines2[0].btm8.length)
-                tL2btm09.push(response.time_lines2[0].btm9.length)
+                tL2btm1.push(response.time_lines2[0].btm1.length)
+                tL2btm2.push(response.time_lines2[0].btm2.length)
+                tL2btm3.push(response.time_lines2[0].btm3.length)
+                tL2btm4.push(response.time_lines2[0].btm4.length)
+                tL2btm5.push(response.time_lines2[0].btm5.length)
+                tL2btm6.push(response.time_lines2[0].btm6.length)
+                tL2btm7.push(response.time_lines2[0].btm7.length)
+                tL2btm8.push(response.time_lines2[0].btm8.length)
+                tL2btm9.push(response.time_lines2[0].btm9.length)
                 tL2btm10.push(response.time_lines2[0].btm10.length)
                 tL2btm11.push(response.time_lines2[0].btm11.length)
                 tL2btm12.push(response.time_lines2[0].btm12.length)
@@ -376,30 +376,30 @@ $(document).ready(function () {
                 //timeline3
                 tL3Ou = response.time_lines3[0].t_line[0].ou;
 
-                tL3tp01.push(response.time_lines3[0].tp1.length)
-                tL3tp02.push(response.time_lines3[0].tp2.length)
-                tL3tp03.push(response.time_lines3[0].tp3.length)
-                tL3tp04.push(response.time_lines3[0].tp4.length)
-                tL3tp05.push(response.time_lines3[0].tp5.length)
-                tL3tp06.push(response.time_lines3[0].tp6.length)
-                tL3tp07.push(response.time_lines3[0].tp7.length)
-                tL3tp08.push(response.time_lines3[0].tp8.length)
-                tL3tp09.push(response.time_lines3[0].tp9.length)
+                tL3tp1.push(response.time_lines3[0].tp1.length)
+                tL3tp2.push(response.time_lines3[0].tp2.length)
+                tL3tp3.push(response.time_lines3[0].tp3.length)
+                tL3tp4.push(response.time_lines3[0].tp4.length)
+                tL3tp5.push(response.time_lines3[0].tp5.length)
+                tL3tp6.push(response.time_lines3[0].tp6.length)
+                tL3tp7.push(response.time_lines3[0].tp7.length)
+                tL3tp8.push(response.time_lines3[0].tp8.length)
+                tL3tp9.push(response.time_lines3[0].tp9.length)
                 tL3tp10.push(response.time_lines3[0].tp10.length)
                 tL3tp11.push(response.time_lines3[0].tp11.length)
                 tL3tp12.push(response.time_lines3[0].tp12.length)
 
                 tL3.push(response.time_lines3[0].t_line)
 
-                tL3btm01.push(response.time_lines3[0].btm1.length)
-                tL3btm02.push(response.time_lines3[0].btm2.length)
-                tL3btm03.push(response.time_lines3[0].btm3.length)
-                tL3btm04.push(response.time_lines3[0].btm4.length)
-                tL3btm05.push(response.time_lines3[0].btm5.length)
-                tL3btm06.push(response.time_lines3[0].btm6.length)
-                tL3btm07.push(response.time_lines3[0].btm7.length)
-                tL3btm08.push(response.time_lines3[0].btm8.length)
-                tL3btm09.push(response.time_lines3[0].btm9.length)
+                tL3btm1.push(response.time_lines3[0].btm1.length)
+                tL3btm2.push(response.time_lines3[0].btm2.length)
+                tL3btm3.push(response.time_lines3[0].btm3.length)
+                tL3btm4.push(response.time_lines3[0].btm4.length)
+                tL3btm5.push(response.time_lines3[0].btm5.length)
+                tL3btm6.push(response.time_lines3[0].btm6.length)
+                tL3btm7.push(response.time_lines3[0].btm7.length)
+                tL3btm8.push(response.time_lines3[0].btm8.length)
+                tL3btm9.push(response.time_lines3[0].btm9.length)
                 tL3btm10.push(response.time_lines3[0].btm10.length)
                 tL3btm11.push(response.time_lines3[0].btm11.length)
                 tL3btm12.push(response.time_lines3[0].btm12.length)
@@ -742,39 +742,39 @@ $(document).ready(function () {
                 $('.contrs3').append(contrs);
             }
         }
-        if (tL1tp04 >= 1) {
+        if (tL1tp4 >= 1) {
             $('.tp4').append(tlTp4);
-            for (i = 1; i <= tL1tp04; i++) {
+            for (i = 1; i <= tL1tp4; i++) {
                 $('.contrs4').append(contrs);
             }
         }
-        if (tL1tp05 >= 1) {
+        if (tL1tp5 >= 1) {
             $('.tp5').append(tlTp5);
-            for (i = 1; i <= tL1tp05; i++) {
+            for (i = 1; i <= tL1tp5; i++) {
                 $('.contrs5').append(contrs);
             }
         }
-        if (tL1tp06 >= 1) {
+        if (tL1tp6 >= 1) {
             $('.tp6').append(tlTp6);
-            for (i = 1; i <= tL1tp06; i++) {
+            for (i = 1; i <= tL1tp6; i++) {
                 $('.contrs6').append(contrs);
             }
         }
-        if (tL1tp07 >= 1) {
+        if (tL1tp7 >= 1) {
             $('.tp7').append(tlTp7);
-            for (i = 1; i <= tL1tp07; i++) {
+            for (i = 1; i <= tL1tp7; i++) {
                 $('.contrs7').append(contrs);
             }
         }
-        if (tL1tp08 >= 1) {
+        if (tL1tp8 >= 1) {
             $('.tp8').append(tlTp8);
-            for (i = 1; i <= tL1tp08; i++) {
+            for (i = 1; i <= tL1tp8; i++) {
                 $('.contrs8').append(contrs);
             }
         }
-        if (tL1tp09 >= 1) {
+        if (tL1tp9 >= 1) {
             $('.tp9').append(tlTp9);
-            for (i = 1; i <= tL1tp09; i++) {
+            for (i = 1; i <= tL1tp9; i++) {
                 $('.contrs9').append(contrs);
             }
         }
@@ -1087,65 +1087,65 @@ $(document).ready(function () {
 
         var random_lgnd = [tlcard1, tlcard2, tlcard3, tlcard4, tlcard5, tlcard6, tlcard7, tlcard8];
 
-        if (tL1btm01 >= 1) {
+        if (tL1btm1 >= 1) {
             $('.btm1').append(tlBttm1);
-            for (i = 1; i <= tL1btm01; i++) {
+            for (i = 1; i <= tL1btm1; i++) {
                 var randomBtm1 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
                 $('.cards1').append(randomBtm1);
             }
         }
-        if (tL1btm02 >= 1) {
+        if (tL1btm2 >= 1) {
             $('.btm2').append(tlBttm2);
-            for (i = 1; i <= tL1btm02; i++) {
+            for (i = 1; i <= tL1btm2; i++) {
                 var randomBtm2 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
                 $('.cards2').append(randomBtm2);
             }
         }
-        if (tL1btm03 >= 1) {
+        if (tL1btm3 >= 1) {
             $('.btm3').append(tlBttm3);
-            for (i = 1; i <= tL1btm03; i++) {
+            for (i = 1; i <= tL1btm3; i++) {
                 var randomBtm3 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
                 $('.cards3').append(randomBtm3);
             }
         }
-        if (tL1btm04 >= 1) {
+        if (tL1btm4 >= 1) {
             $('.btm4').append(tlBttm4);
-            for (i = 1; i <= tL1btm04; i++) {
+            for (i = 1; i <= tL1btm4; i++) {
                 var randomBtm4 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
                 $('.cards4').append(randomBtm4);
             }
         }
-        if (tL1btm05 >= 1) {
+        if (tL1btm5 >= 1) {
             $('.btm5').append(tlBttm5);
-            for (i = 1; i <= tL1btm05; i++) {
+            for (i = 1; i <= tL1btm5; i++) {
                 var randomBtm5 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
                 $('.cards5').append(randomBtm5);
             }
         }
-        if (tL1btm06 >= 1) {
+        if (tL1btm6 >= 1) {
             $('.btm6').append(tlBttm6);
-            for (i = 1; i <= tL1btm06; i++) {
+            for (i = 1; i <= tL1btm6; i++) {
                 var randomBtm6 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
                 $('.cards6').append(randomBtm6);
             }
         }
-        if (tL1btm07 >= 1) {
+        if (tL1btm7 >= 1) {
             $('.btm7').append(tlBttm7);
-            for (i = 1; i <= tL1btm07; i++) {
+            for (i = 1; i <= tL1btm7; i++) {
                 var randomBtm7 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
                 $('.cards7').append(randomBtm7);
             }
         }
-        if (tL1btm08 >= 1) {
+        if (tL1btm8 >= 1) {
             $('.btm8').append(tlBttm8);
-            for (i = 1; i <= tL1btm08; i++) {
+            for (i = 1; i <= tL1btm8; i++) {
                 var randomBtm8 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
                 $('.cards8').append(randomBtm8);
             }
         }
-        if (tL1btm09 >= 1) {
+        if (tL1btm9 >= 1) {
             $('.btm9').append(tlBttm9);
-            for (i = 1; i <= tL1btm09; i++) {
+            for (i = 1; i <= tL1btm9; i++) {
                 var randomBtm9 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
                 $('.cards9').append(randomBtm9);
             }
@@ -1225,7 +1225,7 @@ $(document).ready(function () {
         var panel = '$(".pnl_bttm'
 /*
         for(i=1; i<=12;i++){
-            if(tL1btm01)
+            if(tL1btm1)
 
 
         }*/
