@@ -589,7 +589,6 @@ $(document).ready(function () {
                 $('.timeline').remove()
             }
         } else {
-            console.log("qry1-qry3: " + typeof qry1);
             $('.timeline').remove()
         }
 
@@ -907,7 +906,6 @@ $(document).ready(function () {
         `;
 
         $('.t_line').append(tlJan, tlFeb, tlMar, tlApr, tlMay, tlJun, tlJul, tlAug, tlSep, tlOct, tlNov, tlDic);
-        console.log(tL1tp1, tL1tp2, tL1tp3)
 
         // Bottom
 
@@ -1224,19 +1222,27 @@ $(document).ready(function () {
     function pnlLgnds(lgnd) {
 
         for (i = 1; i <= 12; i++) {
-            //panel = '$(".pnl_bttm'
+            var panel = '.pnl_bttm' + i
             var cards = '.cards' + i
-            var hiddenCards = $(cards).children().filter(':hidden').length;
+            var lngtCards = $(cards).children().length;
+            var lngtCardsHide = $(cards).children().filter(':hidden').length;
+            var isCardshow = $(cards).children().is(':visible')
+            var hasChildren = $(panel).has('*').length > 0;
 
-            if ($(cards).children().is(":hidden")) {
-                console.log("El elemento está oculto - cards: " + cards + " lgnd: " + lgnd)
-                console.log(cards + " El total de card ocultas: " + hiddenCards)
-                // 
-            } else {
-                console.log("El elemento está mostrado - cards: " + cards + " lgnd: " + lgnd)
-                // 
-            }
 
+            if (hasChildren == true) { // tiene hijos el mes
+
+                if (lngtCardsHide < lngtCards) {
+                    $(panel).css("visibility", "visible")
+                }
+
+                if (lngtCards != 0 && $(panel).is(':visible') == true) {
+
+                    if ((lngtCards - lngtCardsHide) == 0 && isCardshow == false) {
+                        $(panel).css("visibility", "hidden")
+                    }
+                }
+            }// no tiene hijos -----
         }
     }
 })
