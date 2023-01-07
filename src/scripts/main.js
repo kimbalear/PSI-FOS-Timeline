@@ -4,9 +4,9 @@ $(document).ready(function () {
     let years = [];
 
     let tL1Ou;
-    let tL1tp01 = [];
-    let tL1tp02 = [];
-    let tL1tp03 = [];
+    let tL1tp1 = [];
+    let tL1tp2 = [];
+    let tL1tp3 = [];
     let tL1tp04 = [];
     let tL1tp05 = [];
     let tL1tp06 = [];
@@ -314,9 +314,9 @@ $(document).ready(function () {
                 //timeline1
                 tL1Ou = response.time_lines1[0].t_line[0].ou;
 
-                tL1tp01.push(response.time_lines1[0].tp1.length)
-                tL1tp02.push(response.time_lines1[0].tp2.length)
-                tL1tp03.push(response.time_lines1[0].tp3.length)
+                tL1tp1.push(response.time_lines1[0].tp1.length)
+                tL1tp2.push(response.time_lines1[0].tp2.length)
+                tL1tp3.push(response.time_lines1[0].tp3.length)
                 tL1tp04.push(response.time_lines1[0].tp4.length)
                 tL1tp05.push(response.time_lines1[0].tp5.length)
                 tL1tp06.push(response.time_lines1[0].tp6.length)
@@ -724,21 +724,21 @@ $(document).ready(function () {
 
         // Top
 
-        if (tL1tp01 >= 1) {
+        if (tL1tp1 >= 1) {
             $('.tp1').append(tlTp1);
-            for (i = 1; i <= tL1tp01; i++) {
+            for (i = 1; i <= tL1tp1; i++) {
                 $('.contrs1').append(contrs);
             }
         }
-        if (tL1tp02 >= 1) {
+        if (tL1tp2 >= 1) {
             $('.tp2').append(tlTp2);
-            for (i = 1; i <= tL1tp02; i++) {
+            for (i = 1; i <= tL1tp2; i++) {
                 $('.contrs2').append(contrs);
             }
         }
-        if (tL1tp03 >= 1) {
+        if (tL1tp3 >= 1) {
             $('.tp3').append(tlTp3);
-            for (i = 1; i <= tL1tp03; i++) {
+            for (i = 1; i <= tL1tp3; i++) {
                 $('.contrs3').append(contrs);
             }
         }
@@ -907,12 +907,12 @@ $(document).ready(function () {
         `;
 
         $('.t_line').append(tlJan, tlFeb, tlMar, tlApr, tlMay, tlJun, tlJul, tlAug, tlSep, tlOct, tlNov, tlDic);
-        console.log(tL1tp01, tL1tp02, tL1tp03)
+        console.log(tL1tp1, tL1tp2, tL1tp3)
 
         // Bottom
 
         const tlBttm1 = `
-        <div class="panel_bottom">
+        <div class="pnl_bttm1">
         <div class="impacts">
             <div class="cards1">
             </div>
@@ -921,7 +921,7 @@ $(document).ready(function () {
         </div>
         `;
         const tlBttm2 = `
-        <div class="panel_bottom">
+        <div class="pnl_bttm2">
         <div class="impacts">
             <div class="cards2">
             </div>
@@ -930,7 +930,7 @@ $(document).ready(function () {
         </div>
         `;
         const tlBttm3 = `
-        <div class="panel_bottom">
+        <div class="pnl_bttm3">
         <div class="impacts">
             <div class="cards3">
             </div>
@@ -939,7 +939,7 @@ $(document).ready(function () {
         </div>
         `;
         const tlBttm4 = `
-        <div class="panel_bottom">
+        <div class="pnl_bttm4">
         <div class="impacts">
             <div class="cards4">
             </div>
@@ -948,7 +948,7 @@ $(document).ready(function () {
         </div>
         `;
         const tlBttm5 = `
-        <div class="panel_bottom">
+        <div class="pnl_bttm5">
         <div class="impacts">
             <div class="cards5">
             </div>
@@ -957,7 +957,7 @@ $(document).ready(function () {
         </div>
         `;
         const tlBttm6 = `
-        <div class="panel_bottom">
+        <div class="pnl_bttm6">
         <div class="impacts">
             <div class="cards6">
             </div>
@@ -966,7 +966,7 @@ $(document).ready(function () {
         </div>
         `;
         const tlBttm7 = `
-        <div class="panel_bottom">
+        <div class="pnl_bttm7">
         <div class="impacts">
             <div class="cards7">
             </div>
@@ -975,7 +975,7 @@ $(document).ready(function () {
         </div>
         `;
         const tlBttm8 = `
-        <div class="panel_bottom">
+        <div class="pnl_bttm8">
         <div class="impacts">
             <div class="cards8">
             </div>
@@ -984,7 +984,7 @@ $(document).ready(function () {
         </div>
         `;
         const tlBttm9 = `
-        <div class="panel_bottom">
+        <div class="pnl_bttm9">
         <div class="impacts">
             <div class="cards9">
             </div>
@@ -993,7 +993,7 @@ $(document).ready(function () {
         </div>
         `;
         const tlBttm10 = `
-        <div class="panel_bottom">
+        <div class="pnl_bttm10">
         <div class="impacts">
             <div class="cards10">
             </div>
@@ -1002,7 +1002,7 @@ $(document).ready(function () {
         </div>
         `;
         const tlBttm11 = `
-        <div class="panel_bottom">
+        <div class="pnl_bttm11">
         <div class="impacts">
             <div class="cards11">
             </div>
@@ -1011,7 +1011,7 @@ $(document).ready(function () {
         </div>
         `;
         const tlBttm12 = `
-        <div class="panel_bottom">
+        <div class="pnl_bttm12">
         <div class="impacts">
             <div class="cards12">
             </div>
@@ -1176,48 +1176,58 @@ $(document).ready(function () {
     // Legends cta
 
     $('#lgnd0').click(function () {
-        $(".card_contr").toggle(this.checked);
-        $(".card_contr").parent().parent().parent().toggle(this.show);
+        $(".card_contr").toggle(this.checked)
+        $(".card_contr").parent().parent().parent().toggle(this.show)
     });
 
     $('#lgnd1').click(function () {
-        $(".card_lgnd1").toggle(this.checked);
+        $(".card_lgnd1").toggle(this.checked)
         //$(".card_lgnd1").parent().parent().parent().toggle(this.show);
-        impactCounterMonth(21, 1);
+        pnlLgnds(1);
     });
 
     $('#lgnd2').click(function () {
-        $(".card_lgnd2").toggle(this.checked);
-        impactCounterMonth(21, 2);
+        $(".card_lgnd2").toggle(this.checked)
+        pnlLgnds(2);
     });
 
     $('#lgnd3').click(function () {
-        $(".card_lgnd3").toggle(this.checked);
-        impactCounterMonth(21, 3);
+        $(".card_lgnd3").toggle(this.checked)
+        pnlLgnds(3);
     });
 
     $('#lgnd4').click(function () {
-        $(".card_lgnd4").toggle(this.checked);
-        impactCounterMonth(21, 4);
+        $(".card_lgnd4").toggle(this.checked)
+        pnlLgnds(4);
     });
 
     $('#lgnd5').click(function () {
-        $(".card_lgnd5").toggle(this.checked);
-        impactCounterMonth(21, 5);
+        $(".card_lgnd5").toggle(this.checked)
+        pnlLgnds(5);
     });
 
     $('#lgnd6').click(function () {
-        $(".card_lgnd6").toggle(this.checked);
-        impactCounterMonth(21, 6);
+        $(".card_lgnd6").toggle(this.checked)
+        pnlLgnds(6);
     });
 
     $('#lgnd7').click(function () {
-        $(".card_lgnd7").toggle(this.checked);
-        impactCounterMonth(21, 7);
+        $(".card_lgnd7").toggle(this.checked)
+        pnlLgnds(7);
     });
 
     $('#lgnd8').click(function () {
-        $(".card_lgnd8").toggle(this.checked);
-        impactCounterMonth(21, 8);
+        $(".card_lgnd8").toggle(this.checked)
+        pnlLgnds(8);
     });
+
+    function pnlLgnds(lgnd){
+        var panel = '$(".pnl_bttm'
+/*
+        for(i=1; i<=12;i++){
+            if(tL1btm01)
+
+
+        }*/
+    }
 })
