@@ -800,108 +800,108 @@ $(document).ready(function () {
 
         const tlJan = `
                         <div class="tl_jan">
-                          <div class="cntr_top"></div>
+                          <div class="cntr_top1"></div>
                           <div class="cnt">
                           <div class="lbl">jan</div>
                           </div>
-                          <div class="cntr_bttm"></div>
+                          <div class="cntr_bttm1"></div>
                         </div>
         `;
         const tlFeb = `
                         <div class="tl_feb">
-                          <div class="cntr_top"></div>
+                          <div class="cntr_top2"></div>
                           <div class="cnt">
                           <div class="lbl">feb</div>
                           </div>
-                          <div class="cntr_bttm"></div>
+                          <div class="cntr_bttm2"></div>
                         </div>
         `;
         const tlMar = `
                       <div class="tl_mar">
-                        <div class="cntr_top"></div>
+                        <div class="cntr_top3"></div>
                         <div class="cnt">
                         <div class="lbl">mar</div>
                         </div>
-                        <div class="cntr_bttm"></div>
+                        <div class="cntr_bttm3"></div>
                       </div>
         `;
         const tlApr = `
                     <div class="tl_apr">
-                      <div class="cntr_top"></div>
+                      <div class="cntr_top4"></div>
                       <div class="cnt">
                       <div class="lbl">apr</div></div>
-                      <div class="cntr_bttm"></div>
+                      <div class="cntr_bttm4"></div>
                     </div>
         `;
         const tlMay = `
                   <div class="tl_may">
-                    <div class="cntr_top"></div>
+                    <div class="cntr_top5"></div>
                     <div class="cnt">
                     <div class="lbl">may</div></div>
-                    <div class="cntr_bttm"></div>
+                    <div class="cntr_bttm5"></div>
                   </div>
         `;
         const tlJun = `
                   <div class="tl_jun">
-                    <div class="cntr_top"></div>
+                    <div class="cntr_top6"></div>
                     <div class="cnt">
                     <div class="lbl">jun</div>
                     </div>
-                    <div class="cntr_bttm"></div>
+                    <div class="cntr_bttm6"></div>
                   </div>
         `;
         const tlJul = `
                   <div class="tl_jul">
-                    <div class="cntr_top"></div>
+                    <div class="cntr_top7"></div>
                     <div class="cnt">
                     <div class="lbl">jul</div>
                     </div>
-                    <div class="cntr_bttm"></div>
+                    <div class="cntr_bttm7"></div>
                   </div>
         `;
         const tlAug = `
                   <div class="tl_aug">
-                    <div class="cntr_top"></div>
+                    <div class="cntr_top8"></div>
                     <div class="cnt">
                     <div class="lbl">aug</div>
                     </div>
-                    <div class="cntr_bttm"></div>
+                    <div class="cntr_bttm8"></div>
                   </div>
         `;
         const tlSep = `
                   <div class="tl_sep">
-                    <div class="cntr_top"></div>
+                    <div class="cntr_top9"></div>
                     <div class="cnt">
                     <div class="lbl">sep</div>
                     </div>
-                    <div class="cntr_bttm"></div>
+                    <div class="9"></div>
                   </div>
         `;
         const tlOct = `
                   <div class="tl_oct">
-                    <div class="cntr_top"></div>
+                    <div class="cntr_top10"></div>
                     <div class="cnt">
                     <div class="lbl">oct</div>
                     </div>
-                    <div class="cntr_bttm"></div>
+                    <div class="cntr_bttm10"></div>
                   </div>
         `;
         const tlNov = `
                         <div class="tl_nov">
-                            <div class="cntr_top"></div>
+                            <div class="cntr_top11"></div>
                             <div class="cnt">
                             <div class="lbl">nov</div>
                             </div>
-                            <div class="cntr_bttm"></div>
+                            <div class="cntr_bttm11"></div>
                         </div>
         `;
         const tlDic = `
                         <div class="tl_dic">
-                            <div class="cntr_top"></div>
+                            <div class="cntr_top1"></div>
                             <div class="cnt">
                             <div class="lbl">dic</div>
                             </div>
-                            <div class="cntr_bttm"></div>
+                            <div class="cntr_bttm12"></div>
                         </div>
         `;
 
@@ -1017,7 +1017,6 @@ $(document).ready(function () {
         <div class="line"></div>
         </div>
         `;
-
         const tlcard1 = `
         <div class="card_lgnd1">
             <div class="title">Service</div>
@@ -1085,18 +1084,84 @@ $(document).ready(function () {
 
         var random_lgnd = [tlcard1, tlcard2, tlcard3, tlcard4, tlcard5, tlcard6, tlcard7, tlcard8];
 
+        const dtContr = `
+        <div class="lbl">Contributions</div>
+        <div class="dot">4</div>
+    `;
+
+        const dtImpacts = `
+        <div class="lbl">Impact</div>
+    `;
+
+        /* 
+        <div class="dot lgnd1_p">1</div>
+            <div class="dot lgnd2_p">1</div>
+            <div class="dot lgnd3_p">1</div>
+            <div class="dot lgnd4_p">1</div>
+            <div class="dot lgnd5_p">1</div>
+            <div class="dot lgnd6_p">1</div>
+            <div class="dot lgnd7_p">1</div>
+            <div class="dot lgnd8_p">1</div>
+        */
+
         if (tL1btm1 >= 1) {
-            $('.btm1').append(tlBttm1);
+            var activ_jan = '<div class="activ_' + tL1btm1 + '">'
+
+            $(activ_jan).appendTo('.cntr_bttm1')
+            $(dtImpacts).appendTo('.activ_' + tL1btm1)
+
+            $('.btm1').append(tlBttm1)
             for (i = 1; i <= tL1btm1; i++) {
-                var randomBtm1 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
-                $('.cards1').append(randomBtm1);
+                var randomBtm1 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards1').append(randomBtm1)
             }
+
+            // Obtenemos el elemento actv
+            var actv = document.querySelector('.cards1');
+            var lg1 = actv.querySelectorAll('.card_lgnd1');
+            var lg2 = actv.querySelectorAll('.card_lgnd2');
+            var lg3 = actv.querySelectorAll('.card_lgnd3');
+            var lg4 = actv.querySelectorAll('.card_lgnd4');
+            var lg5 = actv.querySelectorAll('.card_lgnd5');
+            var lg6 = actv.querySelectorAll('.card_lgnd6');
+            var lg7 = actv.querySelectorAll('.card_lgnd7');
+            var lg8 = actv.querySelectorAll('.card_lgnd8');
+            var cantidad1 = lg1.length;
+            var cantidad2 = lg2.length;
+            var cantidad3 = lg3.length;
+            var cantidad4 = lg4.length;
+            var cantidad5 = lg5.length;
+            var cantidad6 = lg6.length;
+            var cantidad7 = lg7.length;
+            var cantidad8 = lg8.length;
+
+            for (x = 1; x <= tL1btm1; x++) {
+                var dotlgnd = '<div class="dot lgnd' + x + '_p">'
+                console.log(x)
+                if (cantidad1 >= 1) {
+                    console.log("OOOOOOOOOOOOOOOOOOOOOOOO")
+                    $(dotlgnd).appendTo('.activ_' + tL1btm1)
+                }
+            }
+
+            console.log(tL1btm1 + ' lgnd 1: ' + cantidad1)
+
+
         }
         if (tL1btm2 >= 1) {
-            $('.btm2').append(tlBttm2);
+            $('.btm2').append(tlBttm2)
             for (i = 1; i <= tL1btm2; i++) {
                 var randomBtm2 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
                 $('.cards2').append(randomBtm2);
+            }
+
+            switch (i) {
+                case 1:
+                    $(activ_jan).appendTo('.cntr_bttm1')
+                    $(dtImpacts).appendTo('.activ_' + tL1btm1)
+                    break;
+                default:
+                    break
             }
         }
         if (tL1btm3 >= 1) {
@@ -1180,7 +1245,6 @@ $(document).ready(function () {
 
     $('#lgnd1').click(function () {
         $(".card_lgnd1").toggle(this.checked)
-        //$(".card_lgnd1").parent().parent().parent().toggle(this.show);
         pnlLgnds();
     });
 

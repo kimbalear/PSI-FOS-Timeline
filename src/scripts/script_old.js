@@ -271,29 +271,29 @@ $(document).ready(function () {
                     var month = "#jan-" + yrs;
                     var card_impact = ".card_lgnd" + lgnd;
                     // calculo cantidad total y le resto la de los servicios
-                    var plgnd = $(month).find(".cntr_bttm > div .lgnd" + lgnd + "_p").length;
-                    var mxl1 = $(month).find(".cntr_bttm > div .dot").length;
+                    var plgnd = $(month).find(".cntr_bttm1 > div .lgnd" + lgnd + "_p").length;
+                    var mxl1 = $(month).find(".cntr_bttm1 > div .dot").length;
 
                     arr[i, 0] = plgnd;
 
                     if ($(card_impact).css('display') == 'none' || $(card_impact).css("visibility") == "hidden") {
                         console.log("is hidden");
 
-                        $(".cntr_bttm > div .lgnd1_p").show();
+                        $(".cntr_bttm1 > div .lgnd1_p").show();
 
                         if (arr[i, 0] <= mxl1) {
-                            mxl1 = $(month).find(".cntr_bttm > div .dot").length + 1;
+                            mxl1 = $(month).find(".cntr_bttm1 > div .dot").length + 1;
                             arr[i, 0] = mxl1;
                             console.log("paso 1.1 " + arr[i, 0] + " Totals:" + mxl1)
 
                         }
 
                     } else {
-                        $(".cntr_bttm > div .lgnd1_p").hide();
+                        $(".cntr_bttm1 > div .lgnd1_p").hide();
                         console.log("is visible");
 
                         if (arr[i, 0] == mxl1) {
-                            mxl1 = $(month).find(".cntr_bttm > div .dot").length - 1;
+                            mxl1 = $(month).find(".cntr_bttm1 > div .dot").length - 1;
                             arr[i, 0] = mxl1;
                             console.log("paso 2.1 " + arr[i, 0] + " Totals:" + mxl1);
 
@@ -307,7 +307,7 @@ $(document).ready(function () {
                     }
 
                     // oculto dot
-                    $(month).find(".cntr_bttm > div .lgnd1_p").hide();
+                    $(month).find(".cntr_bttm1 > div .lgnd1_p").hide();
 
                     console.log("year: " + yrs);
                     console.log("mes: " + i);
