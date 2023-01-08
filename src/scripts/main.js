@@ -1126,18 +1126,51 @@ $(document).ready(function () {
             var lg6 = actv.querySelectorAll('.card_lgnd6');
             var lg7 = actv.querySelectorAll('.card_lgnd7');
             var lg8 = actv.querySelectorAll('.card_lgnd8');
-            var cantidad1 = lg1.length;
-            var cantidad2 = lg2.length;
-            var cantidad3 = lg3.length;
-            var cantidad4 = lg4.length;
-            var cantidad5 = lg5.length;
-            var cantidad6 = lg6.length;
-            var cantidad7 = lg7.length;
-            var cantidad8 = lg8.length;
+            var ttlgnd1 = lg1.length;
+            var ttlgnd2 = lg2.length;
+            var ttlgnd3 = lg3.length;
+            var ttlgnd4 = lg4.length;
+            var ttlgnd5 = lg5.length;
+            var ttlgnd6 = lg6.length;
+            var ttlgnd7 = lg7.length;
+            var ttlgnd8 = lg8.length;
 
             for (x = 1; x <= tL1btm1; x++) {
-                var dotlgnd = '<div class="dot lgnd' + x + '_p">'+cantidad1+'</div>'
-                $('.activ_' + tL1btm1).append(dotlgnd)
+                switch (x) {
+                    case 1: var dotlgnd = '<div class="dot lgnd' + x + '_p">' + ttlgnd1 + '</div>'
+                        if (ttlgnd1 != 0) {$('.activ_' + tL1btm1).append(dotlgnd)}
+                        break
+                    case 2:
+                        var dotlgnd = '<div class="dot lgnd' + x + '_p">' + ttlgnd2 + '</div>'
+                        if (ttlgnd2 != 0){$('.activ_' + tL1btm1).append(dotlgnd)}
+                        
+                        break
+                    case 3:
+                        var dotlgnd = '<div class="dot lgnd' + x + '_p">' + ttlgnd3 + '</div>'
+                        if (ttlgnd3 != 0) {$('.activ_' + tL1btm1).append(dotlgnd)}
+                        break
+                    case 4:
+                        var dotlgnd = '<div class="dot lgnd' + x + '_p">' + ttlgnd4 + '</div>'
+                        if (ttlgnd4 != 0) {$('.activ_' + tL1btm1).append(dotlgnd)}
+                        break
+                    case 5:
+                        var dotlgnd = '<div class="dot lgnd' + x + '_p">' + ttlgnd5 + '</div>'
+                        if (ttlgnd5 != 0) {$('.activ_' + tL1btm1).append(dotlgnd)}
+                        break
+                    case 6:
+                        var dotlgnd = '<div class="dot lgnd' + x + '_p">' + ttlgnd6 + '</div>'
+                        if (ttlgnd6 != 0) {$('.activ_' + tL1btm1).append(dotlgnd)}
+                        break
+                    case 7:
+                        var dotlgnd = '<div class="dot lgnd' + x + '_p">' + ttlgnd7 + '</div>'
+                        if (ttlgnd7 != 0) {$('.activ_' + tL1btm1).append(dotlgnd)}
+                        break
+                    case 8:
+                        var dotlgnd = '<div class="dot lgnd' + x + '_p">' + ttlgnd8 + '</div>'
+                        if (ttlgnd8 != 0) {$('.activ_' + tL1btm1).append(dotlgnd)}
+                        break
+
+                }
 
             }
         }
