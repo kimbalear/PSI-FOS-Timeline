@@ -1136,17 +1136,10 @@ $(document).ready(function () {
             var cantidad8 = lg8.length;
 
             for (x = 1; x <= tL1btm1; x++) {
-                var dotlgnd = '<div class="dot lgnd' + x + '_p">'
-                console.log(x)
-                if (cantidad1 >= 1) {
-                    console.log("OOOOOOOOOOOOOOOOOOOOOOOO")
-                    $(dotlgnd).appendTo('.activ_' + tL1btm1)
-                }
+                var dotlgnd = '<div class="dot lgnd' + x + '_p">'+cantidad1+'</div>'
+                $('.activ_' + tL1btm1).append(dotlgnd)
+
             }
-
-            console.log(tL1btm1 + ' lgnd 1: ' + cantidad1)
-
-
         }
         if (tL1btm2 >= 1) {
             $('.btm2').append(tlBttm2)
