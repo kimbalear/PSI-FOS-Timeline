@@ -154,31 +154,6 @@
         "title": "Service",
         "subtitle": "Loss",
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
-      },
-      {
-        "title": "Service",
-        "subtitle": "Defended",
-        "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
-      },
-      {
-        "title": "Service",
-        "subtitle": "Reform Introduced",
-        "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
-      },
-      {
-        "title": "Service",
-        "subtitle": "Advanced",
-        "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
-      },
-      {
-        "title": "Service",
-        "subtitle": "Approved",
-        "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
-      },
-      {
-        "title": "Service",
-        "subtitle": "Implemented",
-        "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
     "btm2": [{
@@ -197,7 +172,27 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "btm4": [],
+    "btm4": [{
+      "title": "Service",
+      "subtitle": "Advocacy Stage",
+      "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
+    },
+    {
+      "title": "Service",
+      "subtitle": "Regression Introduced",
+      "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
+    },
+    {
+      "title": "Service",
+      "subtitle": "Loss",
+      "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
+    },
+    {
+      "title": "Service",
+      "subtitle": "Loss",
+      "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
+    }
+  ],
     "btm5": [
       {
         "title": "Service",
@@ -215,8 +210,26 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "btm6": [],
-    "btm7": [],
+    "btm6": [{
+      "title": "Service",
+      "subtitle": "Regression Introduced",
+      "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
+    },
+    {
+      "title": "Service",
+      "subtitle": "Defended",
+      "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
+    }],
+    "btm7": [{
+      "title": "Service",
+      "subtitle": "Regression Introduced",
+      "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
+    },
+    {
+      "title": "Service",
+      "subtitle": "Defended",
+      "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
+    }],
     "btm8": [
       {
         "title": "Service",
@@ -254,7 +267,16 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "btm9": [],
+    "btm9": [{
+      "title": "Service",
+      "subtitle": "Regression Introduced",
+      "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
+    },
+    {
+      "title": "Service",
+      "subtitle": "Defended",
+      "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
+    }],
     "btm10": [
       {
         "title": "Service",
@@ -272,7 +294,16 @@
         "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
       }
     ],
-    "btm11": [],
+    "btm11": [{
+      "title": "Service",
+      "subtitle": "Regression Introduced",
+      "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
+    },
+    {
+      "title": "Service",
+      "subtitle": "Defended",
+      "msg": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters)."
+    }],
     "btm12": [{}]
   }],
   "time_lines2": [{

@@ -874,7 +874,7 @@ $(document).ready(function () {
                     <div class="cnt">
                     <div class="lbl">sep</div>
                     </div>
-                    <div class="9"></div>
+                    <div class="cntr_bttm9"></div>
                   </div>
         `;
         const tlOct = `
@@ -1093,171 +1093,928 @@ $(document).ready(function () {
         <div class="lbl">Impact</div>
     `;
 
-        /* 
-        <div class="dot lgnd1_p">1</div>
-            <div class="dot lgnd2_p">1</div>
-            <div class="dot lgnd3_p">1</div>
-            <div class="dot lgnd4_p">1</div>
-            <div class="dot lgnd5_p">1</div>
-            <div class="dot lgnd6_p">1</div>
-            <div class="dot lgnd7_p">1</div>
-            <div class="dot lgnd8_p">1</div>
-        */
 
         if (tL1btm1 >= 1) {
             var activ_jan = '<div class="activ_' + tL1btm1 + '">'
-
             $(activ_jan).appendTo('.cntr_bttm1')
             $(dtImpacts).appendTo('.activ_' + tL1btm1)
-
             $('.btm1').append(tlBttm1)
+
             for (i = 1; i <= tL1btm1; i++) {
                 var randomBtm1 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
                 $('.cards1').append(randomBtm1)
             }
+            var lg1 = $('.cards1').find('.card_lgnd1').length;
+            var lg2 = $('.cards1').find('.card_lgnd2').length;
+            var lg3 = $('.cards1').find('.card_lgnd3').length;
+            var lg4 = $('.cards1').find('.card_lgnd4').length;
+            var lg5 = $('.cards1').find('.card_lgnd5').length;
+            var lg6 = $('.cards1').find('.card_lgnd6').length;
+            var lg7 = $('.cards1').find('.card_lgnd7').length;
+            var lg8 = $('.cards1').find('.card_lgnd8').length;
+            var dotlgnd = ''
 
-            // Obtenemos el elemento actv
-            var actv = document.querySelector('.cards1');
-            var lg1 = actv.querySelectorAll('.card_lgnd1');
-            var lg2 = actv.querySelectorAll('.card_lgnd2');
-            var lg3 = actv.querySelectorAll('.card_lgnd3');
-            var lg4 = actv.querySelectorAll('.card_lgnd4');
-            var lg5 = actv.querySelectorAll('.card_lgnd5');
-            var lg6 = actv.querySelectorAll('.card_lgnd6');
-            var lg7 = actv.querySelectorAll('.card_lgnd7');
-            var lg8 = actv.querySelectorAll('.card_lgnd8');
-            var ttlgnd1 = lg1.length;
-            var ttlgnd2 = lg2.length;
-            var ttlgnd3 = lg3.length;
-            var ttlgnd4 = lg4.length;
-            var ttlgnd5 = lg5.length;
-            var ttlgnd6 = lg6.length;
-            var ttlgnd7 = lg7.length;
-            var ttlgnd8 = lg8.length;
+            console.log("mont 1 ----------------------------------")
+            console.log("lg1: " + lg1)
+            console.log("lg2: " + lg2)
+            console.log("lg3: " + lg3)
+            console.log("lg4: " + lg4)
+            console.log("lg5: " + lg5)
+            console.log("lg6: " + lg6)
+            console.log("lg7: " + lg7)
+            console.log("lg8: " + lg8)
 
-            for (x = 1; x <= tL1btm1; x++) {
-                switch (x) {
-                    case 1: var dotlgnd = '<div class="dot lgnd' + x + '_p">' + ttlgnd1 + '</div>'
-                        if (ttlgnd1 != 0) {$('.activ_' + tL1btm1).append(dotlgnd)}
-                        break
-                    case 2:
-                        var dotlgnd = '<div class="dot lgnd' + x + '_p">' + ttlgnd2 + '</div>'
-                        if (ttlgnd2 != 0){$('.activ_' + tL1btm1).append(dotlgnd)}
-                        
-                        break
-                    case 3:
-                        var dotlgnd = '<div class="dot lgnd' + x + '_p">' + ttlgnd3 + '</div>'
-                        if (ttlgnd3 != 0) {$('.activ_' + tL1btm1).append(dotlgnd)}
-                        break
-                    case 4:
-                        var dotlgnd = '<div class="dot lgnd' + x + '_p">' + ttlgnd4 + '</div>'
-                        if (ttlgnd4 != 0) {$('.activ_' + tL1btm1).append(dotlgnd)}
-                        break
-                    case 5:
-                        var dotlgnd = '<div class="dot lgnd' + x + '_p">' + ttlgnd5 + '</div>'
-                        if (ttlgnd5 != 0) {$('.activ_' + tL1btm1).append(dotlgnd)}
-                        break
-                    case 6:
-                        var dotlgnd = '<div class="dot lgnd' + x + '_p">' + ttlgnd6 + '</div>'
-                        if (ttlgnd6 != 0) {$('.activ_' + tL1btm1).append(dotlgnd)}
-                        break
-                    case 7:
-                        var dotlgnd = '<div class="dot lgnd' + x + '_p">' + ttlgnd7 + '</div>'
-                        if (ttlgnd7 != 0) {$('.activ_' + tL1btm1).append(dotlgnd)}
-                        break
-                    case 8:
-                        var dotlgnd = '<div class="dot lgnd' + x + '_p">' + ttlgnd8 + '</div>'
-                        if (ttlgnd8 != 0) {$('.activ_' + tL1btm1).append(dotlgnd)}
-                        break
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm1)
+                $('.cntr_bttm1').children(active).append(dotlgnd)
+            }
 
-                }
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm1)
+                $('.cntr_bttm1').children(active).append(dotlgnd)
+            }
 
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm1)
+                $('.cntr_bttm1').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm1)
+                $('.cntr_bttm1').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm1)
+                $('.cntr_bttm1').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm1)
+                $('.cntr_bttm1').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm1)
+                $('.cntr_bttm1').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm1)
+                $('.cntr_bttm1').children(active).append(dotlgnd)
             }
         }
+
         if (tL1btm2 >= 1) {
+            var activ_feb = '<div class="activ_' + tL1btm2 + '">'
+            $(activ_feb).appendTo('.cntr_bttm2')
+            $(dtImpacts).appendTo('.activ_' + tL1btm2)
             $('.btm2').append(tlBttm2)
+
             for (i = 1; i <= tL1btm2; i++) {
-                var randomBtm2 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
-                $('.cards2').append(randomBtm2);
+                var randomBtm2 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards2').append(randomBtm2)
+            }
+            var lg1 = $('.cards2').find('.card_lgnd1').length;
+            var lg2 = $('.cards2').find('.card_lgnd2').length;
+            var lg3 = $('.cards2').find('.card_lgnd3').length;
+            var lg4 = $('.cards2').find('.card_lgnd4').length;
+            var lg5 = $('.cards2').find('.card_lgnd5').length;
+            var lg6 = $('.cards2').find('.card_lgnd6').length;
+            var lg7 = $('.cards2').find('.card_lgnd7').length;
+            var lg8 = $('.cards2').find('.card_lgnd8').length;
+            var dotlgnd = ''
+
+            console.log("mont 2 ----------------------------------")
+
+            console.log("lg1: " + lg1)
+            console.log("lg2: " + lg2)
+            console.log("lg3: " + lg3)
+            console.log("lg4: " + lg4)
+            console.log("lg5: " + lg5)
+            console.log("lg6: " + lg6)
+            console.log("lg7: " + lg7)
+            console.log("lg8: " + lg8)
+
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm2)
+                $('.cntr_bttm2').children(active).append(dotlgnd)
             }
 
-            switch (i) {
-                case 1:
-                    $(activ_jan).appendTo('.cntr_bttm1')
-                    $(dtImpacts).appendTo('.activ_' + tL1btm1)
-                    break;
-                default:
-                    break
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm2)
+                $('.cntr_bttm2').children(active).append(dotlgnd)
             }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm2)
+                $('.cntr_bttm2').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm2)
+                $('.cntr_bttm2').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm2)
+                $('.cntr_bttm2').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm2)
+                $('.cntr_bttm2').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm2)
+                $('.cntr_bttm2').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm2)
+                $('.cntr_bttm2').children(active).append(dotlgnd)
+            }
+            
         }
+
         if (tL1btm3 >= 1) {
-            $('.btm3').append(tlBttm3);
+            var activ_mar = '<div class="activ_' + tL1btm3 + '">'
+            $(activ_mar).appendTo('.cntr_bttm3')
+            $(dtImpacts).appendTo('.activ_' + tL1btm3)
+            $('.btm3').append(tlBttm3)
+
             for (i = 1; i <= tL1btm3; i++) {
-                var randomBtm3 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
-                $('.cards3').append(randomBtm3);
+                var randomBtm3 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards3').append(randomBtm3)
+            }
+            var lg1 = $('.cards3').find('.card_lgnd1').length;
+            var lg2 = $('.cards3').find('.card_lgnd2').length;
+            var lg3 = $('.cards3').find('.card_lgnd3').length;
+            var lg4 = $('.cards3').find('.card_lgnd4').length;
+            var lg5 = $('.cards3').find('.card_lgnd5').length;
+            var lg6 = $('.cards3').find('.card_lgnd6').length;
+            var lg7 = $('.cards3').find('.card_lgnd7').length;
+            var lg8 = $('.cards3').find('.card_lgnd8').length;
+            var dotlgnd = ''
+
+            console.log("mont 3 ----------------------------------")
+
+            console.log("lg1: " + lg1)
+            console.log("lg2: " + lg2)
+            console.log("lg3: " + lg3)
+            console.log("lg4: " + lg4)
+            console.log("lg5: " + lg5)
+            console.log("lg6: " + lg6)
+            console.log("lg7: " + lg7)
+            console.log("lg8: " + lg8)
+
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm3)
+                $('.cntr_bttm3').children(active).append(dotlgnd)
+            }
+
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm3)
+                $('.cntr_bttm3').children(active).append(dotlgnd)
+            }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm3)
+                $('.cntr_bttm3').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm3)
+                $('.cntr_bttm3').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm3)
+                $('.cntr_bttm3').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm3)
+                $('.cntr_bttm3').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm3)
+                $('.cntr_bttm3').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm3)
+                $('.cntr_bttm3').children(active).append(dotlgnd)
             }
         }
+
         if (tL1btm4 >= 1) {
-            $('.btm4').append(tlBttm4);
+            var activ_apr = '<div class="activ_' + tL1btm4 + '">'
+            $(activ_apr).appendTo('.cntr_bttm4')
+            $(dtImpacts).appendTo('.activ_' + tL1btm4)
+            $('.btm4').append(tlBttm4)
+
             for (i = 1; i <= tL1btm4; i++) {
-                var randomBtm4 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
-                $('.cards4').append(randomBtm4);
+                var randomBtm4 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards4').append(randomBtm4)
+            }
+            var lg1 = $('.cards4').find('.card_lgnd1').length;
+            var lg2 = $('.cards4').find('.card_lgnd2').length;
+            var lg3 = $('.cards4').find('.card_lgnd3').length;
+            var lg4 = $('.cards4').find('.card_lgnd4').length;
+            var lg5 = $('.cards4').find('.card_lgnd5').length;
+            var lg6 = $('.cards4').find('.card_lgnd6').length;
+            var lg7 = $('.cards4').find('.card_lgnd7').length;
+            var lg8 = $('.cards4').find('.card_lgnd8').length;
+            var dotlgnd = ''
+
+            console.log("mont 4 ----------------------------------")
+
+            console.log("lg1: " + lg1)
+            console.log("lg2: " + lg2)
+            console.log("lg3: " + lg3)
+            console.log("lg4: " + lg4)
+            console.log("lg5: " + lg5)
+            console.log("lg6: " + lg6)
+            console.log("lg7: " + lg7)
+            console.log("lg8: " + lg8)
+
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm4)
+                $('.cntr_bttm4').children(active).append(dotlgnd)
+            }
+
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm4)
+                $('.cntr_bttm4').children(active).append(dotlgnd)
+            }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm4)
+                $('.cntr_bttm4').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm4)
+                $('.cntr_bttm4').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm4)
+                $('.cntr_bttm4').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm4)
+                $('.cntr_bttm4').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm4)
+                $('.cntr_bttm4').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm4)
+                $('.cntr_bttm4').children(active).append(dotlgnd)
             }
         }
+
         if (tL1btm5 >= 1) {
-            $('.btm5').append(tlBttm5);
+            var activ_may = '<div class="activ_' + tL1btm5 + '">'
+            $(activ_may).appendTo('.cntr_bttm5')
+            $(dtImpacts).appendTo('.activ_' + tL1btm5)
+            $('.btm5').append(tlBttm5)
+
             for (i = 1; i <= tL1btm5; i++) {
-                var randomBtm5 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
-                $('.cards5').append(randomBtm5);
+                var randomBtm5 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards5').append(randomBtm5)
+            }
+            var lg1 = $('.cards5').find('.card_lgnd1').length;
+            var lg2 = $('.cards5').find('.card_lgnd2').length;
+            var lg3 = $('.cards5').find('.card_lgnd3').length;
+            var lg4 = $('.cards5').find('.card_lgnd4').length;
+            var lg5 = $('.cards5').find('.card_lgnd5').length;
+            var lg6 = $('.cards5').find('.card_lgnd6').length;
+            var lg7 = $('.cards5').find('.card_lgnd7').length;
+            var lg8 = $('.cards5').find('.card_lgnd8').length;
+            var dotlgnd = ''
+
+            console.log("mont 5 ----------------------------------")
+
+            console.log("lg1: " + lg1)
+            console.log("lg2: " + lg2)
+            console.log("lg3: " + lg3)
+            console.log("lg4: " + lg4)
+            console.log("lg5: " + lg5)
+            console.log("lg6: " + lg6)
+            console.log("lg7: " + lg7)
+            console.log("lg8: " + lg8)
+
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm5)
+                $('.cntr_bttm5').children(active).append(dotlgnd)
+            }
+
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm5)
+                $('.cntr_bttm5').children(active).append(dotlgnd)
+            }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm5)
+                $('.cntr_bttm5').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm5)
+                $('.cntr_bttm5').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm5)
+                $('.cntr_bttm5').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm5)
+                $('.cntr_bttm5').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm5)
+                $('.cntr_bttm5').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm5)
+                $('.cntr_bttm5').children(active).append(dotlgnd)
             }
         }
+
         if (tL1btm6 >= 1) {
-            $('.btm6').append(tlBttm6);
+            var activ_jun = '<div class="activ_' + tL1btm6 + '">'
+            $(activ_jun).appendTo('.cntr_bttm6')
+            $(dtImpacts).appendTo('.activ_' + tL1btm6)
+            $('.btm6').append(tlBttm6)
+
             for (i = 1; i <= tL1btm6; i++) {
-                var randomBtm6 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
-                $('.cards6').append(randomBtm6);
+                var randomBtm6 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards6').append(randomBtm6)
+            }
+            var lg1 = $('.cards6').find('.card_lgnd1').length;
+            var lg2 = $('.cards6').find('.card_lgnd2').length;
+            var lg3 = $('.cards6').find('.card_lgnd3').length;
+            var lg4 = $('.cards6').find('.card_lgnd4').length;
+            var lg5 = $('.cards6').find('.card_lgnd5').length;
+            var lg6 = $('.cards6').find('.card_lgnd6').length;
+            var lg7 = $('.cards6').find('.card_lgnd7').length;
+            var lg8 = $('.cards6').find('.card_lgnd8').length;
+            var dotlgnd = ''
+
+            console.log("mont 5 ----------------------------------")
+
+            console.log("lg1: " + lg1)
+            console.log("lg2: " + lg2)
+            console.log("lg3: " + lg3)
+            console.log("lg4: " + lg4)
+            console.log("lg5: " + lg5)
+            console.log("lg6: " + lg6)
+            console.log("lg7: " + lg7)
+            console.log("lg8: " + lg8)
+
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm6)
+                $('.cntr_bttm6').children(active).append(dotlgnd)
+            }
+
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm6)
+                $('.cntr_bttm6').children(active).append(dotlgnd)
+            }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm6)
+                $('.cntr_bttm6').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm6)
+                $('.cntr_bttm6').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm6)
+                $('.cntr_bttm6').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm6)
+                $('.cntr_bttm6').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm6)
+                $('.cntr_bttm6').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm6)
+                $('.cntr_bttm6').children(active).append(dotlgnd)
             }
         }
+
         if (tL1btm7 >= 1) {
-            $('.btm7').append(tlBttm7);
+            var activ_jul = '<div class="activ_' + tL1btm7 + '">'
+            $(activ_jul).appendTo('.cntr_bttm7')
+            $(dtImpacts).appendTo('.activ_' + tL1btm6)
+            $('.btm7').append(tlBttm7)
+
             for (i = 1; i <= tL1btm7; i++) {
-                var randomBtm7 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
-                $('.cards7').append(randomBtm7);
+                var randomBtm7 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards7').append(randomBtm7)
+            }
+            var lg1 = $('.cards7').find('.card_lgnd1').length;
+            var lg2 = $('.cards7').find('.card_lgnd2').length;
+            var lg3 = $('.cards7').find('.card_lgnd3').length;
+            var lg4 = $('.cards7').find('.card_lgnd4').length;
+            var lg5 = $('.cards7').find('.card_lgnd5').length;
+            var lg6 = $('.cards7').find('.card_lgnd6').length;
+            var lg7 = $('.cards7').find('.card_lgnd7').length;
+            var lg8 = $('.cards7').find('.card_lgnd8').length;
+            var dotlgnd = ''
+
+            console.log("mont 5 ----------------------------------")
+
+            console.log("lg1: " + lg1)
+            console.log("lg2: " + lg2)
+            console.log("lg3: " + lg3)
+            console.log("lg4: " + lg4)
+            console.log("lg5: " + lg5)
+            console.log("lg6: " + lg6)
+            console.log("lg7: " + lg7)
+            console.log("lg8: " + lg8)
+
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm7)
+                $('.cntr_bttm7').children(active).append(dotlgnd)
+            }
+
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm7)
+                $('.cntr_bttm7').children(active).append(dotlgnd)
+            }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm7)
+                $('.cntr_bttm7').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm7)
+                $('.cntr_bttm7').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm7)
+                $('.cntr_bttm7').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm7)
+                $('.cntr_bttm7').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm7)
+                $('.cntr_bttm7').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm7)
+                $('.cntr_bttm7').children(active).append(dotlgnd)
             }
         }
+
         if (tL1btm8 >= 1) {
-            $('.btm8').append(tlBttm8);
+            var activ_aug = '<div class="activ_' + tL1btm8 + '">'
+            $(activ_aug).appendTo('.cntr_bttm8')
+            $(dtImpacts).appendTo('.activ_' + tL1btm8)
+            $('.btm8').append(tlBttm8)
+
             for (i = 1; i <= tL1btm8; i++) {
-                var randomBtm8 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
-                $('.cards8').append(randomBtm8);
+                var randomBtm8 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards8').append(randomBtm8)
+            }
+            var lg1 = $('.cards8').find('.card_lgnd1').length;
+            var lg2 = $('.cards8').find('.card_lgnd2').length;
+            var lg3 = $('.cards8').find('.card_lgnd3').length;
+            var lg4 = $('.cards8').find('.card_lgnd4').length;
+            var lg5 = $('.cards8').find('.card_lgnd5').length;
+            var lg6 = $('.cards8').find('.card_lgnd6').length;
+            var lg7 = $('.cards8').find('.card_lgnd7').length;
+            var lg8 = $('.cards8').find('.card_lgnd8').length;
+            var dotlgnd = ''
+
+            console.log("mont 5 ----------------------------------")
+
+            console.log("lg1: " + lg1)
+            console.log("lg2: " + lg2)
+            console.log("lg3: " + lg3)
+            console.log("lg4: " + lg4)
+            console.log("lg5: " + lg5)
+            console.log("lg6: " + lg6)
+            console.log("lg7: " + lg7)
+            console.log("lg8: " + lg8)
+
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm8)
+                $('.cntr_bttm8').children(active).append(dotlgnd)
+            }
+
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm8)
+                $('.cntr_bttm8').children(active).append(dotlgnd)
+            }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm8)
+                $('.cntr_bttm8').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm8)
+                $('.cntr_bttm8').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm8)
+                $('.cntr_bttm8').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm8)
+                $('.cntr_bttm8').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm8)
+                $('.cntr_bttm8').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm8)
+                $('.cntr_bttm8').children(active).append(dotlgnd)
             }
         }
+
         if (tL1btm9 >= 1) {
-            $('.btm9').append(tlBttm9);
+            var activ_sep = '<div class="activ_' + tL1btm9 + '">'
+            $(activ_sep).appendTo('.cntr_bttm9')
+            $(dtImpacts).appendTo('.activ_' + tL1btm9)
+            $('.btm9').append(tlBttm9)
+
             for (i = 1; i <= tL1btm9; i++) {
-                var randomBtm9 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
-                $('.cards9').append(randomBtm9);
+                var randomBtm9 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards9').append(randomBtm9)
+            }
+            var lg1 = $('.cards9').find('.card_lgnd1').length;
+            var lg2 = $('.cards9').find('.card_lgnd2').length;
+            var lg3 = $('.cards9').find('.card_lgnd3').length;
+            var lg4 = $('.cards9').find('.card_lgnd4').length;
+            var lg5 = $('.cards9').find('.card_lgnd5').length;
+            var lg6 = $('.cards9').find('.card_lgnd6').length;
+            var lg7 = $('.cards9').find('.card_lgnd7').length;
+            var lg8 = $('.cards9').find('.card_lgnd8').length;
+            var dotlgnd = ''
+
+            console.log("mont 5 ----------------------------------")
+
+            console.log("lg1: " + lg1)
+            console.log("lg2: " + lg2)
+            console.log("lg3: " + lg3)
+            console.log("lg4: " + lg4)
+            console.log("lg5: " + lg5)
+            console.log("lg6: " + lg6)
+            console.log("lg7: " + lg7)
+            console.log("lg8: " + lg8)
+
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm9)
+                $('.cntr_bttm9').children(active).append(dotlgnd)
+            }
+
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm9)
+                $('.cntr_bttm9').children(active).append(dotlgnd)
+            }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm9)
+                $('.cntr_bttm9').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm9)
+                $('.cntr_bttm9').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm9)
+                $('.cntr_bttm9').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm9)
+                $('.cntr_bttm9').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm9)
+                $('.cntr_bttm9').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm9)
+                $('.cntr_bttm9').children(active).append(dotlgnd)
             }
         }
+
         if (tL1btm10 >= 1) {
-            $('.btm10').append(tlBttm10);
+            var activ_oct = '<div class="activ_' + tL1btm10 + '">'
+            $(activ_oct).appendTo('.cntr_bttm10')
+            $(dtImpacts).appendTo('.activ_' + tL1btm10)
+            $('.btm10').append(tlBttm10)
+
             for (i = 1; i <= tL1btm10; i++) {
-                var randomBtm10 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
-                $('.cards10').append(randomBtm10);
+                var randomBtm10 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards10').append(randomBtm10)
+            }
+            var lg1 = $('.cards10').find('.card_lgnd1').length;
+            var lg2 = $('.cards10').find('.card_lgnd2').length;
+            var lg3 = $('.cards10').find('.card_lgnd3').length;
+            var lg4 = $('.cards10').find('.card_lgnd4').length;
+            var lg5 = $('.cards10').find('.card_lgnd5').length;
+            var lg6 = $('.cards10').find('.card_lgnd6').length;
+            var lg7 = $('.cards10').find('.card_lgnd7').length;
+            var lg8 = $('.cards10').find('.card_lgnd8').length;
+            var dotlgnd = ''
+
+            console.log("mont 5 ----------------------------------")
+
+            console.log("lg1: " + lg1)
+            console.log("lg2: " + lg2)
+            console.log("lg3: " + lg3)
+            console.log("lg4: " + lg4)
+            console.log("lg5: " + lg5)
+            console.log("lg6: " + lg6)
+            console.log("lg7: " + lg7)
+            console.log("lg8: " + lg8)
+
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm10)
+                $('.cntr_bttm10').children(active).append(dotlgnd)
+            }
+
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm10)
+                $('.cntr_bttm10').children(active).append(dotlgnd)
+            }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm10)
+                $('.cntr_bttm10').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm10)
+                $('.cntr_bttm10').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm10)
+                $('.cntr_bttm10').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm10)
+                $('.cntr_bttm10').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm10)
+                $('.cntr_bttm10').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm10)
+                $('.cntr_bttm10').children(active).append(dotlgnd)
             }
         }
+
         if (tL1btm11 >= 1) {
-            $('.btm11').append(tlBttm11);
+            var activ_nov = '<div class="activ_' + tL1btm11 + '">'
+            $(activ_nov).appendTo('.cntr_bttm11')
+            $(dtImpacts).appendTo('.activ_' + tL1btm11)
+            $('.btm11').append(tlBttm11)
+
             for (i = 1; i <= tL1btm11; i++) {
-                var randomBtm11 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
-                $('.cards11').append(randomBtm10);
+                var randomBtm11 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards11').append(randomBtm11)
+            }
+            var lg1 = $('.cards11').find('.card_lgnd1').length;
+            var lg2 = $('.cards11').find('.card_lgnd2').length;
+            var lg3 = $('.cards11').find('.card_lgnd3').length;
+            var lg4 = $('.cards11').find('.card_lgnd4').length;
+            var lg5 = $('.cards11').find('.card_lgnd5').length;
+            var lg6 = $('.cards11').find('.card_lgnd6').length;
+            var lg7 = $('.cards11').find('.card_lgnd7').length;
+            var lg8 = $('.cards11').find('.card_lgnd8').length;
+            var dotlgnd = ''
+
+            console.log("mont 5 ----------------------------------")
+
+            console.log("lg1: " + lg1)
+            console.log("lg2: " + lg2)
+            console.log("lg3: " + lg3)
+            console.log("lg4: " + lg4)
+            console.log("lg5: " + lg5)
+            console.log("lg6: " + lg6)
+            console.log("lg7: " + lg7)
+            console.log("lg8: " + lg8)
+
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm11)
+                $('.cntr_bttm11').children(active).append(dotlgnd)
+            }
+
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm11)
+                $('.cntr_bttm11').children(active).append(dotlgnd)
+            }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm11)
+                $('.cntr_bttm11').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm11)
+                $('.cntr_bttm11').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm11)
+                $('.cntr_bttm11').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm11)
+                $('.cntr_bttm11').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm11)
+                $('.cntr_bttm11').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm11)
+                $('.cntr_bttm11').children(active).append(dotlgnd)
             }
         }
+
         if (tL1btm12 >= 1) {
-            $('.btm12').append(tlBttm12);
+            var activ_dic = '<div class="activ_' + tL1btm12 + '">'
+            $(activ_dic).appendTo('.cntr_bttm12')
+            $(dtImpacts).appendTo('.activ_' + tL1btm12)
+            $('.btm12').append(tlBttm12)
+
             for (i = 1; i <= tL1btm12; i++) {
-                var randomBtm12 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)];
-                $('.cards12').append(randomBtm12);
+                var randomBtm12 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards12').append(randomBtm12)
+            }
+            var lg1 = $('.cards12').find('.card_lgnd1').length;
+            var lg2 = $('.cards12').find('.card_lgnd2').length;
+            var lg3 = $('.cards12').find('.card_lgnd3').length;
+            var lg4 = $('.cards12').find('.card_lgnd4').length;
+            var lg5 = $('.cards12').find('.card_lgnd5').length;
+            var lg6 = $('.cards12').find('.card_lgnd6').length;
+            var lg7 = $('.cards12').find('.card_lgnd7').length;
+            var lg8 = $('.cards12').find('.card_lgnd8').length;
+            var dotlgnd = ''
+
+            console.log("mont 5 ----------------------------------")
+
+            console.log("lg1: " + lg1)
+            console.log("lg2: " + lg2)
+            console.log("lg3: " + lg3)
+            console.log("lg4: " + lg4)
+            console.log("lg5: " + lg5)
+            console.log("lg6: " + lg6)
+            console.log("lg7: " + lg7)
+            console.log("lg8: " + lg8)
+
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm12)
+                $('.cntr_bttm12').children(active).append(dotlgnd)
+            }
+
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm12)
+                $('.cntr_bttm12').children(active).append(dotlgnd)
+            }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm12)
+                $('.cntr_bttm12').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm12)
+                $('.cntr_bttm12').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm12)
+                $('.cntr_bttm12').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm12)
+                $('.cntr_bttm12').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm12)
+                $('.cntr_bttm12').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm12)
+                $('.cntr_bttm12').children(active).append(dotlgnd)
             }
         }
     }
