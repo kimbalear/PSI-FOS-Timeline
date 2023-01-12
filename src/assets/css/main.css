@@ -284,6 +284,7 @@ body .wrapper .content {
 body .wrapper .content ::-webkit-scrollbar {
   background-color: #FDF4E7;
   height: 4px;
+  width: 4px;
   border-radius: 2px;
 }
 body .wrapper .content ::-webkit-scrollbar-track {
@@ -302,11 +303,10 @@ body .wrapper .content ::-webkit-scrollbar-button {
   width: auto;
   height: 100%;
   overflow-y: auto;
-  display: flex;
 }
 .timeline_section .timelines {
   display: grid;
-  grid-template-columns: min-content min-content;
+  grid-template-columns: min-content;
   grid-template-rows: 1fr;
   grid-auto-columns: min-content;
   gap: 0px 0px;
