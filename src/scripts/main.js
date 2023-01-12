@@ -582,9 +582,11 @@ $(document).ready(function () {
 
         if (typeof qry1 === 'string' && qry1 != "") {
             if (typeof qry3 === 'string' && qry3 != "") {
-                createTimeline()
-                // log
-                //$('.timeline').css("background-color", "yellow")
+                $('.timeline').remove()
+                if (qry3.length > 4) {
+                    multipleTimeline(qry3, qry3.length)
+                }else{timeline(qry3)}
+                
             } else {
                 $('.timeline').remove()
             }
@@ -594,9 +596,11 @@ $(document).ready(function () {
 
     }
 
-    function createTimeline() {
+    function timeline(year) {
+        
+        $('<div class="lbl">').appendTo('.yr_start')
+        $('.lbl').html(year)
 
-        $('.timeline').remove()
         $('<div class="timeline">').appendTo('.timelines')
         $('<div class="tp_yr">').appendTo('.timeline')
 
@@ -614,6 +618,18 @@ $(document).ready(function () {
         }
 
         $('<div class="yr_start">').appendTo('.t_line')
+
+        if (year.length > 4) {
+            var dateArray = year.split(",");
+            for (x = 0; x <= year.length; x++) {
+                $('.t_line').find('.child').eq(dateArray[x])// Falta crear las otras lineas  de años
+            }
+
+            console.log("dateArray: " + dateArray);
+        } else {
+            $('<div class="lbl">').appendTo('.yr_start')
+            $('.lbl').html(year)
+        }
 
         // Top
         const tlTp1 = `
@@ -1114,16 +1130,6 @@ $(document).ready(function () {
             var lg8 = $('.cards1').find('.card_lgnd8').length;
             var dotlgnd = ''
 
-            console.log("mont 1 ----------------------------------")
-            console.log("lg1: " + lg1)
-            console.log("lg2: " + lg2)
-            console.log("lg3: " + lg3)
-            console.log("lg4: " + lg4)
-            console.log("lg5: " + lg5)
-            console.log("lg6: " + lg6)
-            console.log("lg7: " + lg7)
-            console.log("lg8: " + lg8)
-
             if (lg1 != 0) {
                 dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
                 var active = $('.activ_' + tL1btm1)
@@ -1190,17 +1196,6 @@ $(document).ready(function () {
             var lg8 = $('.cards2').find('.card_lgnd8').length;
             var dotlgnd = ''
 
-            console.log("mont 2 ----------------------------------")
-
-            console.log("lg1: " + lg1)
-            console.log("lg2: " + lg2)
-            console.log("lg3: " + lg3)
-            console.log("lg4: " + lg4)
-            console.log("lg5: " + lg5)
-            console.log("lg6: " + lg6)
-            console.log("lg7: " + lg7)
-            console.log("lg8: " + lg8)
-
             if (lg1 != 0) {
                 dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
                 var active = $('.activ_' + tL1btm2)
@@ -1245,7 +1240,7 @@ $(document).ready(function () {
                 var active = $('.activ_' + tL1btm2)
                 $('.cntr_bttm2').children(active).append(dotlgnd)
             }
-            
+
         }
 
         if (tL1btm3 >= 1) {
@@ -1267,17 +1262,6 @@ $(document).ready(function () {
             var lg7 = $('.cards3').find('.card_lgnd7').length;
             var lg8 = $('.cards3').find('.card_lgnd8').length;
             var dotlgnd = ''
-
-            console.log("mont 3 ----------------------------------")
-
-            console.log("lg1: " + lg1)
-            console.log("lg2: " + lg2)
-            console.log("lg3: " + lg3)
-            console.log("lg4: " + lg4)
-            console.log("lg5: " + lg5)
-            console.log("lg6: " + lg6)
-            console.log("lg7: " + lg7)
-            console.log("lg8: " + lg8)
 
             if (lg1 != 0) {
                 dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
@@ -1345,17 +1329,6 @@ $(document).ready(function () {
             var lg8 = $('.cards4').find('.card_lgnd8').length;
             var dotlgnd = ''
 
-            console.log("mont 4 ----------------------------------")
-
-            console.log("lg1: " + lg1)
-            console.log("lg2: " + lg2)
-            console.log("lg3: " + lg3)
-            console.log("lg4: " + lg4)
-            console.log("lg5: " + lg5)
-            console.log("lg6: " + lg6)
-            console.log("lg7: " + lg7)
-            console.log("lg8: " + lg8)
-
             if (lg1 != 0) {
                 dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
                 var active = $('.activ_' + tL1btm4)
@@ -1421,17 +1394,6 @@ $(document).ready(function () {
             var lg7 = $('.cards5').find('.card_lgnd7').length;
             var lg8 = $('.cards5').find('.card_lgnd8').length;
             var dotlgnd = ''
-
-            console.log("mont 5 ----------------------------------")
-
-            console.log("lg1: " + lg1)
-            console.log("lg2: " + lg2)
-            console.log("lg3: " + lg3)
-            console.log("lg4: " + lg4)
-            console.log("lg5: " + lg5)
-            console.log("lg6: " + lg6)
-            console.log("lg7: " + lg7)
-            console.log("lg8: " + lg8)
 
             if (lg1 != 0) {
                 dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
@@ -1499,17 +1461,6 @@ $(document).ready(function () {
             var lg8 = $('.cards6').find('.card_lgnd8').length;
             var dotlgnd = ''
 
-            console.log("mont 5 ----------------------------------")
-
-            console.log("lg1: " + lg1)
-            console.log("lg2: " + lg2)
-            console.log("lg3: " + lg3)
-            console.log("lg4: " + lg4)
-            console.log("lg5: " + lg5)
-            console.log("lg6: " + lg6)
-            console.log("lg7: " + lg7)
-            console.log("lg8: " + lg8)
-
             if (lg1 != 0) {
                 dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
                 var active = $('.activ_' + tL1btm6)
@@ -1575,17 +1526,6 @@ $(document).ready(function () {
             var lg7 = $('.cards7').find('.card_lgnd7').length;
             var lg8 = $('.cards7').find('.card_lgnd8').length;
             var dotlgnd = ''
-
-            console.log("mont 5 ----------------------------------")
-
-            console.log("lg1: " + lg1)
-            console.log("lg2: " + lg2)
-            console.log("lg3: " + lg3)
-            console.log("lg4: " + lg4)
-            console.log("lg5: " + lg5)
-            console.log("lg6: " + lg6)
-            console.log("lg7: " + lg7)
-            console.log("lg8: " + lg8)
 
             if (lg1 != 0) {
                 dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
@@ -1653,17 +1593,6 @@ $(document).ready(function () {
             var lg8 = $('.cards8').find('.card_lgnd8').length;
             var dotlgnd = ''
 
-            console.log("mont 5 ----------------------------------")
-
-            console.log("lg1: " + lg1)
-            console.log("lg2: " + lg2)
-            console.log("lg3: " + lg3)
-            console.log("lg4: " + lg4)
-            console.log("lg5: " + lg5)
-            console.log("lg6: " + lg6)
-            console.log("lg7: " + lg7)
-            console.log("lg8: " + lg8)
-
             if (lg1 != 0) {
                 dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
                 var active = $('.activ_' + tL1btm8)
@@ -1729,17 +1658,6 @@ $(document).ready(function () {
             var lg7 = $('.cards9').find('.card_lgnd7').length;
             var lg8 = $('.cards9').find('.card_lgnd8').length;
             var dotlgnd = ''
-
-            console.log("mont 5 ----------------------------------")
-
-            console.log("lg1: " + lg1)
-            console.log("lg2: " + lg2)
-            console.log("lg3: " + lg3)
-            console.log("lg4: " + lg4)
-            console.log("lg5: " + lg5)
-            console.log("lg6: " + lg6)
-            console.log("lg7: " + lg7)
-            console.log("lg8: " + lg8)
 
             if (lg1 != 0) {
                 dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
@@ -1807,17 +1725,6 @@ $(document).ready(function () {
             var lg8 = $('.cards10').find('.card_lgnd8').length;
             var dotlgnd = ''
 
-            console.log("mont 5 ----------------------------------")
-
-            console.log("lg1: " + lg1)
-            console.log("lg2: " + lg2)
-            console.log("lg3: " + lg3)
-            console.log("lg4: " + lg4)
-            console.log("lg5: " + lg5)
-            console.log("lg6: " + lg6)
-            console.log("lg7: " + lg7)
-            console.log("lg8: " + lg8)
-
             if (lg1 != 0) {
                 dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
                 var active = $('.activ_' + tL1btm10)
@@ -1883,17 +1790,6 @@ $(document).ready(function () {
             var lg7 = $('.cards11').find('.card_lgnd7').length;
             var lg8 = $('.cards11').find('.card_lgnd8').length;
             var dotlgnd = ''
-
-            console.log("mont 5 ----------------------------------")
-
-            console.log("lg1: " + lg1)
-            console.log("lg2: " + lg2)
-            console.log("lg3: " + lg3)
-            console.log("lg4: " + lg4)
-            console.log("lg5: " + lg5)
-            console.log("lg6: " + lg6)
-            console.log("lg7: " + lg7)
-            console.log("lg8: " + lg8)
 
             if (lg1 != 0) {
                 dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
@@ -1961,16 +1857,1313 @@ $(document).ready(function () {
             var lg8 = $('.cards12').find('.card_lgnd8').length;
             var dotlgnd = ''
 
-            console.log("mont 5 ----------------------------------")
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm12)
+                $('.cntr_bttm12').children(active).append(dotlgnd)
+            }
 
-            console.log("lg1: " + lg1)
-            console.log("lg2: " + lg2)
-            console.log("lg3: " + lg3)
-            console.log("lg4: " + lg4)
-            console.log("lg5: " + lg5)
-            console.log("lg6: " + lg6)
-            console.log("lg7: " + lg7)
-            console.log("lg8: " + lg8)
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm12)
+                $('.cntr_bttm12').children(active).append(dotlgnd)
+            }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm12)
+                $('.cntr_bttm12').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm12)
+                $('.cntr_bttm12').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm12)
+                $('.cntr_bttm12').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm12)
+                $('.cntr_bttm12').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm12)
+                $('.cntr_bttm12').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm12)
+                $('.cntr_bttm12').children(active).append(dotlgnd)
+            }
+        }
+    }
+
+    function multipleTimeline(year) {
+        
+        $('<div class="lbl">').appendTo('.yr_start')
+        $('.lbl').html(year)
+
+        $('<div class="timeline">').appendTo('.timelines')
+        $('<div class="tp_yr">').appendTo('.timeline')
+
+        for (itp = 1; itp <= 12; itp++) {
+            var tp = '<div class="tp' + itp + '">'
+            $(tp).appendTo('.timeline')
+        }
+
+        $('<div class="t_line">').appendTo('.timeline')
+        $('<div class="btm_yr">').appendTo('.timeline')
+
+        for (ibtm = 1; ibtm <= 12; ibtm++) {
+            var btm = '<div class="btm' + ibtm + '">'
+            $(btm).appendTo('.timeline')
+        }
+
+        $('<div class="yr_start">').appendTo('.t_line')
+
+        if (year.length > 4) {
+            var dateArray = year.split(",");
+            for (x = 0; x <= year.length; x++) {
+                $('.t_line').find('.child').eq(dateArray[x])// Falta crear las otras lineas  de años
+            }
+
+            console.log("dateArray: " + dateArray);
+        } else {
+            $('<div class="lbl">').appendTo('.yr_start')
+            $('.lbl').html(year)
+        }
+
+        // Top
+        const tlTp1 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs1"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlTp2 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs2"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlTp3 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs3"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlTp4 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs4"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlTp5 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs5"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlTp6 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs6"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlTp7 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs7"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlTp8 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs8"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlTp9 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs9"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlTp10 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs10"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlTp11 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs11"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlTp12 = `
+        <div class="panel_top">
+        <div class="contributions">
+            <div class="contrs12"></div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+
+        const contrs = `
+        <div class="card_contr">
+            <div class="title">Service</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
+            ipsum, cond (MAX 100 caracters).</div>
+        </div>
+        `;
+
+        // Top
+
+        if (tL1tp1 >= 1) {
+            $('.tp1').append(tlTp1);
+            for (i = 1; i <= tL1tp1; i++) {
+                $('.contrs1').append(contrs);
+            }
+        }
+        if (tL1tp2 >= 1) {
+            $('.tp2').append(tlTp2);
+            for (i = 1; i <= tL1tp2; i++) {
+                $('.contrs2').append(contrs);
+            }
+        }
+        if (tL1tp3 >= 1) {
+            $('.tp3').append(tlTp3);
+            for (i = 1; i <= tL1tp3; i++) {
+                $('.contrs3').append(contrs);
+            }
+        }
+        if (tL1tp4 >= 1) {
+            $('.tp4').append(tlTp4);
+            for (i = 1; i <= tL1tp4; i++) {
+                $('.contrs4').append(contrs);
+            }
+        }
+        if (tL1tp5 >= 1) {
+            $('.tp5').append(tlTp5);
+            for (i = 1; i <= tL1tp5; i++) {
+                $('.contrs5').append(contrs);
+            }
+        }
+        if (tL1tp6 >= 1) {
+            $('.tp6').append(tlTp6);
+            for (i = 1; i <= tL1tp6; i++) {
+                $('.contrs6').append(contrs);
+            }
+        }
+        if (tL1tp7 >= 1) {
+            $('.tp7').append(tlTp7);
+            for (i = 1; i <= tL1tp7; i++) {
+                $('.contrs7').append(contrs);
+            }
+        }
+        if (tL1tp8 >= 1) {
+            $('.tp8').append(tlTp8);
+            for (i = 1; i <= tL1tp8; i++) {
+                $('.contrs8').append(contrs);
+            }
+        }
+        if (tL1tp9 >= 1) {
+            $('.tp9').append(tlTp9);
+            for (i = 1; i <= tL1tp9; i++) {
+                $('.contrs9').append(contrs);
+            }
+        }
+        if (tL1tp10 >= 1) {
+            $('.tp10').append(tlTp10);
+            for (i = 1; i <= tL1tp10; i++) {
+                $('.contrs10').append(contrs);
+            }
+        }
+        if (tL1tp11 >= 1) {
+            $('.tp11').append(tlTp11);
+            for (i = 1; i <= tL1tp11; i++) {
+                $('.contrs11').append(contrs);
+            }
+        }
+        if (tL1tp12 >= 1) {
+            $('.tp12').append(tlTp12);
+            for (i = 1; i <= tL1tp12; i++) {
+                $('.contrs12').append(contrs);
+            }
+        }
+
+        // Line
+
+        const tlJan = `
+                        <div class="tl_jan">
+                          <div class="cntr_top1"></div>
+                          <div class="cnt">
+                          <div class="lbl">jan</div>
+                          </div>
+                          <div class="cntr_bttm1"></div>
+                        </div>
+        `;
+        const tlFeb = `
+                        <div class="tl_feb">
+                          <div class="cntr_top2"></div>
+                          <div class="cnt">
+                          <div class="lbl">feb</div>
+                          </div>
+                          <div class="cntr_bttm2"></div>
+                        </div>
+        `;
+        const tlMar = `
+                      <div class="tl_mar">
+                        <div class="cntr_top3"></div>
+                        <div class="cnt">
+                        <div class="lbl">mar</div>
+                        </div>
+                        <div class="cntr_bttm3"></div>
+                      </div>
+        `;
+        const tlApr = `
+                    <div class="tl_apr">
+                      <div class="cntr_top4"></div>
+                      <div class="cnt">
+                      <div class="lbl">apr</div></div>
+                      <div class="cntr_bttm4"></div>
+                    </div>
+        `;
+        const tlMay = `
+                  <div class="tl_may">
+                    <div class="cntr_top5"></div>
+                    <div class="cnt">
+                    <div class="lbl">may</div></div>
+                    <div class="cntr_bttm5"></div>
+                  </div>
+        `;
+        const tlJun = `
+                  <div class="tl_jun">
+                    <div class="cntr_top6"></div>
+                    <div class="cnt">
+                    <div class="lbl">jun</div>
+                    </div>
+                    <div class="cntr_bttm6"></div>
+                  </div>
+        `;
+        const tlJul = `
+                  <div class="tl_jul">
+                    <div class="cntr_top7"></div>
+                    <div class="cnt">
+                    <div class="lbl">jul</div>
+                    </div>
+                    <div class="cntr_bttm7"></div>
+                  </div>
+        `;
+        const tlAug = `
+                  <div class="tl_aug">
+                    <div class="cntr_top8"></div>
+                    <div class="cnt">
+                    <div class="lbl">aug</div>
+                    </div>
+                    <div class="cntr_bttm8"></div>
+                  </div>
+        `;
+        const tlSep = `
+                  <div class="tl_sep">
+                    <div class="cntr_top9"></div>
+                    <div class="cnt">
+                    <div class="lbl">sep</div>
+                    </div>
+                    <div class="cntr_bttm9"></div>
+                  </div>
+        `;
+        const tlOct = `
+                  <div class="tl_oct">
+                    <div class="cntr_top10"></div>
+                    <div class="cnt">
+                    <div class="lbl">oct</div>
+                    </div>
+                    <div class="cntr_bttm10"></div>
+                  </div>
+        `;
+        const tlNov = `
+                        <div class="tl_nov">
+                            <div class="cntr_top11"></div>
+                            <div class="cnt">
+                            <div class="lbl">nov</div>
+                            </div>
+                            <div class="cntr_bttm11"></div>
+                        </div>
+        `;
+        const tlDic = `
+                        <div class="tl_dic">
+                            <div class="cntr_top1"></div>
+                            <div class="cnt">
+                            <div class="lbl">dic</div>
+                            </div>
+                            <div class="cntr_bttm12"></div>
+                        </div>
+        `;
+
+        $('.t_line').append(tlJan, tlFeb, tlMar, tlApr, tlMay, tlJun, tlJul, tlAug, tlSep, tlOct, tlNov, tlDic);
+
+        // Bottom
+
+        const tlBttm1 = `
+        <div class="pnl_bttm1">
+        <div class="impacts">
+            <div class="cards1">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlBttm2 = `
+        <div class="pnl_bttm2">
+        <div class="impacts">
+            <div class="cards2">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlBttm3 = `
+        <div class="pnl_bttm3">
+        <div class="impacts">
+            <div class="cards3">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlBttm4 = `
+        <div class="pnl_bttm4">
+        <div class="impacts">
+            <div class="cards4">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlBttm5 = `
+        <div class="pnl_bttm5">
+        <div class="impacts">
+            <div class="cards5">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlBttm6 = `
+        <div class="pnl_bttm6">
+        <div class="impacts">
+            <div class="cards6">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlBttm7 = `
+        <div class="pnl_bttm7">
+        <div class="impacts">
+            <div class="cards7">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlBttm8 = `
+        <div class="pnl_bttm8">
+        <div class="impacts">
+            <div class="cards8">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlBttm9 = `
+        <div class="pnl_bttm9">
+        <div class="impacts">
+            <div class="cards9">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlBttm10 = `
+        <div class="pnl_bttm10">
+        <div class="impacts">
+            <div class="cards10">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlBttm11 = `
+        <div class="pnl_bttm11">
+        <div class="impacts">
+            <div class="cards11">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlBttm12 = `
+        <div class="pnl_bttm12">
+        <div class="impacts">
+            <div class="cards12">
+            </div>
+        </div>
+        <div class="line"></div>
+        </div>
+        `;
+        const tlcard1 = `
+        <div class="card_lgnd1">
+            <div class="title">Service</div>
+            <div class="subtitle">Advocacy Stage</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
+            ipsum, cond (MAX 100 caracters).</div>
+        </div>
+        `;
+        const tlcard2 = `
+        <div class="card_lgnd2">
+            <div class="title">Service</div>
+            <div class="subtitle">Regression Introduced</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
+            ipsum, cond (MAX 100 caracters).</div>
+        </div>
+        `;
+        const tlcard3 = `
+        <div class="card_lgnd3">
+            <div class="title">Service</div>
+            <div class="subtitle">Loss</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
+            ipsum, cond (MAX 100 caracters).</div>
+        </div>
+        `;
+        const tlcard4 = `
+        <div class="card_lgnd4">
+            <div class="title">Service</div>
+            <div class="subtitle">Defended</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
+            ipsum, cond (MAX 100 caracters).</div>
+        </div>
+        `;
+        const tlcard5 = `
+        <div class="card_lgnd5">
+            <div class="title">Service</div>
+            <div class="subtitle">Reform Introduced</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
+            ipsum, cond (MAX 100 caracters).</div>
+        </div>
+        `;
+        const tlcard6 = `
+        <div class="card_lgnd6">
+            <div class="title">Service</div>
+            <div class="subtitle">Advanced</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
+            ipsum, cond (MAX 100 caracters).</div>
+        </div>
+        `;
+        const tlcard7 = `
+        <div class="card_lgnd7">
+            <div class="title">Service</div>
+            <div class="subtitle">Approved</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
+            ipsum, cond (MAX 100 caracters).</div>
+        </div>
+        `;
+        const tlcard8 = `
+        <div class="card_lgnd8">
+            <div class="title">Service</div>
+            <div class="subtitle">Implemented</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
+            ipsum, cond (MAX 100 caracters).</div>
+        </div>
+        `;
+
+        var random_lgnd = [tlcard1, tlcard2, tlcard3, tlcard4, tlcard5, tlcard6, tlcard7, tlcard8];
+
+        const dtContr = `
+        <div class="lbl">Contributions</div>
+        <div class="dot">4</div>
+    `;
+
+        const dtImpacts = `
+        <div class="lbl">Impact</div>
+    `;
+
+
+        if (tL1btm1 >= 1) {
+            var activ_jan = '<div class="activ_' + tL1btm1 + '">'
+            $(activ_jan).appendTo('.cntr_bttm1')
+            $(dtImpacts).appendTo('.activ_' + tL1btm1)
+            $('.btm1').append(tlBttm1)
+
+            for (i = 1; i <= tL1btm1; i++) {
+                var randomBtm1 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards1').append(randomBtm1)
+            }
+            var lg1 = $('.cards1').find('.card_lgnd1').length;
+            var lg2 = $('.cards1').find('.card_lgnd2').length;
+            var lg3 = $('.cards1').find('.card_lgnd3').length;
+            var lg4 = $('.cards1').find('.card_lgnd4').length;
+            var lg5 = $('.cards1').find('.card_lgnd5').length;
+            var lg6 = $('.cards1').find('.card_lgnd6').length;
+            var lg7 = $('.cards1').find('.card_lgnd7').length;
+            var lg8 = $('.cards1').find('.card_lgnd8').length;
+            var dotlgnd = ''
+
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm1)
+                $('.cntr_bttm1').children(active).append(dotlgnd)
+            }
+
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm1)
+                $('.cntr_bttm1').children(active).append(dotlgnd)
+            }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm1)
+                $('.cntr_bttm1').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm1)
+                $('.cntr_bttm1').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm1)
+                $('.cntr_bttm1').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm1)
+                $('.cntr_bttm1').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm1)
+                $('.cntr_bttm1').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm1)
+                $('.cntr_bttm1').children(active).append(dotlgnd)
+            }
+        }
+
+        if (tL1btm2 >= 1) {
+            var activ_feb = '<div class="activ_' + tL1btm2 + '">'
+            $(activ_feb).appendTo('.cntr_bttm2')
+            $(dtImpacts).appendTo('.activ_' + tL1btm2)
+            $('.btm2').append(tlBttm2)
+
+            for (i = 1; i <= tL1btm2; i++) {
+                var randomBtm2 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards2').append(randomBtm2)
+            }
+            var lg1 = $('.cards2').find('.card_lgnd1').length;
+            var lg2 = $('.cards2').find('.card_lgnd2').length;
+            var lg3 = $('.cards2').find('.card_lgnd3').length;
+            var lg4 = $('.cards2').find('.card_lgnd4').length;
+            var lg5 = $('.cards2').find('.card_lgnd5').length;
+            var lg6 = $('.cards2').find('.card_lgnd6').length;
+            var lg7 = $('.cards2').find('.card_lgnd7').length;
+            var lg8 = $('.cards2').find('.card_lgnd8').length;
+            var dotlgnd = ''
+
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm2)
+                $('.cntr_bttm2').children(active).append(dotlgnd)
+            }
+
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm2)
+                $('.cntr_bttm2').children(active).append(dotlgnd)
+            }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm2)
+                $('.cntr_bttm2').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm2)
+                $('.cntr_bttm2').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm2)
+                $('.cntr_bttm2').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm2)
+                $('.cntr_bttm2').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm2)
+                $('.cntr_bttm2').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm2)
+                $('.cntr_bttm2').children(active).append(dotlgnd)
+            }
+
+        }
+
+        if (tL1btm3 >= 1) {
+            var activ_mar = '<div class="activ_' + tL1btm3 + '">'
+            $(activ_mar).appendTo('.cntr_bttm3')
+            $(dtImpacts).appendTo('.activ_' + tL1btm3)
+            $('.btm3').append(tlBttm3)
+
+            for (i = 1; i <= tL1btm3; i++) {
+                var randomBtm3 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards3').append(randomBtm3)
+            }
+            var lg1 = $('.cards3').find('.card_lgnd1').length;
+            var lg2 = $('.cards3').find('.card_lgnd2').length;
+            var lg3 = $('.cards3').find('.card_lgnd3').length;
+            var lg4 = $('.cards3').find('.card_lgnd4').length;
+            var lg5 = $('.cards3').find('.card_lgnd5').length;
+            var lg6 = $('.cards3').find('.card_lgnd6').length;
+            var lg7 = $('.cards3').find('.card_lgnd7').length;
+            var lg8 = $('.cards3').find('.card_lgnd8').length;
+            var dotlgnd = ''
+
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm3)
+                $('.cntr_bttm3').children(active).append(dotlgnd)
+            }
+
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm3)
+                $('.cntr_bttm3').children(active).append(dotlgnd)
+            }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm3)
+                $('.cntr_bttm3').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm3)
+                $('.cntr_bttm3').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm3)
+                $('.cntr_bttm3').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm3)
+                $('.cntr_bttm3').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm3)
+                $('.cntr_bttm3').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm3)
+                $('.cntr_bttm3').children(active).append(dotlgnd)
+            }
+        }
+
+        if (tL1btm4 >= 1) {
+            var activ_apr = '<div class="activ_' + tL1btm4 + '">'
+            $(activ_apr).appendTo('.cntr_bttm4')
+            $(dtImpacts).appendTo('.activ_' + tL1btm4)
+            $('.btm4').append(tlBttm4)
+
+            for (i = 1; i <= tL1btm4; i++) {
+                var randomBtm4 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards4').append(randomBtm4)
+            }
+            var lg1 = $('.cards4').find('.card_lgnd1').length;
+            var lg2 = $('.cards4').find('.card_lgnd2').length;
+            var lg3 = $('.cards4').find('.card_lgnd3').length;
+            var lg4 = $('.cards4').find('.card_lgnd4').length;
+            var lg5 = $('.cards4').find('.card_lgnd5').length;
+            var lg6 = $('.cards4').find('.card_lgnd6').length;
+            var lg7 = $('.cards4').find('.card_lgnd7').length;
+            var lg8 = $('.cards4').find('.card_lgnd8').length;
+            var dotlgnd = ''
+
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm4)
+                $('.cntr_bttm4').children(active).append(dotlgnd)
+            }
+
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm4)
+                $('.cntr_bttm4').children(active).append(dotlgnd)
+            }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm4)
+                $('.cntr_bttm4').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm4)
+                $('.cntr_bttm4').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm4)
+                $('.cntr_bttm4').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm4)
+                $('.cntr_bttm4').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm4)
+                $('.cntr_bttm4').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm4)
+                $('.cntr_bttm4').children(active).append(dotlgnd)
+            }
+        }
+
+        if (tL1btm5 >= 1) {
+            var activ_may = '<div class="activ_' + tL1btm5 + '">'
+            $(activ_may).appendTo('.cntr_bttm5')
+            $(dtImpacts).appendTo('.activ_' + tL1btm5)
+            $('.btm5').append(tlBttm5)
+
+            for (i = 1; i <= tL1btm5; i++) {
+                var randomBtm5 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards5').append(randomBtm5)
+            }
+            var lg1 = $('.cards5').find('.card_lgnd1').length;
+            var lg2 = $('.cards5').find('.card_lgnd2').length;
+            var lg3 = $('.cards5').find('.card_lgnd3').length;
+            var lg4 = $('.cards5').find('.card_lgnd4').length;
+            var lg5 = $('.cards5').find('.card_lgnd5').length;
+            var lg6 = $('.cards5').find('.card_lgnd6').length;
+            var lg7 = $('.cards5').find('.card_lgnd7').length;
+            var lg8 = $('.cards5').find('.card_lgnd8').length;
+            var dotlgnd = ''
+
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm5)
+                $('.cntr_bttm5').children(active).append(dotlgnd)
+            }
+
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm5)
+                $('.cntr_bttm5').children(active).append(dotlgnd)
+            }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm5)
+                $('.cntr_bttm5').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm5)
+                $('.cntr_bttm5').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm5)
+                $('.cntr_bttm5').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm5)
+                $('.cntr_bttm5').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm5)
+                $('.cntr_bttm5').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm5)
+                $('.cntr_bttm5').children(active).append(dotlgnd)
+            }
+        }
+
+        if (tL1btm6 >= 1) {
+            var activ_jun = '<div class="activ_' + tL1btm6 + '">'
+            $(activ_jun).appendTo('.cntr_bttm6')
+            $(dtImpacts).appendTo('.activ_' + tL1btm6)
+            $('.btm6').append(tlBttm6)
+
+            for (i = 1; i <= tL1btm6; i++) {
+                var randomBtm6 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards6').append(randomBtm6)
+            }
+            var lg1 = $('.cards6').find('.card_lgnd1').length;
+            var lg2 = $('.cards6').find('.card_lgnd2').length;
+            var lg3 = $('.cards6').find('.card_lgnd3').length;
+            var lg4 = $('.cards6').find('.card_lgnd4').length;
+            var lg5 = $('.cards6').find('.card_lgnd5').length;
+            var lg6 = $('.cards6').find('.card_lgnd6').length;
+            var lg7 = $('.cards6').find('.card_lgnd7').length;
+            var lg8 = $('.cards6').find('.card_lgnd8').length;
+            var dotlgnd = ''
+
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm6)
+                $('.cntr_bttm6').children(active).append(dotlgnd)
+            }
+
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm6)
+                $('.cntr_bttm6').children(active).append(dotlgnd)
+            }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm6)
+                $('.cntr_bttm6').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm6)
+                $('.cntr_bttm6').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm6)
+                $('.cntr_bttm6').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm6)
+                $('.cntr_bttm6').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm6)
+                $('.cntr_bttm6').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm6)
+                $('.cntr_bttm6').children(active).append(dotlgnd)
+            }
+        }
+
+        if (tL1btm7 >= 1) {
+            var activ_jul = '<div class="activ_' + tL1btm7 + '">'
+            $(activ_jul).appendTo('.cntr_bttm7')
+            $(dtImpacts).appendTo('.activ_' + tL1btm6)
+            $('.btm7').append(tlBttm7)
+
+            for (i = 1; i <= tL1btm7; i++) {
+                var randomBtm7 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards7').append(randomBtm7)
+            }
+            var lg1 = $('.cards7').find('.card_lgnd1').length;
+            var lg2 = $('.cards7').find('.card_lgnd2').length;
+            var lg3 = $('.cards7').find('.card_lgnd3').length;
+            var lg4 = $('.cards7').find('.card_lgnd4').length;
+            var lg5 = $('.cards7').find('.card_lgnd5').length;
+            var lg6 = $('.cards7').find('.card_lgnd6').length;
+            var lg7 = $('.cards7').find('.card_lgnd7').length;
+            var lg8 = $('.cards7').find('.card_lgnd8').length;
+            var dotlgnd = ''
+
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm7)
+                $('.cntr_bttm7').children(active).append(dotlgnd)
+            }
+
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm7)
+                $('.cntr_bttm7').children(active).append(dotlgnd)
+            }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm7)
+                $('.cntr_bttm7').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm7)
+                $('.cntr_bttm7').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm7)
+                $('.cntr_bttm7').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm7)
+                $('.cntr_bttm7').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm7)
+                $('.cntr_bttm7').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm7)
+                $('.cntr_bttm7').children(active).append(dotlgnd)
+            }
+        }
+
+        if (tL1btm8 >= 1) {
+            var activ_aug = '<div class="activ_' + tL1btm8 + '">'
+            $(activ_aug).appendTo('.cntr_bttm8')
+            $(dtImpacts).appendTo('.activ_' + tL1btm8)
+            $('.btm8').append(tlBttm8)
+
+            for (i = 1; i <= tL1btm8; i++) {
+                var randomBtm8 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards8').append(randomBtm8)
+            }
+            var lg1 = $('.cards8').find('.card_lgnd1').length;
+            var lg2 = $('.cards8').find('.card_lgnd2').length;
+            var lg3 = $('.cards8').find('.card_lgnd3').length;
+            var lg4 = $('.cards8').find('.card_lgnd4').length;
+            var lg5 = $('.cards8').find('.card_lgnd5').length;
+            var lg6 = $('.cards8').find('.card_lgnd6').length;
+            var lg7 = $('.cards8').find('.card_lgnd7').length;
+            var lg8 = $('.cards8').find('.card_lgnd8').length;
+            var dotlgnd = ''
+
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm8)
+                $('.cntr_bttm8').children(active).append(dotlgnd)
+            }
+
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm8)
+                $('.cntr_bttm8').children(active).append(dotlgnd)
+            }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm8)
+                $('.cntr_bttm8').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm8)
+                $('.cntr_bttm8').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm8)
+                $('.cntr_bttm8').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm8)
+                $('.cntr_bttm8').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm8)
+                $('.cntr_bttm8').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm8)
+                $('.cntr_bttm8').children(active).append(dotlgnd)
+            }
+        }
+
+        if (tL1btm9 >= 1) {
+            var activ_sep = '<div class="activ_' + tL1btm9 + '">'
+            $(activ_sep).appendTo('.cntr_bttm9')
+            $(dtImpacts).appendTo('.activ_' + tL1btm9)
+            $('.btm9').append(tlBttm9)
+
+            for (i = 1; i <= tL1btm9; i++) {
+                var randomBtm9 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards9').append(randomBtm9)
+            }
+            var lg1 = $('.cards9').find('.card_lgnd1').length;
+            var lg2 = $('.cards9').find('.card_lgnd2').length;
+            var lg3 = $('.cards9').find('.card_lgnd3').length;
+            var lg4 = $('.cards9').find('.card_lgnd4').length;
+            var lg5 = $('.cards9').find('.card_lgnd5').length;
+            var lg6 = $('.cards9').find('.card_lgnd6').length;
+            var lg7 = $('.cards9').find('.card_lgnd7').length;
+            var lg8 = $('.cards9').find('.card_lgnd8').length;
+            var dotlgnd = ''
+
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm9)
+                $('.cntr_bttm9').children(active).append(dotlgnd)
+            }
+
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm9)
+                $('.cntr_bttm9').children(active).append(dotlgnd)
+            }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm9)
+                $('.cntr_bttm9').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm9)
+                $('.cntr_bttm9').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm9)
+                $('.cntr_bttm9').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm9)
+                $('.cntr_bttm9').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm9)
+                $('.cntr_bttm9').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm9)
+                $('.cntr_bttm9').children(active).append(dotlgnd)
+            }
+        }
+
+        if (tL1btm10 >= 1) {
+            var activ_oct = '<div class="activ_' + tL1btm10 + '">'
+            $(activ_oct).appendTo('.cntr_bttm10')
+            $(dtImpacts).appendTo('.activ_' + tL1btm10)
+            $('.btm10').append(tlBttm10)
+
+            for (i = 1; i <= tL1btm10; i++) {
+                var randomBtm10 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards10').append(randomBtm10)
+            }
+            var lg1 = $('.cards10').find('.card_lgnd1').length;
+            var lg2 = $('.cards10').find('.card_lgnd2').length;
+            var lg3 = $('.cards10').find('.card_lgnd3').length;
+            var lg4 = $('.cards10').find('.card_lgnd4').length;
+            var lg5 = $('.cards10').find('.card_lgnd5').length;
+            var lg6 = $('.cards10').find('.card_lgnd6').length;
+            var lg7 = $('.cards10').find('.card_lgnd7').length;
+            var lg8 = $('.cards10').find('.card_lgnd8').length;
+            var dotlgnd = ''
+
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm10)
+                $('.cntr_bttm10').children(active).append(dotlgnd)
+            }
+
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm10)
+                $('.cntr_bttm10').children(active).append(dotlgnd)
+            }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm10)
+                $('.cntr_bttm10').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm10)
+                $('.cntr_bttm10').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm10)
+                $('.cntr_bttm10').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm10)
+                $('.cntr_bttm10').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm10)
+                $('.cntr_bttm10').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm10)
+                $('.cntr_bttm10').children(active).append(dotlgnd)
+            }
+        }
+
+        if (tL1btm11 >= 1) {
+            var activ_nov = '<div class="activ_' + tL1btm11 + '">'
+            $(activ_nov).appendTo('.cntr_bttm11')
+            $(dtImpacts).appendTo('.activ_' + tL1btm11)
+            $('.btm11').append(tlBttm11)
+
+            for (i = 1; i <= tL1btm11; i++) {
+                var randomBtm11 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards11').append(randomBtm11)
+            }
+            var lg1 = $('.cards11').find('.card_lgnd1').length;
+            var lg2 = $('.cards11').find('.card_lgnd2').length;
+            var lg3 = $('.cards11').find('.card_lgnd3').length;
+            var lg4 = $('.cards11').find('.card_lgnd4').length;
+            var lg5 = $('.cards11').find('.card_lgnd5').length;
+            var lg6 = $('.cards11').find('.card_lgnd6').length;
+            var lg7 = $('.cards11').find('.card_lgnd7').length;
+            var lg8 = $('.cards11').find('.card_lgnd8').length;
+            var dotlgnd = ''
+
+            if (lg1 != 0) {
+                dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
+                var active = $('.activ_' + tL1btm11)
+                $('.cntr_bttm11').children(active).append(dotlgnd)
+            }
+
+            if (lg2 != 0) {
+                dotlgnd = '<div class="dot lgnd2_p">' + lg2 + '</div>'
+                var active = $('.activ_' + tL1btm11)
+                $('.cntr_bttm11').children(active).append(dotlgnd)
+            }
+
+            if (lg3 != 0) {
+                dotlgnd = '<div class="dot lgnd3_p">' + lg3 + '</div>'
+                var active = $('.activ_' + tL1btm11)
+                $('.cntr_bttm11').children(active).append(dotlgnd)
+            }
+
+            if (lg4 != 0) {
+                dotlgnd = '<div class="dot lgnd4_p">' + lg4 + '</div>'
+                var active = $('.activ_' + tL1btm11)
+                $('.cntr_bttm11').children(active).append(dotlgnd)
+            }
+
+            if (lg5 != 0) {
+                dotlgnd = '<div class="dot lgnd5_p">' + lg5 + '</div>'
+                var active = $('.activ_' + tL1btm11)
+                $('.cntr_bttm11').children(active).append(dotlgnd)
+            }
+            if (lg6 != 0) {
+                dotlgnd = '<div class="dot lgnd6_p">' + lg6 + '</div>'
+                var active = $('.activ_' + tL1btm11)
+                $('.cntr_bttm11').children(active).append(dotlgnd)
+            }
+            if (lg7 != 0) {
+                dotlgnd = '<div class="dot lgnd7_p">' + lg7 + '</div>'
+                var active = $('.activ_' + tL1btm11)
+                $('.cntr_bttm11').children(active).append(dotlgnd)
+            }
+            if (lg8 != 0) {
+                dotlgnd = '<div class="dot lgnd8_p">' + lg8 + '</div>'
+                var active = $('.activ_' + tL1btm11)
+                $('.cntr_bttm11').children(active).append(dotlgnd)
+            }
+        }
+
+        if (tL1btm12 >= 1) {
+            var activ_dic = '<div class="activ_' + tL1btm12 + '">'
+            $(activ_dic).appendTo('.cntr_bttm12')
+            $(dtImpacts).appendTo('.activ_' + tL1btm12)
+            $('.btm12').append(tlBttm12)
+
+            for (i = 1; i <= tL1btm12; i++) {
+                var randomBtm12 = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                $('.cards12').append(randomBtm12)
+            }
+            var lg1 = $('.cards12').find('.card_lgnd1').length;
+            var lg2 = $('.cards12').find('.card_lgnd2').length;
+            var lg3 = $('.cards12').find('.card_lgnd3').length;
+            var lg4 = $('.cards12').find('.card_lgnd4').length;
+            var lg5 = $('.cards12').find('.card_lgnd5').length;
+            var lg6 = $('.cards12').find('.card_lgnd6').length;
+            var lg7 = $('.cards12').find('.card_lgnd7').length;
+            var lg8 = $('.cards12').find('.card_lgnd8').length;
+            var dotlgnd = ''
 
             if (lg1 != 0) {
                 dotlgnd = '<div class="dot lgnd1_p">' + lg1 + '</div>'
@@ -2018,6 +3211,7 @@ $(document).ready(function () {
             }
         }
     }
+    
 
     // Legends cta
 
