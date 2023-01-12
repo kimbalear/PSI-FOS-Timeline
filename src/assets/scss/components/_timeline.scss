@@ -1,10 +1,10 @@
 .timeline_section {
     width: auto;
     height: 100%;
-    overflow-y: auto;
-    //display: flex;
+    overflow: auto;
 
     .timelines {
+        float: left;
         display: grid;
         grid-template-columns: min-content;
         grid-template-rows: 1fr;
@@ -17,13 +17,20 @@
         .timeline {
             display: grid;
             grid-template-columns: 60px 220px 220px 220px 220px 220px 220px 220px 220px 220px 220px 220px 220px;
-            grid-template-rows: 1fr 44px 1fr;
+            grid-template-rows: 36px 1fr 44px 1fr;
             gap: 0px 0px;
             grid-auto-flow: row;
             grid-template-areas:
+                "tp_yr ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn"
                 "tp_yr tp1 tp2 tp3 tp4 tp5 tp6 tp7 tp8 tp9 tp10 tp11 tp12"
                 "line line line line line line line line line line line line line"
                 "btm_yr btm1 btm2 btm3 btm4 btm5 btm6 btm7 btm8 btm9 btm10 btm11 btm12";
+
+
+            .ce_btn {
+                grid-area: ce_btn;
+                
+            }
 
             .tp_yr {
                 grid-area: tp_yr;
@@ -134,7 +141,18 @@
                     width: 220px;
                     height: auto;
 
-                    .cntr_top1, .cntr_top2, .cntr_top3, .cntr_top4, .cntr_top5, .cntr_top6, .cntr_top7, .cntr_top8, .cntr_top9, .cntr_top10, .cntr_top11, .cntr_top12 {
+                    .cntr_top1,
+                    .cntr_top2,
+                    .cntr_top3,
+                    .cntr_top4,
+                    .cntr_top5,
+                    .cntr_top6,
+                    .cntr_top7,
+                    .cntr_top8,
+                    .cntr_top9,
+                    .cntr_top10,
+                    .cntr_top11,
+                    .cntr_top12 {
                         position: relative;
                         width: 100%;
                         height: auto;
@@ -192,7 +210,18 @@
                         }
                     }
 
-                    .cntr_bttm1, .cntr_bttm2, .cntr_bttm3, .cntr_bttm4, .cntr_bttm5, .cntr_bttm6, .cntr_bttm7, .cntr_bttm8, .cntr_bttm9, .cntr_bttm10, .cntr_bttm11, .cntr_bttm12 {
+                    .cntr_bttm1,
+                    .cntr_bttm2,
+                    .cntr_bttm3,
+                    .cntr_bttm4,
+                    .cntr_bttm5,
+                    .cntr_bttm6,
+                    .cntr_bttm7,
+                    .cntr_bttm8,
+                    .cntr_bttm9,
+                    .cntr_bttm10,
+                    .cntr_bttm11,
+                    .cntr_bttm12 {
                         position: relative;
                         width: 100%;
                         height: auto;
@@ -472,12 +501,32 @@
 
                 }
 
-                .tl_feb, .tl_mar, .tl_apr, .tl_may, .tl_jun, .tl_jul, .tl_aug, .tl_sep, .tl_oct, .tl_nov {
+                .tl_feb,
+                .tl_mar,
+                .tl_apr,
+                .tl_may,
+                .tl_jun,
+                .tl_jul,
+                .tl_aug,
+                .tl_sep,
+                .tl_oct,
+                .tl_nov {
                     float: left;
                     width: 220px;
                     height: auto;
 
-                    .cntr_top1, .cntr_top2, .cntr_top3, .cntr_top4, .cntr_top5, .cntr_top6, .cntr_top7, .cntr_top8, .cntr_top9, .cntr_top10, .cntr_top11, .cntr_top12 {
+                    .cntr_top1,
+                    .cntr_top2,
+                    .cntr_top3,
+                    .cntr_top4,
+                    .cntr_top5,
+                    .cntr_top6,
+                    .cntr_top7,
+                    .cntr_top8,
+                    .cntr_top9,
+                    .cntr_top10,
+                    .cntr_top11,
+                    .cntr_top12 {
                         position: relative;
                         width: 100%;
                         height: auto;
@@ -568,7 +617,18 @@
                         }
                     }
 
-                    .cntr_bttm1, .cntr_bttm2, .cntr_bttm3, .cntr_bttm4, .cntr_bttm5, .cntr_bttm6, .cntr_bttm7, .cntr_bttm8, .cntr_bttm9, .cntr_bttm10, .cntr_bttm11, .cntr_bttm12 {
+                    .cntr_bttm1,
+                    .cntr_bttm2,
+                    .cntr_bttm3,
+                    .cntr_bttm4,
+                    .cntr_bttm5,
+                    .cntr_bttm6,
+                    .cntr_bttm7,
+                    .cntr_bttm8,
+                    .cntr_bttm9,
+                    .cntr_bttm10,
+                    .cntr_bttm11,
+                    .cntr_bttm12 {
                         position: relative;
                         width: 100%;
                         height: auto;
@@ -852,7 +912,18 @@
                     width: 220px;
                     height: auto;
 
-                    .cntr_top1, .cntr_top2, .cntr_top3, .cntr_top4, .cntr_top5, .cntr_top6, .cntr_top7, .cntr_top8, .cntr_top9, .cntr_top10, .cntr_top11, .cntr_top12 {
+                    .cntr_top1,
+                    .cntr_top2,
+                    .cntr_top3,
+                    .cntr_top4,
+                    .cntr_top5,
+                    .cntr_top6,
+                    .cntr_top7,
+                    .cntr_top8,
+                    .cntr_top9,
+                    .cntr_top10,
+                    .cntr_top11,
+                    .cntr_top12 {
                         position: relative;
                         width: 100%;
                         height: auto;
@@ -911,7 +982,18 @@
                         }
                     }
 
-                    .cntr_bttm1, .cntr_bttm2, .cntr_bttm3, .cntr_bttm4, .cntr_bttm5, .cntr_bttm6, .cntr_bttm7, .cntr_bttm8, .cntr_bttm9, .cntr_bttm10, .cntr_bttm11, .cntr_bttm12 {
+                    .cntr_bttm1,
+                    .cntr_bttm2,
+                    .cntr_bttm3,
+                    .cntr_bttm4,
+                    .cntr_bttm5,
+                    .cntr_bttm6,
+                    .cntr_bttm7,
+                    .cntr_bttm8,
+                    .cntr_bttm9,
+                    .cntr_bttm10,
+                    .cntr_bttm11,
+                    .cntr_bttm12 {
                         position: relative;
                         width: 100%;
                         height: auto;
