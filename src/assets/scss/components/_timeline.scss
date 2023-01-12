@@ -29,7 +29,7 @@
 
             .ce_btn {
                 grid-area: ce_btn;
-                
+
             }
 
             .tp_yr {
@@ -141,23 +141,12 @@
                     width: 220px;
                     height: auto;
 
-                    .cntr_top1,
-                    .cntr_top2,
-                    .cntr_top3,
-                    .cntr_top4,
-                    .cntr_top5,
-                    .cntr_top6,
-                    .cntr_top7,
-                    .cntr_top8,
-                    .cntr_top9,
-                    .cntr_top10,
-                    .cntr_top11,
-                    .cntr_top12 {
+                    .cntr_top1 {
                         position: relative;
                         width: 100%;
                         height: auto;
 
-                        .dots_contr {
+                        .dots_contr1 {
                             position: absolute;
                             left: 68px;
                             top: -7px;
@@ -176,7 +165,7 @@
                                 color: $clr2;
                             }
 
-                            .dot {
+                            .dot1 {
                                 width: min-content;
                                 float: right;
                                 width: 12px;
@@ -210,18 +199,7 @@
                         }
                     }
 
-                    .cntr_bttm1,
-                    .cntr_bttm2,
-                    .cntr_bttm3,
-                    .cntr_bttm4,
-                    .cntr_bttm5,
-                    .cntr_bttm6,
-                    .cntr_bttm7,
-                    .cntr_bttm8,
-                    .cntr_bttm9,
-                    .cntr_bttm10,
-                    .cntr_bttm11,
-                    .cntr_bttm12 {
+                    .cntr_bttm1 {
                         position: relative;
                         width: 100%;
                         height: auto;
@@ -515,7 +493,6 @@
                     width: 220px;
                     height: auto;
 
-                    .cntr_top1,
                     .cntr_top2,
                     .cntr_top3,
                     .cntr_top4,
@@ -525,13 +502,21 @@
                     .cntr_top8,
                     .cntr_top9,
                     .cntr_top10,
-                    .cntr_top11,
-                    .cntr_top12 {
+                    .cntr_top11 {
                         position: relative;
                         width: 100%;
                         height: auto;
 
-                        .dots_contr {
+                        .dots_contr2,
+                        .dots_contr3,
+                        .dots_contr4,
+                        .dots_contr5,
+                        .dots_contr6,
+                        .dots_contr7,
+                        .dots_contr8,
+                        .dots_contr9,
+                        .dots_contr10,
+                        .dots_contr11 {
                             position: absolute;
                             left: 68px;
                             top: -7px;
@@ -550,13 +535,21 @@
                                 color: $clr2;
                             }
 
-                            .dot {
+                            .dot2,
+                            .dot3,
+                            .dot4,
+                            .dot5,
+                            .dot6,
+                            .dot7,
+                            .dot8,
+                            .dot9,
+                            .dot10,
+                            .dot11 {
                                 width: min-content;
                                 float: right;
                                 width: 12px;
                                 height: 12px;
                                 border-radius: 6px;
-                                background-color: $clr2;
                                 font-size: 10px;
                                 font-weight: 400;
                                 line-height: 12px;
@@ -627,8 +620,7 @@
                     .cntr_bttm8,
                     .cntr_bttm9,
                     .cntr_bttm10,
-                    .cntr_bttm11,
-                    .cntr_bttm12 {
+                    .cntr_bttm11 {
                         position: relative;
                         width: 100%;
                         height: auto;
@@ -912,23 +904,12 @@
                     width: 220px;
                     height: auto;
 
-                    .cntr_top1,
-                    .cntr_top2,
-                    .cntr_top3,
-                    .cntr_top4,
-                    .cntr_top5,
-                    .cntr_top6,
-                    .cntr_top7,
-                    .cntr_top8,
-                    .cntr_top9,
-                    .cntr_top10,
-                    .cntr_top11,
                     .cntr_top12 {
                         position: relative;
                         width: 100%;
                         height: auto;
 
-                        .dots_contr {
+                        .dots_contr12 {
                             position: absolute;
                             left: 68px;
                             top: -7px;
@@ -947,7 +928,7 @@
                                 color: $clr2;
                             }
 
-                            .dot {
+                            .dot12 {
                                 width: min-content;
                                 float: right;
                                 width: 12px;
@@ -982,17 +963,6 @@
                         }
                     }
 
-                    .cntr_bttm1,
-                    .cntr_bttm2,
-                    .cntr_bttm3,
-                    .cntr_bttm4,
-                    .cntr_bttm5,
-                    .cntr_bttm6,
-                    .cntr_bttm7,
-                    .cntr_bttm8,
-                    .cntr_bttm9,
-                    .cntr_bttm10,
-                    .cntr_bttm11,
                     .cntr_bttm12 {
                         position: relative;
                         width: 100%;
@@ -1270,6 +1240,31 @@
                         }
                     }
 
+                }
+
+                .dot1,
+                .dot2,
+                .dot3,
+                .dot4,
+                .dot5,
+                .dot6,
+                .dot7,
+                .dot8,
+                .dot9,
+                .dot10,
+                .dot11,
+                .dot12 {
+                    width: min-content;
+                    float: right;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 6px;
+                    font-size: 10px;
+                    font-weight: 400;
+                    line-height: 12px;
+                    text-align: center;
+                    color: $clr1;
+                    background-color: $clr2;
                 }
             }
 

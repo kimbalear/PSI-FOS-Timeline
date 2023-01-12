@@ -918,7 +918,7 @@ $(document).ready(function () {
         `;
         const tlDic = `
                         <div class="tl_dic">
-                            <div class="cntr_top1"></div>
+                            <div class="cntr_top12"></div>
                             <div class="cnt">
                             <div class="lbl">dic</div>
                             </div>
@@ -1105,19 +1105,142 @@ $(document).ready(function () {
 
         var random_lgnd = [tlcard1, tlcard2, tlcard3, tlcard4, tlcard5, tlcard6, tlcard7, tlcard8];
 
-        const dtContr = `
-        <div class="lbl">Contributions</div>
-        <div class="dot">4</div>    `;
-
         const dtImpacts = `
         <div class="lbl">Impact</div>
     `;
-/*
+
         if (tL1tp1 >= 1) {
-            $(dtContr).appendTo('.cntr_top1')
+            $('<div class="dots_contr1">').appendTo('.cntr_top1')
+            var lblc = '<div class="lbl">Contributions</div>'
+            $('.dots_contr1').append(lblc)
+            
+            var numContr = $(".contrs1").children().length;
+
+            dotlgnd = '<div class="dot1">' + numContr + '</div>'
+            $('.dots_contr1').append(dotlgnd)
         }
 
-*/
+        if (tL1tp2 >= 1) {
+            $('<div class="dots_contr2">').appendTo('.cntr_top2')
+            var lblc = '<div class="lbl">Contributions</div>'
+            $('.dots_contr2').append(lblc)
+            
+            var numContr = $(".contrs2").children().length;
+
+            dotlgnd = '<div class="dot2">' + numContr + '</div>'
+            $('.dots_contr2').append(dotlgnd)
+        }
+
+        if (tL1tp3 >= 1) {
+            $('<div class="dots_contr3">').appendTo('.cntr_top3')
+            var lblc = '<div class="lbl">Contributions</div>'
+            $('.dots_contr3').append(lblc)
+            
+            var numContr = $(".contrs3").children().length;
+
+            dotlgnd = '<div class="dot3">' + numContr + '</div>'
+            $('.dots_contr3').append(dotlgnd)
+        }
+
+        if (tL1tp4 >= 1) {
+            $('<div class="dots_contr4">').appendTo('.cntr_top4')
+            var lblc = '<div class="lbl">Contributions</div>'
+            $('.dots_contr4').append(lblc)
+            
+            var numContr = $(".contrs4").children().length;
+
+            dotlgnd = '<div class="dot4">' + numContr + '</div>'
+            $('.dots_contr4').append(dotlgnd)
+        }
+
+        if (tL1tp5 >= 1) {
+            $('<div class="dots_contr5">').appendTo('.cntr_top5')
+            var lblc = '<div class="lbl">Contributions</div>'
+            $('.dots_contr5').append(lblc)
+            
+            var numContr = $(".contrs5").children().length;
+
+            dotlgnd = '<div class="dot5">' + numContr + '</div>'
+            $('.dots_contr5').append(dotlgnd)
+        }
+
+        if (tL1tp6 >= 1) {
+            $('<div class="dots_contr6">').appendTo('.cntr_top6')
+            var lblc = '<div class="lbl">Contributions</div>'
+            $('.dots_contr6').append(lblc)
+            
+            var numContr = $(".contrs6").children().length;
+
+            dotlgnd = '<div class="dot6">' + numContr + '</div>'
+            $('.dots_contr6').append(dotlgnd)
+        }
+
+        if (tL1tp7 >= 1) {
+            $('<div class="dots_contr7">').appendTo('.cntr_top7')
+            var lblc = '<div class="lbl">Contributions</div>'
+            $('.dots_contr7').append(lblc)
+            
+            var numContr = $(".contrs7").children().length;
+
+            dotlgnd = '<div class="dot7">' + numContr + '</div>'
+            $('.dots_contr7').append(dotlgnd)
+        }
+
+        if (tL1tp8 >= 1) {
+            $('<div class="dots_contr8">').appendTo('.cntr_top8')
+            var lblc = '<div class="lbl">Contributions</div>'
+            $('.dots_contr8').append(lblc)
+            
+            var numContr = $(".contrs8").children().length;
+
+            dotlgnd = '<div class="dot8">' + numContr + '</div>'
+            $('.dots_contr8').append(dotlgnd)
+        }
+
+        if (tL1tp9 >= 1) {
+            $('<div class="dots_contr9">').appendTo('.cntr_top9')
+            var lblc = '<div class="lbl">Contributions</div>'
+            $('.dots_contr9').append(lblc)
+            
+            var numContr = $(".contrs9").children().length;
+
+            dotlgnd = '<div class="dot9">' + numContr + '</div>'
+            $('.dots_contr9').append(dotlgnd)
+        }
+
+        if (tL1tp10 >= 1) {
+            $('<div class="dots_contr10">').appendTo('.cntr_top10')
+            var lblc = '<div class="lbl">Contributions</div>'
+            $('.dots_contr10').append(lblc)
+            
+            var numContr = $(".contrs10").children().length;
+
+            dotlgnd = '<div class="dot10">' + numContr + '</div>'
+            $('.dots_contr10').append(dotlgnd)
+        }
+
+        if (tL1tp11 >= 1) {
+            $('<div class="dots_contr11">').appendTo('.cntr_top11')
+            var lblc = '<div class="lbl">Contributions</div>'
+            $('.dots_contr11').append(lblc)
+            
+            var numContr = $(".contrs11").children().length;
+
+            dotlgnd = '<div class="dot11">' + numContr + '</div>'
+            $('.dots_contr11').append(dotlgnd)
+        }
+
+        if (tL1tp12 >= 1) {
+            $('<div class="dots_contr12">').appendTo('.cntr_top12')
+            var lblc = '<div class="lbl">Contributions</div>'
+            $('.dots_contr12').append(lblc)
+            
+            var numContr = $(".contrs12").children().length;
+
+            dotlgnd = '<div class="dot12">' + numContr + '</div>'
+            $('.dots_contr12').append(dotlgnd)
+        }
+//
         if (tL1btm1 >= 1) {
             var activ_jan = '<div class="activ_' + tL1btm1 + '">'
             $(activ_jan).appendTo('.cntr_bttm1')
