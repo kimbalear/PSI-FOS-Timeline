@@ -260,7 +260,7 @@ body .wrapper .top_bar .top_ctrs {
   grid-area: top_ctrs;
   padding: 6px 0 0;
 }
-body .wrapper .top_bar .top_ctrs .multiSelect, body .wrapper .top_bar .top_ctrs .btn_plus {
+body .wrapper .top_bar .top_ctrs .multiSelect, body .wrapper .top_bar .top_ctrs .btn_plus, body .wrapper .top_bar .top_ctrs .btn_print {
   float: right;
   margin-left: 8px;
 }
@@ -16613,6 +16613,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
 }
 .panel_top .contributions ::-webkit-scrollbar {
   background-color: #FDF4E7;
+  height: 4px;
   width: 4px;
   border-radius: 2px;
 }
@@ -17493,6 +17494,76 @@ label.checkbox.lgnd8 span {
   grid-area: dlg_cnt;
   padding: 8px 16px;
 }
+.scrim .dlg_pdf {
+  width: 100%;
+  max-width: 80%;
+  max-height: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
+  grid-auto-columns: max-content;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: column;
+  background-color: #FFF;
+  border: 2px solid;
+  border-radius: 12px;
+  grid-template-areas: "dlg_bar dlg_cta" "dlg_cnt dlg_cnt";
+}
+.scrim .dlg_pdf .dlg_pdf_bar {
+  grid-area: dlg_bar;
+  padding: 0 8px 0 16px;
+  border-radius: 9.5px 0 0 0;
+  display: flex;
+  align-items: center;
+}
+.scrim .dlg_pdf .dlg_pdf_bar .lbl {
+  width: auto;
+  height: auto;
+  font-weight: 300;
+  font-size: 21px;
+  text-transform: capitalize;
+}
+.scrim .dlg_pdf .dlg_pdf_cta {
+  grid-area: dlg_cta;
+  border-radius: 0 9.5px 0 0;
+}
+.scrim .dlg_pdf .dlg_pdf_cnt {
+  align-self: start;
+  grid-area: dlg_cnt;
+  padding: 8px 16px;
+  /* background of the scrollbar except button or resizer */
+  /* scrollbar itself */
+  /* set button(top and bottom of the scrollbar) */
+}
+.scrim .dlg_pdf .dlg_pdf_cnt .dlg_pdf_canvas {
+  width: 100%;
+  height: calc(100% - 240px);
+  overflow: auto;
+}
+.scrim .dlg_pdf .dlg_pdf_cnt .dlg_pdf_btns {
+  width: 100%;
+  height: 64px;
+  overflow: auto;
+}
+.scrim .dlg_pdf .dlg_pdf_cnt ::-webkit-scrollbar {
+  background-color: rgba(119, 113, 106, 0.1);
+  height: 4px;
+  width: 4px;
+  border-radius: 2px;
+}
+.scrim .dlg_pdf .dlg_pdf_cnt ::-webkit-scrollbar-track {
+  background-color: rgba(119, 113, 106, 0.1);
+  border-radius: 4px;
+}
+.scrim .dlg_pdf .dlg_pdf_cnt ::-webkit-scrollbar-thumb {
+  background-color: #77716A;
+  border-radius: 4px;
+}
+.scrim .dlg_pdf .dlg_pdf_cnt ::-webkit-scrollbar-button {
+  display: none;
+}
 
 .btn-lgnd-inf {
   width: 19px;
@@ -17521,6 +17592,15 @@ label.checkbox.lgnd8 span {
   cursor: pointer;
   background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_128_2599)'%3E%3Cpath d='M33 25.2857H25.2857V33H22.7143V25.2857H15V22.7143H22.7143V15H25.2857V22.7143H33V25.2857Z' fill='%23FDF4E7'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_128_2599'%3E%3Crect width='48' height='48' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
 }
+.btn_print {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  padding: 8px 8px;
+  background-color: rgba(62, 115, 230, 0.3882352941);
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_135_2511)'%3E%3Cpath d='M33.1 18.6667H14.9C12.742 18.6667 11 20.4533 11 22.6667V30.6667H16.2V36H31.8V30.6667H37V22.6667C37 20.4533 35.258 18.6667 33.1 18.6667ZM29.2 33.3333H18.8V26.6667H29.2V33.3333ZM33.1 24C32.385 24 31.8 23.4 31.8 22.6667C31.8 21.9333 32.385 21.3333 33.1 21.3333C33.815 21.3333 34.4 21.9333 34.4 22.6667C34.4 23.4 33.815 24 33.1 24ZM31.8 12H16.2V17.3333H31.8V12Z' fill='%23FDF4E7'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_135_2511'%3E%3Crect width='48' height='48' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+}
 .area_exp_colaps {
   width: 100%;
   height: 24px;
@@ -17536,7 +17616,19 @@ label.checkbox.lgnd8 span {
   margin: 0 4px 0 23px;
   font-size: 12px;
   padding: 5px 8px;
-  color: #FFF;
+}
+.btns {
+  float: right;
+  width: auto;
+  text-align: center;
+  min-width: 90px;
+  height: 48px;
+  border-radius: 6px;
+  padding: 8px 8px;
+  background-color: rgba(62, 115, 230, 0.3882352941);
+  line-height: 32px;
+  margin: 8px 4px;
+  cursor: pointer;
 }
 .msbx-ou {
   margin: 0 4px 16px 4px;

@@ -582,13 +582,15 @@ $(document).ready(function () {
 
         if (typeof qry1 === 'string' && qry1 != "") {
             if (typeof qry3 === 'string' && qry3 != "") {
+                $(".btn_print").show()
                 timeline(qry3)
-
             } else {
                 $('.timeline').remove()
+                $(".btn_print").hide()
             }
         } else {
             $('.timeline').remove()
+            $(".btn_print").hide()
         }
 
     }
@@ -604,7 +606,7 @@ $(document).ready(function () {
         $('<div class="area_exp_colaps">').appendTo('.ce_btn')
 
         var ctabtn = `
-            <div class="btn">Hide</div>
+            <div class="btn ignore">Hide</div>
         `;
         $('.area_exp_colaps').append(ctabtn)
 
@@ -1113,7 +1115,7 @@ $(document).ready(function () {
             $('<div class="dots_contr1">').appendTo('.cntr_top1')
             var lblc = '<div class="lbl">Contributions</div>'
             $('.dots_contr1').append(lblc)
-            
+
             var numContr = $(".contrs1").children().length;
 
             dotlgnd = '<div class="dot1">' + numContr + '</div>'
@@ -1124,7 +1126,7 @@ $(document).ready(function () {
             $('<div class="dots_contr2">').appendTo('.cntr_top2')
             var lblc = '<div class="lbl">Contributions</div>'
             $('.dots_contr2').append(lblc)
-            
+
             var numContr = $(".contrs2").children().length;
 
             dotlgnd = '<div class="dot2">' + numContr + '</div>'
@@ -1135,7 +1137,7 @@ $(document).ready(function () {
             $('<div class="dots_contr3">').appendTo('.cntr_top3')
             var lblc = '<div class="lbl">Contributions</div>'
             $('.dots_contr3').append(lblc)
-            
+
             var numContr = $(".contrs3").children().length;
 
             dotlgnd = '<div class="dot3">' + numContr + '</div>'
@@ -1146,7 +1148,7 @@ $(document).ready(function () {
             $('<div class="dots_contr4">').appendTo('.cntr_top4')
             var lblc = '<div class="lbl">Contributions</div>'
             $('.dots_contr4').append(lblc)
-            
+
             var numContr = $(".contrs4").children().length;
 
             dotlgnd = '<div class="dot4">' + numContr + '</div>'
@@ -1157,7 +1159,7 @@ $(document).ready(function () {
             $('<div class="dots_contr5">').appendTo('.cntr_top5')
             var lblc = '<div class="lbl">Contributions</div>'
             $('.dots_contr5').append(lblc)
-            
+
             var numContr = $(".contrs5").children().length;
 
             dotlgnd = '<div class="dot5">' + numContr + '</div>'
@@ -1168,7 +1170,7 @@ $(document).ready(function () {
             $('<div class="dots_contr6">').appendTo('.cntr_top6')
             var lblc = '<div class="lbl">Contributions</div>'
             $('.dots_contr6').append(lblc)
-            
+
             var numContr = $(".contrs6").children().length;
 
             dotlgnd = '<div class="dot6">' + numContr + '</div>'
@@ -1179,7 +1181,7 @@ $(document).ready(function () {
             $('<div class="dots_contr7">').appendTo('.cntr_top7')
             var lblc = '<div class="lbl">Contributions</div>'
             $('.dots_contr7').append(lblc)
-            
+
             var numContr = $(".contrs7").children().length;
 
             dotlgnd = '<div class="dot7">' + numContr + '</div>'
@@ -1190,7 +1192,7 @@ $(document).ready(function () {
             $('<div class="dots_contr8">').appendTo('.cntr_top8')
             var lblc = '<div class="lbl">Contributions</div>'
             $('.dots_contr8').append(lblc)
-            
+
             var numContr = $(".contrs8").children().length;
 
             dotlgnd = '<div class="dot8">' + numContr + '</div>'
@@ -1201,7 +1203,7 @@ $(document).ready(function () {
             $('<div class="dots_contr9">').appendTo('.cntr_top9')
             var lblc = '<div class="lbl">Contributions</div>'
             $('.dots_contr9').append(lblc)
-            
+
             var numContr = $(".contrs9").children().length;
 
             dotlgnd = '<div class="dot9">' + numContr + '</div>'
@@ -1212,7 +1214,7 @@ $(document).ready(function () {
             $('<div class="dots_contr10">').appendTo('.cntr_top10')
             var lblc = '<div class="lbl">Contributions</div>'
             $('.dots_contr10').append(lblc)
-            
+
             var numContr = $(".contrs10").children().length;
 
             dotlgnd = '<div class="dot10">' + numContr + '</div>'
@@ -1223,7 +1225,7 @@ $(document).ready(function () {
             $('<div class="dots_contr11">').appendTo('.cntr_top11')
             var lblc = '<div class="lbl">Contributions</div>'
             $('.dots_contr11').append(lblc)
-            
+
             var numContr = $(".contrs11").children().length;
 
             dotlgnd = '<div class="dot11">' + numContr + '</div>'
@@ -1234,13 +1236,13 @@ $(document).ready(function () {
             $('<div class="dots_contr12">').appendTo('.cntr_top12')
             var lblc = '<div class="lbl">Contributions</div>'
             $('.dots_contr12').append(lblc)
-            
+
             var numContr = $(".contrs12").children().length;
 
             dotlgnd = '<div class="dot12">' + numContr + '</div>'
             $('.dots_contr12').append(dotlgnd)
         }
-//
+        //
         if (tL1btm1 >= 1) {
             var activ_jan = '<div class="activ_' + tL1btm1 + '">'
             $(activ_jan).appendTo('.cntr_bttm1')
@@ -2126,4 +2128,40 @@ $(document).ready(function () {
             }
         }
     }
+
+    $(".btn_print").hide()
+
+    $(".btn_print").click(function () {
+        $('<div class="scrim">').appendTo('body')
+
+        $('<div class="dlg_pdf">').appendTo('.scrim')
+        $('<div class="dlg_pdf_bar">').appendTo('.dlg_pdf')
+        $('<div class="lbl">').appendTo('.dlg_pdf_bar')
+
+        $('<div class="dlg_pdf_cta">').appendTo('.dlg_pdf')
+        $('<div class="btn-sys-close">').appendTo('.dlg_pdf_cta')
+
+        $('<div class="dlg_pdf_cnt">').appendTo('.dlg_pdf')
+        $('<div class="dlg_pdf_canvas">').appendTo('.dlg_pdf_cnt')
+        $('<div class="dlg_pdf_btns">').appendTo('.dlg_pdf_cnt')
+
+        var save_pdf = '<div id="save_pdf" class="btns">Save</div>'
+        $('.dlg_pdf_btns').append(save_pdf)
+
+        $('.dlg_pdf_pdf').addClass("d_lgnd0")
+        $('.dlg_pdf_bar').addClass("tt_lgnd0")
+        $('.dlg_pdf_cta').addClass("i_lgnd0")
+
+        $('.dlg_pdf_bar').children().html("Export to PDF")
+
+        html2canvas(document.querySelector(".timeline")).then(canvas => {
+            $('.dlg_pdf_canvas').append(canvas)
+            $('#save_pdf').on('click', function () {
+                var imgTimeline = canvas.toDataURL('image/png')
+                var doc = new jsPDF()
+                doc.addImage(imgTimeline, 'PNG', 10, 10)
+                doc.save('sample.pdf')
+            })
+        })
+    })
 })
