@@ -2158,9 +2158,17 @@ $(document).ready(function () {
             $('.dlg_pdf_canvas').append(canvas)
             $('#save_pdf').on('click', function () {
                 var imgTimeline = canvas.toDataURL('image/png')
-                var doc = new jsPDF()
-                doc.addImage(imgTimeline, 'PNG', 10, 10)
+                var pdf = new jsPDF('l', 'mm', 'a4')
+
+                const imgProps = pdf.getImageProperties(imgTimeline);
+                const pdfWidth = pdf.internal.pageSize.getWidth();
+                const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+                pdf.addImage(imgTimeline, 'PNG', 0, 0, pdfWidth, pdfHeight);
+                pdf.save('download.pdf');
+                /*
+                doc.addImage(imgTimeline, 'PNG', 0, 0, 210, 297)
                 doc.save('sample.pdf')
+                */
             })
         })
     })
