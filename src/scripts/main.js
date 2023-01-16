@@ -554,6 +554,10 @@ $(document).ready(function () {
         $('div.scrim').remove()
     })
 
+    var allCheckboxes=$('[type=checkbox]');
+
+    allCheckboxes.prop('disabled', true)
+
     function setTimeline(stns, typ) {
         let ou, srv, yrs;
 
@@ -583,12 +587,15 @@ $(document).ready(function () {
         if (typeof qry1 === 'string' && qry1 != "") {
             if (typeof qry3 === 'string' && qry3 != "") {
                 $(".btn_print").show()
+                allCheckboxes.prop('disabled', false)
                 timeline(qry3)
             } else {
+                allCheckboxes.prop('disabled', true)
                 $('.timeline').remove()
                 $(".btn_print").hide()
             }
         } else {
+            allCheckboxes.prop('disabled', true)
             $('.timeline').remove()
             $(".btn_print").hide()
         }
@@ -2085,7 +2092,28 @@ $(document).ready(function () {
         $(".card_lgnd8").toggle(this.checked)
         pnlLgnds();
     });
+/*
+    $('#lgnd0').hover(function(){
+        $('.toast').text('Este elemento esta situado en la posición: '+$(this).index());
+    });
 
+    $('#lgnd1').hover(function(){
+        $('.toast').text('Este elemento esta situado en la posición: '+$(this).index());
+    });
+
+    $('#lgnd2').hover(function(){
+        $('.toast').text('Este elemento esta situado en la posición: '+$(this).index());
+    });
+
+    $('#lgnd3').hover(function(){
+        $('.toast').text('Este elemento esta situado en la posición: '+$(this).index());
+    });
+
+    $('#lgnd0').blur(function(){
+        $('.toast').text('')
+        $('.toast').hide()
+    })
+*/
     $(document).on('click', '.btn', function () {
         $(".tp_yr").toggle();
         $(".btm_yr").toggle();

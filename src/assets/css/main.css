@@ -17148,6 +17148,18 @@ label {
   margin-top: 2rem;
 }
 
+.toast {
+  position: absolute;
+  top: 120px;
+  right: 16px;
+  width: auto;
+  height: auto;
+  min-height: 24px;
+  line-height: 24px;
+  background-color: aqua;
+  padding: 0 8px;
+}
+
 /* Checkbox styles */
 label.checkbox {
   font-size: 1rem;
