@@ -590,11 +590,13 @@ $(document).ready(function () {
                 allCheckboxes.prop('disabled', false)
                 timeline(qry3)
             } else {
+                allCheckboxes.prop('checked', true)
                 allCheckboxes.prop('disabled', true)
                 $('.timeline').remove()
                 $(".btn_print").hide()
             }
         } else {
+            allCheckboxes.prop('checked', true)
             allCheckboxes.prop('disabled', true)
             $('.timeline').remove()
             $(".btn_print").hide()
