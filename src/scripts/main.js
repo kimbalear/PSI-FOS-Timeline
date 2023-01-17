@@ -252,7 +252,6 @@ $(document).ready(function () {
         var dropdown = self.find('.msbx-yrs_dropdown')
         var list = self.find('.msbx-yrs_list')
         var option = self.find('.msbx-yrs_option')
-        var optionText = self.find('.msbx-yrs_text')
 
         dropdown.attr('data-multiple', 'true')
         list.css('top', dropdown.height() + 5)
@@ -747,7 +746,7 @@ $(document).ready(function () {
 
         const contrs = `
         <div class="card_contr">
-            <div class="title">Service</div>
+            <div class="title">Need</div>
             <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
             ipsum, cond (MAX 100 caracters).</div>
         </div>
@@ -1051,70 +1050,62 @@ $(document).ready(function () {
         `;
         const tlcard1 = `
         <div class="card_lgnd1">
-            <div class="title">Service</div>
-            <div class="subtitle">Advocacy Stage</div>
+            <div class="title">Need</div>
+            <div class="subtitle">Regression Introduced</div>
             <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
             ipsum, cond (MAX 100 caracters).</div>
         </div>
         `;
         const tlcard2 = `
         <div class="card_lgnd2">
-            <div class="title">Service</div>
-            <div class="subtitle">Regression Introduced</div>
+            <div class="title">Need</div>
+            <div class="subtitle">Loss</div>
             <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
             ipsum, cond (MAX 100 caracters).</div>
         </div>
         `;
         const tlcard3 = `
         <div class="card_lgnd3">
-            <div class="title">Service</div>
-            <div class="subtitle">Loss</div>
+            <div class="title">Need</div>
+            <div class="subtitle">Defended</div>
             <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
             ipsum, cond (MAX 100 caracters).</div>
         </div>
         `;
         const tlcard4 = `
         <div class="card_lgnd4">
-            <div class="title">Service</div>
-            <div class="subtitle">Defended</div>
+            <div class="title">Need</div>
+            <div class="subtitle">Reform Introduced</div>
             <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
             ipsum, cond (MAX 100 caracters).</div>
         </div>
         `;
         const tlcard5 = `
         <div class="card_lgnd5">
-            <div class="title">Service</div>
-            <div class="subtitle">Reform Introduced</div>
+            <div class="title">Need</div>
+            <div class="subtitle">Advanced</div>
             <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
             ipsum, cond (MAX 100 caracters).</div>
         </div>
         `;
         const tlcard6 = `
         <div class="card_lgnd6">
-            <div class="title">Service</div>
-            <div class="subtitle">Advanced</div>
+            <div class="title">Need</div>
+            <div class="subtitle">Approved</div>
             <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
             ipsum, cond (MAX 100 caracters).</div>
         </div>
         `;
         const tlcard7 = `
         <div class="card_lgnd7">
-            <div class="title">Service</div>
-            <div class="subtitle">Approved</div>
-            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
-            ipsum, cond (MAX 100 caracters).</div>
-        </div>
-        `;
-        const tlcard8 = `
-        <div class="card_lgnd8">
-            <div class="title">Service</div>
+            <div class="title">Need</div>
             <div class="subtitle">Implemented</div>
             <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
             ipsum, cond (MAX 100 caracters).</div>
         </div>
         `;
 
-        var random_lgnd = [tlcard1, tlcard2, tlcard3, tlcard4, tlcard5, tlcard6, tlcard7, tlcard8];
+        var random_lgnd = [tlcard1, tlcard2, tlcard3, tlcard4, tlcard5, tlcard6, tlcard7];
 
         const dtImpacts = `
         <div class="lbl">Impact</div>
@@ -2094,28 +2085,7 @@ $(document).ready(function () {
         $(".card_lgnd8").toggle(this.checked)
         pnlLgnds();
     });
-/*
-    $('#lgnd0').hover(function(){
-        $('.toast').text('Este elemento esta situado en la posición: '+$(this).index());
-    });
 
-    $('#lgnd1').hover(function(){
-        $('.toast').text('Este elemento esta situado en la posición: '+$(this).index());
-    });
-
-    $('#lgnd2').hover(function(){
-        $('.toast').text('Este elemento esta situado en la posición: '+$(this).index());
-    });
-
-    $('#lgnd3').hover(function(){
-        $('.toast').text('Este elemento esta situado en la posición: '+$(this).index());
-    });
-
-    $('#lgnd0').blur(function(){
-        $('.toast').text('')
-        $('.toast').hide()
-    })
-*/
     $(document).on('click', '.btn', function () {
         $(".tp_yr").toggle();
         $(".btm_yr").toggle();

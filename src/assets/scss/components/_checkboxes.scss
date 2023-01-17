@@ -42,8 +42,4 @@ label.checkbox {
     &.lgnd7 {
         @include checkbox($clrbk_lgnd7_p);
     }
-
-    &.lgnd8 {
-        @include checkbox($clrbk_lgnd8_p);
-    }
 }
