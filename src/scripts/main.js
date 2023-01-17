@@ -548,11 +548,11 @@ $(document).ready(function () {
     $(document).on('click', '.btn-sys-close', function () {
         $('div.scrim').remove()
     })
-
+/*
     $(document).on('click', '.scrim', function () {
         $('div.scrim').remove()
     })
-
+*/
     var allCheckboxes=$('[type=checkbox]');
 
     allCheckboxes.prop('disabled', true)
@@ -746,9 +746,8 @@ $(document).ready(function () {
 
         const contrs = `
         <div class="card_contr">
-            <div class="title">Need</div>
-            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
-            ipsum, cond (MAX 100 caracters).</div>
+            <div class="title">Title</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters).</div>
         </div>
         `;
 
@@ -1052,56 +1051,49 @@ $(document).ready(function () {
         <div class="card_lgnd1">
             <div class="title">Need</div>
             <div class="subtitle">Regression Introduced</div>
-            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
-            ipsum, cond (MAX 100 caracters).</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters).</div>
         </div>
         `;
         const tlcard2 = `
         <div class="card_lgnd2">
             <div class="title">Need</div>
             <div class="subtitle">Loss</div>
-            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
-            ipsum, cond (MAX 100 caracters).</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters).</div>
         </div>
         `;
         const tlcard3 = `
         <div class="card_lgnd3">
             <div class="title">Need</div>
             <div class="subtitle">Defended</div>
-            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
-            ipsum, cond (MAX 100 caracters).</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters).</div>
         </div>
         `;
         const tlcard4 = `
         <div class="card_lgnd4">
             <div class="title">Need</div>
             <div class="subtitle">Reform Introduced</div>
-            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
-            ipsum, cond (MAX 100 caracters).</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters).</div>
         </div>
         `;
         const tlcard5 = `
         <div class="card_lgnd5">
             <div class="title">Need</div>
             <div class="subtitle">Advanced</div>
-            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
-            ipsum, cond (MAX 100 caracters).</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters).</div>
         </div>
         `;
         const tlcard6 = `
         <div class="card_lgnd6">
             <div class="title">Need</div>
             <div class="subtitle">Approved</div>
-            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
-            ipsum, cond (MAX 100 caracters).</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters).</div>
         </div>
         `;
         const tlcard7 = `
         <div class="card_lgnd7">
             <div class="title">Need</div>
             <div class="subtitle">Implemented</div>
-            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem
-            ipsum, cond (MAX 100 caracters).</div>
+            <div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters).</div>
         </div>
         `;
 
@@ -2171,5 +2163,176 @@ $(document).ready(function () {
                 */
             })
         })
+    })
+
+    $(document).on('click', '.card_lgnd1', function () {
+        var ChildTitle = $(this).find(".title").text();
+        var ChildSubTitle = $(this).find(".subtitle").text();
+        var ChildCont = $(this).find(".cont").text();
+        $('<div class="scrim">').appendTo('body')
+
+        $('<div class="dlg d_lgnd1">').appendTo('.scrim')
+        $('<div class="dlg_bar tt_lgnd1">').appendTo('.dlg')
+        $('<div class="lbl">').appendTo('.dlg_bar')
+
+        $('<div class="dlg_cta i_lgnd1">').appendTo('.dlg')
+        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
+        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
+
+        $('<div class="dlg_cnt">').appendTo('.dlg')
+
+        $('.dlg_bar').children().html(ChildTitle +" - "+ChildSubTitle)
+        $('.dlg_cnt').html(ChildCont)
+    })
+
+    $(document).on('click', '.card_lgnd2', function () {
+        var ChildTitle = $(this).find(".title").text();
+        var ChildSubTitle = $(this).find(".subtitle").text();
+        var ChildCont = $(this).find(".cont").text();
+        $('<div class="scrim">').appendTo('body')
+
+        $('<div class="dlg d_lgnd2">').appendTo('.scrim')
+        $('<div class="dlg_bar tt_lgnd2">').appendTo('.dlg')
+        $('<div class="lbl">').appendTo('.dlg_bar')
+
+        $('<div class="dlg_cta i_lgnd2">').appendTo('.dlg')
+        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
+        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
+
+        $('<div class="dlg_cnt">').appendTo('.dlg')
+
+        $('.dlg_bar').children().html(ChildTitle +" - "+ChildSubTitle)
+        $('.dlg_cnt').html(ChildCont)
+    })
+
+    $(document).on('click', '.card_lgnd3', function () {
+        var ChildTitle = $(this).find(".title").text();
+        var ChildSubTitle = $(this).find(".subtitle").text();
+        var ChildCont = $(this).find(".cont").text();
+        $('<div class="scrim">').appendTo('body')
+
+        $('<div class="dlg d_lgnd3">').appendTo('.scrim')
+        $('<div class="dlg_bar tt_lgnd3">').appendTo('.dlg')
+        $('<div class="lbl">').appendTo('.dlg_bar')
+
+        $('<div class="dlg_cta i_lgnd3">').appendTo('.dlg')
+        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
+        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
+
+        $('<div class="dlg_cnt">').appendTo('.dlg')
+
+        $('.dlg_bar').children().html(ChildTitle +" - "+ChildSubTitle)
+        $('.dlg_cnt').html(ChildCont)
+    })
+
+    $(document).on('click', '.card_lgnd4', function () {
+        var ChildTitle = $(this).find(".title").text();
+        var ChildSubTitle = $(this).find(".subtitle").text();
+        var ChildCont = $(this).find(".cont").text();
+        $('<div class="scrim">').appendTo('body')
+
+        $('<div class="dlg d_lgnd4">').appendTo('.scrim')
+        $('<div class="dlg_bar tt_lgnd4">').appendTo('.dlg')
+        $('<div class="lbl">').appendTo('.dlg_bar')
+
+        $('<div class="dlg_cta i_lgnd4">').appendTo('.dlg')
+        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
+        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
+
+        $('<div class="dlg_cnt">').appendTo('.dlg')
+
+        $('.dlg_bar').children().html(ChildTitle +" - "+ChildSubTitle)
+        $('.dlg_cnt').html(ChildCont)
+    })
+
+    $(document).on('click', '.card_lgnd5', function () {
+        var ChildTitle = $(this).find(".title").text();
+        var ChildSubTitle = $(this).find(".subtitle").text();
+        var ChildCont = $(this).find(".cont").text();
+        $('<div class="scrim">').appendTo('body')
+
+        $('<div class="dlg d_lgnd5">').appendTo('.scrim')
+        $('<div class="dlg_bar tt_lgnd5">').appendTo('.dlg')
+        $('<div class="lbl">').appendTo('.dlg_bar')
+
+        $('<div class="dlg_cta i_lgnd5">').appendTo('.dlg')
+        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
+        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
+
+        $('<div class="dlg_cnt">').appendTo('.dlg')
+
+        $('.dlg_bar').children().html(ChildTitle +" - "+ChildSubTitle)
+        $('.dlg_cnt').html(ChildCont)
+    })
+
+    $(document).on('click', '.card_lgnd6', function () {
+        var ChildTitle = $(this).find(".title").text();
+        var ChildSubTitle = $(this).find(".subtitle").text();
+        var ChildCont = $(this).find(".cont").text();
+        $('<div class="scrim">').appendTo('body')
+
+        $('<div class="dlg d_lgnd6">').appendTo('.scrim')
+        $('<div class="dlg_bar tt_lgnd6">').appendTo('.dlg')
+        $('<div class="lbl">').appendTo('.dlg_bar')
+
+        $('<div class="dlg_cta i_lgnd6">').appendTo('.dlg')
+        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
+        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
+
+        $('<div class="dlg_cnt">').appendTo('.dlg')
+
+        $('.dlg_bar').children().html(ChildTitle +" - "+ChildSubTitle)
+        $('.dlg_cnt').html(ChildCont)
+    })
+
+    $(document).on('click', '.card_lgnd7', function () {
+        var ChildTitle = $(this).find(".title").text();
+        var ChildSubTitle = $(this).find(".subtitle").text();
+        var ChildCont = $(this).find(".cont").text();
+        $('<div class="scrim">').appendTo('body')
+
+        $('<div class="dlg d_lgnd7">').appendTo('.scrim')
+        $('<div class="dlg_bar tt_lgnd7">').appendTo('.dlg')
+        $('<div class="lbl">').appendTo('.dlg_bar')
+
+        $('<div class="dlg_cta i_lgnd7">').appendTo('.dlg')
+        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
+        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
+
+        $('<div class="dlg_cnt">').appendTo('.dlg')
+
+        $('.dlg_bar').children().html(ChildTitle +" - "+ChildSubTitle)
+        $('.dlg_cnt').html(ChildCont)
+    })
+
+    $(document).on('click', '.card_contr', function () {
+        var ChildTitle = $(this).find(".title").text();
+        var ChildCont = $(this).find(".cont").text();
+        $('<div class="scrim">').appendTo('body')
+
+        $('<div class="dlg d_lgnd0">').appendTo('.scrim')
+        $('<div class="dlg_bar tt_lgnd0">').appendTo('.dlg')
+        $('<div class="lbl">').appendTo('.dlg_bar')
+
+        $('<div class="dlg_cta i_lgnd0">').appendTo('.dlg')
+        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
+        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
+
+        $('<div class="dlg_cnt">').appendTo('.dlg')
+
+        $('<textarea class="dlg_tx">').appendTo('.dlg_cnt')
+
+        $('.dlg_bar').children().html(ChildTitle)
+        $('.dlg_tx').html(ChildCont)
+    })
+
+    $(document).on('click', '.btn-sys-edit', function () {
+        $(this).remove();
+        $('<div class="btn-sys-save">').prependTo('.dlg_cta')
+    })
+
+    $(document).on('click', '.btn-sys-save', function () {
+        $(this).remove();
+        $('<div class="btn-sys-edit">').prependTo('.dlg_cta')
     })
 })

@@ -55,6 +55,15 @@
             align-self: start;
             grid-area: dlg_cnt;
             padding: 8px 16px;
+
+            .dlg_tx {
+                width: 100%;
+                height: 100px;
+                resize: none;
+                text-align: left;
+                border: none;
+                background-color: transparent;
+            }
         }
     }
 
