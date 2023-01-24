@@ -1,12 +1,5 @@
 $(document).ready(function () {
 
-    // Seleccionar el canvas
-    var canvas = document.getElementById("myCanvas");
-    var ctx = canvas.getContext("2d");
-
-    console.log("ctx: " + ctx)
-
-    // Establecer el nivel de zoom inicial
     var zoom = 1;
 
     // Add click event for zoom in button
