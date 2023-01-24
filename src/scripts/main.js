@@ -2155,6 +2155,8 @@ $(document).ready(function () {
 
         $(".impacts").css("max-height", "none")
         $(".impacts > div").css("overflow", "none")
+        $(".ignore").hide()
+
 
         html2canvas(document.querySelector(".timeline")).then(canvas => {
             canvas.id = "myCanvas";
@@ -2173,6 +2175,7 @@ $(document).ready(function () {
             })
             $(".impacts").css("max-height", "35vh")
             $(".impacts > div").css("overflow-x", "auto")
+            $(".ignore").show()
         })
     })
 
