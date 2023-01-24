@@ -2153,6 +2153,9 @@ $(document).ready(function () {
 
         $('.dlg_pdf_bar').children().html("Export to PDF")
 
+        $(".impacts").css("max-height", "none")
+        $(".impacts > div").css("overflow", "none")
+
         html2canvas(document.querySelector(".timeline")).then(canvas => {
             canvas.id = "myCanvas";
             $('.dlg_pdf_canvas').append(canvas)
@@ -2166,11 +2169,10 @@ $(document).ready(function () {
                 const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
                 pdf.addImage(imgTimeline, 'PNG', 0, 0, pdfWidth, pdfHeight);
                 pdf.save('download.pdf');
-                /*
-                doc.addImage(imgTimeline, 'PNG', 0, 0, 210, 297)
-                doc.save('sample.pdf')
-                */
+                $('div.scrim').remove()
             })
+            $(".impacts").css("max-height", "35vh")
+            $(".impacts > div").css("overflow-x", "auto")
         })
     })
 
