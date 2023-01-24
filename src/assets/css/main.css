@@ -17485,30 +17485,54 @@ label.checkbox.lgnd7 span {
   grid-area: dlg_pdf_btns;
   position: relative;
 }
-.scrim .dlg_pdf .dlg_pdf_btns #zoomIn {
+.scrim .dlg_pdf .dlg_pdf_btns .cta_canvas {
   position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #DFDFDC;
+  padding: 8px;
+  border-radius: 0 0 10px 10px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-auto-columns: 1fr;
+  gap: 0 0;
+  grid-auto-flow: row;
+  grid-template-areas: "cnt";
+}
+.scrim .dlg_pdf .dlg_pdf_btns .cta_canvas .cnt {
+  display: grid;
+  grid-template-columns: 24px 24px 24px;
+  grid-template-rows: auto;
+  gap: 8px 12px;
+  grid-auto-flow: row;
+  grid-template-areas: "z_in z_out z_res";
+  grid-area: cnt;
+}
+.scrim .dlg_pdf .dlg_pdf_btns .cta_canvas .cnt .z_in {
+  grid-area: z_in;
+}
+.scrim .dlg_pdf .dlg_pdf_btns .cta_canvas .cnt .z_in #zoomIn {
   width: 24px;
   height: 24px;
-  top: 8px;
-  left: 0;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23000000'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z'/%3E%3C/svg%3E");
   cursor: pointer;
 }
-.scrim .dlg_pdf .dlg_pdf_btns #zoomOut {
-  position: absolute;
+.scrim .dlg_pdf .dlg_pdf_btns .cta_canvas .cnt .z_out {
+  grid-area: z_out;
+}
+.scrim .dlg_pdf .dlg_pdf_btns .cta_canvas .cnt .z_out #zoomOut {
   width: 24px;
   height: 24px;
-  top: 8;
-  left: 36px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23000000'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM7 9h5v1H7z'/%3E%3C/svg%3E");
   cursor: pointer;
 }
-.scrim .dlg_pdf .dlg_pdf_btns #zoom-reset {
-  position: absolute;
+.scrim .dlg_pdf .dlg_pdf_btns .cta_canvas .cnt .z_res {
+  grid-area: z_res;
+}
+.scrim .dlg_pdf .dlg_pdf_btns .cta_canvas .cnt .z_res #zoom-reset {
   width: 24px;
   height: 24px;
-  top: 8;
-  left: 72px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23000000'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M3 5v4h2V5h4V3H5c-1.1 0-2 .9-2 2zm2 10H3v4c0 1.1.9 2 2 2h4v-2H5v-4zm14 4h-4v2h4c1.1 0 2-.9 2-2v-4h-2v4zm0-16h-4v2h4v4h2V5c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E");
   cursor: pointer;
 }

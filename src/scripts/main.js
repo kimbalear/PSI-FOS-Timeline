@@ -2140,9 +2140,17 @@ $(document).ready(function () {
 
         $('<div class="dlg_pdf_btns">').appendTo('.dlg_cnt')
 
-        $('<div id="zoomIn">').appendTo('.dlg_pdf_btns')
-        $('<div id="zoomOut">').appendTo('.dlg_pdf_btns')
-        $('<div id="zoom-reset">').appendTo('.dlg_pdf_btns')
+
+        $('<div class="cta_canvas">').appendTo('.dlg_pdf_btns')
+        $('<div class="cnt">').appendTo('.cta_canvas')
+        $('<div class="z_in">').appendTo('.cnt')
+        $('<div class="z_out">').appendTo('.cnt')
+        $('<div class="z_res">').appendTo('.cnt')
+
+
+        $('<div id="zoomIn">').appendTo('.z_in')
+        $('<div id="zoomOut">').appendTo('.z_out')
+        $('<div id="zoom-reset">').appendTo('.z_res')
 
         var save_pdf = '<div id="save_pdf" class="btns">Save</div>'
         $('.dlg_pdf_btns').append(save_pdf)
@@ -2152,6 +2160,9 @@ $(document).ready(function () {
         $('.dlg_pdf_cta').addClass("i_lgnd0")
 
         $('.dlg_pdf_bar').children().html("Export to PDF")
+
+        $(".contributions").css("max-height", "none")
+        $(".contributions > div").css("overflow", "none")
 
         $(".impacts").css("max-height", "none")
         $(".impacts > div").css("overflow", "none")
@@ -2173,6 +2184,8 @@ $(document).ready(function () {
                 pdf.save('download.pdf');
                 $('div.scrim').remove()
             })
+            $(".contributions").css("max-height", "35vh")
+            $(".contributions > div").css("overflow-x", "auto")
             $(".impacts").css("max-height", "35vh")
             $(".impacts > div").css("overflow-x", "auto")
             $(".ignore").show()
