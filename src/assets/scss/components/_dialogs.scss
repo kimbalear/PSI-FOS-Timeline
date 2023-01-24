@@ -118,10 +118,12 @@
                 height: 100%;
                 max-height: calc(100% - 72px);
                 overflow: auto;
+                background-color: #F7F7F6;
 
                 .dlg_pdf_canvas {
-                    width: 100%;
+                    width: auto;
                     height: auto;
+                    background-color: tramsparent;
                 }
             }
         }

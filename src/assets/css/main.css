@@ -17472,10 +17472,12 @@ label.checkbox.lgnd7 span {
   height: 100%;
   max-height: calc(100% - 72px);
   overflow: auto;
+  background-color: #F7F7F6;
 }
 .scrim .dlg_pdf .dlg_cnt .dlg_pdf_preview .dlg_pdf_canvas {
-  width: 100%;
+  width: auto;
   height: auto;
+  background-color: tramsparent;
 }
 .scrim .dlg_pdf .dlg_pdf_btns {
   width: 100%;
