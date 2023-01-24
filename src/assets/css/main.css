@@ -17477,7 +17477,8 @@ label.checkbox.lgnd7 span {
 .scrim .dlg_pdf .dlg_cnt .dlg_pdf_preview .dlg_pdf_canvas {
   width: auto;
   height: auto;
-  background-color: tramsparent;
+  background-color: transparent;
+  cursor: pointer;
 }
 .scrim .dlg_pdf .dlg_pdf_btns {
   width: 100%;
