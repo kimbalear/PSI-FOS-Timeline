@@ -548,12 +548,12 @@ $(document).ready(function () {
     $(document).on('click', '.btn-sys-close', function () {
         $('div.scrim').remove()
     })
-/*
-    $(document).on('click', '.scrim', function () {
-        $('div.scrim').remove()
-    })
-*/
-    var allCheckboxes=$('[type=checkbox]');
+    /*
+        $(document).on('click', '.scrim', function () {
+            $('div.scrim').remove()
+        })
+    */
+    var allCheckboxes = $('[type=checkbox]');
 
     allCheckboxes.prop('disabled', true)
 
@@ -2135,8 +2135,14 @@ $(document).ready(function () {
 
         $('<div class="dlg_cnt">').appendTo('.dlg_pdf')
         $('<div class="dlg_pdf_preview">').appendTo('.dlg_cnt')
+
         $('<div class="dlg_pdf_canvas">').appendTo('.dlg_pdf_preview')
+
         $('<div class="dlg_pdf_btns">').appendTo('.dlg_cnt')
+
+        $('<div id="zoomIn">').appendTo('.dlg_pdf_btns')
+        $('<div id="zoomOut">').appendTo('.dlg_pdf_btns')
+        $('<div id="zoom-reset">').appendTo('.dlg_pdf_btns')
 
         var save_pdf = '<div id="save_pdf" class="btns">Save</div>'
         $('.dlg_pdf_btns').append(save_pdf)
@@ -2148,7 +2154,9 @@ $(document).ready(function () {
         $('.dlg_pdf_bar').children().html("Export to PDF")
 
         html2canvas(document.querySelector(".timeline")).then(canvas => {
+            canvas.id = "myCanvas";
             $('.dlg_pdf_canvas').append(canvas)
+            $('<script src="src/scripts/canvas.js">').appendTo('.dlg_pdf_canvas')
             $('#save_pdf').on('click', function () {
                 var imgTimeline = canvas.toDataURL('image/png')
                 var pdf = new jsPDF('l', 'mm', 'a4')
@@ -2182,7 +2190,7 @@ $(document).ready(function () {
 
         $('<div class="dlg_cnt">').appendTo('.dlg')
 
-        $('.dlg_bar').children().html(ChildTitle +" - "+ChildSubTitle)
+        $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
         $('.dlg_cnt').html(ChildCont)
     })
 
@@ -2202,7 +2210,7 @@ $(document).ready(function () {
 
         $('<div class="dlg_cnt">').appendTo('.dlg')
 
-        $('.dlg_bar').children().html(ChildTitle +" - "+ChildSubTitle)
+        $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
         $('.dlg_cnt').html(ChildCont)
     })
 
@@ -2222,7 +2230,7 @@ $(document).ready(function () {
 
         $('<div class="dlg_cnt">').appendTo('.dlg')
 
-        $('.dlg_bar').children().html(ChildTitle +" - "+ChildSubTitle)
+        $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
         $('.dlg_cnt').html(ChildCont)
     })
 
@@ -2242,7 +2250,7 @@ $(document).ready(function () {
 
         $('<div class="dlg_cnt">').appendTo('.dlg')
 
-        $('.dlg_bar').children().html(ChildTitle +" - "+ChildSubTitle)
+        $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
         $('.dlg_cnt').html(ChildCont)
     })
 
@@ -2262,7 +2270,7 @@ $(document).ready(function () {
 
         $('<div class="dlg_cnt">').appendTo('.dlg')
 
-        $('.dlg_bar').children().html(ChildTitle +" - "+ChildSubTitle)
+        $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
         $('.dlg_cnt').html(ChildCont)
     })
 
@@ -2282,7 +2290,7 @@ $(document).ready(function () {
 
         $('<div class="dlg_cnt">').appendTo('.dlg')
 
-        $('.dlg_bar').children().html(ChildTitle +" - "+ChildSubTitle)
+        $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
         $('.dlg_cnt').html(ChildCont)
     })
 
@@ -2302,7 +2310,7 @@ $(document).ready(function () {
 
         $('<div class="dlg_cnt">').appendTo('.dlg')
 
-        $('.dlg_bar').children().html(ChildTitle +" - "+ChildSubTitle)
+        $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
         $('.dlg_cnt').html(ChildCont)
     })
 
