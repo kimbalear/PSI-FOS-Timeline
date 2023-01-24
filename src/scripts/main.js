@@ -2133,9 +2133,10 @@ $(document).ready(function () {
         $('<div class="dlg_pdf_cta">').appendTo('.dlg_pdf')
         $('<div class="btn-sys-close">').appendTo('.dlg_pdf_cta')
 
-        $('<div class="dlg_pdf_cnt">').appendTo('.dlg_pdf')
-        $('<div class="dlg_pdf_canvas">').appendTo('.dlg_pdf_cnt')
-        $('<div class="dlg_pdf_btns">').appendTo('.dlg_pdf_cnt')
+        $('<div class="dlg_cnt">').appendTo('.dlg_pdf')
+        $('<div class="dlg_pdf_preview">').appendTo('.dlg_cnt')
+        $('<div class="dlg_pdf_canvas">').appendTo('.dlg_pdf_preview')
+        $('<div class="dlg_pdf_btns">').appendTo('.dlg_cnt')
 
         var save_pdf = '<div id="save_pdf" class="btns">Save</div>'
         $('.dlg_pdf_btns').append(save_pdf)

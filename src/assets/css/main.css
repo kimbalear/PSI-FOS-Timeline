@@ -17432,15 +17432,17 @@ label.checkbox.lgnd7 span {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: 40px calc(100% - 50px) 64px;
   grid-auto-columns: max-content;
-  grid-auto-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: column;
   background-color: #FFF;
   border: 2px solid;
   border-radius: 12px;
-  grid-template-areas: "dlg_bar dlg_cta" "dlg_cnt dlg_cnt";
+  grid-template-areas: "dlg_bar dlg_cta" "dlg_cnt dlg_cnt" "dlg_pdf_btns dlg_pdf_btns";
+  /* background of the scrollbar except button or resizer */
+  /* scrollbar itself */
+  /* set button(top and bottom of the scrollbar) */
 }
 .scrim .dlg_pdf .dlg_pdf_bar {
   grid-area: dlg_bar;
@@ -17460,39 +17462,41 @@ label.checkbox.lgnd7 span {
   grid-area: dlg_cta;
   border-radius: 0 9.5px 0 0;
 }
-.scrim .dlg_pdf .dlg_pdf_cnt {
-  align-self: start;
+.scrim .dlg_pdf .dlg_cnt {
   grid-area: dlg_cnt;
+  align-self: start;
   padding: 8px 16px;
-  /* background of the scrollbar except button or resizer */
-  /* scrollbar itself */
-  /* set button(top and bottom of the scrollbar) */
 }
-.scrim .dlg_pdf .dlg_pdf_cnt .dlg_pdf_canvas {
+.scrim .dlg_pdf .dlg_cnt .dlg_pdf_preview {
   width: 100%;
-  height: calc(100% - 240px);
+  height: 100%;
+  max-height: calc(100% - 72px);
   overflow: auto;
 }
-.scrim .dlg_pdf .dlg_pdf_cnt .dlg_pdf_btns {
+.scrim .dlg_pdf .dlg_cnt .dlg_pdf_preview .dlg_pdf_canvas {
+  width: 100%;
+  height: auto;
+}
+.scrim .dlg_pdf .dlg_pdf_btns {
   width: 100%;
   height: 64px;
-  overflow: auto;
+  grid-area: dlg_pdf_btns;
 }
-.scrim .dlg_pdf .dlg_pdf_cnt ::-webkit-scrollbar {
+.scrim .dlg_pdf ::-webkit-scrollbar {
   background-color: rgba(119, 113, 106, 0.1);
   height: 4px;
   width: 4px;
   border-radius: 2px;
 }
-.scrim .dlg_pdf .dlg_pdf_cnt ::-webkit-scrollbar-track {
+.scrim .dlg_pdf ::-webkit-scrollbar-track {
   background-color: rgba(119, 113, 106, 0.1);
   border-radius: 4px;
 }
-.scrim .dlg_pdf .dlg_pdf_cnt ::-webkit-scrollbar-thumb {
+.scrim .dlg_pdf ::-webkit-scrollbar-thumb {
   background-color: #77716A;
   border-radius: 4px;
 }
-.scrim .dlg_pdf .dlg_pdf_cnt ::-webkit-scrollbar-button {
+.scrim .dlg_pdf ::-webkit-scrollbar-button {
   display: none;
 }
 
