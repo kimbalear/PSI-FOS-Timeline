@@ -2180,7 +2180,7 @@ $(document).ready(function () {
                 const imgProps = pdf.getImageProperties(imgTimeline);
                 const pdfWidth = pdf.internal.pageSize.getWidth();
                 const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-                pdf.addImage(imgTimeline, 'PNG', 0, 0, pdfWidth, pdfHeight);
+                pdf.addImage(imgTimeline, 'PNG', 10, 10, pdfWidth - 20, pdfHeight - 20);
                 pdf.save('download.pdf');
                 $('div.scrim').remove()
             })
