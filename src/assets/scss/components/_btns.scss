@@ -61,25 +61,41 @@
     &:hover {}
 }
 
-.area_exp_colaps {
-    width: 100%;
-    height: 24px;
+.top_timeline {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 24px;
+    gap: 0px 28px;
+    grid-template-areas:
+        "lb_ou btn_hs";
 
-    .btn {
-        float: left;
-        width: auto;
-        height: 24px;
-        border-radius: 6px;
-        padding: 8px 8px;
-        background-color: $clink;
-        cursor: pointer;
-        margin: 0 4px 0 23px;
-        font-size: 12px;
-        padding: 5px 8px;
-        //color: #FFF;
-
-        &:hover {}
+    .lb_ou {
+        align-self: center; 
+        grid-area: lb_ou; 
+        color: $clr3;
+        font-weight: 700;
+        font-size: 16px;
+        padding-left: 23px;
     }
+
+    .btn_hs {
+        align-self: center; 
+        grid-area: btn_hs; 
+
+        .btn {
+            width: min-content;
+            height: 24px;
+            border-radius: 6px;
+            padding: 8px 8px;
+            background-color: $clink;
+            cursor: pointer;
+            font-size: 12px;
+            padding: 5px 8px;
+    
+            &:hover {}
+        }
+      }
 }
 
 .btns {

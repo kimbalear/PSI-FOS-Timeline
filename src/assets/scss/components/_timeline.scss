@@ -1,25 +1,19 @@
-.timeline_section {
+.timelines {
     width: auto;
     height: 100%;
     overflow: auto;
 
-    .timelines {
-        float: left;
-        display: grid;
-        grid-template-columns: min-content;
-        grid-template-rows: 1fr;
-        grid-auto-columns: min-content;
-        gap: 0px 0px;
-        grid-auto-flow: column;
-        grid-template-areas:
-            ". .";
+    .ounit {
+        padding-bottom: 20px;
 
         .timeline {
+            float: left;
             display: grid;
             grid-template-columns: 60px 220px 220px 220px 220px 220px 220px 220px 220px 220px 220px 220px 220px;
             grid-template-rows: 36px 1fr 44px 1fr;
             gap: 0px 0px;
             grid-auto-flow: row;
+            padding-bottom: 20px;
             grid-template-areas:
                 "tp_yr ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn"
                 "tp_yr tp1 tp2 tp3 tp4 tp5 tp6 tp7 tp8 tp9 tp10 tp11 tp12"
@@ -1333,5 +1327,6 @@
                 padding: 0 4px 0 23px;
             }
         }
+
     }
 }
