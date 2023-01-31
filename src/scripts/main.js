@@ -1326,7 +1326,7 @@ $(document).ready(function () {
             $(btm).toggle();
         }
 
-        if ($(".tp_yr").is(":visible")) {
+        if ($('#' + firstTwoChars + 'tpyr').is(":visible")) {
             $(this).text("Hide");
         } else {
             $(this).text("Show");
