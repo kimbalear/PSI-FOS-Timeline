@@ -259,7 +259,7 @@ body .wrapper .top_bar .top_lgnds .list_lgnds div {
 body .wrapper .content {
   padding: 8px 16px 0;
   width: 100%;
-  height: calc(100% - 130px);
+  height: calc(100% - 113px);
   padding-bottom: 8px;
   /* total width */
   /* background of the scrollbar except button or resizer */
@@ -292,6 +292,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
 .timelines .ounit {
   display: flex;
   flex-direction: row;
+  height: 100%;
   padding-bottom: 20px;
 }
 .timelines .ounit .timeline {
@@ -17602,10 +17603,14 @@ label.checkbox.lgnd7 span {
   height: 48px;
   border-radius: 6px;
   padding: 8px 8px;
-  background-color: rgba(62, 115, 230, 0.3882352941);
+  background-color: #f86a6a;
   cursor: pointer;
-  background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_135_2511)'%3E%3Cpath d='M33.1 18.6667H14.9C12.742 18.6667 11 20.4533 11 22.6667V30.6667H16.2V36H31.8V30.6667H37V22.6667C37 20.4533 35.258 18.6667 33.1 18.6667ZM29.2 33.3333H18.8V26.6667H29.2V33.3333ZM33.1 24C32.385 24 31.8 23.4 31.8 22.6667C31.8 21.9333 32.385 21.3333 33.1 21.3333C33.815 21.3333 34.4 21.9333 34.4 22.6667C34.4 23.4 33.815 24 33.1 24ZM31.8 12H16.2V17.3333H31.8V12Z' fill='%23FDF4E7'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_135_2511'%3E%3Crect width='48' height='48' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_206_2511)'%3E%3Cpath d='M33.6 12H19.2C17.88 12 16.8 13.08 16.8 14.4V28.8C16.8 30.12 17.88 31.2 19.2 31.2H33.6C34.92 31.2 36 30.12 36 28.8V14.4C36 13.08 34.92 12 33.6 12ZM23.4 21C23.4 21.996 22.596 22.8 21.6 22.8H20.4V25.2H18.6V18H21.6C22.596 18 23.4 18.804 23.4 19.8V21ZM29.4 23.4C29.4 24.396 28.596 25.2 27.6 25.2H24.6V18H27.6C28.596 18 29.4 18.804 29.4 19.8V23.4ZM34.2 19.8H32.4V21H34.2V22.8H32.4V25.2H30.6V18H34.2V19.8ZM20.4 21H21.6V19.8H20.4V21ZM14.4 16.8H12V33.6C12 34.92 13.08 36 14.4 36H31.2V33.6H14.4V16.8ZM26.4 23.4H27.6V19.8H26.4V23.4Z' fill='%23FDF4E7'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_206_2511'%3E%3Crect width='48' height='48' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
 }
+.btn_print:hover {
+  background-color: #FF5050;
+}
+
 .top_timeline {
   display: grid;
   grid-auto-columns: 1fr;
