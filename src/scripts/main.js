@@ -1312,15 +1312,17 @@ $(document).ready(function () {
     });
 
     $(document).on('click', '.btn', function () {
-        $(".tp_yr").toggle();
-        $(".btm_yr").toggle();
+        id = $(this).prop("id")
+        var firstTwoChars = id.substring(0, 2);
+        $('#' + firstTwoChars + 'tpyr').toggle();
+        $('#' + firstTwoChars + 'btmyr').toggle();
         for (itp = 1; itp <= 12; itp++) {
-            var tp = '.tp' + itp
+            var tp = '#' + firstTwoChars +'tp' + itp
             $(tp).toggle();
         }
 
         for (ibtm = 1; ibtm <= 12; ibtm++) {
-            var btm = '.btm' + ibtm
+            var btm = '#' + firstTwoChars + 'btm_' + ibtm
             $(btm).toggle();
         }
 
