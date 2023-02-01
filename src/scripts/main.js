@@ -1358,72 +1358,74 @@ $(document).ready(function () {
     }
 
     $(".btn_print").click(function () {
-        $('<div class="scrim">').appendTo('body')
+        if (!$(this).hasClass("disabled")) {
+            $('<div class="scrim">').appendTo('body')
 
-        $('<div class="dlg_pdf">').appendTo('.scrim')
-        $('<div class="dlg_pdf_bar">').appendTo('.dlg_pdf')
-        $('<div class="lbl">').appendTo('.dlg_pdf_bar')
+            $('<div class="dlg_pdf">').appendTo('.scrim')
+            $('<div class="dlg_pdf_bar">').appendTo('.dlg_pdf')
+            $('<div class="lbl">').appendTo('.dlg_pdf_bar')
 
-        $('<div class="dlg_pdf_cta">').appendTo('.dlg_pdf')
-        $('<div class="btn-sys-close">').appendTo('.dlg_pdf_cta')
+            $('<div class="dlg_pdf_cta">').appendTo('.dlg_pdf')
+            $('<div class="btn-sys-close">').appendTo('.dlg_pdf_cta')
 
-        $('<div class="dlg_cnt">').appendTo('.dlg_pdf')
-        $('<div class="dlg_pdf_preview">').appendTo('.dlg_cnt')
+            $('<div class="dlg_cnt">').appendTo('.dlg_pdf')
+            $('<div class="dlg_pdf_preview">').appendTo('.dlg_cnt')
 
-        $('<div class="dlg_pdf_canvas">').appendTo('.dlg_pdf_preview')
+            $('<div class="dlg_pdf_canvas">').appendTo('.dlg_pdf_preview')
 
-        $('<div class="dlg_pdf_btns">').appendTo('.dlg_cnt')
-
-
-        $('<div class="cta_canvas">').appendTo('.dlg_pdf_btns')
-        $('<div class="cnt">').appendTo('.cta_canvas')
-        $('<div class="z_in">').appendTo('.cnt')
-        $('<div class="z_out">').appendTo('.cnt')
-        $('<div class="z_res">').appendTo('.cnt')
+            $('<div class="dlg_pdf_btns">').appendTo('.dlg_cnt')
 
 
-        $('<div id="zoomIn">').appendTo('.z_in')
-        $('<div id="zoomOut">').appendTo('.z_out')
-        $('<div id="zoom-reset">').appendTo('.z_res')
-
-        var save_pdf = '<div id="save_pdf" class="btns">Save</div>'
-        $('.dlg_pdf_btns').append(save_pdf)
-
-        $('.dlg_pdf_pdf').addClass("d_lgnd0")
-        $('.dlg_pdf_bar').addClass("tt_lgnd0")
-        $('.dlg_pdf_cta').addClass("i_lgnd0")
-
-        $('.dlg_pdf_bar').children().html("Export to PDF")
-
-        $(".contributions").css("max-height", "none")
-        $(".contributions > div").css("overflow", "none")
-
-        $(".impacts").css("max-height", "none")
-        $(".impacts > div").css("overflow", "none")
-        $(".ignore").hide()
+            $('<div class="cta_canvas">').appendTo('.dlg_pdf_btns')
+            $('<div class="cnt">').appendTo('.cta_canvas')
+            $('<div class="z_in">').appendTo('.cnt')
+            $('<div class="z_out">').appendTo('.cnt')
+            $('<div class="z_res">').appendTo('.cnt')
 
 
-        html2canvas(document.querySelector(".timeline")).then(canvas => {
-            canvas.id = "myCanvas";
-            $('.dlg_pdf_canvas').append(canvas)
-            $('<script src="src/scripts/canvas.js">').appendTo('.dlg_pdf_canvas')
-            $('#save_pdf').on('click', function () {
-                var imgTimeline = canvas.toDataURL('image/png')
-                var pdf = new jsPDF('l', 'mm', 'a4')
+            $('<div id="zoomIn">').appendTo('.z_in')
+            $('<div id="zoomOut">').appendTo('.z_out')
+            $('<div id="zoom-reset">').appendTo('.z_res')
 
-                const imgProps = pdf.getImageProperties(imgTimeline);
-                const pdfWidth = pdf.internal.pageSize.getWidth();
-                const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-                pdf.addImage(imgTimeline, 'PNG', 10, 10, pdfWidth - 20, pdfHeight - 20);
-                pdf.save('download.pdf');
-                $('div.scrim').remove()
+            var save_pdf = '<div id="save_pdf" class="btns">Save</div>'
+            $('.dlg_pdf_btns').append(save_pdf)
+
+            $('.dlg_pdf_pdf').addClass("d_lgnd0")
+            $('.dlg_pdf_bar').addClass("tt_lgnd0")
+            $('.dlg_pdf_cta').addClass("i_lgnd0")
+
+            $('.dlg_pdf_bar').children().html("Export to PDF")
+
+            $(".contributions").css("max-height", "none")
+            $(".contributions > div").css("overflow", "none")
+
+            $(".impacts").css("max-height", "none")
+            $(".impacts > div").css("overflow", "none")
+            $(".ignore").hide()
+
+
+            html2canvas(document.querySelector(".timeline")).then(canvas => {
+                canvas.id = "myCanvas";
+                $('.dlg_pdf_canvas').append(canvas)
+                $('<script src="src/scripts/canvas.js">').appendTo('.dlg_pdf_canvas')
+                $('#save_pdf').on('click', function () {
+                    var imgTimeline = canvas.toDataURL('image/png')
+                    var pdf = new jsPDF('l', 'mm', 'a4')
+
+                    const imgProps = pdf.getImageProperties(imgTimeline);
+                    const pdfWidth = pdf.internal.pageSize.getWidth();
+                    const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+                    pdf.addImage(imgTimeline, 'PNG', 10, 10, pdfWidth - 20, pdfHeight - 20);
+                    pdf.save('download.pdf');
+                    $('div.scrim').remove()
+                })
+                $(".contributions").css("max-height", "35vh")
+                $(".contributions > div").css("overflow-x", "auto")
+                $(".impacts").css("max-height", "35vh")
+                $(".impacts > div").css("overflow-x", "auto")
+                $(".ignore").show()
             })
-            $(".contributions").css("max-height", "35vh")
-            $(".contributions > div").css("overflow-x", "auto")
-            $(".impacts").css("max-height", "35vh")
-            $(".impacts > div").css("overflow-x", "auto")
-            $(".ignore").show()
-        })
+        }
     })
 
     $(document).on('click', '.card_lgnd1', function () {
@@ -1601,7 +1603,7 @@ $(document).ready(function () {
         $(function () {
             $('[data-toggle="tooltip"]').tooltip({ delay: { "show": 500, "hide": 100 } })
         })
-      } else {
+    } else {
         // ---
-      }
+    }
 })
