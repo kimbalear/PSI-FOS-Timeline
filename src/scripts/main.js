@@ -1416,7 +1416,7 @@ $(document).ready(function () {
                     const pdfWidth = pdf.internal.pageSize.getWidth();
                     const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
                     pdf.addImage(imgTimeline, 'PNG', 10, 10, pdfWidth - 20, pdfHeight - 20);
-                    pdf.save('download.pdf');
+                    pdf.save($('.lb_ou').text());
                     $('div.scrim').remove()
                 })
                 $(".contributions").css("max-height", "35vh")
