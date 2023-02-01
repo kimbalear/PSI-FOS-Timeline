@@ -434,6 +434,8 @@ $(document).ready(function () {
     };
 
     function SetOrgUnits(st, typ) {
+        console.log(st)
+
         var nameOu = ""
         for (var i = 0; i < st.length; i++) {
 
@@ -461,14 +463,17 @@ $(document).ready(function () {
     };
 
     function SetYears(st, typ) {
+        console.log(st)
         var firstYear = ""
         var lastTwo = ""
         var years = ""
         for (var i = 0; i < st.length; i++) {
             if (i >= 1) {
                 lastTwo = lastTwo + "/" + st[i].slice(-2)
+                $(".btn_print").addClass('disabled')
             } else {
-                firstYear = firstYear + st[i];
+                firstYear = firstYear + st[i]
+                $(".btn_print").removeClass('disabled')
             }
         }
         years = firstYear + lastTwo;
@@ -588,13 +593,11 @@ $(document).ready(function () {
                 allCheckboxes.prop('checked', true)
                 allCheckboxes.prop('disabled', true)
                 $('.ounit').remove()
-                $(".btn_print").hide()
             }
         } else {
             allCheckboxes.prop('checked', true)
             allCheckboxes.prop('disabled', true)
             $('.ounit').remove()
-            $(".btn_print").hide()
         }
 
     }
@@ -612,9 +615,7 @@ $(document).ready(function () {
         var btnhs = '<div id="' + id_ou + tLtype + 'btnhs" class="btn_hs"></div>'
         var ctabtn = '<div id="' + id_ou + tLtype + 'btn" class="btn ignore">Hide</div>'
         var tline = '<div id="' + id_ou + tLtype + 'tline" class="t_line">'
-
         var yrstart = '<div id="' + id_ou + tLtype + 'yrstart" class="yr_start">'
-
         var btmyr = '<div id="' + id_ou + tLtype + 'btmyr" class="btm_yr">'
 
 
@@ -1317,7 +1318,7 @@ $(document).ready(function () {
         $('#' + firstTwoChars + 'tpyr').toggle();
         $('#' + firstTwoChars + 'btmyr').toggle();
         for (itp = 1; itp <= 12; itp++) {
-            var tp = '#' + firstTwoChars +'tp' + itp
+            var tp = '#' + firstTwoChars + 'tp' + itp
             $(tp).toggle();
         }
 
@@ -1327,9 +1328,9 @@ $(document).ready(function () {
         }
 
         if ($('#' + firstTwoChars + 'tpyr').is(":visible")) {
-            $(this).text("Hide");
+            $(this).text("Hide year");//Hide all years
         } else {
-            $(this).text("Show");
+            $(this).text("Show year");//Show all years
         }
     })
 
@@ -1355,8 +1356,6 @@ $(document).ready(function () {
             }
         }
     }
-
-    $(".btn_print").hide()
 
     $(".btn_print").click(function () {
         $('<div class="scrim">').appendTo('body')
@@ -1597,4 +1596,12 @@ $(document).ready(function () {
         $(this).remove();
         $('<div class="btn-sys-edit">').prependTo('.dlg_cta')
     })
+
+    if ($(".btn_print").hasClass(".disabled")) {
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip({ delay: { "show": 500, "hide": 100 } })
+        })
+      } else {
+        // ---
+      }
 })
