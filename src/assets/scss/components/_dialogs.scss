@@ -89,9 +89,32 @@
 
                 .frm {
                     padding: 4px;
-                    border: 1px solid $clrgba15;
+                    //border: 1px solid $clrgba15;
                     font-size: 0.8em;
                     margin-bottom: 8px;
+                }
+
+                .files {
+                    display: grid;
+                    grid-template-columns: 40px 1fr;
+                    grid-template-rows: 40px;
+                    grid-auto-columns: 1fr;
+                    gap: 0px 8px;
+                    grid-auto-flow: row;
+                    cursor: pointer;
+                    grid-template-areas:
+                        "f_icon f_name";
+
+                    .f_icon {
+                        justify-self: center;
+                        align-self: center;
+                        grid-area: f_icon;
+                    }
+
+                    .f_name {
+                        align-self: center; 
+                        grid-area: f_name;
+                    }
                 }
             }
 
@@ -99,7 +122,7 @@
             .grp4 {
                 float: left;
                 height: auto;
-                min-height: 60px;
+                min-height: 165px;
                 border: 1px solid;
                 padding: 8px;
                 margin: 0 8px 8px 0;

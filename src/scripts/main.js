@@ -469,10 +469,9 @@ $(document).ready(function () {
         for (var i = 0; i < st.length; i++) {
             if (i >= 1) {
                 lastTwo = lastTwo + "/" + st[i].slice(-2)
-                $(".btn_print").addClass('disabled')
+
             } else {
                 firstYear = firstYear + st[i]
-                $(".btn_print").removeClass('disabled')
             }
         }
         years = firstYear + lastTwo;
@@ -587,7 +586,6 @@ $(document).ready(function () {
 
         if (typeof qry1 === 'string' && qry1 != "") {
             if (typeof qry3 === 'string' && qry3 != "") {
-                $(".btn_print").show()
                 allCheckboxes.prop('disabled', false)
                 timeline(qry1, qry3)
             } else {
@@ -605,7 +603,7 @@ $(document).ready(function () {
 
     function timeline_structure(id_ou, nameOu, year, tLtype) {
 
-        //console.log('un año')
+        //console.log(nameOu + " - " + year)
 
         var lblYr = '<div id="' + id_ou + tLtype + 'lbl" class="lbl"></div>'
         var timeline = '<div id="' + id_ou + tLtype + 'tl" class="timeline"></div>'
@@ -1249,8 +1247,32 @@ $(document).ready(function () {
         }
     }
 
+    function toggleDisabled(var1, var2) {
+        var arrOu = var1.split(',');
+        var arryear = var2.split('/');
+
+        if ((Array.isArray(arrOu) && arrOu.length == 1) || (Array.isArray(arryear) && arryear.length == 1)) {
+            $('.btn_print').removeClass('disabled')
+        }
+
+        if ((Array.isArray(arrOu) && arrOu.length == 1) && (Array.isArray(arryear) && arryear.length > 1)) {
+            if ($('.btn_print').hasClass('disabled')) {
+                $('.btn_print').removeClass('disabled')
+            }
+            $('.btn_print').addClass('disabled')
+        }
+
+        if ((Array.isArray(arrOu) && arrOu.length > 1) && (Array.isArray(arryear) && arryear.length == 1)) {
+            if ($('.btn_print').hasClass('disabled')) {
+                $('.btn_print').removeClass('disabled')
+            }
+            $('.btn_print').addClass('disabled')
+        }
+    }
+
     function timeline(ou, year) {
         $('.ounit').remove()
+        toggleDisabled(ou, year)
 
         if (ou.indexOf(',') !== -1) {
             var arrOu = ou.split(',');
@@ -1429,9 +1451,9 @@ $(document).ready(function () {
         }
     })
 
-    function contentCard(ChildCont, imgs){
-        var imgs = ["1.jpg","2.jpg","3.jpg"]
-        var url ="https://knowtechture.com/timeline/src/assets/imgs/"
+    function contentCard(ChildCont, imgs) {
+        var imgs = ["1.jpg", "2.jpg", "3.jpg"]
+        var url = "https://knowtechture.com/timeline/src/assets/imgs/"
 
         $('<div class="grp1">').appendTo('.dlg_cnt')
         $('<div id="gr1_tt" class="title">').appendTo('.grp1')
@@ -1456,16 +1478,25 @@ $(document).ready(function () {
         $('<div id="bx3" class="grp3">').appendTo('.dlg_cnt')
         $('<div id="gr3_tt" class="title">').appendTo('.grp3')
 
-        $('<div id="lblfrm3" class="lblfrm">').appendTo('#bx3')
-        $('<div id="lblfrm31" class="lblfrm">').appendTo('#bx3')
-        $('<div id="lblfrm32" class="lblfrm">').appendTo('#bx3')
+        $('<div id="file31" class="files">').appendTo('#bx3')
+        $('<div id="f_icon31" class="f_icon">').appendTo('#file31')
+        $('<div class="doc_file">').appendTo('#f_icon31')
+        $('<div id="f_name31" class="f_name">').appendTo('#file31')
+        $('#f_name31').html("File name")
 
+        $('<div id="file32" class="files">').appendTo('#bx3')
+        $('<div id="f_icon32" class="f_icon">').appendTo('#file32')
+        $('<div class="pdf_file">').appendTo('#f_icon32')
+        $('<div id="f_name32" class="f_name">').appendTo('#file32')
+        $('#f_name32').html("File name")
 
-        $('#lblfrm3').html("field 1")
-        $('#lblfrm31').html("field 2")
-        $('#lblfrm32').html("field 3")
+        $('<div id="file33" class="files">').appendTo('#bx3')
+        $('<div id="f_icon33" class="f_icon">').appendTo('#file33')
+        $('<div class="xls_file">').appendTo('#f_icon33')
+        $('<div id="f_name33" class="f_name">').appendTo('#file33')
+        $('#f_name33').html("File name")
 
-        $('#gr3_tt').html("Upload documents")
+        $('#gr3_tt').html("Documents")
 
         $('<div id="bx4" class="grp4">').appendTo('.dlg_cnt')
         $('<div id="gr4_tt" class="title">').appendTo('#bx4')
@@ -1475,7 +1506,7 @@ $(document).ready(function () {
         $('<div class="i2">').appendTo('.imgContainer')
         $('<div class="i3">').appendTo('.imgContainer')
 
-        $('#gr4_tt').html("Upload images")
+        $('#gr4_tt').html("Images")
         $(".i1").html("<img src='" + url + imgs[0] + "' style='width:100%; height:auto;'>");
         $(".i2").html("<img src='" + url + imgs[1] + "' style='width:100%; height:auto;'>");
         $(".i3").html("<img src='" + url + imgs[2] + "' style='width:100%; height:auto;'>");
@@ -1647,15 +1678,7 @@ $(document).ready(function () {
         $('.dlg_tx').html(ChildCont)
     })
 
-    $(document).on('click', '.btn-sys-edit', function () {
-        $(this).remove();
-        $('<div class="btn-sys-save">').prependTo('.dlg_cta')
-    })
-
-    $(document).on('click', '.btn-sys-save', function () {
-        $(this).remove();
-        $('<div class="btn-sys-edit">').prependTo('.dlg_cta')
-    })
+    $(document).on('click', '.btn-sys-edit', function () {})
 
     if ($(".btn_print").hasClass(".disabled")) {
         $(function () {
