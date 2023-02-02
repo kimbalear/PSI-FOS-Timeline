@@ -317,6 +317,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   padding-bottom: 20px;
 }
 .timelines .ounit .timeline {
+  height: max-content;
   display: grid;
   grid-template-columns: 60px 220px 220px 220px 220px 220px 220px 220px 220px 220px 220px 220px 220px;
   grid-template-rows: 36px 1fr 44px 1fr;

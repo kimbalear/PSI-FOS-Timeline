@@ -1419,8 +1419,6 @@ $(document).ready(function () {
 
             $('.dlg_pdf_bar').children().html("Export to PDF")
 
-            $(".timeline").css("height", "max-content")
-
             $(".contributions").css("max-height", "none")
             $(".contributions > div").css("overflow", "none")
 
