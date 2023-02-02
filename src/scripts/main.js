@@ -614,7 +614,7 @@ $(document).ready(function () {
         var topl = '<div id="' + id_ou + tLtype + 'topl" class="top_timeline">'
         var topTl = '<div id="' + id_ou + tLtype + 'lbou" class="lb_ou">' + nameOu + '</div>'
         var btnhs = '<div id="' + id_ou + tLtype + 'btnhs" class="btn_hs"></div>'
-        var ctabtn = '<div id="' + id_ou + tLtype + 'btn" class="btn ignore">Hide</div>'
+        var ctabtn = '<div id="' + id_ou + tLtype + 'btn" class="btn ignore">Hide year</div>'
         var tline = '<div id="' + id_ou + tLtype + 'tline" class="t_line">'
         var yrstart = '<div id="' + id_ou + tLtype + 'yrstart" class="yr_start">'
         var btmyr = '<div id="' + id_ou + tLtype + 'btmyr" class="btm_yr">'
