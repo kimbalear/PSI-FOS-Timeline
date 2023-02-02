@@ -1419,6 +1419,8 @@ $(document).ready(function () {
 
             $('.dlg_pdf_bar').children().html("Export to PDF")
 
+            $(".timeline").css("height", "max-content")
+
             $(".contributions").css("max-height", "none")
             $(".contributions > div").css("overflow", "none")
 
@@ -1438,7 +1440,7 @@ $(document).ready(function () {
                     const imgProps = pdf.getImageProperties(imgTimeline);
                     const pdfWidth = pdf.internal.pageSize.getWidth();
                     const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-                    pdf.addImage(imgTimeline, 'PNG', 10, 10, pdfWidth - 20, pdfHeight - 20);
+                    pdf.addImage(imgTimeline, 'PNG', 0, 0, pdfWidth - 20, pdfHeight - 20);
                     pdf.save($('.lb_ou').text());
                     $('div.scrim').remove()
                 })
