@@ -17422,6 +17422,83 @@ label.checkbox.lgnd7 span {
   border: none;
   background-color: transparent;
 }
+.scrim .dlg .dlg_cnt .grp1,
+.scrim .dlg .dlg_cnt .grp2,
+.scrim .dlg .dlg_cnt .grp3 {
+  width: 100%;
+  height: auto;
+  min-height: 60px;
+  border: 1px solid;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid rgba(119, 113, 106, 0.5);
+}
+.scrim .dlg .dlg_cnt .grp1 .title,
+.scrim .dlg .dlg_cnt .grp2 .title,
+.scrim .dlg .dlg_cnt .grp3 .title {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.scrim .dlg .dlg_cnt .grp1 .lblfrm,
+.scrim .dlg .dlg_cnt .grp2 .lblfrm,
+.scrim .dlg .dlg_cnt .grp3 .lblfrm {
+  font-size: 0.8em;
+  color: #292626;
+  margin-bottom: 3px;
+}
+.scrim .dlg .dlg_cnt .grp1 .frm,
+.scrim .dlg .dlg_cnt .grp2 .frm,
+.scrim .dlg .dlg_cnt .grp3 .frm {
+  padding: 4px;
+  border: 1px solid rgba(119, 113, 106, 0.5);
+  font-size: 0.8em;
+  margin-bottom: 8px;
+}
+.scrim .dlg .dlg_cnt .grp3,
+.scrim .dlg .dlg_cnt .grp4 {
+  float: left;
+  height: auto;
+  min-height: 60px;
+  border: 1px solid;
+  padding: 8px;
+  margin: 0 8px 8px 0;
+  border: 1px solid rgba(119, 113, 106, 0.5);
+}
+.scrim .dlg .dlg_cnt .grp3 .title,
+.scrim .dlg .dlg_cnt .grp4 .title {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.scrim .dlg .dlg_cnt .grp3 .imgContainer,
+.scrim .dlg .dlg_cnt .grp4 .imgContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 8px;
+  grid-auto-flow: auto;
+  grid-template-areas: "i1 i2 i3";
+}
+.scrim .dlg .dlg_cnt .grp3 .imgContainer .i1,
+.scrim .dlg .dlg_cnt .grp4 .imgContainer .i1 {
+  grid-area: i1;
+}
+.scrim .dlg .dlg_cnt .grp3 .imgContainer .i2,
+.scrim .dlg .dlg_cnt .grp4 .imgContainer .i2 {
+  grid-area: i2;
+}
+.scrim .dlg .dlg_cnt .grp3 .imgContainer .i3,
+.scrim .dlg .dlg_cnt .grp4 .imgContainer .i3 {
+  grid-area: i3;
+}
+.scrim .dlg .dlg_cnt .grp3 {
+  margin: 0 4px 8px 0;
+  width: calc(30% - 4px);
+}
+.scrim .dlg .dlg_cnt .grp4 {
+  margin: 0 0 8px 4px;
+  width: calc(70% - 4px);
+}
 .scrim .dlg_pdf {
   width: 100%;
   max-width: 80%;
@@ -17637,7 +17714,7 @@ label.checkbox.lgnd7 span {
   grid-area: btn_hs;
 }
 .top_timeline .btn_hs .btn {
-  width: min-content;
+  width: max-content;
   height: 24px;
   border-radius: 6px;
   padding: 8px 8px;

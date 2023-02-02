@@ -64,6 +64,85 @@
                 border: none;
                 background-color: transparent;
             }
+
+            .grp1,
+            .grp2,
+            .grp3 {
+                width: 100%;
+                height: auto;
+                min-height: 60px;
+                border: 1px solid;
+                padding: 8px;
+                margin-bottom: 8px;
+                border: 1px solid $clrgba15;
+
+                .title {
+                    font-weight: 500;
+                    margin-bottom: 8px;
+                }
+
+                .lblfrm {
+                    font-size: 0.8em;
+                    color: $clr3;
+                    margin-bottom: 3px;
+                }
+
+                .frm {
+                    padding: 4px;
+                    border: 1px solid $clrgba15;
+                    font-size: 0.8em;
+                    margin-bottom: 8px;
+                }
+            }
+
+            .grp3,
+            .grp4 {
+                float: left;
+                height: auto;
+                min-height: 60px;
+                border: 1px solid;
+                padding: 8px;
+                margin: 0 8px 8px 0;
+                border: 1px solid $clrgba15;
+
+                .title {
+                    font-weight: 500;
+                    margin-bottom: 8px;
+                }
+
+                .imgContainer {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: 1fr;
+                    grid-auto-columns: 1fr;
+                    gap: 0px 8px;
+                    grid-auto-flow: auto;
+                    grid-template-areas:
+                        "i1 i2 i3";
+
+                    .i1 {
+                        grid-area: i1;
+                    }
+
+                    .i2 {
+                        grid-area: i2;
+                    }
+
+                    .i3 {
+                        grid-area: i3;
+                    }
+                }
+            }
+
+            .grp3 {
+                margin: 0 4px 8px 0;
+                width: calc(30% - 4px);
+            }
+
+            .grp4 {
+                margin: 0 0 8px 4px;
+                width: calc(70% - 4px);
+            }
         }
     }
 

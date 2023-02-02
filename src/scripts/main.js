@@ -434,7 +434,6 @@ $(document).ready(function () {
     };
 
     function SetOrgUnits(st, typ) {
-        console.log(st)
 
         var nameOu = ""
         for (var i = 0; i < st.length; i++) {
@@ -463,7 +462,7 @@ $(document).ready(function () {
     };
 
     function SetYears(st, typ) {
-        console.log(st)
+
         var firstYear = ""
         var lastTwo = ""
         var years = ""
@@ -496,6 +495,8 @@ $(document).ready(function () {
         $('<div class="btn-sys-close">').appendTo('.dlg_cta')
 
         $('<div class="dlg_cnt">').appendTo('.dlg')
+        $('<div class="grp_advc">').appendTo('.dlg_cnt')
+        $('.grp_advc').html("This is")
         switch (lgnd) {
             case "lgnd0":
                 $('.dlg').addClass("d_" + lgnd)
@@ -546,7 +547,7 @@ $(document).ready(function () {
 
         $('.dlg_bar').children().html(lgnd_text)
 
-        $('.dlg_cnt').html("This is")
+        //$('.dlg_cnt').html("This is")
 
     })
 
@@ -665,7 +666,7 @@ $(document).ready(function () {
         var tlTp10 = '<div id="' + id_ou + tLtype + 'pnl_top10" class="panel_top"><div id="' + id_ou + tLtype + 'contns10" class="contributions"><div id="' + id_ou + tLtype + '10cnstr" class="contrs10"></div></div><div id="' + id_ou + tLtype + 'lc10" class="line"></div></div>'
         var tlTp11 = '<div id="' + id_ou + tLtype + 'pnl_top11" class="panel_top"><div id="' + id_ou + tLtype + 'contns11" class="contributions"><div id="' + id_ou + tLtype + '11cnstr" class="contrs11"></div></div><div id="' + id_ou + tLtype + 'lc11" class="line"></div></div>'
         var tlTp12 = '<div id="' + id_ou + tLtype + 'pnl_top12" class="panel_top"><div id="' + id_ou + tLtype + 'contns12" class="contributions"><div id="' + id_ou + tLtype + '12cnstr" class="contrs12"></div></div><div id="' + id_ou + tLtype + 'lc12" class="line"></div></div>'
-        var contrs = '<div id="' + id_ou + tLtype + 'card_cntr" class="card_contr"><div class="title">Title</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters).</div></div>';
+        var contrs = '<div id="' + id_ou + tLtype + 'card_cntr" class="card_contr"><div class="title">Title</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>';
 
         // Line
         var tlJan = '<div id="' + id_ou + tLtype + 'jan" class="tl_jan"><div id="' + id_ou + tLtype + 'cntr_top1" class="cntr_top1"></div><div class="cnt"><div class="lbl">jan</div></div><div id="' + id_ou + tLtype + 'cntr_bttm1" class="cntr_bttm1"></div></div>'
@@ -698,13 +699,13 @@ $(document).ready(function () {
         var tlBttm12 = '<div class="pnl_bttm12"><div class="impacts"><div id="' + id_ou + tLtype + 'cards12" class="cards12"></div></div><div class="line"></div></div>'
 
         // Bottom
-        var tlcard1 = '<div class="card_lgnd1"><div class="title">Need</div><div class="subtitle">Regression Introduced</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters).</div></div>'
-        var tlcard2 = '<div class="card_lgnd2"><div class="title">Need</div><div class="subtitle">Loss</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters).</div></div>'
-        var tlcard3 = '<div class="card_lgnd3"><div class="title">Need</div><div class="subtitle">Defended</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters).</div></div>'
-        var tlcard4 = '<div class="card_lgnd4"><div class="title">Need</div><div class="subtitle">Reform Introduced</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters).</div></div>'
-        var tlcard5 = '<div class="card_lgnd5"><div class="title">Need</div><div class="subtitle">Advanced</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters).</div> </div>'
-        var tlcard6 = '<div class="card_lgnd6"><div class="title">Need</div><div class="subtitle">Approved</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters).</div></div>'
-        var tlcard7 = '<div class="card_lgnd7"><div class="title">Need</div><div class="subtitle">Implemented</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond (MAX 100 caracters).</div></div>'
+        var tlcard1 = '<div class="card_lgnd1"><div class="title">Need</div><div class="subtitle">Regression Introduced</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
+        var tlcard2 = '<div class="card_lgnd2"><div class="title">Need</div><div class="subtitle">Loss</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
+        var tlcard3 = '<div class="card_lgnd3"><div class="title">Need</div><div class="subtitle">Defended</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
+        var tlcard4 = '<div class="card_lgnd4"><div class="title">Need</div><div class="subtitle">Reform Introduced</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
+        var tlcard5 = '<div class="card_lgnd5"><div class="title">Need</div><div class="subtitle">Advanced</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div> </div>'
+        var tlcard6 = '<div class="card_lgnd6"><div class="title">Need</div><div class="subtitle">Approved</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
+        var tlcard7 = '<div class="card_lgnd7"><div class="title">Need</div><div class="subtitle">Implemented</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
 
         var dtImpacts = '<div class="lbl">Impact</div>'
 
@@ -1428,36 +1429,87 @@ $(document).ready(function () {
         }
     })
 
-    $(document).on('click', '.card_lgnd1', function () {
-        var ChildTitle = $(this).find(".title").text();
-        var ChildSubTitle = $(this).find(".subtitle").text();
-        var ChildCont = $(this).find(".cont").text();
-        $('<div class="scrim">').appendTo('body')
+    function contentCard(ChildCont, imgs){
+        var imgs = ["1.jpg","2.jpg","3.jpg"]
+        var url ="https://knowtechture.com/timeline/src/assets/imgs/"
 
+        $('<div class="grp1">').appendTo('.dlg_cnt')
+        $('<div id="gr1_tt" class="title">').appendTo('.grp1')
+        $('<div id="bx1" class="msbx">').appendTo('.grp1')
+        $('<div id="lblfrm1" class="lblfrm">').appendTo('#bx1')
+        $('<div id="frm1" class="frm">').appendTo('#bx1')
+        $('#gr1_tt').html("Advocacy Tracker")
+        $('#lblfrm1').html("Advocacy Stage")
+        $('#frm1').html("[ Advocacy Stage ]")
+
+        $('<div class="grp2">').appendTo('.dlg_cnt')
+        $('<div id="bx2" class="msbx">').appendTo('.grp2')
+        $('<div id="lblfrm2" class="lblfrm">').appendTo('#bx2')
+        $('<div id="frm2" class="frm">').appendTo('#bx2')
+        $('<div id="lblfrm21" class="lblfrm">').appendTo('#bx2')
+        $('<div id="frm21" class="frm">').appendTo('#bx2')
+        $('#lblfrm2').html("Brief (120 ch)")
+        $('#frm2').html(ChildCont)
+        $('#lblfrm21').html("Detail")
+        $('#frm21').html("[ Detail ]")
+
+        $('<div id="bx3" class="grp3">').appendTo('.dlg_cnt')
+        $('<div id="gr3_tt" class="title">').appendTo('.grp3')
+
+        $('<div id="lblfrm3" class="lblfrm">').appendTo('#bx3')
+        $('<div id="lblfrm31" class="lblfrm">').appendTo('#bx3')
+        $('<div id="lblfrm32" class="lblfrm">').appendTo('#bx3')
+
+
+        $('#lblfrm3').html("field 1")
+        $('#lblfrm31').html("field 2")
+        $('#lblfrm32').html("field 3")
+
+        $('#gr3_tt').html("Upload documents")
+
+        $('<div id="bx4" class="grp4">').appendTo('.dlg_cnt')
+        $('<div id="gr4_tt" class="title">').appendTo('#bx4')
+
+        $('<div class="imgContainer">').appendTo('#bx4')
+        $('<div class="i1">').appendTo('.imgContainer')
+        $('<div class="i2">').appendTo('.imgContainer')
+        $('<div class="i3">').appendTo('.imgContainer')
+
+        $('#gr4_tt').html("Upload images")
+        $(".i1").html("<img src='" + url + imgs[0] + "' style='width:100%; height:auto;'>");
+        $(".i2").html("<img src='" + url + imgs[1] + "' style='width:100%; height:auto;'>");
+        $(".i3").html("<img src='" + url + imgs[2] + "' style='width:100%; height:auto;'>");
+
+    }
+
+    $(document).on('click', '.card_lgnd1', function () {
+        var ChildTitle = $(this).find(".title").text()
+        var ChildSubTitle = $(this).find(".subtitle").text()
+        var ChildCont = $(this).find(".cont").text()
+
+        $('<div class="scrim">').appendTo('body')
         $('<div class="dlg d_lgnd1">').appendTo('.scrim')
         $('<div class="dlg_bar tt_lgnd1">').appendTo('.dlg')
         $('<div class="lbl">').appendTo('.dlg_bar')
-
         $('<div class="dlg_cta i_lgnd1">').appendTo('.dlg')
         $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
         $('<div class="btn-sys-close">').appendTo('.dlg_cta')
 
-        $('<div class="dlg_cnt">').appendTo('.dlg')
-
         $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-        $('.dlg_cnt').html(ChildCont)
+
+        $('<div class="dlg_cnt">').appendTo('.dlg')
+        contentCard(ChildCont)
     })
 
     $(document).on('click', '.card_lgnd2', function () {
         var ChildTitle = $(this).find(".title").text();
         var ChildSubTitle = $(this).find(".subtitle").text();
         var ChildCont = $(this).find(".cont").text();
-        $('<div class="scrim">').appendTo('body')
 
+        $('<div class="scrim">').appendTo('body')
         $('<div class="dlg d_lgnd2">').appendTo('.scrim')
         $('<div class="dlg_bar tt_lgnd2">').appendTo('.dlg')
         $('<div class="lbl">').appendTo('.dlg_bar')
-
         $('<div class="dlg_cta i_lgnd2">').appendTo('.dlg')
         $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
         $('<div class="btn-sys-close">').appendTo('.dlg_cta')
@@ -1465,7 +1517,8 @@ $(document).ready(function () {
         $('<div class="dlg_cnt">').appendTo('.dlg')
 
         $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-        $('.dlg_cnt').html(ChildCont)
+
+        contentCard(ChildCont)
     })
 
     $(document).on('click', '.card_lgnd3', function () {
@@ -1485,7 +1538,8 @@ $(document).ready(function () {
         $('<div class="dlg_cnt">').appendTo('.dlg')
 
         $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-        $('.dlg_cnt').html(ChildCont)
+
+        contentCard(ChildCont)
     })
 
     $(document).on('click', '.card_lgnd4', function () {
@@ -1505,7 +1559,8 @@ $(document).ready(function () {
         $('<div class="dlg_cnt">').appendTo('.dlg')
 
         $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-        $('.dlg_cnt').html(ChildCont)
+
+        contentCard(ChildCont)
     })
 
     $(document).on('click', '.card_lgnd5', function () {
@@ -1525,7 +1580,8 @@ $(document).ready(function () {
         $('<div class="dlg_cnt">').appendTo('.dlg')
 
         $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-        $('.dlg_cnt').html(ChildCont)
+
+        contentCard(ChildCont)
     })
 
     $(document).on('click', '.card_lgnd6', function () {
@@ -1545,7 +1601,8 @@ $(document).ready(function () {
         $('<div class="dlg_cnt">').appendTo('.dlg')
 
         $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-        $('.dlg_cnt').html(ChildCont)
+
+        contentCard(ChildCont)
     })
 
     $(document).on('click', '.card_lgnd7', function () {
@@ -1565,7 +1622,8 @@ $(document).ready(function () {
         $('<div class="dlg_cnt">').appendTo('.dlg')
 
         $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-        $('.dlg_cnt').html(ChildCont)
+
+        contentCard(ChildCont)
     })
 
     $(document).on('click', '.card_contr', function () {
