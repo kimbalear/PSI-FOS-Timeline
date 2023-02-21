@@ -709,7 +709,7 @@ $(document).ready(function () {
 
         var random_lgnd = [tlcard1, tlcard2, tlcard3, tlcard4, tlcard5, tlcard6, tlcard7];
 
-        if (tL1tp1 >= 1) {
+        if (tL1tp1 >= 1 && tLtype == 1 ) {
             //building contributions
             $('#' + id_ou + tLtype + 'tp1').append(tlTp1);
             for (i = 1; i <= tL1tp1; i++) {
@@ -723,7 +723,7 @@ $(document).ready(function () {
             dotlgnd = '<div id="dot1" class="dot1">' + numContr + '</div>'
             $('#' + id_ou + tLtype + '1dots').append(dotlgnd)
         }
-        if (tL1tp2 >= 1) {
+        if (tL1tp2 >= 1 && tLtype == 1) {
             //building contributions
             $('#' + id_ou + tLtype + 'tp2').append(tlTp2);
             for (i = 1; i <= tL1tp2; i++) {
@@ -737,7 +737,7 @@ $(document).ready(function () {
             dotlgnd = '<div id="dot2" class="dot2">' + numContr + '</div>'
             $('#' + id_ou + tLtype + '2dots').append(dotlgnd)
         }
-        if (tL1tp3 >= 1) {
+        if (tL1tp3 >= 1 && tLtype == 1) {
             //building contributions
             $('#' + id_ou + tLtype + 'tp3').append(tlTp3);
             for (i = 1; i <= tL1tp3; i++) {
@@ -751,7 +751,7 @@ $(document).ready(function () {
             dotlgnd = '<div id="dot3" class="dot3">' + numContr + '</div>'
             $('#' + id_ou + tLtype + '3dots').append(dotlgnd)
         }
-        if (tL1tp4 >= 1) {
+        if (tL1tp4 >= 1 && tLtype == 1) {
             //building contributions
             $('#' + id_ou + tLtype + 'tp4').append(tlTp4);
             for (i = 1; i <= tL1tp4; i++) {
@@ -765,7 +765,7 @@ $(document).ready(function () {
             dotlgnd = '<div id="dot4" class="dot4">' + numContr + '</div>'
             $('#' + id_ou + tLtype + '4dots').append(dotlgnd)
         }
-        if (tL1tp5 >= 1) {
+        if (tL1tp5 >= 1 && tLtype == 1) {
             //building contributions
             $('#' + id_ou + tLtype + 'tp5').append(tlTp5);
             for (i = 1; i <= tL1tp5; i++) {
@@ -779,7 +779,7 @@ $(document).ready(function () {
             dotlgnd = '<div id="dot5" class="dot5">' + numContr + '</div>'
             $('#' + id_ou + tLtype + '5dots').append(dotlgnd)
         }
-        if (tL1tp6 >= 1) {
+        if (tL1tp6 >= 1 && tLtype == 1) {
             //building contributions
             $('#' + id_ou + tLtype + 'tp6').append(tlTp6);
             for (i = 1; i <= tL1tp6; i++) {
@@ -793,7 +793,7 @@ $(document).ready(function () {
             dotlgnd = '<div id="dot6" class="dot6">' + numContr + '</div>'
             $('#' + id_ou + tLtype + '6dots').append(dotlgnd)
         }
-        if (tL1tp7 >= 1) {
+        if (tL1tp7 >= 1 && tLtype == 1) {
             //building contributions
             $('#' + id_ou + tLtype + 'tp7').append(tlTp7);
             for (i = 1; i <= tL1tp7; i++) {
@@ -807,7 +807,7 @@ $(document).ready(function () {
             dotlgnd = '<div id="dot7" class="dot7">' + numContr + '</div>'
             $('#' + id_ou + tLtype + '7dots').append(dotlgnd)
         }
-        if (tL1tp8 >= 1) {
+        if (tL1tp8 >= 1 && tLtype == 1) {
             //building contributions
             $('#' + id_ou + tLtype + 'tp8').append(tlTp8);
             for (i = 1; i <= tL1tp8; i++) {
@@ -821,7 +821,7 @@ $(document).ready(function () {
             dotlgnd = '<div id="dot8" class="dot8">' + numContr + '</div>'
             $('#' + id_ou + tLtype + '8dots').append(dotlgnd)
         }
-        if (tL1tp9 >= 1) {
+        if (tL1tp9 >= 1 && tLtype == 1) {
             //building contributions
             $('#' + id_ou + tLtype + 'tp9').append(tlTp9);
             for (i = 1; i <= tL1tp9; i++) {
@@ -835,7 +835,7 @@ $(document).ready(function () {
             dotlgnd = '<div id="dot9" class="dot9">' + numContr + '</div>'
             $('#' + id_ou + tLtype + '9dots').append(dotlgnd)
         }
-        if (tL1tp10 >= 1) {
+        if (tL1tp10 >= 1 && tLtype == 1) {
             //building contributions
             $('#' + id_ou + tLtype + 'tp10').append(tlTp10);
             for (i = 1; i <= tL1tp10; i++) {
@@ -849,7 +849,7 @@ $(document).ready(function () {
             dotlgnd = '<div id="dot10" class="dot10">' + numContr + '</div>'
             $('#' + id_ou + tLtype + '10dots').append(dotlgnd)
         }
-        if (tL1tp11 >= 1) {
+        if (tL1tp11 >= 1 && tLtype == 1) {
             //building contributions
             $('#' + id_ou + tLtype + 'tp11').append(tlTp11);
             for (i = 1; i <= tL1tp11; i++) {
@@ -863,7 +863,7 @@ $(document).ready(function () {
             dotlgnd = '<div id="dot11" class="dot11">' + numContr + '</div>'
             $('#' + id_ou + tLtype + '11dots').append(dotlgnd)
         }
-        if (tL1tp12 >= 1) {
+        if (tL1tp12 >= 1 && tLtype == 1) {
             //building contributions
             $('#' + id_ou + tLtype + 'tp12').append(tlTp12);
             for (i = 1; i <= tL1tp12; i++) {
@@ -880,36 +880,39 @@ $(document).ready(function () {
 
         //building impacts
         if (tL1btm1 >= 1) {
-            $('<div class="activ_' + tL1btm1 + '">').appendTo('#' + id_ou + tLtype + 'cntr_bttm1')
-            $(dtImpacts).appendTo('#' + id_ou + tLtype + 'cntr_bttm1' + ' > .activ_' + tL1btm1)
-            $('#' + id_ou + tLtype + 'btm_1').append(tlBttm1)
+            if( tLtype == 1 )
+            {
+                $('<div class="activ_' + tL1btm1 + '">').appendTo('#' + id_ou + tLtype + 'cntr_bttm1')
+                $(dtImpacts).appendTo('#' + id_ou + tLtype + 'cntr_bttm1' + ' > .activ_' + tL1btm1)
+                $('#' + id_ou + tLtype + 'btm_1').append(tlBttm1)
 
-            for (i = 1; i <= tL1btm1; i++) {
-                var randomBtm = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
-                $('#' + id_ou + tLtype + 'cards1').append(randomBtm)
-            }
+                for (i = 1; i <= tL1btm1; i++) {
+                    var randomBtm = random_lgnd[Math.floor(Math.random() * random_lgnd.length)]
+                    $('#' + id_ou + tLtype + 'cards1').append(randomBtm)
+                }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd1').length;
-            var lg2 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd2').length;
-            var lg3 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd3').length;
-            var lg4 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd4').length;
-            var lg5 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd5').length;
-            var lg6 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd6').length;
-            var lg7 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd7').length;
-            var lg8 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd8').length;
-            var dotlgnd = ''
+                var lg1 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd1').length;
+                var lg2 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd2').length;
+                var lg3 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd3').length;
+                var lg4 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd4').length;
+                var lg5 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd5').length;
+                var lg6 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd6').length;
+                var lg7 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd7').length;
+                var lg8 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd8').length;
+                var dotlgnd = ''
 
-            var active = $('.activ_' + tL1btm1);
+                var active = $('.activ_' + tL1btm1);
 
-            for (let i = 1; i <= 8; i++) {
-                if (eval(`lg${i}`) != 0) {
-                    let dotlgnd = `<div id="${id_ou}dot${i}" class="dot lgnd${i}_p">${eval(`lg${i}`)}</div>`;
-                    $('#' + id_ou + tLtype + 'cntr_bttm1').children(active).append(dotlgnd);
+                for (let i = 1; i <= 8; i++) {
+                    if (eval(`lg${i}`) != 0) {
+                        let dotlgnd = `<div id="${id_ou}dot${i}" class="dot lgnd${i}_p">${eval(`lg${i}`)}</div>`;
+                        $('#' + id_ou + tLtype + 'cntr_bttm1').children(active).append(dotlgnd);
+                    }
                 }
             }
 
         }
-        if (tL1btm2 >= 1) {
+        if (tL1btm2 >= 1 && tLtype == 1) {
             $('<div class="activ_' + tL1btm2 + '">').appendTo('#' + id_ou + tLtype + 'cntr_bttm2')
             $(dtImpacts).appendTo('#' + id_ou + tLtype + 'cntr_bttm2' + ' > .activ_' + tL1btm2)
             $('#' + id_ou + tLtype + 'btm_2').append(tlBttm2)
@@ -938,7 +941,7 @@ $(document).ready(function () {
                 }
             }
         }
-        if (tL1btm3 >= 1) {
+        if (tL1btm3 >= 1 && tLtype == 1) {
             $('<div class="activ_' + tL1btm3 + '">').appendTo('#' + id_ou + tLtype + 'cntr_bttm3')
             $(dtImpacts).appendTo('#' + id_ou + tLtype + 'cntr_bttm3' + ' > .activ_' + tL1btm3)
             $('#' + id_ou + tLtype + 'btm_3').append(tlBttm3)
@@ -967,7 +970,7 @@ $(document).ready(function () {
                 }
             }
         }
-        if (tL1btm4 >= 1) {
+        if (tL1btm4 >= 1 && tLtype == 1) {
             $('<div class="activ_' + tL1btm4 + '">').appendTo('#' + id_ou + tLtype + 'cntr_bttm4')
             $(dtImpacts).appendTo('#' + id_ou + tLtype + 'cntr_bttm4' + ' > .activ_' + tL1btm4)
             $('#' + id_ou + tLtype + 'btm_4').append(tlBttm4)
@@ -996,7 +999,7 @@ $(document).ready(function () {
                 }
             }
         }
-        if (tL1btm5 >= 1) {
+        if (tL1btm5 >= 1 && tLtype == 1) {
             $('<div class="activ_' + tL1btm5 + '">').appendTo('#' + id_ou + tLtype + 'cntr_bttm5')
             $(dtImpacts).appendTo('#' + id_ou + tLtype + 'cntr_bttm5' + ' > .activ_' + tL1btm5)
             $('#' + id_ou + tLtype + 'btm_5').append(tlBttm5)
@@ -1025,7 +1028,7 @@ $(document).ready(function () {
                 }
             }
         }
-        if (tL1btm6 >= 1) {
+        if (tL1btm6 >= 1 && tLtype == 1) {
             $('<div class="activ_' + tL1btm6 + '">').appendTo('#' + id_ou + tLtype + 'cntr_bttm6')
             $(dtImpacts).appendTo('#' + id_ou + tLtype + 'cntr_bttm6' + ' > .activ_' + tL1btm6)
             $('#' + id_ou + tLtype + 'btm_6').append(tlBttm6)
@@ -1054,7 +1057,7 @@ $(document).ready(function () {
                 }
             }
         }
-        if (tL1btm7 >= 1) {
+        if (tL1btm7 >= 1 && tLtype == 1) {
             $('<div class="activ_' + tL1btm7 + '">').appendTo('#' + id_ou + tLtype + 'cntr_bttm7')
             $(dtImpacts).appendTo('#' + id_ou + tLtype + 'cntr_bttm7' + ' > .activ_' + tL1btm7)
             $('#' + id_ou + tLtype + 'btm_7').append(tlBttm7)
@@ -1083,7 +1086,7 @@ $(document).ready(function () {
                 }
             }
         }
-        if (tL1btm8 >= 1) {
+        if (tL1btm8 >= 1 && tLtype == 1) {
             $('<div class="activ_' + tL1btm8 + '">').appendTo('#' + id_ou + tLtype + 'cntr_bttm8')
             $(dtImpacts).appendTo('#' + id_ou + tLtype + 'cntr_bttm8' + ' > .activ_' + tL1btm8)
             $('#' + id_ou + tLtype + 'btm_8').append(tlBttm8)
@@ -1112,7 +1115,7 @@ $(document).ready(function () {
                 }
             }
         }
-        if (tL1btm9 >= 1) {
+        if (tL1btm9 >= 1 && tLtype == 1) {
             $('<div class="activ_' + tL1btm9 + '">').appendTo('#' + id_ou + tLtype + 'cntr_bttm9')
             $(dtImpacts).appendTo('#' + id_ou + tLtype + 'cntr_bttm9' + ' > .activ_' + tL1btm9)
             $('#' + id_ou + tLtype + 'btm_9').append(tlBttm9)
@@ -1141,7 +1144,7 @@ $(document).ready(function () {
                 }
             }
         }
-        if (tL1btm10 >= 1) {
+        if (tL1btm10 >= 1 && tLtype == 1) {
             $('<div class="activ_' + tL1btm10 + '">').appendTo('#' + id_ou + tLtype + 'cntr_bttm10')
             $(dtImpacts).appendTo('#' + id_ou + tLtype + 'cntr_bttm10' + ' > .activ_' + tL1btm10)
             $('#' + id_ou + tLtype + 'btm_10').append(tlBttm10)
@@ -1170,7 +1173,7 @@ $(document).ready(function () {
                 }
             }
         }
-        if (tL1btm11 >= 1) {
+        if (tL1btm11 >= 1 && tLtype == 1) {
             $('<div class="activ_' + tL1btm11 + '">').appendTo('#' + id_ou + tLtype + 'cntr_bttm11')
             $(dtImpacts).appendTo('#' + id_ou + tLtype + 'cntr_bttm11' + ' > .activ_' + tL1btm11)
             $('#' + id_ou + tLtype + 'btm_11').append(tlBttm11)
@@ -1199,7 +1202,7 @@ $(document).ready(function () {
                 }
             }
         }
-        if (tL1btm12 >= 1) {
+        if (tL1btm12 >= 1 && tLtype == 1) {
             $('<div class="activ_' + tL1btm12 + '">').appendTo('#' + id_ou + tLtype + 'cntr_bttm12')
             $(dtImpacts).appendTo('#' + id_ou + tLtype + 'cntr_bttm12' + ' > .activ_' + tL1btm12)
             $('#' + id_ou + tLtype + 'btm_12').append(tlBttm12)
