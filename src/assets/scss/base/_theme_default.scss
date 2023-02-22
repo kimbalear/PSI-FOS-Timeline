@@ -88,7 +88,9 @@ body {
                 grid-area: top_ctrs;
                 padding: 6px 0 0;
 
-                .multiSelect, .btn_plus, .btn_print {
+                .multiSelect,
+                .btn_plus,
+                .btn_print {
                     float: right;
                     margin-left: 8px;
                 }

@@ -246,7 +246,9 @@ body .wrapper .top_bar .top_ctrs {
   grid-area: top_ctrs;
   padding: 6px 0 0;
 }
-body .wrapper .top_bar .top_ctrs .multiSelect, body .wrapper .top_bar .top_ctrs .btn_plus, body .wrapper .top_bar .top_ctrs .btn_print {
+body .wrapper .top_bar .top_ctrs .multiSelect,
+body .wrapper .top_bar .top_ctrs .btn_plus,
+body .wrapper .top_bar .top_ctrs .btn_print {
   float: right;
   margin-left: 8px;
 }
@@ -318,7 +320,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   padding-bottom: 20px;
 }
 .timelines .ounit .timeline {
-  height: max-content;
+  height: 100%;
   display: grid;
   grid-template-columns: 60px 220px 220px 220px 220px 220px 220px 220px 220px 220px 220px 220px 220px;
   grid-template-rows: 36px 1fr 44px 1fr;

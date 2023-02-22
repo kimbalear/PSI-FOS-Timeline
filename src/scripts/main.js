@@ -1083,7 +1083,7 @@ $(document).ready(function () {
                 }
             }
         }
-        if (tL1btm8 >= 1 && tLtype == 1) {
+        if (tL1btm8 >= 1) {
             $('<div class="activ_' + tL1btm8 + '">').appendTo('#' + id_ou + tLtype + 'cntr_bttm8')
             $(dtImpacts).appendTo('#' + id_ou + tLtype + 'cntr_bttm8' + ' > .activ_' + tL1btm8)
             $('#' + id_ou + tLtype + 'btm_8').append(tlBttm8)
@@ -1687,4 +1687,5 @@ $(document).ready(function () {
     } else {
         // ---
     }
+      
 })
