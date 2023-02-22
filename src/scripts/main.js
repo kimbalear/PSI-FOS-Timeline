@@ -709,7 +709,7 @@ $(document).ready(function () {
 
         var random_lgnd = [tlcard1, tlcard2, tlcard3, tlcard4, tlcard5, tlcard6, tlcard7];
 
-        if (tL1tp1 >= 1) {
+        if (tL1tp1 >= 1&& tLtype == 1) {
             //building contributions
             $('#' + id_ou + tLtype + 'tp1').append(tlTp1);
             for (i = 1; i <= tL1tp1; i++) {
@@ -1083,7 +1083,7 @@ $(document).ready(function () {
                 }
             }
         }
-        if (tL1btm8 >= 1) {
+        if (tL1btm8 >= 1 && tLtype == 1) {
             $('<div class="activ_' + tL1btm8 + '">').appendTo('#' + id_ou + tLtype + 'cntr_bttm8')
             $(dtImpacts).appendTo('#' + id_ou + tLtype + 'cntr_bttm8' + ' > .activ_' + tL1btm8)
             $('#' + id_ou + tLtype + 'btm_8').append(tlBttm8)
