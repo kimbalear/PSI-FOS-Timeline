@@ -17530,8 +17530,6 @@ label.checkbox.lgnd7 span {
 }
 .scrim .dlg .dlg_cnt .dl4 .dl4cont {
   grid-area: dl4cont;
-}
-.scrim .dlg .dlg_cnt .dl4 .dl4cont .imgContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -17540,13 +17538,13 @@ label.checkbox.lgnd7 span {
   grid-auto-flow: auto;
   grid-template-areas: "i1 i2 i3";
 }
-.scrim .dlg .dlg_cnt .dl4 .dl4cont .imgContainer .i1 {
+.scrim .dlg .dlg_cnt .dl4 .dl4cont .i1 {
   grid-area: i1;
 }
-.scrim .dlg .dlg_cnt .dl4 .dl4cont .imgContainer .i2 {
+.scrim .dlg .dlg_cnt .dl4 .dl4cont .i2 {
   grid-area: i2;
 }
-.scrim .dlg .dlg_cnt .dl4 .dl4cont .imgContainer .i3 {
+.scrim .dlg .dlg_cnt .dl4 .dl4cont .i3 {
   grid-area: i3;
 }
 .scrim .dlg_c {

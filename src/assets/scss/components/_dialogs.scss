@@ -105,12 +105,13 @@
                 overflow-y: auto;
 
                 .bxtext {
-                    .lbl{
+                    .lbl {
                         clear: both;
                         white-space: pre-line;
                         font-weight: 500;
                     }
-                    .content{
+
+                    .content {
                         clear: both;
                     }
 
@@ -175,28 +176,25 @@
 
                 .dl4cont {
                     grid-area: dl4cont;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: 1fr;
+                    grid-auto-columns: 1fr;
+                    gap: 0px 8px;
+                    grid-auto-flow: auto;
+                    grid-template-areas:
+                        "i1 i2 i3";
 
-                    .imgContainer {
-                        display: grid;
-                        grid-template-columns: 1fr 1fr 1fr;
-                        grid-template-rows: 1fr;
-                        grid-auto-columns: 1fr;
-                        gap: 0px 8px;
-                        grid-auto-flow: auto;
-                        grid-template-areas:
-                            "i1 i2 i3";
+                    .i1 {
+                        grid-area: i1;
+                    }
 
-                        .i1 {
-                            grid-area: i1;
-                        }
+                    .i2 {
+                        grid-area: i2;
+                    }
 
-                        .i2 {
-                            grid-area: i2;
-                        }
-
-                        .i3 {
-                            grid-area: i3;
-                        }
+                    .i3 {
+                        grid-area: i3;
                     }
                 }
             }

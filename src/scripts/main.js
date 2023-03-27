@@ -1500,11 +1500,9 @@ $(document).ready(function () {
         $('<div class="dl4title">').appendTo('.dl4')
         $('<div class="dl4cont">').appendTo('.dl4')
 
-        $('<div class="imgContainer">').appendTo('.dl4cont')
-
-        $('<div class="i1">').appendTo('.imgContainer')
-        $('<div class="i2">').appendTo('.imgContainer')
-        $('<div class="i3">').appendTo('.imgContainer')
+        $('<div class="i1">').appendTo('.dl4cont')
+        $('<div class="i2">').appendTo('.dl4cont')
+        $('<div class="i3">').appendTo('.dl4cont')
 
         $('.dl4title').html("Images")
         $(".i1").html("<img src='" + url + imgs[0] + "' style='width:100%; height:auto;'>");
