@@ -1456,56 +1456,57 @@ $(document).ready(function () {
         var url = "https://knowtechture.com/timeline/src/assets/imgs/"
 
         $('<div class="dl1">').appendTo('.dlg_cnt')
-        $('<div id="gr1_tt" class="title">').appendTo('.dl1')
-        $('<div id="bx1" class="msbx">').appendTo('.dl1')
-        $('<div id="lblfrm1" class="lblfrm">').appendTo('#bx1')
-        $('<div id="frm1" class="frm">').appendTo('#bx1')
-        $('#gr1_tt').html("Advocacy Tracker")
-        $('#lblfrm1').html("Advocacy Stage")
-        $('#frm1').html("[ Advocacy Stage ]")
+        $('<div class="dl1_title">').appendTo('.dl1')
+        $('<div class="dl1_end_d">').appendTo('.dl1')
+        $('<div class="dl1_cont">').appendTo('.dl1')
+
+        $('.dl1_title').html("Advocacy Tracker")
+        $('.dl1_end_d').html("##/##/####")
+        $('.dl1_cont').html("<label>Advocacy Stage</label><br>[ Advocacy Stage ]")
 
         $('<div class="dl2">').appendTo('.dlg_cnt')
+        $('<div class="bxtext">').appendTo('.dl2')
+        $('.bxtext').html(ChildCont + "<div class='lbl'>Lorem ipsum dolor sit amet</div><div class='content'>Consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel.</div><div class='lbl'>Curabitur eget euismod nisl</div><div class='content'>Et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum. Ut quis ornare orci, finibus convallis enim. Nullam elementum metus non lacinia convallis. Duis blandit orci non neque semper egestas. Phasellus et turpis sed nulla vulputate gravida. In vehicula sem diam, ut mattis risus lacinia sed.</div>")
         
-        $('<div id="bx2" class="msbx">').appendTo('.dl2')
-        $('<div id="frm2" class="frm">').appendTo('#bx2')
-        $('#frm2').html(ChildCont + "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum. Ut quis ornare orci, finibus convallis enim. Nullam elementum metus non lacinia convallis. Duis blandit orci non neque semper egestas. Phasellus et turpis sed nulla vulputate gravida. In vehicula sem diam, ut mattis risus lacinia sed.")
-        
-        $('<div id="bx3" class="dl31">').appendTo('.dlg_cnt')
+        $('<div class="dl31">').appendTo('.dlg_cnt')
         $('<div class="l31title">').appendTo('.dl31')
-        $('<div class="l31cont">').appendTo('.dl31')
+        $('.l31title').html("Documents => Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
 
-        $('<div id="file31" class="files">').appendTo('.l31cont')
-        $('<div id="f_icon31" class="f_icon">').appendTo('#file31')
-        $('<div class="doc_file">').appendTo('#f_icon31')
-        $('<div id="f_name31" class="f_name">').appendTo('#file31')
-        $('#f_name31').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
+        $('<div class="dl32">').appendTo('.dlg_cnt')
 
-        $('<div id="file32" class="files">').appendTo('.l31cont')
-        $('<div id="f_icon32" class="f_icon">').appendTo('#file32')
-        $('<div class="pdf_file">').appendTo('#f_icon32')
-        $('<div id="f_name32" class="f_name">').appendTo('#file32')
-        $('#f_name32').html("Etiam non nibh mi. Proin pulvinar ex et dictum posuere. Fusce efficitur tempus risus, eu tincidunt dolor lobortis sit amet. Nulla non urna sed enim tristique vestibulum tempus non dolor. Sed commodo, felis ac dignissim elementum, lacus nunc ultrices enim, a faucibus nibh quam a est. Vivamus ullamcorper in lacus non condimentum. Vestibulum finibus velit nunc, sed dictum ipsum accumsan in. Nam eu convallis dui. Suspendisse sapien orci, imperdiet in neque vel, euismod aliquam nibh. Vivamus ut pellentesque ante, quis pharetra tortor. Vestibulum ut hendrerit erat.")
+        $('<div id="file1" class="dl32files">').appendTo('.dl32')
+        $('<div id="f_icon1" class="f_icon">').appendTo('#file1')
+        $('<div class="doc_file">').appendTo('#f_icon1')
+        $('<div id="f_name1" class="f_name">').appendTo('#file1')
+        $('#f_name1').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
 
-        $('<div id="file33" class="files">').appendTo('.l31cont')
-        $('<div id="f_icon33" class="f_icon">').appendTo('#file33')
-        $('<div class="xls_file">').appendTo('#f_icon33')
-        $('<div id="f_name33" class="f_name">').appendTo('#file33')
-        $('#f_name33').html("Duis fringilla mi enim, non semper mi semper id. Nullam vulputate, quam at gravida hendrerit, odio magna rhoncus diam, eu suscipit nibh felis sit amet magna. Etiam quis eros ipsum. Pellentesque cursus scelerisque purus sit amet condimentum. Ut quis ornare orci, finibus convallis enim. Nullam elementum metus non lacinia convallis. Duis blandit orci non neque semper egestas. Phasellus et turpis sed nulla vulputate gravida. In vehicula sem diam, ut mattis risus lacinia sed. Maecenas eget congue purus, non malesuada dui. Nullam bibendum ultricies tortor. Fusce massa arcu, porttitor in venenatis eget, rhoncus sit amet est. Nulla facilisi. In volutpat, eros quis tincidunt placerat, leo metus aliquet quam, vitae tempus sem lectus ut odio.")
+        $('<div id="file2" class="dl32files">').appendTo('.dl32')
+        $('<div id="f_icon2" class="f_icon">').appendTo('#file2')
+        $('<div class="pdf_file">').appendTo('#f_icon2')
+        $('<div id="f_name2" class="f_name">').appendTo('#file2')
+        $('#f_name2').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
 
-        $('.l31title').html("Documents")
+        $('<div id="file3" class="dl32files">').appendTo('.dl32')
+        $('<div id="f_icon3" class="f_icon">').appendTo('#file3')
+        $('<div class="xls_file">').appendTo('#f_icon3')
+        $('<div id="f_name3" class="f_name">').appendTo('#file3')
+        $('#f_name3').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
 
-        $('<div id="bx4" class="dl32">').appendTo('.dlg_cnt')
 
-        $('<div class="l32title">').appendTo('.dl32')
-        $('<div class="l32cont">').appendTo('.dl32')
+        
 
-        $('<div class="imgContainer">').appendTo('.l32cont')
+        $('<div class="dl4">').appendTo('.dlg_cnt')
+
+        $('<div class="dl4title">').appendTo('.dl4')
+        $('<div class="dl4cont">').appendTo('.dl4')
+
+        $('<div class="imgContainer">').appendTo('.dl4cont')
 
         $('<div class="i1">').appendTo('.imgContainer')
         $('<div class="i2">').appendTo('.imgContainer')
         $('<div class="i3">').appendTo('.imgContainer')
 
-        $('.l32title').html("Images")
+        $('.dl4title').html("Images")
         $(".i1").html("<img src='" + url + imgs[0] + "' style='width:100%; height:auto;'>");
         $(".i2").html("<img src='" + url + imgs[1] + "' style='width:100%; height:auto;'>");
         $(".i3").html("<img src='" + url + imgs[2] + "' style='width:100%; height:auto;'>");

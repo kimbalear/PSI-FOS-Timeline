@@ -17401,11 +17401,11 @@ label.checkbox.lgnd7 span {
 .scrim .dlg {
   width: 55%;
   max-width: 700px;
-  height: 450px;
+  padding-bottom: 16px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto auto;
   grid-auto-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: column;
@@ -17438,20 +17438,35 @@ label.checkbox.lgnd7 span {
   padding: 8px 16px;
   display: grid;
   grid-auto-columns: 1fr;
-  grid-template-columns: 30% 1fr;
-  grid-template-rows: 80px 140px 140px;
+  grid-template-columns: minmax(120, 50%) 1fr;
+  grid-template-rows: 80px 100px auto auto;
   gap: 8px 8px;
-  grid-template-areas: "dl1 dl1" "dl2 dl2" "dl31 dl32";
+  font-size: 1em !important;
+  grid-template-areas: "dl1 dl1" "dl2 dl2" "dl31 dl32" "dl4 dl4";
 }
 .scrim .dlg .dlg_cnt .dl1 {
   grid-area: dl1;
   border-bottom: 1px solid rgba(119, 113, 106, 0.5);
-  padding: 0 8px;
-  overflow-y: auto;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 120px;
+  grid-template-rows: auto 1fr;
+  gap: 8px 8px;
+  grid-template-areas: "dl1_title dl1_end_d" "dl1_cont dl1_cont";
 }
-.scrim .dlg .dlg_cnt .dl1 .title {
+.scrim .dlg .dlg_cnt .dl1 .dl1_title {
+  grid-area: dl1_title;
   font-weight: 500;
-  margin-bottom: 8px;
+}
+.scrim .dlg .dlg_cnt .dl1 .dl1_end_d {
+  grid-area: dl1_end_d;
+}
+.scrim .dlg .dlg_cnt .dl1 .dl1_cont {
+  grid-area: dl1_cont;
+}
+.scrim .dlg .dlg_cnt .dl1 .dl1_cont label {
+  font-weight: 500;
+  font-size: 1em !important;
 }
 .scrim .dlg .dlg_cnt .dl2 {
   grid-area: dl2;
@@ -17459,23 +17474,26 @@ label.checkbox.lgnd7 span {
   padding: 0 8px 8px 8px;
   overflow-y: auto;
 }
+.scrim .dlg .dlg_cnt .dl2 .bxtext .lbl {
+  clear: both;
+  white-space: pre-line;
+  font-weight: 500;
+}
+.scrim .dlg .dlg_cnt .dl2 .bxtext .content {
+  clear: both;
+}
 .scrim .dlg .dlg_cnt .dl31 {
   grid-area: dl31;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
-  gap: 8px 8px;
-  height: 140px;
-  grid-template-areas: "l31title" "l31cont";
 }
 .scrim .dlg .dlg_cnt .dl31 .l31title {
   grid-area: l31title;
   font-weight: 500;
 }
-.scrim .dlg .dlg_cnt .dl31 .l31cont {
-  grid-area: l31cont;
+.scrim .dlg .dlg_cnt .dl32 {
+  grid-area: dl32;
 }
-.scrim .dlg .dlg_cnt .dl31 .l31cont .files {
+.scrim .dlg .dlg_cnt .dl32 .dl32files {
+  max-width: 170px;
   display: grid;
   grid-template-columns: 36px auto;
   grid-template-rows: 36px;
@@ -17484,12 +17502,12 @@ label.checkbox.lgnd7 span {
   cursor: pointer;
   grid-template-areas: "f_icon f_name";
 }
-.scrim .dlg .dlg_cnt .dl31 .l31cont .files .f_icon {
+.scrim .dlg .dlg_cnt .dl32 .dl32files .f_icon {
   justify-self: center;
   align-self: center;
   grid-area: f_icon;
 }
-.scrim .dlg .dlg_cnt .dl31 .l31cont .files .f_name {
+.scrim .dlg .dlg_cnt .dl32 .dl32files .f_name {
   align-self: center;
   grid-area: f_name;
   white-space: nowrap;
@@ -17497,23 +17515,23 @@ label.checkbox.lgnd7 span {
   text-overflow: ellipsis;
   font-size: 12px;
 }
-.scrim .dlg .dlg_cnt .dl32 {
-  grid-area: dl32;
+.scrim .dlg .dlg_cnt .dl4 {
+  grid-area: dl4;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
   gap: 8px 8px;
   height: 140px;
-  grid-template-areas: "l32title" "l32cont";
+  grid-template-areas: "dl4title" "dl4cont";
 }
-.scrim .dlg .dlg_cnt .dl32 .l32title {
-  grid-area: l32title;
+.scrim .dlg .dlg_cnt .dl4 .dl4title {
+  grid-area: dl4title;
   font-weight: 500;
 }
-.scrim .dlg .dlg_cnt .dl32 .l32cont {
-  grid-area: l32cont;
+.scrim .dlg .dlg_cnt .dl4 .dl4cont {
+  grid-area: dl4cont;
 }
-.scrim .dlg .dlg_cnt .dl32 .l32cont .imgContainer {
+.scrim .dlg .dlg_cnt .dl4 .dl4cont .imgContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -17522,13 +17540,13 @@ label.checkbox.lgnd7 span {
   grid-auto-flow: auto;
   grid-template-areas: "i1 i2 i3";
 }
-.scrim .dlg .dlg_cnt .dl32 .l32cont .imgContainer .i1 {
+.scrim .dlg .dlg_cnt .dl4 .dl4cont .imgContainer .i1 {
   grid-area: i1;
 }
-.scrim .dlg .dlg_cnt .dl32 .l32cont .imgContainer .i2 {
+.scrim .dlg .dlg_cnt .dl4 .dl4cont .imgContainer .i2 {
   grid-area: i2;
 }
-.scrim .dlg .dlg_cnt .dl32 .l32cont .imgContainer .i3 {
+.scrim .dlg .dlg_cnt .dl4 .dl4cont .imgContainer .i3 {
   grid-area: i3;
 }
 .scrim .dlg_c {
