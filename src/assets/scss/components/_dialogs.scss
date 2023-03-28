@@ -162,7 +162,7 @@
                 grid-area: dl4;
                 display: grid;
                 grid-template-columns: 1fr;
-                grid-template-rows: auto 1fr;
+                grid-template-rows: auto 126px;
                 gap: 8px 8px;
                 height: 140px;
                 grid-template-areas:
@@ -187,14 +187,17 @@
 
                     .i1 {
                         grid-area: i1;
+                        overflow: hidden;
                     }
 
                     .i2 {
                         grid-area: i2;
+                        overflow: hidden;
                     }
 
                     .i3 {
                         grid-area: i3;
+                        overflow: hidden;
                     }
                 }
             }
