@@ -1492,6 +1492,18 @@ $(document).ready(function () {
         $('<div id="f_name3" class="f_name">').appendTo('#file3')
         $('#f_name3').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
 
+        $('<div id="file4" class="dl32files">').appendTo('.dl32')
+        $('<div id="f_icon4" class="f_icon">').appendTo('#file4')
+        $('<div class="xls_file">').appendTo('#f_icon4')
+        $('<div id="f_name4" class="f_name">').appendTo('#file4')
+        $('#f_name4').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
+
+        $('<div id="file5" class="dl32files">').appendTo('.dl32')
+        $('<div id="f_icon5" class="f_icon">').appendTo('#file5')
+        $('<div class="xls_file">').appendTo('#f_icon5')
+        $('<div id="f_name5" class="f_name">').appendTo('#file5')
+        $('#f_name5').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
+
 
         
 

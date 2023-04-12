@@ -56,7 +56,7 @@
             display: grid;
             grid-auto-columns: 1fr;
             grid-template-columns: minmax(120, 50%) 1fr;
-            grid-template-rows: 80px 100px auto auto;
+            grid-template-rows: 80px 100px 115px auto;
             gap: 8px 8px;
             font-size: 1em !important;
             grid-template-areas:
@@ -120,6 +120,9 @@
 
             .dl31 {
                 grid-area: dl31;
+                border-bottom: 1px solid $clrgba15;
+                padding: 0 8px 8px 8px;
+                overflow-y: auto;
 
                 .l31title {
                     grid-area: l31title;
@@ -129,6 +132,9 @@
 
             .dl32 {
                 grid-area: dl32;
+                border-bottom: 1px solid $clrgba15;
+                padding: 0 8px 8px 8px;
+                overflow-y: auto;
 
                 .dl32files {
                     max-width: 170px;
@@ -176,29 +182,11 @@
 
                 .dl4cont {
                     grid-area: dl4cont;
-                    display: grid;
-                    grid-template-columns: 1fr 1fr 1fr;
-                    grid-template-rows: 1fr;
-                    grid-auto-columns: 1fr;
+                    display: flex;
                     gap: 0px 8px;
-                    grid-auto-flow: auto;
-                    grid-template-areas:
-                        "i1 i2 i3";
-
-                    .i1 {
-                        grid-area: i1;
-                        overflow: hidden;
-                    }
-
-                    .i2 {
-                        grid-area: i2;
-                        overflow: hidden;
-                    }
-
-                    .i3 {
-                        grid-area: i3;
-                        overflow: hidden;
-                    }
+                    border-bottom: 1px solid $clrgba15;
+                    padding: 0 8px 8px 8px;
+                    overflow-y: auto;
                 }
             }
         }
