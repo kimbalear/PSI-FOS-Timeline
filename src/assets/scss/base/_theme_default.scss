@@ -32,120 +32,45 @@ body {
             display: grid;
             grid-auto-flow: column;
             grid-auto-columns: max-content;
-            grid-auto-rows: auto;
-            grid-template-columns: 20% 80%;
-            grid-template-rows: 36px min-max(36px, auto);
+            grid-template-columns: calc(100% - 56px) 56px;
+            grid-template-rows: 65px;
             gap: 0px 0px;
-            margin: 0 16px;
-            padding: 8px 0;
+            margin: 0 8px;
             border-bottom: 1px solid $clr3;
             grid-template-areas:
-                "top_left top_ctrs"
-                "top_left top_lgnds";
-
-            .top_left {
-                display: grid;
-                grid-template-columns: 100%;
-                grid-template-rows: auto auto;
-                gap: 0px 0px;
-                grid-template-areas:
-                    "l1"
-                    "l2";
-                grid-area: top_left;
-
-                .l1 {
-                    align-self: start;
-                    grid-area: l1;
-                    font-weight: 700;
-                    color: $clr1;
-                }
-
-                .l2 {
-                    align-self: start;
-                    grid-area: l2;
-                    color: $clr3;
-                    font-weight: 700;
-                    font-size: 16px;
-
-                    #top_ou {
-                        align-self: flex-start;
-                    }
-
-                    #top_yrs {
-                        padding: 2px 0;
-                        font-weight: 400;
-                    }
-
-                    #top_srv {
-                        color: $clr1;
-                        align-self: flex-end;
-                    }
-                }
-            }
+                "top_lgnds top_ctrs";
 
             .top_ctrs {
-                justify-self: end;
-                align-self: start;
                 grid-area: top_ctrs;
-                padding: 6px 0 0;
+                justify-content: center;
+                align-self: center;
 
-                .multiSelect,
                 .btn_plus,
                 .btn_print {
-                    float: right;
-                    margin-left: 8px;
+                    float: left;
                 }
             }
 
             .top_lgnds {
-                align-self: start;
+                align-self: center;
                 grid-area: top_lgnds;
 
                 .list_lgnds {
 
                     div {
-                        float: right;
+                        float: left;
                     }
 
                 }
-
-
             }
         }
 
-        .content {
-            padding: 8px 16px 0;
-            width: 100%;
-            height: calc(100% - 113px);
-            padding-bottom: 8px;
-
-
-
-            /* total width */
-            ::-webkit-scrollbar {
-                background-color: $clr2;
-                height: 4px;
-                width: 4px;
-                border-radius: 2px;
-            }
-
-            /* background of the scrollbar except button or resizer */
-            ::-webkit-scrollbar-track {
-                background-color: $clr2;
-                border-radius: 4px;
-
-            }
-
-            /* scrollbar itself */
-            ::-webkit-scrollbar-thumb {
-                background-color: $clr1;
-                border-radius: 4px;
-            }
-
-            /* set button(top and bottom of the scrollbar) */
-            ::-webkit-scrollbar-button {
-                display: none;
-            }
+        .clps_menu{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            float: right;
+            margin-right: 8px;
         }
     }
 }

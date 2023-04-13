@@ -200,92 +200,35 @@ body .wrapper .top_bar {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: max-content;
-  grid-auto-rows: auto;
-  grid-template-columns: 20% 80%;
-  grid-template-rows: 36px min-max(36px, auto);
+  grid-template-columns: calc(100% - 56px) 56px;
+  grid-template-rows: 65px;
   gap: 0px 0px;
-  margin: 0 16px;
-  padding: 8px 0;
+  margin: 0 8px;
   border-bottom: 1px solid #292626;
-  grid-template-areas: "top_left top_ctrs" "top_left top_lgnds";
-}
-body .wrapper .top_bar .top_left {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: auto auto;
-  gap: 0px 0px;
-  grid-template-areas: "l1" "l2";
-  grid-area: top_left;
-}
-body .wrapper .top_bar .top_left .l1 {
-  align-self: start;
-  grid-area: l1;
-  font-weight: 700;
-  color: #77716A;
-}
-body .wrapper .top_bar .top_left .l2 {
-  align-self: start;
-  grid-area: l2;
-  color: #292626;
-  font-weight: 700;
-  font-size: 16px;
-}
-body .wrapper .top_bar .top_left .l2 #top_ou {
-  align-self: flex-start;
-}
-body .wrapper .top_bar .top_left .l2 #top_yrs {
-  padding: 2px 0;
-  font-weight: 400;
-}
-body .wrapper .top_bar .top_left .l2 #top_srv {
-  color: #77716A;
-  align-self: flex-end;
+  grid-template-areas: "top_lgnds top_ctrs";
 }
 body .wrapper .top_bar .top_ctrs {
-  justify-self: end;
-  align-self: start;
   grid-area: top_ctrs;
-  padding: 6px 0 0;
+  justify-content: center;
+  align-self: center;
 }
-body .wrapper .top_bar .top_ctrs .multiSelect,
 body .wrapper .top_bar .top_ctrs .btn_plus,
 body .wrapper .top_bar .top_ctrs .btn_print {
-  float: right;
-  margin-left: 8px;
+  float: left;
 }
 body .wrapper .top_bar .top_lgnds {
-  align-self: start;
+  align-self: center;
   grid-area: top_lgnds;
 }
 body .wrapper .top_bar .top_lgnds .list_lgnds div {
+  float: left;
+}
+body .wrapper .clps_menu {
+  width: 100px;
+  height: 100px;
+  background-color: red;
   float: right;
-}
-body .wrapper .content {
-  padding: 8px 16px 0;
-  width: 100%;
-  height: calc(100% - 113px);
-  padding-bottom: 8px;
-  /* total width */
-  /* background of the scrollbar except button or resizer */
-  /* scrollbar itself */
-  /* set button(top and bottom of the scrollbar) */
-}
-body .wrapper .content ::-webkit-scrollbar {
-  background-color: #FDF4E7;
-  height: 4px;
-  width: 4px;
-  border-radius: 2px;
-}
-body .wrapper .content ::-webkit-scrollbar-track {
-  background-color: #FDF4E7;
-  border-radius: 4px;
-}
-body .wrapper .content ::-webkit-scrollbar-thumb {
-  background-color: #77716A;
-  border-radius: 4px;
-}
-body .wrapper .content ::-webkit-scrollbar-button {
-  display: none;
+  margin-right: 8px;
 }
 
 .doc_file {
@@ -17128,7 +17071,7 @@ label {
 
 /* Checkbox styles */
 label.checkbox {
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1rem;
   cursor: pointer;
   padding-left: 21px;
