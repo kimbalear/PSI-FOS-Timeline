@@ -1,13 +1,6 @@
-$color_1: #444f5b;
-$color_2: #fff;
-$color_3: #525c67;
-$color_4: #b2bac3;
-$color_5: #b8bcbf;
-$color_6: #4073FF;
-
 .msbx-ou {
     margin: 0 4px 16px 4px;
-    min-width: 200px;
+    min-width: 100%;
     position: relative;
     float: left;
 
@@ -104,6 +97,7 @@ $color_6: #4073FF;
 }
 
 .msbx-ou_list {
+    border: none;
     margin: 0;
     margin-bottom: 25px;
     padding: 0;
@@ -164,6 +158,7 @@ $color_6: #4073FF;
 }
 
 .msbx-ou_list.-open {
+    border: none;
     opacity: 1;
     visibility: visible;
     -webkit-transform: scale(1) translate(0, 12px);
@@ -264,11 +259,14 @@ $color_6: #4073FF;
 }
 
 .msbx-ou_noselections {
+    position: relative;
     text-align: center;
-    padding: 7px;
+    padding: 18px 0 0;
     color: $color_4;
     font-weight: 450;
     margin: 0;
+    font-size: 1em;
+    line-height: 1.2em;
 }
 
 .msbx-ou_placeholder {
@@ -298,7 +296,7 @@ $color_6: #4073FF;
 
 .msbx-srv {
     margin: 0 4px 16px 4px;
-    min-width: 200px;
+    min-width: 100%;
     position: relative;
     float: left;
 
@@ -395,6 +393,7 @@ $color_6: #4073FF;
 }
 
 .msbx-srv_list {
+    border: none;
     margin: 0;
     margin-bottom: 25px;
     padding: 0;
@@ -455,6 +454,7 @@ $color_6: #4073FF;
 }
 
 .msbx-srv_list.-open {
+    border: none;
     opacity: 1;
     visibility: visible;
     -webkit-transform: scale(1) translate(0, 12px);
@@ -560,6 +560,8 @@ $color_6: #4073FF;
     color: $color_4;
     font-weight: 450;
     margin: 0;
+    font-size: 1em;
+    line-height: 1.2em;
 }
 
 .msbx-srv_placeholder {
@@ -588,7 +590,7 @@ $color_6: #4073FF;
 
 .msbx-yrs {
     margin: 0 4px 16px 4px;
-    min-width: 200px;
+    min-width: 100%;
     position: relative;
     float: left;
 
@@ -685,6 +687,7 @@ $color_6: #4073FF;
 }
 
 .msbx-yrs_list {
+    border: none;
     margin: 0;
     margin-bottom: 25px;
     padding: 0;
@@ -745,6 +748,7 @@ $color_6: #4073FF;
 }
 
 .msbx-yrs_list.-open {
+    border: none;
     opacity: 1;
     visibility: visible;
     -webkit-transform: scale(1) translate(0, 12px);
@@ -850,6 +854,8 @@ $color_6: #4073FF;
     color: $color_4;
     font-weight: 450;
     margin: 0;
+    font-size: 1em;
+    line-height: 1.2em;
 }
 
 .msbx-yrs_placeholder {

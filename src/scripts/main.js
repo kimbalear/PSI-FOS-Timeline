@@ -109,6 +109,7 @@ $(document).ready(function () {
                                               </li>`)
         })
 
+        var fields = self.find('.msbx-ou_field')
         var dropdown = self.find('.msbx-ou_dropdown')
         var list = self.find('.msbx-ou_list')
         var option = self.find('.msbx-ou_option')
@@ -130,7 +131,7 @@ $(document).ready(function () {
                     self.remove()
 
                     list.find('.msbx-ou_option:contains(' + self.text() + ')').removeClass('-selected')
-                    list.css('top', dropdown.height() + 5).find('.msbx-ou_noselections').remove()
+                    dropdown.css('top', dropdown.height() + 5).find('.msbx-ou_noselections').remove()
                     field.find('option:contains(' + self.text() + ')').prop('selected', false)
                     selector(field, "ou")
 
@@ -143,7 +144,7 @@ $(document).ready(function () {
             }).addClass('-hasValue')
             list.css('top', dropdown.height() + 5)
             if (!option.not('.-selected').length) {
-                list.append('<h5 class="msbx-ou_noselections">No Selections</h5>')
+                dropdown.append('<p class="msbx-ou_noselections">No more selections</p>')
             }
 
             selector(field, "ou")
@@ -200,7 +201,7 @@ $(document).ready(function () {
                     e.stopPropagation()
                     self.remove()
                     list.find('.msbx-srv_option:contains(' + self.text() + ')').removeClass('-selected')
-                    list.css('top', dropdown.height() + 5).find('.msbx-srv_noselections').remove()
+                    dropdown.css('top', dropdown.height() + 5).find('.msbx-srv_noselections').remove()
                     field.find('option:contains(' + self.text() + ')').prop('selected', false)
                     selector(field, "srv")
 
@@ -211,7 +212,7 @@ $(document).ready(function () {
             }).addClass('-hasValue')
             list.css('top', dropdown.height() + 5)
             if (!option.not('.-selected').length) {
-                list.append('<h5 class="msbx-srv_noselections">No Selections</h5>')
+                dropdown.append('<p class="msbx-srv_noselections">No more selections</p>')
             }
 
             selector(field, "srv")
@@ -267,7 +268,7 @@ $(document).ready(function () {
                     e.stopPropagation()
                     self.remove()
                     list.find('.msbx-yrs_option:contains(' + self.text() + ')').removeClass('-selected')
-                    list.css('top', dropdown.height() + 5).find('.msbx-yrs_noselections').remove()
+                    dropdown.css('top', dropdown.height() + 5).find('.msbx-yrs_noselections').remove()
                     field.find('option:contains(' + self.text() + ')').prop('selected', false)
                     selector(field, "yrs")
 
@@ -278,7 +279,7 @@ $(document).ready(function () {
             }).addClass('-hasValue')
             list.css('top', dropdown.height() + 5)
             if (!option.not('.-selected').length) {
-                list.append('<h5 class="msbx-yrs_noselections">No Selections</h5>')
+                dropdown.append('<p class="msbx-yrs_noselections">No more selections</p>')
             }
 
             selector(field, "yrs")
@@ -1739,6 +1740,11 @@ $(document).ready(function () {
         })
     } else {
         // ---
+
+        $('#cta_search').on('click', function() {
+            console.log("paso")
+            $('#search-menu').toggleClass('open');
+          });
     }
       
 })

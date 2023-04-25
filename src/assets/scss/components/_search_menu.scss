@@ -1,0 +1,74 @@
+.search_menu {
+    right: -380px;
+    padding: 0 0 0 48px;
+    position: absolute;
+    transition: right 0.5s ease;
+    min-width: 220px;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "cta_area cnt_options";
+    align-content: center;
+    align-items: start;
+
+    .cta_area {
+        grid-area: cta_area;
+
+        .cta_i{
+            width: 48px;
+            height: 48px;
+            margin-top: 20px;
+            background-color: aqua;
+        }
+    }
+
+    .cnt_options {
+        grid-area: cnt_options;
+        padding: 18px 16px 0 8px;
+        display: grid;
+        grid-template-columns: 360px;
+        grid-template-rows: auto auto auto 1fr auto;
+        grid-auto-columns: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        align-content: center;
+        align-items: center;
+        height: calc(100vh - 66px);
+        border-left: 1px solid $color_5;
+        box-shadow: $shadow-left;
+        grid-template-areas:
+            "grd_ou"
+            "grd_srv"
+            "grd_yrs"
+            "grd_others"
+            "grd_footer";
+
+        .grd_ou {
+            grid-area: grd_ou;
+        }
+
+        .grd_srv {
+            grid-area: grd_srv;
+        }
+
+        .grd_yrs {
+            grid-area: grd_yrs;
+        }
+
+        .grd_others {
+            grid-area: grd_others;
+        }
+
+        .grd_footer {
+            grid-area: grd_footer;
+            background-color: aqua;
+        }
+    }
+}
+
+.search_menu.open {
+    right: 0px; // Posición final cuando el menú esté abierto
+}
