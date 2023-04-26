@@ -1742,8 +1742,8 @@ $(document).ready(function () {
         // ---
 
         $('#cta_search').on('click', function() {
-            console.log("paso")
             $('#search-menu').toggleClass('open');
+            $('#panel_sh').toggleClass('open');
           });
     }
       
