@@ -604,14 +604,14 @@ $(document).ready(function () {
 
     function timeline_structure(id_ou, nameOu, year, tLtype) {
 
-        //console.log(nameOu + " - " + year)
+        console.log(id_ou, nameOu, year, tLtype)
 
-        var lblYr = '<div id="' + id_ou + tLtype + 'lbl" class="lbl"></div>'
+        //var lblYr = '<div id="' + id_ou + tLtype + 'lbl" class="lbl"></div>'
         var timeline = '<div id="' + id_ou + tLtype + 'tl" class="timeline"></div>'
         var tpyr = '<div id="' + id_ou + tLtype + 'tpyr" class="tp_yr"></div>'
         var cebtn = '<div id="' + id_ou + tLtype + 'cebtn" class="ce_btn"></div>'
         var topl = '<div id="' + id_ou + tLtype + 'topl" class="top_timeline">'
-        var topTl = '<div id="' + id_ou + tLtype + 'lbou" class="lb_ou">' + nameOu + '</div>'
+        //var topTl = '<div id="' + id_ou + tLtype + 'lbou" class="lb_ou">' + nameOu + '</div>'
         var btnhs = '<div id="' + id_ou + tLtype + 'btnhs" class="btn_hs"></div>'
         var ctabtn = '<div id="' + id_ou + tLtype + 'btn" class="btn ignore">Hide year</div>'
         var tline = '<div id="' + id_ou + tLtype + 'tline" class="t_line">'
@@ -619,15 +619,15 @@ $(document).ready(function () {
         var btmyr = '<div id="' + id_ou + tLtype + 'btmyr" class="btm_yr">'
 
 
-        $(lblYr).appendTo('.yr_start')
-        $(lblYr).html(year)
+        //$(lblYr).appendTo('.yr_start')
+        //$(lblYr).html(year)
 
 
         $(timeline).appendTo('#' + id_ou)
         $(tpyr).appendTo('#' + id_ou + tLtype + 'tl')
         $(cebtn).appendTo('#' + id_ou + tLtype + 'tl')
         $(topl).appendTo('#' + id_ou + tLtype + 'cebtn')
-        $(topTl).appendTo('#' + id_ou + tLtype + 'topl')
+        //$(topTl).appendTo('#' + id_ou + tLtype + 'topl')
         $(btnhs).appendTo('#' + id_ou + tLtype + 'topl')
         $(ctabtn).appendTo('#' + id_ou + tLtype + 'btnhs')
         for (itp = 1; itp <= 12; itp++) {

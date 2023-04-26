@@ -18554,6 +18554,7 @@ label.checkbox.lgnd7 span {
   background-color: #b8bcbf;
   border-radius: 8px 0px 0px 8px;
   box-shadow: -3px 3px 15px -3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 .search_menu .cnt_options {
   grid-area: cnt_options;
@@ -18585,11 +18586,18 @@ label.checkbox.lgnd7 span {
 }
 .search_menu .cnt_options .grd_footer {
   grid-area: grd_footer;
-  background-color: aqua;
+  font-size: 0.8em;
+  color: #77716A;
+  line-height: 2em;
+  text-align: center;
 }
 
 .search_menu.open {
   right: 0px;
+}
+
+.arrow {
+  animation: arrow-animation 1s infinite;
 }
 
 ::-webkit-scrollbar {
