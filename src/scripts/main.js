@@ -604,7 +604,7 @@ $(document).ready(function () {
 
     function timeline_structure(id_ou, nameOu, year, tLtype) {
 
-        console.log(id_ou, nameOu, year, tLtype)
+        console.log("id_ou:" + id_ou + " | nameOu:" + nameOu + " | year:" + year + " | tLtype:" + tLtype)
 
         //var lblYr = '<div id="' + id_ou + tLtype + 'lbl" class="lbl"></div>'
         var timeline = '<div id="' + id_ou + tLtype + 'tl" class="timeline"></div>'
