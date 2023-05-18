@@ -13,6 +13,8 @@
         "cta_area cnt_options";
     align-content: center;
     align-items: start;
+    
+    z-index: 999;
 
     .cta_area {
         grid-area: cta_area;
@@ -43,6 +45,7 @@
         height: calc(100vh - 66px);
         border-left: 1px solid $color_5;
         box-shadow: $shadow-left;
+        background-color: $clr2;
         grid-template-areas:
             "grd_ou"
             "grd_srv"
