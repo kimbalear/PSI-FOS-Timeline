@@ -65,6 +65,7 @@
 }
 
 .msbx-ou_arrow {
+
     &::before {
         content: '';
         position: absolute;
@@ -241,6 +242,8 @@
     font-weight: 300;
 
     &:hover {
+        background-color: #FF5050;
+
         .msbx-ou_deselect {
             stroke: $clr_sm;
         }
@@ -537,6 +540,8 @@
     font-weight: 300;
 
     &:hover {
+        background-color: #FF5050;
+
         .msbx-srv_deselect {
             stroke: $clr2;
         }
@@ -832,6 +837,8 @@
     font-weight: 500;
 
     &:hover {
+        background-color: #FF5050;
+        
         .msbx-yrs_deselect {
             stroke: $clr_sm;
         }

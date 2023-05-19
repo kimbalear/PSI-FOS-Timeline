@@ -200,7 +200,7 @@ body .wrapper .top_bar {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: max-content;
-  grid-template-columns: calc(100% - 56px) 56px;
+  grid-template-columns: calc(100% - 120px) 120px;
   grid-template-rows: 65px;
   gap: 0px 0px;
   border-bottom: 1px solid #444F5B;
@@ -208,12 +208,12 @@ body .wrapper .top_bar {
 }
 body .wrapper .top_bar .top_ctrs {
   grid-area: top_ctrs;
-  justify-content: center;
-  align-self: center;
+  display: flex;
 }
 body .wrapper .top_bar .top_ctrs .btn_plus,
 body .wrapper .top_bar .top_ctrs .btn_print {
   float: left;
+  margin: 8px;
 }
 body .wrapper .top_bar .top_lgnds {
   align-self: center;
@@ -251,6 +251,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
 
 .top_left {
   color: #FDF4E7;
+  font-size: 2px;
 }
 
 .doc_file {
@@ -306,6 +307,7 @@ body .wrapper .content ::-webkit-scrollbar-button {
   gap: 0px 0px;
   grid-auto-flow: row;
   padding-bottom: 20px;
+  border-bottom: 1px solid rgba(119, 113, 106, 0.5);
   grid-template-areas: "tp_yr ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn" "tp_yr tp1 tp2 tp3 tp4 tp5 tp6 tp7 tp8 tp9 tp10 tp11 tp12" "line line line line line line line line line line line line line" "btm_yr btm1 btm2 btm3 btm4 btm5 btm6 btm7 btm8 btm9 btm10 btm11 btm12";
 }
 .timelines .ounit .timeline .ce_btn {
@@ -17000,6 +17002,10 @@ body .wrapper .content ::-webkit-scrollbar-button {
   padding: 8px;
 }
 
+.card_contr:hover, .card_lgnd1:hover, .card_lgnd2:hover, .card_lgnd3:hover, .card_lgnd4:hover, .card_lgnd5:hover, .card_lgnd6:hover, .card_lgnd7:hover {
+  cursor: pointer;
+}
+
 select {
   appearance: none;
   background-color: transparent;
@@ -17729,10 +17735,14 @@ label.checkbox.lgnd7 span {
   height: 48px;
   border-radius: 6px;
   padding: 8px 8px;
-  background-color: rgba(62, 115, 230, 0.3882352941);
+  background-color: #444F5B;
   cursor: pointer;
   background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_128_2599)'%3E%3Cpath d='M33 25.2857H25.2857V33H22.7143V25.2857H15V22.7143H22.7143V15H25.2857V22.7143H33V25.2857Z' fill='%23FDF4E7'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_128_2599'%3E%3Crect width='48' height='48' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
 }
+.btn_plus:hover {
+  background-color: #4073FF;
+}
+
 .btn_print {
   width: 48px;
   height: 48px;
@@ -17751,27 +17761,12 @@ label.checkbox.lgnd7 span {
   background-color: #FF5050;
 }
 
-.top_timeline {
-  display: grid;
-  grid-auto-columns: 1fr;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: 24px;
-  gap: 0px 28px;
-  grid-template-areas: "lb_ou btn_hs";
-}
-.top_timeline .lb_ou {
-  align-self: center;
-  grid-area: lb_ou;
-  color: #292626;
-  font-weight: 700;
-  font-size: 16px;
-  padding-left: 23px;
-}
-.top_timeline .btn_hs {
+.btn_hs {
   align-self: center;
   grid-area: btn_hs;
+  margin-left: 10px;
 }
-.top_timeline .btn_hs .btn {
+.btn_hs .btn {
   width: max-content;
   height: 24px;
   border-radius: 6px;
@@ -17782,6 +17777,10 @@ label.checkbox.lgnd7 span {
   padding: 5px 8px;
   color: #FDF4E7;
 }
+.btn_hs .btn:hover {
+  background-color: #4073FF;
+}
+
 .btns {
   float: right;
   width: auto;
@@ -17795,6 +17794,10 @@ label.checkbox.lgnd7 span {
   margin: 8px 4px;
   cursor: pointer;
 }
+.btns:hover {
+  background-color: #4073FF;
+}
+
 .msbx-ou {
   margin: 0 4px 16px 4px;
   min-width: 100%;
@@ -18004,6 +18007,9 @@ label.checkbox.lgnd7 span {
   border-radius: 30px;
   cursor: pointer;
   font-weight: 300;
+}
+.msbx-ou_choice:hover {
+  background-color: #FF5050;
 }
 .msbx-ou_choice:hover .msbx-ou_deselect {
   stroke: #444F5B;
@@ -18260,6 +18266,9 @@ label.checkbox.lgnd7 span {
   cursor: pointer;
   font-weight: 300;
 }
+.msbx-srv_choice:hover {
+  background-color: #FF5050;
+}
 .msbx-srv_choice:hover .msbx-srv_deselect {
   stroke: #FDF4E7;
 }
@@ -18514,6 +18523,9 @@ label.checkbox.lgnd7 span {
   cursor: pointer;
   font-weight: 500;
 }
+.msbx-yrs_choice:hover {
+  background-color: #FF5050;
+}
 .msbx-yrs_choice:hover .msbx-yrs_deselect {
   stroke: #444F5B;
 }
@@ -18580,19 +18592,21 @@ label.checkbox.lgnd7 span {
 .search_menu .cta_area .cta_i {
   width: 36px;
   height: 36px;
-  margin-top: 0px;
   padding: 6px;
   background-color: #444F5B;
   border-radius: 0px 0px 0px 8px;
   box-shadow: -3px 3px 15px -3px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
+.search_menu .cta_area .cta_i:hover {
+  background-color: #4073FF;
+}
 .search_menu .cnt_options {
   grid-area: cnt_options;
-  padding: 18px 16px 0 8px;
+  padding: 18px 8px 0 8px;
   display: grid;
   grid-template-columns: 360px;
-  grid-template-rows: auto auto auto 1fr auto;
+  grid-template-rows: 1fr auto auto;
   grid-auto-columns: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
@@ -18602,18 +18616,37 @@ label.checkbox.lgnd7 span {
   border-left: 1px solid #444F5B;
   box-shadow: -3px 0px 15px -3px rgba(0, 0, 0, 0.1);
   background-color: #FDF4E7;
-  grid-template-areas: "grd_ou" "grd_srv" "grd_yrs" "grd_others" "grd_footer";
+  grid-template-areas: "grd_sort" "grd_others" "grd_footer";
 }
-.search_menu .cnt_options .grd_ou {
+.search_menu .cnt_options .grd_sort {
+  grid-area: grd_sort;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+.search_menu .cnt_options .grd_sort .cnt_sort {
+  display: grid;
+  grid-template-columns: 348px;
+  grid-template-rows: auto auto auto auto;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  align-content: center;
+  align-items: center;
+  grid-template-areas: "grd_ou" "grd_srv" "grd_yrs";
+}
+.search_menu .cnt_options .grd_sort .cnt_sort .grd_ou {
   grid-area: grd_ou;
 }
-.search_menu .cnt_options .grd_srv {
+.search_menu .cnt_options .grd_sort .cnt_sort .grd_srv {
   grid-area: grd_srv;
 }
-.search_menu .cnt_options .grd_yrs {
+.search_menu .cnt_options .grd_sort .cnt_sort .grd_yrs {
   grid-area: grd_yrs;
 }
 .search_menu .cnt_options .grd_others {
+  align-self: flex-end;
   grid-area: grd_others;
 }
 .search_menu .cnt_options .grd_footer {

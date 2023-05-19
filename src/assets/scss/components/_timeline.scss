@@ -17,6 +17,7 @@
             gap: 0px 0px;
             grid-auto-flow: row;
             padding-bottom: 20px;
+            border-bottom: 1px solid $clrgba15;
             grid-template-areas:
                 "tp_yr ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn"
                 "tp_yr tp1 tp2 tp3 tp4 tp5 tp6 tp7 tp8 tp9 tp10 tp11 tp12"

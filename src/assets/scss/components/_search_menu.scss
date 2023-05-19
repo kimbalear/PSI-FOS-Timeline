@@ -13,7 +13,7 @@
         "cta_area cnt_options";
     align-content: center;
     align-items: start;
-    
+
     z-index: 999;
 
     .cta_area {
@@ -22,21 +22,24 @@
         .cta_i {
             width: 36px;
             height: 36px;
-            margin-top: 0px;
             padding: 6px;
             background-color: $clr_sm;
             border-radius: 0px 0px 0px 8px;
             box-shadow: $shadow-lb;
             cursor: pointer;
+
+            &:hover {
+                background-color: $color_6;
+            }
         }
     }
 
     .cnt_options {
         grid-area: cnt_options;
-        padding: 18px 16px 0 8px;
+        padding: 18px 8px 0 8px;
         display: grid;
         grid-template-columns: 360px;
-        grid-template-rows: auto auto auto 1fr auto;
+        grid-template-rows: 1fr auto auto;
         grid-auto-columns: 1fr;
         gap: 0px 0px;
         grid-auto-flow: row;
@@ -47,25 +50,47 @@
         box-shadow: $shadow-left;
         background-color: $clr2;
         grid-template-areas:
-            "grd_ou"
-            "grd_srv"
-            "grd_yrs"
+            "grd_sort"
             "grd_others"
             "grd_footer";
 
-        .grd_ou {
-            grid-area: grd_ou;
-        }
+        .grd_sort {
+            grid-area: grd_sort;
+            overflow-y: auto;
+            overflow-x: hidden;
+            width: 100%;
+            height: 100%;
 
-        .grd_srv {
-            grid-area: grd_srv;
-        }
+            .cnt_sort {
+                display: grid;
+                grid-template-columns: 348px;
+                grid-template-rows: auto auto auto auto;
+                grid-auto-columns: 1fr;
+                gap: 0px 0px;
+                grid-auto-flow: row;
+                align-content: center;
+                align-items: center;
+                grid-template-areas:
+                    "grd_ou"
+                    "grd_srv"
+                    "grd_yrs";
 
-        .grd_yrs {
-            grid-area: grd_yrs;
+                .grd_ou {
+                    grid-area: grd_ou;
+                }
+
+                .grd_srv {
+                    grid-area: grd_srv;
+                }
+
+                .grd_yrs {
+                    grid-area: grd_yrs;
+                }
+            }
         }
 
         .grd_others {
+            align-self: flex-end;
             grid-area: grd_others;
         }
 

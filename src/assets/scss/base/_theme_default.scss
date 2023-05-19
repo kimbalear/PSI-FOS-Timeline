@@ -32,7 +32,7 @@ body {
             display: grid;
             grid-auto-flow: column;
             grid-auto-columns: max-content;
-            grid-template-columns: calc(100% - 56px) 56px;
+            grid-template-columns: calc(100% - 120px) 120px;
             grid-template-rows: 65px;
             gap: 0px 0px;
             border-bottom: 1px solid $clr_sm;
@@ -41,12 +41,13 @@ body {
 
             .top_ctrs {
                 grid-area: top_ctrs;
-                justify-content: center;
-                align-self: center;
+                display: flex;
+                
 
                 .btn_plus,
                 .btn_print {
                     float: left;
+                    margin: 8px;
                 }
             }
 
@@ -102,4 +103,5 @@ body {
 
 .top_left {
     color: $clr2;
+    font-size: 2px;
 }
