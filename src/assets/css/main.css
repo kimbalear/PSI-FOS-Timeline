@@ -203,8 +203,7 @@ body .wrapper .top_bar {
   grid-template-columns: calc(100% - 56px) 56px;
   grid-template-rows: 65px;
   gap: 0px 0px;
-  margin: 0 8px;
-  border-bottom: 1px solid #292626;
+  border-bottom: 1px solid #444F5B;
   grid-template-areas: "top_lgnds top_ctrs";
 }
 body .wrapper .top_bar .top_ctrs {
@@ -278,14 +277,14 @@ body .wrapper .content ::-webkit-scrollbar-button {
 .panel_sh {
   width: 24px;
   height: 24px;
-  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_428_2601)'%3E%3Cpath d='M3 18H16V16H3V18ZM3 13H13V11H3V13ZM3 6V8H16V6H3ZM21 15.59L17.42 12L21 8.41L19.59 7L14.59 12L19.59 17L21 15.59Z' fill='%2377716A'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_428_2601'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_516_2616)"><path d="M18 8H20V16H18V8ZM7.99 13H16V11H7.99V8L4 12L7.99 16V13Z" fill="%23FDF4E7"/></g><defs><clipPath id="clip0_516_2616"><rect width="24" height="24" fill="white" transform="matrix(0 1 -1 0 24 0)"/></clipPath></defs></svg>');
 }
 
 .panel_sh.open {
   width: 24px;
   height: 24px;
   padding: 6px;
-  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_428_2604)'%3E%3Cpath d='M21 6L8 6V8L21 8L21 6ZM21 11L11 11L11 13L21 13V11ZM21 18V16L8 16V18L21 18ZM3 8.41L6.58 12L3 15.59L4.41 17L9.41 12L4.41 7L3 8.41Z' fill='%2377716A'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_428_2604'%3E%3Crect width='24' height='24' fill='white' transform='matrix(-1 0 0 -1 24 24)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_516_2613)"><path d="M6 16H4L4 8H6L6 16ZM16.01 11L8 11L8 13L16.01 13V16L20 12L16.01 8V11Z" fill="%23FDF4E7"/></g><defs><clipPath id="clip0_516_2613"><rect width="24" height="24" fill="white" transform="matrix(-1 0 0 -1 24 24)"/></clipPath></defs></svg>');
 }
 
 .timelines {
@@ -17744,7 +17743,7 @@ label.checkbox.lgnd7 span {
   background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_206_2511)'%3E%3Cpath d='M33.6 12H19.2C17.88 12 16.8 13.08 16.8 14.4V28.8C16.8 30.12 17.88 31.2 19.2 31.2H33.6C34.92 31.2 36 30.12 36 28.8V14.4C36 13.08 34.92 12 33.6 12ZM23.4 21C23.4 21.996 22.596 22.8 21.6 22.8H20.4V25.2H18.6V18H21.6C22.596 18 23.4 18.804 23.4 19.8V21ZM29.4 23.4C29.4 24.396 28.596 25.2 27.6 25.2H24.6V18H27.6C28.596 18 29.4 18.804 29.4 19.8V23.4ZM34.2 19.8H32.4V21H34.2V22.8H32.4V25.2H30.6V18H34.2V19.8ZM20.4 21H21.6V19.8H20.4V21ZM14.4 16.8H12V33.6C12 34.92 13.08 36 14.4 36H31.2V33.6H14.4V16.8ZM26.4 23.4H27.6V19.8H26.4V23.4Z' fill='%23FDF4E7'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_206_2511'%3E%3Crect width='48' height='48' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
 }
 .btn_print.disabled {
-  background-color: gray;
+  background-color: #b8bcbf;
   color: lightgray;
   cursor: not-allowed;
 }
@@ -17777,10 +17776,11 @@ label.checkbox.lgnd7 span {
   height: 24px;
   border-radius: 6px;
   padding: 8px 8px;
-  background-color: rgba(62, 115, 230, 0.3882352941);
+  background-color: #444F5B;
   cursor: pointer;
   font-size: 12px;
   padding: 5px 8px;
+  color: #FDF4E7;
 }
 .btns {
   float: right;
@@ -17820,7 +17820,7 @@ label.checkbox.lgnd7 span {
   outline: none;
   background-color: #FDF4E7;
   color: #444f5b;
-  border: 1px solid #d9dbde;
+  border: 1px solid #444F5B;
   font-weight: 400;
   padding: 0.5px 13px;
   margin: 0;
@@ -17835,7 +17835,7 @@ label.checkbox.lgnd7 span {
 .msbx-ou_dropdown.-hasValue + .msbx-ou_placeholder {
   top: -11px;
   left: 17px;
-  color: #77716A;
+  color: #444F5B;
   font-size: 13px;
 }
 
@@ -17848,7 +17848,7 @@ label.checkbox.lgnd7 span {
 .msbx-ou_dropdown.-open + .msbx-ou_placeholder {
   top: -11px;
   left: 17px;
-  color: #4073FF;
+  color: #444F5B;
   font-size: 13px;
 }
 
@@ -17859,7 +17859,7 @@ label.checkbox.lgnd7 span {
   width: 2px;
   height: 8px;
   border-radius: 20px;
-  border-bottom: 8px solid #99A3BA;
+  border-bottom: 8px solid #444F5B;
   top: 40%;
   transition: all 0.15s ease;
   right: 18px;
@@ -17873,7 +17873,7 @@ label.checkbox.lgnd7 span {
   width: 2px;
   height: 8px;
   border-radius: 20px;
-  border-bottom: 8px solid #99A3BA;
+  border-bottom: 8px solid #444F5B;
   top: 40%;
   transition: all 0.15s ease;
   right: 13px;
@@ -17906,7 +17906,7 @@ label.checkbox.lgnd7 span {
   transition: opacity 0.1s ease, visibility 0.1s ease, transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32), -webkit-transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
   -webkit-transform: scale(0.8) translate(0, 4px);
   transform: scale(0.8) translate(0, 4px);
-  border: 1px solid #d9dbde;
+  border: 1px solid #444F5B;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.12);
 }
 
@@ -17931,7 +17931,7 @@ label.checkbox.lgnd7 span {
   cursor: pointer;
   display: block;
   padding: 5px 13px;
-  color: #525c67;
+  color: #444F5B;
   font-size: 14px;
   text-decoration: none;
   outline: none;
@@ -17994,8 +17994,8 @@ label.checkbox.lgnd7 span {
 }
 
 .msbx-ou_choice {
-  background: rgba(77, 132, 254, 0.1);
-  color: #444f5b;
+  background: #444F5B;
+  color: #FDF4E7;
   padding: 4px 8px;
   line-height: 17px;
   margin: 5px;
@@ -18003,17 +18003,17 @@ label.checkbox.lgnd7 span {
   font-size: 13px;
   border-radius: 30px;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 300;
 }
 .msbx-ou_choice:hover .msbx-ou_deselect {
-  stroke: #77716A;
+  stroke: #444F5B;
 }
 
 .msbx-ou_deselect {
   width: 12px;
   height: 12px;
   display: inline-block;
-  stroke: #b2bac3;
+  stroke: #444F5B;
   stroke-width: 4px;
   margin-top: -1px;
   margin-left: 2px;
@@ -18024,7 +18024,7 @@ label.checkbox.lgnd7 span {
   position: relative;
   text-align: center;
   padding: 18px 0 0;
-  color: #b2bac3;
+  color: #444F5B;
   font-weight: 450;
   margin: 0;
   font-size: 1em;
@@ -18074,8 +18074,8 @@ label.checkbox.lgnd7 span {
   box-shadow: none;
   outline: none;
   background-color: #FDF4E7;
-  color: #444f5b;
-  border: 1px solid #d9dbde;
+  color: #444F5B;
+  border: 1px solid #444F5B;
   font-weight: 400;
   padding: 0.5px 13px;
   margin: 0;
@@ -18090,7 +18090,7 @@ label.checkbox.lgnd7 span {
 .msbx-srv_dropdown.-hasValue + .msbx-srv_placeholder {
   top: -11px;
   left: 17px;
-  color: #77716A;
+  color: #444F5B;
   font-size: 13px;
 }
 
@@ -18103,7 +18103,7 @@ label.checkbox.lgnd7 span {
 .msbx-srv_dropdown.-open + .msbx-srv_placeholder {
   top: -11px;
   left: 17px;
-  color: #4073FF;
+  color: #444F5B;
   font-size: 13px;
 }
 
@@ -18114,7 +18114,7 @@ label.checkbox.lgnd7 span {
   width: 2px;
   height: 8px;
   border-radius: 20px;
-  border-bottom: 8px solid #99A3BA;
+  border-bottom: 8px solid #444F5B;
   top: 40%;
   transition: all 0.15s ease;
   right: 18px;
@@ -18128,7 +18128,7 @@ label.checkbox.lgnd7 span {
   width: 2px;
   height: 8px;
   border-radius: 20px;
-  border-bottom: 8px solid #99A3BA;
+  border-bottom: 8px solid #444F5B;
   top: 40%;
   transition: all 0.15s ease;
   right: 13px;
@@ -18161,7 +18161,7 @@ label.checkbox.lgnd7 span {
   transition: opacity 0.1s ease, visibility 0.1s ease, transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32), -webkit-transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
   -webkit-transform: scale(0.8) translate(0, 4px);
   transform: scale(0.8) translate(0, 4px);
-  border: 1px solid #d9dbde;
+  border: 1px solid #444F5B;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.12);
 }
 
@@ -18186,7 +18186,7 @@ label.checkbox.lgnd7 span {
   cursor: pointer;
   display: block;
   padding: 5px 13px;
-  color: #525c67;
+  color: #444F5B;
   font-size: 14px;
   text-decoration: none;
   outline: none;
@@ -18249,8 +18249,8 @@ label.checkbox.lgnd7 span {
 }
 
 .msbx-srv_choice {
-  background: rgba(77, 132, 254, 0.1);
-  color: #444f5b;
+  background: #444F5B;
+  color: #FDF4E7;
   padding: 4px 8px;
   line-height: 17px;
   margin: 5px;
@@ -18258,17 +18258,17 @@ label.checkbox.lgnd7 span {
   font-size: 13px;
   border-radius: 30px;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 300;
 }
 .msbx-srv_choice:hover .msbx-srv_deselect {
-  stroke: #77716A;
+  stroke: #FDF4E7;
 }
 
 .msbx-srv_deselect {
   width: 12px;
   height: 12px;
   display: inline-block;
-  stroke: #b2bac3;
+  stroke: #FDF4E7;
   stroke-width: 4px;
   margin-top: -1px;
   margin-left: 2px;
@@ -18278,7 +18278,7 @@ label.checkbox.lgnd7 span {
 .msbx-srv_noselections {
   text-align: center;
   padding: 7px;
-  color: #b2bac3;
+  color: #444F5B;
   font-weight: 450;
   margin: 0;
   font-size: 1em;
@@ -18329,7 +18329,7 @@ label.checkbox.lgnd7 span {
   outline: none;
   background-color: #FDF4E7;
   color: #444f5b;
-  border: 1px solid #d9dbde;
+  border: 1px solid #444F5B;
   font-weight: 400;
   padding: 0.5px 13px;
   margin: 0;
@@ -18344,7 +18344,7 @@ label.checkbox.lgnd7 span {
 .msbx-yrs_dropdown.-hasValue + .msbx-yrs_placeholder {
   top: -11px;
   left: 17px;
-  color: #77716A;
+  color: #444F5B;
   font-size: 13px;
 }
 
@@ -18357,7 +18357,7 @@ label.checkbox.lgnd7 span {
 .msbx-yrs_dropdown.-open + .msbx-yrs_placeholder {
   top: -11px;
   left: 17px;
-  color: #4073FF;
+  color: #444F5B;
   font-size: 13px;
 }
 
@@ -18368,7 +18368,7 @@ label.checkbox.lgnd7 span {
   width: 2px;
   height: 8px;
   border-radius: 20px;
-  border-bottom: 8px solid #99A3BA;
+  border-bottom: 8px solid #444F5B;
   top: 40%;
   transition: all 0.15s ease;
   right: 18px;
@@ -18382,7 +18382,7 @@ label.checkbox.lgnd7 span {
   width: 2px;
   height: 8px;
   border-radius: 20px;
-  border-bottom: 8px solid #99A3BA;
+  border-bottom: 8px solid #444F5B;
   top: 40%;
   transition: all 0.15s ease;
   right: 13px;
@@ -18415,7 +18415,7 @@ label.checkbox.lgnd7 span {
   transition: opacity 0.1s ease, visibility 0.1s ease, transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32), -webkit-transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
   -webkit-transform: scale(0.8) translate(0, 4px);
   transform: scale(0.8) translate(0, 4px);
-  border: 1px solid #d9dbde;
+  border: 1px solid #444F5B;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.12);
 }
 
@@ -18440,7 +18440,7 @@ label.checkbox.lgnd7 span {
   cursor: pointer;
   display: block;
   padding: 5px 13px;
-  color: #525c67;
+  color: #444F5B;
   font-size: 14px;
   text-decoration: none;
   outline: none;
@@ -18503,8 +18503,8 @@ label.checkbox.lgnd7 span {
 }
 
 .msbx-yrs_choice {
-  background: rgba(77, 132, 254, 0.1);
-  color: #444f5b;
+  background: #444F5B;
+  color: #FDF4E7;
   padding: 4px 8px;
   line-height: 17px;
   margin: 5px;
@@ -18515,14 +18515,14 @@ label.checkbox.lgnd7 span {
   font-weight: 500;
 }
 .msbx-yrs_choice:hover .msbx-yrs_deselect {
-  stroke: #77716A;
+  stroke: #444F5B;
 }
 
 .msbx-yrs_deselect {
   width: 12px;
   height: 12px;
   display: inline-block;
-  stroke: #b2bac3;
+  stroke: #444F5B;
   stroke-width: 4px;
   margin-top: -1px;
   margin-left: 2px;
@@ -18532,7 +18532,7 @@ label.checkbox.lgnd7 span {
 .msbx-yrs_noselections {
   text-align: center;
   padding: 7px;
-  color: #b2bac3;
+  color: #444F5B;
   font-weight: 450;
   margin: 0;
   font-size: 1em;
@@ -18559,7 +18559,7 @@ label.checkbox.lgnd7 span {
 }
 
 .search_menu {
-  right: -380px;
+  right: -385px;
   padding: 0 0 0 48px;
   position: absolute;
   transition: right 0.5s ease;
@@ -18580,10 +18580,10 @@ label.checkbox.lgnd7 span {
 .search_menu .cta_area .cta_i {
   width: 36px;
   height: 36px;
-  margin-top: 48px;
+  margin-top: 0px;
   padding: 6px;
-  background-color: #b8bcbf;
-  border-radius: 8px 0px 0px 8px;
+  background-color: #444F5B;
+  border-radius: 0px 0px 0px 8px;
   box-shadow: -3px 3px 15px -3px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
@@ -18599,7 +18599,7 @@ label.checkbox.lgnd7 span {
   align-content: center;
   align-items: center;
   height: calc(100vh - 66px);
-  border-left: 1px solid #b8bcbf;
+  border-left: 1px solid #444F5B;
   box-shadow: -3px 0px 15px -3px rgba(0, 0, 0, 0.1);
   background-color: #FDF4E7;
   grid-template-areas: "grd_ou" "grd_srv" "grd_yrs" "grd_others" "grd_footer";

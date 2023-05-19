@@ -26,7 +26,7 @@
     outline: none;
     background-color: $clr2;
     color: $color_1;
-    border: 1px solid #d9dbde;
+    border: 1px solid $clr_sm;
     font-weight: 400;
     padding: 0.5px 13px;
     margin: 0;
@@ -42,7 +42,7 @@
         .msbx-ou_placeholder {
             top: -11px;
             left: 17px;
-            color: $clr1;
+            color: $clr_sm;
             font-size: 13px;
         }
     }
@@ -58,7 +58,7 @@
         .msbx-ou_placeholder {
             top: -11px;
             left: 17px;
-            color: $color_6;
+            color: $clr_sm;
             font-size: 13px;
         }
     }
@@ -72,7 +72,7 @@
         width: 2px;
         height: 8px;
         border-radius: 20px;
-        border-bottom: 8px solid #99A3BA;
+        border-bottom: 8px solid $clr_sm;
         top: 40%;
         transition: all .15s ease;
         right: 18px;
@@ -87,7 +87,7 @@
         width: 2px;
         height: 8px;
         border-radius: 20px;
-        border-bottom: 8px solid #99A3BA;
+        border-bottom: 8px solid $clr_sm;
         top: 40%;
         transition: all .15s ease;
         right: 13px;
@@ -121,7 +121,7 @@
     transition: opacity 0.1s ease, visibility 0.1s ease, transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32), -webkit-transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
     -webkit-transform: scale(0.8) translate(0, 4px);
     transform: scale(0.8) translate(0, 4px);
-    border: 1px solid #d9dbde;
+    border: 1px solid $clr_sm;
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.12);
 }
 
@@ -149,7 +149,7 @@
     cursor: pointer;
     display: block;
     padding: 5px 13px;
-    color: $color_3;
+    color: $clr_sm;
     font-size: 14px;
     text-decoration: none;
     outline: none;
@@ -229,8 +229,8 @@
 }
 
 .msbx-ou_choice {
-    background: rgba(77, 132, 254, 0.1);
-    color: $color_1;
+    background: $clr_sm;
+    color: $clr2;
     padding: 4px 8px;
     line-height: 17px;
     margin: 5px;
@@ -238,11 +238,11 @@
     font-size: 13px;
     border-radius: 30px;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 300;
 
     &:hover {
         .msbx-ou_deselect {
-            stroke: $clr1;
+            stroke: $clr_sm;
         }
     }
 }
@@ -251,7 +251,7 @@
     width: 12px;
     height: 12px;
     display: inline-block;
-    stroke: #b2bac3;
+    stroke: $clr_sm;
     stroke-width: 4px;
     margin-top: -1px;
     margin-left: 2px;
@@ -262,7 +262,7 @@
     position: relative;
     text-align: center;
     padding: 18px 0 0;
-    color: $color_4;
+    color: $clr_sm;
     font-weight: 450;
     margin: 0;
     font-size: 1em;
@@ -321,8 +321,8 @@
     box-shadow: none;
     outline: none;
     background-color: $clr2;
-    color: $color_1;
-    border: 1px solid #d9dbde;
+    color: $clr_sm;
+    border: 1px solid $clr_sm;
     font-weight: 400;
     padding: 0.5px 13px;
     margin: 0;
@@ -338,7 +338,7 @@
         .msbx-srv_placeholder {
             top: -11px;
             left: 17px;
-            color: $clr1;
+            color: $clr_sm;
             font-size: 13px;
         }
     }
@@ -354,7 +354,7 @@
         .msbx-srv_placeholder {
             top: -11px;
             left: 17px;
-            color: $color_6;
+            color: $clr_sm;
             font-size: 13px;
         }
     }
@@ -368,7 +368,7 @@
         width: 2px;
         height: 8px;
         border-radius: 20px;
-        border-bottom: 8px solid #99A3BA;
+        border-bottom: 8px solid $clr_sm;
         top: 40%;
         transition: all .15s ease;
         right: 18px;
@@ -383,7 +383,7 @@
         width: 2px;
         height: 8px;
         border-radius: 20px;
-        border-bottom: 8px solid #99A3BA;
+        border-bottom: 8px solid $clr_sm;
         top: 40%;
         transition: all .15s ease;
         right: 13px;
@@ -417,7 +417,7 @@
     transition: opacity 0.1s ease, visibility 0.1s ease, transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32), -webkit-transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
     -webkit-transform: scale(0.8) translate(0, 4px);
     transform: scale(0.8) translate(0, 4px);
-    border: 1px solid #d9dbde;
+    border: 1px solid $clr_sm;
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.12);
 }
 
@@ -445,7 +445,7 @@
     cursor: pointer;
     display: block;
     padding: 5px 13px;
-    color: $color_3;
+    color: $clr_sm;
     font-size: 14px;
     text-decoration: none;
     outline: none;
@@ -525,8 +525,8 @@
 }
 
 .msbx-srv_choice {
-    background: rgba(77, 132, 254, 0.1);
-    color: $color_1;
+    background: $clr_sm;
+    color: $clr2;
     padding: 4px 8px;
     line-height: 17px;
     margin: 5px;
@@ -534,11 +534,11 @@
     font-size: 13px;
     border-radius: 30px;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 300;
 
     &:hover {
         .msbx-srv_deselect {
-            stroke: $clr1;
+            stroke: $clr2;
         }
     }
 }
@@ -547,7 +547,7 @@
     width: 12px;
     height: 12px;
     display: inline-block;
-    stroke: #b2bac3;
+    stroke: $clr2;
     stroke-width: 4px;
     margin-top: -1px;
     margin-left: 2px;
@@ -557,7 +557,7 @@
 .msbx-srv_noselections {
     text-align: center;
     padding: 7px;
-    color: $color_4;
+    color: $clr_sm;
     font-weight: 450;
     margin: 0;
     font-size: 1em;
@@ -587,6 +587,7 @@
     }
 }
 
+/////////////////////////////////////////
 
 .msbx-yrs {
     margin: 0 4px 16px 4px;
@@ -616,7 +617,7 @@
     outline: none;
     background-color: $clr2;
     color: $color_1;
-    border: 1px solid #d9dbde;
+    border: 1px solid $clr_sm;
     font-weight: 400;
     padding: 0.5px 13px;
     margin: 0;
@@ -632,7 +633,7 @@
         .msbx-yrs_placeholder {
             top: -11px;
             left: 17px;
-            color: $clr1;
+            color: $clr_sm;
             font-size: 13px;
         }
     }
@@ -648,7 +649,7 @@
         .msbx-yrs_placeholder {
             top: -11px;
             left: 17px;
-            color: $color_6;
+            color: $clr_sm;
             font-size: 13px;
         }
     }
@@ -662,7 +663,7 @@
         width: 2px;
         height: 8px;
         border-radius: 20px;
-        border-bottom: 8px solid #99A3BA;
+        border-bottom: 8px solid $clr_sm;
         top: 40%;
         transition: all .15s ease;
         right: 18px;
@@ -677,7 +678,7 @@
         width: 2px;
         height: 8px;
         border-radius: 20px;
-        border-bottom: 8px solid #99A3BA;
+        border-bottom: 8px solid $clr_sm;
         top: 40%;
         transition: all .15s ease;
         right: 13px;
@@ -711,7 +712,7 @@
     transition: opacity 0.1s ease, visibility 0.1s ease, transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32), -webkit-transform 0.15s cubic-bezier(0.4, 0.6, 0.5, 1.32);
     -webkit-transform: scale(0.8) translate(0, 4px);
     transform: scale(0.8) translate(0, 4px);
-    border: 1px solid #d9dbde;
+    border: 1px solid $clr_sm;
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.12);
 }
 
@@ -739,7 +740,7 @@
     cursor: pointer;
     display: block;
     padding: 5px 13px;
-    color: $color_3;
+    color: $clr_sm;
     font-size: 14px;
     text-decoration: none;
     outline: none;
@@ -819,8 +820,8 @@
 }
 
 .msbx-yrs_choice {
-    background: rgba(77, 132, 254, 0.1);
-    color: $color_1;
+    background: $clr_sm;
+    color: $clr2;
     padding: 4px 8px;
     line-height: 17px;
     margin: 5px;
@@ -832,7 +833,7 @@
 
     &:hover {
         .msbx-yrs_deselect {
-            stroke: $clr1;
+            stroke: $clr_sm;
         }
     }
 }
@@ -841,7 +842,7 @@
     width: 12px;
     height: 12px;
     display: inline-block;
-    stroke: #b2bac3;
+    stroke: $clr_sm;
     stroke-width: 4px;
     margin-top: -1px;
     margin-left: 2px;
@@ -851,7 +852,7 @@
 .msbx-yrs_noselections {
     text-align: center;
     padding: 7px;
-    color: $color_4;
+    color: $clr_sm;
     font-weight: 450;
     margin: 0;
     font-size: 1em;
