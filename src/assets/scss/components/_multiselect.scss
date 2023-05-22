@@ -1,3 +1,4 @@
+
 .msbx-ou {
     margin: 0 4px 16px 4px;
     min-width: 100%;
@@ -65,7 +66,6 @@
 }
 
 .msbx-ou_arrow {
-
     &::before {
         content: '';
         position: absolute;
@@ -239,11 +239,11 @@
     font-size: 13px;
     border-radius: 30px;
     cursor: pointer;
-    font-weight: 300;
+    font-weight: 500;
 
     &:hover {
         background-color: #FF5050;
-
+        
         .msbx-ou_deselect {
             stroke: $clr_sm;
         }
@@ -262,9 +262,8 @@
 }
 
 .msbx-ou_noselections {
-    position: relative;
     text-align: center;
-    padding: 18px 0 0;
+    padding: 7px;
     color: $clr_sm;
     font-weight: 450;
     margin: 0;
@@ -294,6 +293,7 @@
         }
     }
 }
+
 
 ///////////////////////////
 
