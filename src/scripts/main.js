@@ -583,7 +583,6 @@ $(document).ready(function () {
         if (typeof yrs === 'undefined') {
         } else {
             qry3 = yrs
-            console.log(qry3)//2023/22/21/20
         }
 
         if (typeof qry1 === 'string' && qry1 != "") {
@@ -1244,17 +1243,12 @@ $(document).ready(function () {
                 }
             }
 
-            console.log("Array year:" + arrYear)
+            var sortedYears = arrYear.slice().sort(function (a, b) {
+                return a - b;
+            });
 
-            for (var i = 0; i < arrYear.length; i++) {
-                var sortedYears = arrYear.slice().sort(function (a, b) {
-                    return a - b;
-                });
-
-                timeline_structure(id_ou, nameOu, arrYear[i], i)
-
-                console.log("Sorted: " + sortedYears); // [1992, 1998, 2005, 2012, 2018]
-
+            for (var i = 0; i < sortedYears.length; i++) {
+                timeline_structure(id_ou, nameOu, sortedYears[i], i)
             }
         }
     }
