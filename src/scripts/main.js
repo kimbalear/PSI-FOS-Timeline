@@ -583,6 +583,7 @@ $(document).ready(function () {
         if (typeof yrs === 'undefined') {
         } else {
             qry3 = yrs
+            console.log(qry3)//2023/22/21/20
         }
 
         if (typeof qry1 === 'string' && qry1 != "") {
@@ -603,8 +604,6 @@ $(document).ready(function () {
     }
 
     function timeline_structure(id_ou, nameOu, year, tLtype) {
-
-        console.log("id_ou:" + id_ou + " | nameOu:" + nameOu + " | year:" + year + " | tLtype:" + tLtype)
 
         //var lblYr = '<div id="' + id_ou + tLtype + 'lbl" class="lbl"></div>'
         var timeline = '<div id="' + id_ou + tLtype + 'tl" class="timeline"></div>'
@@ -710,7 +709,7 @@ $(document).ready(function () {
 
         var random_lgnd = [tlcard1, tlcard2, tlcard3, tlcard4, tlcard5, tlcard6, tlcard7];
 
-        if (tL1tp1 >= 1&& tLtype == 1) {
+        if (tL1tp1 >= 1 && tLtype == 1) {
             //building contributions
             $('#' + id_ou + tLtype + 'tp1').append(tlTp1);
             for (i = 1; i <= tL1tp1; i++) {
@@ -1243,7 +1242,19 @@ $(document).ready(function () {
                 if (i !== 0) {
                     arrYear[i] = prefix + arrYear[i];
                 }
+            }
+
+            console.log("Array year:" + arrYear)
+
+            for (var i = 0; i < arrYear.length; i++) {
+                var sortedYears = arrYear.slice().sort(function (a, b) {
+                    return a - b;
+                });
+
                 timeline_structure(id_ou, nameOu, arrYear[i], i)
+
+                console.log("Sorted: " + sortedYears); // [1992, 1998, 2005, 2012, 2018]
+
             }
         }
     }
@@ -1468,7 +1479,7 @@ $(document).ready(function () {
         $('<div class="dl2">').appendTo('.dlg_cnt')
         $('<div class="bxtext">').appendTo('.dl2')
         $('.bxtext').html(ChildCont + "<div class='lbl'>Lorem ipsum dolor sit amet</div><div class='content'>Consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel.</div><div class='lbl'>Curabitur eget euismod nisl</div><div class='content'>Et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum. Ut quis ornare orci, finibus convallis enim. Nullam elementum metus non lacinia convallis. Duis blandit orci non neque semper egestas. Phasellus et turpis sed nulla vulputate gravida. In vehicula sem diam, ut mattis risus lacinia sed.</div>")
-        
+
         $('<div class="dl31">').appendTo('.dlg_cnt')
         $('<div class="l31title">').appendTo('.dl31')
         $('.l31title').html("Documents => Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
@@ -1506,7 +1517,7 @@ $(document).ready(function () {
         $('#f_name5').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
 
 
-        
+
 
         $('<div class="dl4">').appendTo('.dlg_cnt')
 
@@ -1732,7 +1743,7 @@ $(document).ready(function () {
         $('.dlg_tx').html(ChildCont)
     })
 
-    $(document).on('click', '.btn-sys-edit', function () {})
+    $(document).on('click', '.btn-sys-edit', function () { })
 
     if ($(".btn_print").hasClass(".disabled")) {
         $(function () {
@@ -1741,10 +1752,10 @@ $(document).ready(function () {
     } else {
         // ---
 
-        $('#cta_search').on('click', function() {
+        $('#cta_search').on('click', function () {
             $('#search-menu').toggleClass('open');
             $('#panel_sh').toggleClass('open');
-          });
+        });
     }
-      
+
 })
