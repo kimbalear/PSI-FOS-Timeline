@@ -616,11 +616,6 @@ $(document).ready(function () {
         var yrstart = '<div id="' + id_ou + tLtype + 'yrstart" class="yr_start">'
         var btmyr = '<div id="' + id_ou + tLtype + 'btmyr" class="btm_yr">'
 
-
-        //$(lblYr).appendTo('.yr_start')
-        //$(lblYr).html(year)
-
-
         $(timeline).appendTo('#' + id_ou)
         $(tpyr).appendTo('#' + id_ou + tLtype + 'tl')
         $(cebtn).appendTo('#' + id_ou + tLtype + 'tl')
