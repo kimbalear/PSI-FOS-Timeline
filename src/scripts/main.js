@@ -1536,6 +1536,7 @@ $(document).ready(function () {
         $('<div class="dlg_cta i_lgnd1">').appendTo('.dlg')
         $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
         $('<div class="btn-sys-close">').appendTo('.dlg_cta')
+
         $('<div class="dlg_cnt">').appendTo('.dlg')
         $('<div class="dl1">').appendTo('.dlg_cnt')
         $('<div class="dl2>').appendTo('.dlg_cnt')
@@ -1546,7 +1547,7 @@ $(document).ready(function () {
 
         $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
 
-        $('<div class="dlg_cnt">').appendTo('.dlg')
+        $('<div class="dlg_cnt">').appendTo('.dlg1')
         contentCard(ChildCont)
     })
 
