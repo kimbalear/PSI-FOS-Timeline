@@ -495,8 +495,7 @@ $(document).ready(function () {
         $('<div class="btn-sys-close">').appendTo('.dlg_cta')
 
         $('<div class="dlg_cnt">').appendTo('.dlg')
-        $('<div class="grp_advc">').appendTo('.dlg_cnt')
-        $('.grp_advc').html("This is")
+        
         switch (lgnd) {
             case "lgnd0":
                 $('.dlg').addClass("d_" + lgnd)
@@ -1239,7 +1238,7 @@ $(document).ready(function () {
             }
 
             var sortedYears = arrYear.slice().sort(function (a, b) {
-                return a - b;
+                return b - a;
             });
 
             for (var i = 0; i < sortedYears.length; i++) {
