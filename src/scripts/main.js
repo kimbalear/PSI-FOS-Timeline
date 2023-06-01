@@ -91,26 +91,6 @@ $(document).ready(function () {
     let tL3btm12 = [];
 
     let qry1, qry2, qry3
-    const mySwitch = document.getElementById("mySwitch");
-    mySwitch.addEventListener("change", function () {
-        const array = obtenerArray();
-
-        if (this.checked) {
-            // Ordenar de forma ascendente (a - b)
-            array.sort(function (a, b) {
-                return a.localeCompare(b);
-            });
-        } else {
-            // Ordenar de forma descendente (b - a)
-            array.sort(function (a, b) {
-                return b.localeCompare(a);
-            });
-        }
-
-        console.log(array);
-    });
-
-    //primeropasarle el array y luego continuar cuando devuelve el sort
 
     $('.msbx-ou').each(function (e) {
         var self = $(this)
