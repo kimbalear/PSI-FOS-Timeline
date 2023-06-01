@@ -18,18 +18,82 @@
 
     .cta_area {
         grid-area: cta_area;
+        margin-top: 8px;
+        display: grid;
+        grid-template-columns: 48px;
+        grid-template-rows: 48px 48px 48px;
+        grid-auto-columns: 1fr;
+        gap: 8px 0px;
+        grid-auto-flow: row;
+        align-items: stretch;
+        grid-template-areas:
+            "cnt_ipanel"
+            "cnt_irun"
+            "cnt_ipdf";
 
-        .cta_i {
-            width: 36px;
-            height: 36px;
-            padding: 6px;
-            background-color: $clr_sm;
-            border-radius: 0px 0px 0px 8px;
-            box-shadow: $shadow-lb;
-            cursor: pointer;
+        .cnt_ipanel {
+            grid-area: cnt_ipanel;
 
-            &:hover {
-                background-color: $color_6;
+            .ipanel {
+                width: 48px;
+                height: 48px;
+                padding: 6px;
+                background-color: $color_7;
+                border-radius: 8px 0px 0px 8px;
+                box-shadow: $shadow-lb;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $color_6;
+                }
+            }
+        }
+
+        .cnt_irun {
+            grid-area: cnt_irun;
+
+            .irun {
+                width: 48px;
+                height: 48px;
+                padding: 6px;
+                background-color: $clrbk_lgnd4_p;
+                border-radius: 8px 0px 0px 8px;
+                box-shadow: $shadow-lb;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $color_6;
+                }
+
+                &.disabled {
+                    background-color: $color_5;
+                    color: lightgray;
+                    cursor: not-allowed;
+                }
+            }
+        }
+
+        .cnt_ipdf {
+            grid-area: cnt_ipdf;
+
+            .ipdf {
+                width: 48px;
+                height: 48px;
+                padding: 6px;
+                background-color: $clrbk_lgnd1_p;
+                border-radius: 8px 0px 0px 8px;
+                box-shadow: $shadow-lb;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $color_6;
+                }
+
+                &.disabled {
+                    background-color: $color_5;
+                    color: lightgray;
+                    cursor: not-allowed;
+                }
             }
         }
     }

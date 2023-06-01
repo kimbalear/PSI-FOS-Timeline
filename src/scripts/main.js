@@ -585,18 +585,25 @@ $(document).ready(function () {
         }
 
         if (typeof qry1 === 'string' && qry1 != "") {
+
             if (typeof qry3 === 'string' && qry3 != "") {
                 allCheckboxes.prop('disabled', false)
                 timeline(qry1, qry3)
+                $('.irun').removeClass('disabled');
+                $('.ipdf').removeClass('disabled');
             } else {
                 allCheckboxes.prop('checked', true)
                 allCheckboxes.prop('disabled', true)
-                $('.ounit').remove()
+                $('.ounit').remove();
+                $('.irun').addClass('disabled');
+                $('.ipdf').addClass('disabled');
             }
         } else {
             allCheckboxes.prop('checked', true)
             allCheckboxes.prop('disabled', true)
             $('.ounit').remove()
+            $('.irun').addClass('disabled');
+            $('.ipdf').addClass('disabled');
         }
 
     }
@@ -1247,32 +1254,8 @@ $(document).ready(function () {
         }
     }
 
-    function toggleDisabled(var1, var2) {
-        var arrOu = var1.split(',');
-        var arryear = var2.split('/');
-
-        if ((Array.isArray(arrOu) && arrOu.length == 1) || (Array.isArray(arryear) && arryear.length == 1)) {
-            $('.btn_print').removeClass('disabled')
-        }
-
-        if ((Array.isArray(arrOu) && arrOu.length == 1) && (Array.isArray(arryear) && arryear.length > 1)) {
-            if ($('.btn_print').hasClass('disabled')) {
-                $('.btn_print').removeClass('disabled')
-            }
-            $('.btn_print').addClass('disabled')
-        }
-
-        if ((Array.isArray(arrOu) && arrOu.length > 1) && (Array.isArray(arryear) && arryear.length == 1)) {
-            if ($('.btn_print').hasClass('disabled')) {
-                $('.btn_print').removeClass('disabled')
-            }
-            $('.btn_print').addClass('disabled')
-        }
-    }
-
     function timeline(ou, year) {
         $('.ounit').remove()
-        toggleDisabled(ou, year)
 
         if (ou.indexOf(',') !== -1) {
             var arrOu = ou.split(',');
@@ -1380,7 +1363,7 @@ $(document).ready(function () {
         }
     }
 
-    $(".btn_print").click(function () {
+    $(".ipdf").click(function () {
         if (!$(this).hasClass("disabled")) {
             $('<div class="scrim">').appendTo('body')
 
@@ -1734,14 +1717,14 @@ $(document).ready(function () {
 
     $(document).on('click', '.btn-sys-edit', function () { })
 
-    if ($(".btn_print").hasClass(".disabled")) {
+    if ($(".ipdf").hasClass(".disabled")) {
         $(function () {
             $('[data-toggle="tooltip"]').tooltip({ delay: { "show": 500, "hide": 100 } })
         })
     } else {
         // ---
 
-        $('#cta_search').on('click', function () {
+        $('.cnt_ipanel').on('click', function () {
             $('#search-menu').toggleClass('open');
             $('#panel_sh').toggleClass('open');
         });
