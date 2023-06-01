@@ -18693,35 +18693,38 @@ label.checkbox.lgnd7 span {
   border-left: 1px solid #444F5B;
   box-shadow: -3px 0px 15px -3px rgba(0, 0, 0, 0.1);
   background-color: #FDF4E7;
-  grid-template-areas: "grd_sort" "grd_others" "grd_footer";
+  grid-template-areas: "grd_srh" "grd_others" "grd_footer";
 }
-.search_menu .cnt_options .grd_sort {
-  grid-area: grd_sort;
+.search_menu .cnt_options .grd_srh {
+  grid-area: grd_srh;
   overflow-y: auto;
   overflow-x: hidden;
   width: 100%;
   height: 100%;
   padding-top: 8px;
 }
-.search_menu .cnt_options .grd_sort .cnt_sort {
+.search_menu .cnt_options .grd_srh .cnt_sort {
   display: grid;
   grid-template-columns: 348px;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
   grid-auto-columns: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   align-content: center;
   align-items: center;
-  grid-template-areas: "grd_ou" "grd_srv" "grd_yrs";
+  grid-template-areas: "grd_ou" "grd_srv" "grd_yrs" "grd_sort";
 }
-.search_menu .cnt_options .grd_sort .cnt_sort .grd_ou {
+.search_menu .cnt_options .grd_srh .cnt_sort .grd_ou {
   grid-area: grd_ou;
 }
-.search_menu .cnt_options .grd_sort .cnt_sort .grd_srv {
+.search_menu .cnt_options .grd_srh .cnt_sort .grd_srv {
   grid-area: grd_srv;
 }
-.search_menu .cnt_options .grd_sort .cnt_sort .grd_yrs {
+.search_menu .cnt_options .grd_srh .cnt_sort .grd_yrs {
   grid-area: grd_yrs;
+}
+.search_menu .cnt_options .grd_srh .cnt_sort .grd_sort {
+  grid-area: grd_sort;
 }
 .search_menu .cnt_options .grd_others {
   align-self: flex-end;

@@ -1730,4 +1730,8 @@ $(document).ready(function () {
         });
     }
 
+    $('.ipanel').tooltip();
+    $('.irun').tooltip();
+    $('.ipdf').tooltip();
+
 })
