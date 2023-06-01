@@ -91,6 +91,26 @@ $(document).ready(function () {
     let tL3btm12 = [];
 
     let qry1, qry2, qry3
+    const mySwitch = document.getElementById("mySwitch");
+    mySwitch.addEventListener("change", function () {
+        const array = obtenerArray();
+
+        if (this.checked) {
+            // Ordenar de forma ascendente (a - b)
+            array.sort(function (a, b) {
+                return a.localeCompare(b);
+            });
+        } else {
+            // Ordenar de forma descendente (b - a)
+            array.sort(function (a, b) {
+                return b.localeCompare(a);
+            });
+        }
+
+        console.log(array);
+    });
+
+    //primeropasarle el array y luego continuar cuando devuelve el sort
 
     $('.msbx-ou').each(function (e) {
         var self = $(this)
@@ -495,7 +515,7 @@ $(document).ready(function () {
         $('<div class="btn-sys-close">').appendTo('.dlg_cta')
 
         $('<div class="dlg_cnt">').appendTo('.dlg')
-        
+
         switch (lgnd) {
             case "lgnd0":
                 $('.dlg').addClass("d_" + lgnd)
@@ -1729,9 +1749,4 @@ $(document).ready(function () {
             $('#panel_sh').toggleClass('open');
         });
     }
-
-    $('.ipanel').tooltip();
-    $('.irun').tooltip();
-    $('.ipdf').tooltip();
-
 })
