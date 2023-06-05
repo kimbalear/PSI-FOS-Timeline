@@ -90,7 +90,11 @@ $(document).ready(function () {
     let tL3btm11 = [];
     let tL3btm12 = [];
 
+    let id_ou
+    let nameOu
     let qry1, qry2, qry3
+    let arrYear
+    let sortedYears
 
     $('.msbx-ou').each(function (e) {
         var self = $(this)
@@ -436,7 +440,7 @@ $(document).ready(function () {
 
     function SetOrgUnits(st, typ) {
 
-        var nameOu = ""
+        nameOu = ""
         for (var i = 0; i < st.length; i++) {
 
             if (i >= 1) {
@@ -594,14 +598,12 @@ $(document).ready(function () {
             } else {
                 allCheckboxes.prop('checked', true)
                 allCheckboxes.prop('disabled', true)
-                $('.ounit').remove();
                 $('.irun').addClass('disabled');
                 $('.ipdf').addClass('disabled');
             }
         } else {
             allCheckboxes.prop('checked', true)
             allCheckboxes.prop('disabled', true)
-            $('.ounit').remove()
             $('.irun').addClass('disabled');
             $('.ipdf').addClass('disabled');
         }
@@ -610,6 +612,12 @@ $(document).ready(function () {
 
     function timeline_structure(id_ou, nameOu, year, tLtype) {
 
+        console.log("-------------------------------------");
+        console.log("id_ou: " + id_ou);
+        console.log("nameOu: " + nameOu);
+        console.log("year: " + year);
+        console.log("tLtype: " + tLtype);
+        console.log("-------------------------------------");
         //var lblYr = '<div id="' + id_ou + tLtype + 'lbl" class="lbl"></div>'
         var timeline = '<div id="' + id_ou + tLtype + 'tl" class="timeline"></div>'
         var tpyr = '<div id="' + id_ou + tLtype + 'tpyr" class="tp_yr"></div>'
@@ -1232,7 +1240,7 @@ $(document).ready(function () {
     }
 
     function building_timeline(id_ou, nameOu, year) {
-        var arrYear = year.split("/");
+        arrYear = year.split("/");
 
         if (arrYear.length == 1) {
             //SOLO
@@ -1245,52 +1253,40 @@ $(document).ready(function () {
                     arrYear[i] = prefix + arrYear[i];
                 }
             }
-
-            var mySwitch = document.getElementById("mySwitch");
-            var sortedYears;
-
-            if (mySwitch.checked) {
-                // Ordenar de forma descendente (b - a)
-                sortedYears = arrYear.slice().sort(function (a, b) {
-                    return b - a;
-                });
-            } else {
-                // Ordenar de forma ascendente (a - b)
-                sortedYears = arrYear.slice().sort(function (a, b) {
-                    return a - b;
-                });
-            }
-
-            for (var i = 0; i < sortedYears.length; i++) {
-                timeline_structure(id_ou, nameOu, sortedYears[i], i);
-            }
+            sortyears(arrYear)
         }
     }
 
+    function sortyears(arrYear) {
 
-
-    const mySwitch = document.getElementById("mySwitch");
-    mySwitch.addEventListener("change", function () {
-        const array = [4, 2, 6, 1, 3, 5];
-
-        if (this.checked) {
-            // Ordenar de forma descendente (b - a)
-            array.sort(function (a, b) {
+        if (mySwitch.checked) {
+            sortedYears = arrYear.slice().sort(function (a, b) {
                 return b - a;
             });
         } else {
-            // Ordenar de forma ascendente (a - b)
-            array.sort(function (a, b) {
+            sortedYears = arrYear.slice().sort(function (a, b) {
                 return a - b;
             });
         }
 
-        console.log(array);
+        console.log("sortedYears: " + sortedYears);
+
+        for (var i = 0; i < sortedYears.length; i++) {
+            timeline_structure(id_ou, nameOu, sortedYears[i], i);
+        }
+    }
+
+    const mySwitch = document.getElementById("mySwitch");
+    mySwitch.addEventListener("change", function () {
+
+        $('.ounit').remove()
+        //sortyears(arrYear)
     });
 
 
     function timeline(ou, year) {
         $('.ounit').remove()
+        console.log("REMOVE")
 
         if (ou.indexOf(',') !== -1) {
             var arrOu = ou.split(',');
@@ -1766,7 +1762,7 @@ $(document).ready(function () {
 
         $('.cnt_irun').on('click', function () {
             for (var i = 0; i < sortedYears.length; i++) {
-                timeline_structure(id_ou, nameOu, sortedYears[i], i);
+                timeline_structure(id_ou, nameOu, arrYear[i], i)
             }
         });
     }
