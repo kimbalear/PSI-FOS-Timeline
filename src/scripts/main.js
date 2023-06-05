@@ -1235,8 +1235,10 @@ $(document).ready(function () {
         var arrYear = year.split("/");
 
         if (arrYear.length == 1) {
-            timeline_structure(id_ou, nameOu, year, '0')
+            //SOLO
+            timeline_structure(id_ou, nameOu, year, '0');
         } else {
+            //VARIOS
             let prefix = arrYear[0].slice(0, 2);
             for (var i = 0; i < arrYear.length; i++) {
                 if (i !== 0) {
@@ -1244,15 +1246,48 @@ $(document).ready(function () {
                 }
             }
 
-            var sortedYears = arrYear.slice().sort(function (a, b) {
-                return b - a;
-            });
+            var mySwitch = document.getElementById("mySwitch");
+            var sortedYears;
+
+            if (mySwitch.checked) {
+                // Ordenar de forma descendente (b - a)
+                sortedYears = arrYear.slice().sort(function (a, b) {
+                    return b - a;
+                });
+            } else {
+                // Ordenar de forma ascendente (a - b)
+                sortedYears = arrYear.slice().sort(function (a, b) {
+                    return a - b;
+                });
+            }
 
             for (var i = 0; i < sortedYears.length; i++) {
-                timeline_structure(id_ou, nameOu, sortedYears[i], i)
+                timeline_structure(id_ou, nameOu, sortedYears[i], i);
             }
         }
     }
+
+
+
+    const mySwitch = document.getElementById("mySwitch");
+    mySwitch.addEventListener("change", function () {
+        const array = [4, 2, 6, 1, 3, 5];
+
+        if (this.checked) {
+            // Ordenar de forma descendente (b - a)
+            array.sort(function (a, b) {
+                return b - a;
+            });
+        } else {
+            // Ordenar de forma ascendente (a - b)
+            array.sort(function (a, b) {
+                return a - b;
+            });
+        }
+
+        console.log(array);
+    });
+
 
     function timeline(ou, year) {
         $('.ounit').remove()
@@ -1727,6 +1762,12 @@ $(document).ready(function () {
         $('.cnt_ipanel').on('click', function () {
             $('#search-menu').toggleClass('open');
             $('#panel_sh').toggleClass('open');
+        });
+
+        $('.cnt_irun').on('click', function () {
+            for (var i = 0; i < sortedYears.length; i++) {
+                timeline_structure(id_ou, nameOu, sortedYears[i], i);
+            }
         });
     }
 })
