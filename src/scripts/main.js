@@ -1254,6 +1254,10 @@ $(document).ready(function () {
                 }
             }
             sortyears(arrYear)
+
+            for (var i = 0; i < sortedYears.length; i++) {
+                timeline_structure(id_ou, nameOu, sortedYears[i], i)
+            }
         }
     }
 
@@ -1270,16 +1274,12 @@ $(document).ready(function () {
         }
 
         console.log("sortedYears: " + sortedYears);
-
-        for (var i = 0; i < sortedYears.length; i++) {
-            timeline_structure(id_ou, nameOu, sortedYears[i], i);
-        }
     }
 
     const mySwitch = document.getElementById("mySwitch");
     mySwitch.addEventListener("change", function () {
 
-        $('.ounit').remove()
+        //$('.ounit').remove()
         //sortyears(arrYear)
     });
 
