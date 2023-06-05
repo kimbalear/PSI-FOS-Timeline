@@ -1752,18 +1752,16 @@ $(document).ready(function () {
         $(function () {
             $('[data-toggle="tooltip"]').tooltip({ delay: { "show": 500, "hide": 100 } })
         })
-    } else {
-        // ---
-
-        $('.cnt_ipanel').on('click', function () {
-            $('#search-menu').toggleClass('open');
-            $('#panel_sh').toggleClass('open');
-        });
-
-        $('.cnt_irun').on('click', function () {
-            for (var i = 0; i < sortedYears.length; i++) {
-                timeline_structure(id_ou, nameOu, arrYear[i], i)
-            }
-        });
     }
+
+    $('.cnt_ipanel').on('click', function () {
+        $('#search-menu').toggleClass('open');
+        $('#panel_sh').toggleClass('open');
+    });
+
+    $('.cnt_irun').on('click', function () {
+        for (var i = 0; i < sortedYears.length; i++) {
+            timeline_structure(id_ou, nameOu, arrYear[i], i)
+        }
+    });
 })
