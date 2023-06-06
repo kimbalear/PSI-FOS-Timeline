@@ -412,7 +412,7 @@ $(document).ready(function () {
         })
     };
 
-    readJson()
+    
 
     function selector(field, typ) { // seleccion de Selectores
         let array = field.val()
@@ -481,6 +481,7 @@ $(document).ready(function () {
         }
         years = firstYear + lastTwo;
         $("#top_yrs").text(years)
+        console.log("typ: //////////////// " + typ)
         setTimeline(years, typ)
     };
 
@@ -593,6 +594,7 @@ $(document).ready(function () {
             if (typeof qry3 === 'string' && qry3 != "") {
                 allCheckboxes.prop('disabled', false)
                 timeline(qry1, qry3)
+                console.log(qry1 + "-----" + qry3)
                 $('.irun').removeClass('disabled');
                 $('.ipdf').removeClass('disabled');
             } else {
@@ -1760,8 +1762,6 @@ $(document).ready(function () {
     });
 
     $('.cnt_irun').on('click', function () {
-        for (var i = 0; i < sortedYears.length; i++) {
-            timeline_structure(id_ou, nameOu, arrYear[i], i)
-        }
+        timeline(qry1, qry3)
     });
 })
