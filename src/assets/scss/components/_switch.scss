@@ -5,6 +5,7 @@ $background-color_3: #2196F3;
 .switch {
 	position: relative;
 	display: inline-block;
+	margin-top: 12px;
 	width: 48px;
 	height: 24px;
 	input {
@@ -51,6 +52,9 @@ input {
 }
 .label {
 	display: inline-block;
-	margin-right: 10px;
+	margin:  0 10px 16px;
 	vertical-align: middle;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 24px;
 }
