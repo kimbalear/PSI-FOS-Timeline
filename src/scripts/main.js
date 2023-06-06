@@ -412,7 +412,7 @@ $(document).ready(function () {
         })
     };
 
-    
+    readJson()
 
     function selector(field, typ) { // seleccion de Selectores
         let array = field.val()
@@ -481,7 +481,6 @@ $(document).ready(function () {
         }
         years = firstYear + lastTwo;
         $("#top_yrs").text(years)
-        console.log("typ: //////////////// " + typ)
         setTimeline(years, typ)
     };
 
@@ -593,8 +592,6 @@ $(document).ready(function () {
 
             if (typeof qry3 === 'string' && qry3 != "") {
                 allCheckboxes.prop('disabled', false)
-                timeline(qry1, qry3)
-                console.log(qry1 + "-----" + qry3)
                 $('.irun').removeClass('disabled');
                 $('.ipdf').removeClass('disabled');
             } else {
@@ -1754,14 +1751,16 @@ $(document).ready(function () {
         $(function () {
             $('[data-toggle="tooltip"]').tooltip({ delay: { "show": 500, "hide": 100 } })
         })
+    } else {
+        // ---
+
+        $('.cnt_ipanel').on('click', function () {
+            $('#search-menu').toggleClass('open');
+            $('#panel_sh').toggleClass('open');
+        });
+
+        $('.cnt_irun').on('click', function () {
+            timeline(qry1, qry3)
+        });
     }
-
-    $('.cnt_ipanel').on('click', function () {
-        $('#search-menu').toggleClass('open');
-        $('#panel_sh').toggleClass('open');
-    });
-
-    $('.cnt_irun').on('click', function () {
-        timeline(qry1, qry3)
-    });
 })
