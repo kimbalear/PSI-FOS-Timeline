@@ -1468,7 +1468,6 @@ $(document).ready(function () {
         var imgs = ["1.jpg", "2.jpg", "3.jpg"]
         var url = "https://knowtechture.com/timeline/src/assets/imgs/"
 
-        $('<div class="dl1">').appendTo('.dlg_cnt')
         $('<div class="dl1_title">').appendTo('.dl1')
         $('<div class="dl1_end_d">').appendTo('.dl1')
         $('<div class="dl1_cont">').appendTo('.dl1')
