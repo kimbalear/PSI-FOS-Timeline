@@ -1468,6 +1468,17 @@ $(document).ready(function () {
         var imgs = ["1.jpg", "2.jpg", "3.jpg"]
         var url = "https://knowtechture.com/timeline/src/assets/imgs/"
 
+        ////////////////////////////////////////////////////////
+        $('<div class="cnt_header">').appendTo('.dlg_cnt')
+        $('<div class="cnt_sections">').appendTo('.dlg_cnt')
+        $('<div class="sections">').appendTo('.cnt_sections')
+
+        $('<div class="dl1">').appendTo('.cnt_header')
+        $('<div class="dl2">').appendTo('.sections')
+
+        // ....
+        ////////////////////////////////////////////////////////
+
         $('<div class="dl1_title">').appendTo('.dl1')
         $('<div class="dl1_end_d">').appendTo('.dl1')
         $('<div class="dl1_cont">').appendTo('.dl1')
@@ -1475,12 +1486,10 @@ $(document).ready(function () {
         $('.dl1_title').html("Advocacy Tracker")
         $('.dl1_end_d').html("##/##/####")
         $('.dl1_cont').html("<label>Advocacy Stage</label><br>[ Advocacy Stage ]")
-
-        $('<div class="dl2">').appendTo('.dlg_cnt')
-        $('<div class="bxtext">').appendTo('.dl2')
-        /*
-        $('.bxtext').html(ChildCont + "<div class='lbl'>Lorem ipsum dolor sit amet</div><div class='content'>Consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel.</div><div class='lbl'>Curabitur eget euismod nisl</div><div class='content'>Et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum. Ut quis ornare orci, finibus convallis enim. Nullam elementum metus non lacinia convallis. Duis blandit orci non neque semper egestas. Phasellus et turpis sed nulla vulputate gravida. In vehicula sem diam, ut mattis risus lacinia sed.</div>")
-
+        //$('.cnt_sections').html("cnt_sections Tracker")
+        
+        $('.dl2').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel blandit libero, non suscipit ligula. Maecenas molestie finibus scelerisque. Curabitur luctus vel orci sed pulvinar. Suspendisse potenti. Donec orci velit, mollis eget arcu a, feugiat aliquam nunc. Morbi a consectetur ligula. Nunc mattis, metus sed dictum venenatis, quam felis placerat odio, at vulputate mauris eros sed mi. Aenean ut augue vestibulum, sollicitudin arcu tincidunt, ultrices sem. Suspendisse quis lobortis felis. Etiam tincidunt congue viverra. Pellentesque sapien nisl, condimentum sit amet diam at, finibus consectetur sapien. Quisque pretium suscipit felis et laoreet. Quisque tincidunt lectus leo, et aliquam arcu pretium vel. Cras finibus tincidunt tincidunt. Praesent eu luctus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;Duis elit nisi, commodo et ornare eget, ultricies et turpis. Curabitur ullamcorper lacinia urna at mollis. Duis accumsan, mauris vitae posuere pulvinar, tortor ligula facilisis ex, at ultricies justo neque in dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan ante vitae neque imperdiet, a maximus nulla cursus. Nam facilisis scelerisque purus, vitae ornare neque placerat non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin vel ante eget arcu pulvinar vehicula at at nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus.Aenean mattis ultricies imperdiet. Nulla rhoncus, est sit amet commodo ullamcorper, augue arcu laoreet dolor, tristique dictum velit orci in dui. Nulla ut libero ut tellus porta convallis ut ultrices odio. Ut non volutpat risus, et consectetur justo. Aliquam consequat ut erat vitae tincidunt. Donec fringilla posuere quam, sed aliquet quam rutrum quis. Aenean euismod nulla non sem pharetra, sit amet luctus tortor pulvinar. Quisque consectetur lectus vitae hendrerit euismod. Sed non lobortis eros. Sed accumsan eget justo eu varius. Curabitur consequat, orci eget interdum luctus, turpis purus dictum ipsum, at egestas magna dui sit amet eros. Suspendisse quis sollicitudin sem.Phasellus mi turpis, posuere eget justo quis, maximus laoreet lectus. Praesent tempor urna orci, in auctor nunc porttitor id. Vivamus imperdiet odio non ultricies auctor.")
+/*
         $('<div class="dl31">').appendTo('.dlg_cnt')
         $('<div class="l31title">').appendTo('.dl31')
         $('.l31title').html("Documents => Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
@@ -1558,13 +1567,11 @@ $(document).ready(function () {
         //   <div class="cnt_sections"></div>
         // </div>
         /////////////////////////////
-        $('<div id="mlsoplo" class="cnt_header">').appendTo('.dlg_cnt')
-        $('<div class="cnt_sections>').appendTo('.dlg_cnt')
+        
 
-        $('<div class="dl1">').appendTo('.cnt_header')
-        $('<div class="sections>').appendTo('.cnt_sections')
+        //$('<div class="sections>').appendTo('.cnt_sections')
 
-        $('<div class="dl2>').appendTo('.sections')
+        //$('<div class="dl2>').appendTo('.sections')
 
         /*
 
@@ -1579,7 +1586,7 @@ $(document).ready(function () {
         contentCard(ChildCont)
         
     })
-
+/*
     $(document).on('click', '.card_lgnd2', function () {
         var ChildTitle = $(this).find(".title").text();
         var ChildSubTitle = $(this).find(".subtitle").text();
@@ -1762,7 +1769,7 @@ $(document).ready(function () {
         $('.dlg_bar').children().html(ChildTitle)
         $('.dlg_tx').html(ChildCont)
     })
-
+*/
     $(document).on('click', '.btn-sys-edit', function () { })
 
     if ($(".ipdf").hasClass(".disabled")) {

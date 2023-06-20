@@ -17409,8 +17409,8 @@ label.checkbox.lgnd7 span {
   align-items: center;
 }
 .scrim .dlg {
-  width: 55%;
-  max-width: 700px;
+  max-width: 60vw;
+  max-height: 60vh;
   padding-bottom: 16px;
   margin: 0 auto;
   display: grid;
@@ -17423,6 +17423,7 @@ label.checkbox.lgnd7 span {
   border: 2px solid;
   border-radius: 12px;
   box-sizing: border-box;
+  overflow-y: hidden;
   grid-template-areas: "dlg_bar dlg_cta" "dlg_cnt dlg_cnt";
 }
 .scrim .dlg .dlg_bar {
@@ -17463,12 +17464,15 @@ label.checkbox.lgnd7 span {
   grid-area: cnt_sections;
   overflow-y: auto;
   overflow-x: hidden;
+  height: 99%;
+  background-color: greenyellow;
 }
 .scrim .dlg .dlg_cnt .cnt_sections .sections {
   margin: 0 16px;
   width: 100%;
   background-color: red;
   height: auto;
+  padding: 20px 0;
 }
 .scrim .dlg_cnt {
   grid-area: dlg_cnt;
