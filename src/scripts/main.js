@@ -1478,6 +1478,7 @@ $(document).ready(function () {
 
         $('<div class="dl2">').appendTo('.dlg_cnt')
         $('<div class="bxtext">').appendTo('.dl2')
+        /*
         $('.bxtext').html(ChildCont + "<div class='lbl'>Lorem ipsum dolor sit amet</div><div class='content'>Consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel.</div><div class='lbl'>Curabitur eget euismod nisl</div><div class='content'>Et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum. Ut quis ornare orci, finibus convallis enim. Nullam elementum metus non lacinia convallis. Duis blandit orci non neque semper egestas. Phasellus et turpis sed nulla vulputate gravida. In vehicula sem diam, ut mattis risus lacinia sed.</div>")
 
         $('<div class="dl31">').appendTo('.dlg_cnt')
@@ -1532,6 +1533,7 @@ $(document).ready(function () {
         $(".i1").html("<img src='" + url + imgs[0] + "' style='width:100%; height:auto;'>");
         $(".i2").html("<img src='" + url + imgs[1] + "' style='width:100%; height:auto;'>");
         $(".i3").html("<img src='" + url + imgs[2] + "' style='width:100%; height:auto;'>");
+        */
 
     }
 
@@ -1549,8 +1551,23 @@ $(document).ready(function () {
         $('<div class="btn-sys-close">').appendTo('.dlg_cta')
 
         $('<div class="dlg_cnt">').appendTo('.dlg')
-        $('<div class="dl1">').appendTo('.dlg_cnt')
-        $('<div class="dl2>').appendTo('.dlg_cnt')
+
+        /////////////////////////////
+        // <div class="dlg_cnt">
+        //   <div class="cnt_header"></div>
+        //   <div class="cnt_sections"></div>
+        // </div>
+        /////////////////////////////
+        $('<div id="mlsoplo" class="cnt_header">').appendTo('.dlg_cnt')
+        $('<div class="cnt_sections>').appendTo('.dlg_cnt')
+
+        $('<div class="dl1">').appendTo('.cnt_header')
+        $('<div class="sections>').appendTo('.cnt_sections')
+
+        $('<div class="dl2>').appendTo('.sections')
+
+        /*
+
         $('<div class="dl31">').appendTo('.dlg_cnt')
         $('<div class="dl32">').appendTo('.dlg_cnt')
 
@@ -1558,8 +1575,9 @@ $(document).ready(function () {
 
         $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
 
-        $('<div class="dlg_cnt">').appendTo('.dlg1')
+        $('<div class="dlg_cnt">').appendTo('.dlg1')*/
         contentCard(ChildCont)
+        
     })
 
     $(document).on('click', '.card_lgnd2', function () {
@@ -1576,6 +1594,7 @@ $(document).ready(function () {
         $('<div class="btn-sys-close">').appendTo('.dlg_cta')
 
         $('<div class="dlg_cnt">').appendTo('.dlg')
+
         $('<div class="dl1">').appendTo('.dlg_cnt')
         $('<div class="dl2>').appendTo('.dlg_cnt')
         $('<div class="dl31">').appendTo('.dlg_cnt')
