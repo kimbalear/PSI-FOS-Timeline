@@ -17447,9 +17447,8 @@ label.checkbox.lgnd7 span {
 .scrim .dlg .dlg_cnt {
   grid-area: dlg_cnt;
   background-color: blue;
-  width: 100%;
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
   grid-auto-columns: 1fr;
   gap: 0px 0px;
@@ -17464,15 +17463,18 @@ label.checkbox.lgnd7 span {
   grid-area: cnt_sections;
   overflow-y: auto;
   overflow-x: hidden;
-  height: 99%;
-  background-color: greenyellow;
+  height: max-content;
 }
 .scrim .dlg .dlg_cnt .cnt_sections .sections {
   margin: 0 16px;
   width: 100%;
-  background-color: red;
   height: auto;
   padding: 20px 0;
+}
+.scrim .dlg .dlg_cnt .cnt_sections .sections .dl2 {
+  background-color: greenyellow;
+  width: 100%;
+  height: auto;
 }
 .scrim .dlg_cnt {
   grid-area: dlg_cnt;
