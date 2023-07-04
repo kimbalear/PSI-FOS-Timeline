@@ -1,0 +1,76 @@
+.d_lgnd1 {
+    border-color: $clrbk_lgnd1_p!important;
+}
+.lgn1_g,.lgn1_g {
+    color:  $clr2!important;
+    background-color: $clrbk_lgnd1_p!important;
+}
+.lgn1_g,.lgn1_g {
+    color:  $clr2!important;
+    background-color: $clrbk_lgnd1_p!important;
+}
+
+$(document).on('click', '.card_lgnd1', function () {
+    var dlgtype = 'd_lgnd1' //border
+    var dlgNeed = $(this).find(".subtitle").text()
+    var dlgTitle = $(this).find(".title").text()
+    var dlgtypetoobtns = 'd_lgnd1ToogleBtns'
+    contentCard(dlgtype, dlgNeed, dlgTitle, dlgtypetoobtns)
+})
+
+function contentCard(dlgtype, dlgNeed, dlgTitle, dlgtypetoobtns, imgs) {
+    console.log('dlgtype: ' + dlgtype)
+    console.log('dlgNeed: ' + dlgNeed)
+    console.log('dlgTitle: ' + dlgTitle)
+    console.log('dlgtypetoobtns: ' + dlgtypetoobtns)
+    console.log('imgs: ' + imgs)
+    var imgs = ["1.jpg", "2.jpg", "3.jpg"]
+    var url = "https://knowtechture.com/timeline/src/assets/imgs/"
+    $('<div class="scrim">').appendTo('body')
+
+    $('<div class="dlg ' + dlgtype + '">').appendTo('.scrim')
+    $('<div class="dlg_bar lgn1_g">').appendTo('.dlg')
+    $('<div class="lbl">').appendTo('.dlg_bar')
+    $('<div class="dlg_cta lgn1_g">').appendTo('.dlg')
+    $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
+    $('<div class="btn-sys-close">').appendTo('.dlg_cta')
+    $('<div class="dlg_cnt">').appendTo('.dlg')
+
+    ////////////////////////////////////////////////////////
+    $('<div class="cnt_header">').appendTo('.dlg_cnt')
+    $('<div class="cnt_sections">').appendTo('.dlg_cnt')
+    $('<div class="sections">').appendTo('.cnt_sections')
+
+    //ACA $('<div class="dl1">').appendTo('.cnt_header')
+    $('<div class="wrapper-dlg">').appendTo('.cnt_header')
+    $('<div class="header-dlg">').appendTo('.wrapper-dlg')
+    $('<div class="top-l-dlg">').appendTo('.header-dlg')
+    $('<div class="top-c-dlg">').appendTo('.header-dlg')
+    $('<div class="top-r-dlg">').appendTo('.header-dlg')
+
+    $('<div class="toggle-btn-dlg" id="button1">').appendTo('.top-r-dlg')
+    $('<div class="icon" id="icon1">').appendTo('#button1')
+    $('<span class="label" id="label1">').appendTo('#button1')
+
+    $('<div class="toggle-btn-dlg" id="button2">').appendTo('.top-r-dlg')
+    $('<div class="icon" id="icon2">').appendTo('#button2')
+    $('<span class="label" id="label2">').appendTo('#button2')
+
+    $('<div class="cnt-dlg">').appendTo('.header-dlg')
+
+    $('.top-l-dlg').html("<label>Advocacy Tracker</label>")
+    $('.top-c-dlg').html("##/##/####")
+    $('.cnt-dlg').html("[ Advocacy Stage ]")
+    $('#label1').html("Etiqueta 1")
+    $('#label2').html("Etiqueta 2")
+
+
+
+    $('<div class="dl2">').appendTo('.sections')
+
+    ////////////////////////////////////////////////////////
+
+    $('<div class="dl1_title">').appendTo('.dl1')
+    $('<div class="dl1_end_d">').appendTo('.dl1')
+    $('<div class="dl1_cont">').appendTo('.dl1')
+}

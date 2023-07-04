@@ -610,13 +610,14 @@ $(document).ready(function () {
     }
 
     function timeline_structure(id_ou, nameOu, year, tLtype) {
-
-        console.log("-------------------------------------");
-        console.log("id_ou: " + id_ou);
-        console.log("nameOu: " + nameOu);
-        console.log("year: " + year);
-        console.log("tLtype: " + tLtype);
-        console.log("-------------------------------------");
+        /*
+                console.log("-------------------------------------");
+                console.log("id_ou: " + id_ou);
+                console.log("nameOu: " + nameOu);
+                console.log("year: " + year);
+                console.log("tLtype: " + tLtype);
+                console.log("-------------------------------------");
+                */
         //var lblYr = '<div id="' + id_ou + tLtype + 'lbl" class="lbl"></div>'
         var timeline = '<div id="' + id_ou + tLtype + 'tl" class="timeline"></div>'
         var tpyr = '<div id="' + id_ou + tLtype + 'tpyr" class="tp_yr"></div>'
@@ -1271,8 +1272,6 @@ $(document).ready(function () {
                 return a - b;
             });
         }
-
-        console.log("sortedYears: " + sortedYears);
     }
 
     const mySwitch = document.getElementById("mySwitch");
@@ -1285,7 +1284,6 @@ $(document).ready(function () {
 
     function timeline(ou, year) {
         $('.ounit').remove()
-        console.log("REMOVE")
 
         if (ou.indexOf(',') !== -1) {
             var arrOu = ou.split(',');
@@ -1464,312 +1462,337 @@ $(document).ready(function () {
         }
     })
 
-    function contentCard(ChildCont, imgs) {
+    /*
+    <div class="toggle-btn-dlg" id="button1">
+        <i class="icon" id="icon1"></i>
+        <span class="label" id="label1">Etiqueta 1</span>
+    </div>
+    <div class="toggle-btn-dlg" id="button2">
+        <i class="icon" id="icon2"></i>
+        <span class="label" id="label2">Etiqueta 2</span>
+    </div>
+    */
+
+    function contentCard(dlgtype, dlgNeed, dlgTitle, groupStyle, imgs) {
+        console.log('dlgtype: ' + dlgtype)
+        console.log('dlgNeed: ' + dlgNeed)
+        console.log('dlgTitle: ' + dlgTitle)
+        console.log('groupStyle: ' + groupStyle)
+        console.log('imgs: ' + imgs)
         var imgs = ["1.jpg", "2.jpg", "3.jpg"]
         var url = "https://knowtechture.com/timeline/src/assets/imgs/"
+        $('<div class="scrim">').appendTo('body')
+
+        $('<div class="dlg ' + dlgtype + '">').appendTo('.scrim')
+        $('<div class="dlg_bar '+ groupStyle + '">').appendTo('.dlg')
+        $('<div class="lbl">').appendTo('.dlg_bar')
+        $('<div class="dlg_cta '+ groupStyle + '">').appendTo('.dlg')
+        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
+        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
+        $('<div class="dlg_cnt">').appendTo('.dlg')
 
         ////////////////////////////////////////////////////////
         $('<div class="cnt_header">').appendTo('.dlg_cnt')
         $('<div class="cnt_sections">').appendTo('.dlg_cnt')
         $('<div class="sections">').appendTo('.cnt_sections')
 
-        $('<div class="dl1">').appendTo('.cnt_header')
+        //ACA $('<div class="dl1">').appendTo('.cnt_header')
+        $('<div class="wrapper-dlg">').appendTo('.cnt_header')
+        $('<div class="header-dlg">').appendTo('.wrapper-dlg')
+        $('<div class="top-l-dlg">').appendTo('.header-dlg')
+        $('<div class="top-c-dlg">').appendTo('.header-dlg')
+        $('<div class="top-r-dlg">').appendTo('.header-dlg')
+
+        $('<div class="toggle-btn-dlg '+ groupStyle + '" id="button1">').appendTo('.top-r-dlg')
+        $('<div class="icon" id="icon1">').appendTo('#button1')
+        $('<span class="label" id="label1">').appendTo('#button1')
+
+        $('<div class="toggle-btn-dlg '+ groupStyle + '" id="button2">').appendTo('.top-r-dlg')
+        $('<div class="icon" id="icon2">').appendTo('#button2')
+        $('<span class="label" id="label2">').appendTo('#button2')
+
+        $('<div class="cnt-dlg">').appendTo('.header-dlg')
+
+        $('.top-l-dlg').html("<label>Advocacy Tracker</label>")
+        $('.top-c-dlg').html("##/##/####")
+        $('.cnt-dlg').html("[ Advocacy Stage ]")
+        $('#label1').html("Documents")
+        $('#label2').html("Images")
+
+
+
         $('<div class="dl2">').appendTo('.sections')
 
-        // ....
         ////////////////////////////////////////////////////////
 
         $('<div class="dl1_title">').appendTo('.dl1')
         $('<div class="dl1_end_d">').appendTo('.dl1')
         $('<div class="dl1_cont">').appendTo('.dl1')
 
-        $('.dl1_title').html("Advocacy Tracker")
-        $('.dl1_end_d').html("##/##/####")
-        $('.dl1_cont').html("<label>Advocacy Stage</label><br>[ Advocacy Stage ]")
+
         //$('.cnt_sections').html("cnt_sections Tracker")
-        
+
         $('.dl2').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel blandit libero, non suscipit ligula. Maecenas molestie finibus scelerisque. Curabitur luctus vel orci sed pulvinar. Suspendisse potenti. Donec orci velit, mollis eget arcu a, feugiat aliquam nunc. Morbi a consectetur ligula. Nunc mattis, metus sed dictum venenatis, quam felis placerat odio, at vulputate mauris eros sed mi. Aenean ut augue vestibulum, sollicitudin arcu tincidunt, ultrices sem. Suspendisse quis lobortis felis. Etiam tincidunt congue viverra. Pellentesque sapien nisl, condimentum sit amet diam at, finibus consectetur sapien. Quisque pretium suscipit felis et laoreet. Quisque tincidunt lectus leo, et aliquam arcu pretium vel. Cras finibus tincidunt tincidunt. Praesent eu luctus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;Duis elit nisi, commodo et ornare eget, ultricies et turpis. Curabitur ullamcorper lacinia urna at mollis. Duis accumsan, mauris vitae posuere pulvinar, tortor ligula facilisis ex, at ultricies justo neque in dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan ante vitae neque imperdiet, a maximus nulla cursus. Nam facilisis scelerisque purus, vitae ornare neque placerat non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin vel ante eget arcu pulvinar vehicula at at nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus.Aenean mattis ultricies imperdiet. Nulla rhoncus, est sit amet commodo ullamcorper, augue arcu laoreet dolor, tristique dictum velit orci in dui. Nulla ut libero ut tellus porta convallis ut ultrices odio. Ut non volutpat risus, et consectetur justo. Aliquam consequat ut erat vitae tincidunt. Donec fringilla posuere quam, sed aliquet quam rutrum quis. Aenean euismod nulla non sem pharetra, sit amet luctus tortor pulvinar. Quisque consectetur lectus vitae hendrerit euismod. Sed non lobortis eros. Sed accumsan eget justo eu varius. Curabitur consequat, orci eget interdum luctus, turpis purus dictum ipsum, at egestas magna dui sit amet eros. Suspendisse quis sollicitudin sem.Phasellus mi turpis, posuere eget justo quis, maximus laoreet lectus. Praesent tempor urna orci, in auctor nunc porttitor id. Vivamus imperdiet odio non ultricies auctor.")
-/*
-        $('<div class="dl31">').appendTo('.dlg_cnt')
-        $('<div class="l31title">').appendTo('.dl31')
-        $('.l31title').html("Documents => Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
-
-        $('<div class="dl32">').appendTo('.dlg_cnt')
-
-        $('<div id="file1" class="dl32files">').appendTo('.dl32')
-        $('<div id="f_icon1" class="f_icon">').appendTo('#file1')
-        $('<div class="doc_file">').appendTo('#f_icon1')
-        $('<div id="f_name1" class="f_name">').appendTo('#file1')
-        $('#f_name1').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
-
-        $('<div id="file2" class="dl32files">').appendTo('.dl32')
-        $('<div id="f_icon2" class="f_icon">').appendTo('#file2')
-        $('<div class="pdf_file">').appendTo('#f_icon2')
-        $('<div id="f_name2" class="f_name">').appendTo('#file2')
-        $('#f_name2').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
-
-        $('<div id="file3" class="dl32files">').appendTo('.dl32')
-        $('<div id="f_icon3" class="f_icon">').appendTo('#file3')
-        $('<div class="xls_file">').appendTo('#f_icon3')
-        $('<div id="f_name3" class="f_name">').appendTo('#file3')
-        $('#f_name3').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
-
-        $('<div id="file4" class="dl32files">').appendTo('.dl32')
-        $('<div id="f_icon4" class="f_icon">').appendTo('#file4')
-        $('<div class="xls_file">').appendTo('#f_icon4')
-        $('<div id="f_name4" class="f_name">').appendTo('#file4')
-        $('#f_name4').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
-
-        $('<div id="file5" class="dl32files">').appendTo('.dl32')
-        $('<div id="f_icon5" class="f_icon">').appendTo('#file5')
-        $('<div class="xls_file">').appendTo('#f_icon5')
-        $('<div id="f_name5" class="f_name">').appendTo('#file5')
-        $('#f_name5').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
-
-
-
-
-        $('<div class="dl4">').appendTo('.dlg_cnt')
-
-        $('<div class="dl4title">').appendTo('.dl4')
-        $('<div class="dl4cont">').appendTo('.dl4')
-
-        $('<div class="i1">').appendTo('.dl4cont')
-        $('<div class="i2">').appendTo('.dl4cont')
-        $('<div class="i3">').appendTo('.dl4cont')
-
-        $('.dl4title').html("Images")
-        $(".i1").html("<img src='" + url + imgs[0] + "' style='width:100%; height:auto;'>");
-        $(".i2").html("<img src='" + url + imgs[1] + "' style='width:100%; height:auto;'>");
-        $(".i3").html("<img src='" + url + imgs[2] + "' style='width:100%; height:auto;'>");
-        */
+        /*
+                $('<div class="dl31">').appendTo('.dlg_cnt')
+                $('<div class="l31title">').appendTo('.dl31')
+                $('.l31title').html("Documents => Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
+        
+                $('<div class="dl32">').appendTo('.dlg_cnt')
+        
+                $('<div id="file1" class="dl32files">').appendTo('.dl32')
+                $('<div id="f_icon1" class="f_icon">').appendTo('#file1')
+                $('<div class="doc_file">').appendTo('#f_icon1')
+                $('<div id="f_name1" class="f_name">').appendTo('#file1')
+                $('#f_name1').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
+        
+                $('<div id="file2" class="dl32files">').appendTo('.dl32')
+                $('<div id="f_icon2" class="f_icon">').appendTo('#file2')
+                $('<div class="pdf_file">').appendTo('#f_icon2')
+                $('<div id="f_name2" class="f_name">').appendTo('#file2')
+                $('#f_name2').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
+        
+                $('<div id="file3" class="dl32files">').appendTo('.dl32')
+                $('<div id="f_icon3" class="f_icon">').appendTo('#file3')
+                $('<div class="xls_file">').appendTo('#f_icon3')
+                $('<div id="f_name3" class="f_name">').appendTo('#file3')
+                $('#f_name3').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
+        
+                $('<div id="file4" class="dl32files">').appendTo('.dl32')
+                $('<div id="f_icon4" class="f_icon">').appendTo('#file4')
+                $('<div class="xls_file">').appendTo('#f_icon4')
+                $('<div id="f_name4" class="f_name">').appendTo('#file4')
+                $('#f_name4').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
+        
+                $('<div id="file5" class="dl32files">').appendTo('.dl32')
+                $('<div id="f_icon5" class="f_icon">').appendTo('#file5')
+                $('<div class="xls_file">').appendTo('#f_icon5')
+                $('<div id="f_name5" class="f_name">').appendTo('#file5')
+                $('#f_name5').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
+        
+        
+        
+        
+                $('<div class="dl4">').appendTo('.dlg_cnt')
+        
+                $('<div class="dl4title">').appendTo('.dl4')
+                $('<div class="dl4cont">').appendTo('.dl4')
+        
+                $('<div class="i1">').appendTo('.dl4cont')
+                $('<div class="i2">').appendTo('.dl4cont')
+                $('<div class="i3">').appendTo('.dl4cont')
+        
+                $('.dl4title').html("Images")
+                $(".i1").html("<img src='" + url + imgs[0] + "' style='width:100%; height:auto;'>");
+                $(".i2").html("<img src='" + url + imgs[1] + "' style='width:100%; height:auto;'>");
+                $(".i3").html("<img src='" + url + imgs[2] + "' style='width:100%; height:auto;'>");
+                */
 
     }
 
     $(document).on('click', '.card_lgnd1', function () {
-        var ChildTitle = $(this).find(".title").text()
-        var ChildSubTitle = $(this).find(".subtitle").text()
-        var ChildCont = $(this).find(".cont").text()
-
-        $('<div class="scrim">').appendTo('body')
-        $('<div class="dlg d_lgnd1">').appendTo('.scrim')
-        $('<div class="dlg_bar tt_lgnd1">').appendTo('.dlg')
-        $('<div class="lbl">').appendTo('.dlg_bar')
-        $('<div class="dlg_cta i_lgnd1">').appendTo('.dlg')
-        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
-        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-
-        $('<div class="dlg_cnt">').appendTo('.dlg')
-
-        /////////////////////////////
-        // <div class="dlg_cnt">
-        //   <div class="cnt_header"></div>
-        //   <div class="cnt_sections"></div>
-        // </div>
-        /////////////////////////////
-        
-
-        //$('<div class="sections>').appendTo('.cnt_sections')
-
-        //$('<div class="dl2>').appendTo('.sections')
-
-        /*
-
-        $('<div class="dl31">').appendTo('.dlg_cnt')
-        $('<div class="dl32">').appendTo('.dlg_cnt')
-
-        $('<div class="dlg_tx">').appendTo('.dl2')
-
-        $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-
-        $('<div class="dlg_cnt">').appendTo('.dlg1')*/
-        contentCard(ChildCont)
-        
-    })
-/*
-    $(document).on('click', '.card_lgnd2', function () {
-        var ChildTitle = $(this).find(".title").text();
-        var ChildSubTitle = $(this).find(".subtitle").text();
-        var ChildCont = $(this).find(".cont").text();
-
-        $('<div class="scrim">').appendTo('body')
-        $('<div class="dlg d_lgnd2">').appendTo('.scrim')
-        $('<div class="dlg_bar tt_lgnd2">').appendTo('.dlg')
-        $('<div class="lbl">').appendTo('.dlg_bar')
-        $('<div class="dlg_cta i_lgnd2">').appendTo('.dlg')
-        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
-        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-
-        $('<div class="dlg_cnt">').appendTo('.dlg')
-
-        $('<div class="dl1">').appendTo('.dlg_cnt')
-        $('<div class="dl2>').appendTo('.dlg_cnt')
-        $('<div class="dl31">').appendTo('.dlg_cnt')
-        $('<div class="dl32">').appendTo('.dlg_cnt')
-
-        $('<div class="dlg_tx">').appendTo('.dl2')
-
-        $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-
-        contentCard(ChildCont)
+        var dlgtype = 'd_lgnd1' //border
+        var dlgNeed = $(this).find(".subtitle").text()
+        var dlgTitle = $(this).find(".title").text()
+        var groupStyle = 'lgn1_g'
+        contentCard(dlgtype, dlgNeed, dlgTitle, groupStyle)
     })
 
-    $(document).on('click', '.card_lgnd3', function () {
-        var ChildTitle = $(this).find(".title").text();
-        var ChildSubTitle = $(this).find(".subtitle").text();
-        var ChildCont = $(this).find(".cont").text();
-        $('<div class="scrim">').appendTo('body')
+    $(document).on('click', '.toggle-btn-dlg', function () {
 
-        $('<div class="dlg d_lgnd3">').appendTo('.scrim')
-        $('<div class="dlg_bar tt_lgnd3">').appendTo('.dlg')
-        $('<div class="lbl">').appendTo('.dlg_bar')
+        // Remove 'active' class from all buttons
+        $('.toggle-btn-dlg').removeClass('active');
+        $('.toggle-btn-dlg').css('width', '36px');
 
-        $('<div class="dlg_cta i_lgnd3">').appendTo('.dlg')
-        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
-        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-
-        $('<div class="dlg_cnt">').appendTo('.dlg')
-        $('<div class="dl1">').appendTo('.dlg_cnt')
-        $('<div class="dl2>').appendTo('.dlg_cnt')
-        $('<div class="dl31">').appendTo('.dlg_cnt')
-        $('<div class="dl32">').appendTo('.dlg_cnt')
-
-        $('<div class="dlg_tx">').appendTo('.dl2')
-
-        $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-
-        contentCard(ChildCont)
+        // Add 'active' class to the clicked button
+        $(this).addClass('active');
+        $(this).css('width', '120px');
     })
 
-    $(document).on('click', '.card_lgnd4', function () {
-        var ChildTitle = $(this).find(".title").text();
-        var ChildSubTitle = $(this).find(".subtitle").text();
-        var ChildCont = $(this).find(".cont").text();
-        $('<div class="scrim">').appendTo('body')
-
-        $('<div class="dlg d_lgnd4">').appendTo('.scrim')
-        $('<div class="dlg_bar tt_lgnd4">').appendTo('.dlg')
-        $('<div class="lbl">').appendTo('.dlg_bar')
-
-        $('<div class="dlg_cta i_lgnd4">').appendTo('.dlg')
-        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
-        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-
-        $('<div class="dlg_cnt">').appendTo('.dlg')
-        $('<div class="dl1">').appendTo('.dlg_cnt')
-        $('<div class="dl2>').appendTo('.dlg_cnt')
-        $('<div class="dl31">').appendTo('.dlg_cnt')
-        $('<div class="dl32">').appendTo('.dlg_cnt')
-
-        $('<div class="dlg_tx">').appendTo('.dl2')
-
-        $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-
-        contentCard(ChildCont)
-    })
-
-    $(document).on('click', '.card_lgnd5', function () {
-        var ChildTitle = $(this).find(".title").text();
-        var ChildSubTitle = $(this).find(".subtitle").text();
-        var ChildCont = $(this).find(".cont").text();
-        $('<div class="scrim">').appendTo('body')
-
-        $('<div class="dlg d_lgnd5">').appendTo('.scrim')
-        $('<div class="dlg_bar tt_lgnd5">').appendTo('.dlg')
-        $('<div class="lbl">').appendTo('.dlg_bar')
-
-        $('<div class="dlg_cta i_lgnd5">').appendTo('.dlg')
-        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
-        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-
-        $('<div class="dlg_cnt">').appendTo('.dlg')
-        $('<div class="dl1">').appendTo('.dlg_cnt')
-        $('<div class="dl2>').appendTo('.dlg_cnt')
-        $('<div class="dl31">').appendTo('.dlg_cnt')
-        $('<div class="dl32">').appendTo('.dlg_cnt')
-
-        $('<div class="dlg_tx">').appendTo('.dl2')
-
-        $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-
-        contentCard(ChildCont)
-    })
-
-    $(document).on('click', '.card_lgnd6', function () {
-        var ChildTitle = $(this).find(".title").text();
-        var ChildSubTitle = $(this).find(".subtitle").text();
-        var ChildCont = $(this).find(".cont").text();
-        $('<div class="scrim">').appendTo('body')
-
-        $('<div class="dlg d_lgnd6">').appendTo('.scrim')
-        $('<div class="dlg_bar tt_lgnd6">').appendTo('.dlg')
-        $('<div class="lbl">').appendTo('.dlg_bar')
-
-        $('<div class="dlg_cta i_lgnd6">').appendTo('.dlg')
-        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
-        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-
-        $('<div class="dlg_cnt">').appendTo('.dlg')
-        $('<div class="dl1">').appendTo('.dlg_cnt')
-        $('<div class="dl2>').appendTo('.dlg_cnt')
-        $('<div class="dl31">').appendTo('.dlg_cnt')
-        $('<div class="dl32">').appendTo('.dlg_cnt')
-
-        $('<div class="dlg_tx">').appendTo('.dl2')
-
-        $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-
-        contentCard(ChildCont)
-    })
-
-    $(document).on('click', '.card_lgnd7', function () {
-        var ChildTitle = $(this).find(".title").text();
-        var ChildSubTitle = $(this).find(".subtitle").text();
-        var ChildCont = $(this).find(".cont").text();
-        $('<div class="scrim">').appendTo('body')
-
-        $('<div class="dlg d_lgnd7">').appendTo('.scrim')
-        $('<div class="dlg_bar tt_lgnd7">').appendTo('.dlg')
-        $('<div class="lbl">').appendTo('.dlg_bar')
-
-        $('<div class="dlg_cta i_lgnd7">').appendTo('.dlg')
-        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
-        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-
-        $('<div class="dlg_cnt">').appendTo('.dlg')
-        $('<div class="dl1">').appendTo('.dlg_cnt')
-        $('<div class="dl2>').appendTo('.dlg_cnt')
-        $('<div class="dl31">').appendTo('.dlg_cnt')
-        $('<div class="dl32">').appendTo('.dlg_cnt')
-
-        $('<div class="dlg_tx">').appendTo('.dl2')
-
-        $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-
-        contentCard(ChildCont)
-    })
-
-    $(document).on('click', '.card_contr', function () {
-        var ChildTitle = $(this).find(".title").text();
-        var ChildCont = $(this).find(".cont").text();
-        $('<div class="scrim">').appendTo('body')
-
-        $('<div class="dlg_c d_lgnd0">').appendTo('.scrim')
-        $('<div class="dlg_bar tt_lgnd0">').appendTo('.dlg_c')
-        $('<div class="lbl">').appendTo('.dlg_bar')
-
-        $('<div class="dlg_cta i_lgnd0">').appendTo('.dlg_c')
-        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
-        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-
-        $('<div class="dlg_cnt">').appendTo('.dlg_c')
-
-        $('<div class="dlg_tx">').appendTo('.dlg_cnt')
-
-        $('.dlg_bar').children().html(ChildTitle)
-        $('.dlg_tx').html(ChildCont)
-    })
-*/
+    /*
+        $(document).on('click', '.card_lgnd2', function () {
+            var ChildTitle = $(this).find(".title").text();
+            var ChildSubTitle = $(this).find(".subtitle").text();
+            var ChildCont = $(this).find(".cont").text();
+    
+            $('<div class="scrim">').appendTo('body')
+            $('<div class="dlg d_lgnd2">').appendTo('.scrim')
+            $('<div class="dlg_bar tt_lgnd2">').appendTo('.dlg')
+            $('<div class="lbl">').appendTo('.dlg_bar')
+            $('<div class="dlg_cta i_lgnd2">').appendTo('.dlg')
+            $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
+            $('<div class="btn-sys-close">').appendTo('.dlg_cta')
+    
+            $('<div class="dlg_cnt">').appendTo('.dlg')
+    
+            $('<div class="dl1">').appendTo('.dlg_cnt')
+            $('<div class="dl2>').appendTo('.dlg_cnt')
+            $('<div class="dl31">').appendTo('.dlg_cnt')
+            $('<div class="dl32">').appendTo('.dlg_cnt')
+    
+            $('<div class="dlg_tx">').appendTo('.dl2')
+    
+            $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
+    
+            contentCard(ChildCont)
+        })
+    
+        $(document).on('click', '.card_lgnd3', function () {
+            var ChildTitle = $(this).find(".title").text();
+            var ChildSubTitle = $(this).find(".subtitle").text();
+            var ChildCont = $(this).find(".cont").text();
+            $('<div class="scrim">').appendTo('body')
+    
+            $('<div class="dlg d_lgnd3">').appendTo('.scrim')
+            $('<div class="dlg_bar tt_lgnd3">').appendTo('.dlg')
+            $('<div class="lbl">').appendTo('.dlg_bar')
+    
+            $('<div class="dlg_cta i_lgnd3">').appendTo('.dlg')
+            $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
+            $('<div class="btn-sys-close">').appendTo('.dlg_cta')
+    
+            $('<div class="dlg_cnt">').appendTo('.dlg')
+            $('<div class="dl1">').appendTo('.dlg_cnt')
+            $('<div class="dl2>').appendTo('.dlg_cnt')
+            $('<div class="dl31">').appendTo('.dlg_cnt')
+            $('<div class="dl32">').appendTo('.dlg_cnt')
+    
+            $('<div class="dlg_tx">').appendTo('.dl2')
+    
+            $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
+    
+            contentCard(ChildCont)
+        })
+    
+        $(document).on('click', '.card_lgnd4', function () {
+            var ChildTitle = $(this).find(".title").text();
+            var ChildSubTitle = $(this).find(".subtitle").text();
+            var ChildCont = $(this).find(".cont").text();
+            $('<div class="scrim">').appendTo('body')
+    
+            $('<div class="dlg d_lgnd4">').appendTo('.scrim')
+            $('<div class="dlg_bar tt_lgnd4">').appendTo('.dlg')
+            $('<div class="lbl">').appendTo('.dlg_bar')
+    
+            $('<div class="dlg_cta i_lgnd4">').appendTo('.dlg')
+            $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
+            $('<div class="btn-sys-close">').appendTo('.dlg_cta')
+    
+            $('<div class="dlg_cnt">').appendTo('.dlg')
+            $('<div class="dl1">').appendTo('.dlg_cnt')
+            $('<div class="dl2>').appendTo('.dlg_cnt')
+            $('<div class="dl31">').appendTo('.dlg_cnt')
+            $('<div class="dl32">').appendTo('.dlg_cnt')
+    
+            $('<div class="dlg_tx">').appendTo('.dl2')
+    
+            $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
+    
+            contentCard(ChildCont)
+        })
+    
+        $(document).on('click', '.card_lgnd5', function () {
+            var ChildTitle = $(this).find(".title").text();
+            var ChildSubTitle = $(this).find(".subtitle").text();
+            var ChildCont = $(this).find(".cont").text();
+            $('<div class="scrim">').appendTo('body')
+    
+            $('<div class="dlg d_lgnd5">').appendTo('.scrim')
+            $('<div class="dlg_bar tt_lgnd5">').appendTo('.dlg')
+            $('<div class="lbl">').appendTo('.dlg_bar')
+    
+            $('<div class="dlg_cta i_lgnd5">').appendTo('.dlg')
+            $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
+            $('<div class="btn-sys-close">').appendTo('.dlg_cta')
+    
+            $('<div class="dlg_cnt">').appendTo('.dlg')
+            $('<div class="dl1">').appendTo('.dlg_cnt')
+            $('<div class="dl2>').appendTo('.dlg_cnt')
+            $('<div class="dl31">').appendTo('.dlg_cnt')
+            $('<div class="dl32">').appendTo('.dlg_cnt')
+    
+            $('<div class="dlg_tx">').appendTo('.dl2')
+    
+            $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
+    
+            contentCard(ChildCont)
+        })
+    
+        $(document).on('click', '.card_lgnd6', function () {
+            var ChildTitle = $(this).find(".title").text();
+            var ChildSubTitle = $(this).find(".subtitle").text();
+            var ChildCont = $(this).find(".cont").text();
+            $('<div class="scrim">').appendTo('body')
+    
+            $('<div class="dlg d_lgnd6">').appendTo('.scrim')
+            $('<div class="dlg_bar tt_lgnd6">').appendTo('.dlg')
+            $('<div class="lbl">').appendTo('.dlg_bar')
+    
+            $('<div class="dlg_cta i_lgnd6">').appendTo('.dlg')
+            $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
+            $('<div class="btn-sys-close">').appendTo('.dlg_cta')
+    
+            $('<div class="dlg_cnt">').appendTo('.dlg')
+            $('<div class="dl1">').appendTo('.dlg_cnt')
+            $('<div class="dl2>').appendTo('.dlg_cnt')
+            $('<div class="dl31">').appendTo('.dlg_cnt')
+            $('<div class="dl32">').appendTo('.dlg_cnt')
+    
+            $('<div class="dlg_tx">').appendTo('.dl2')
+    
+            $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
+    
+            contentCard(ChildCont)
+        })
+    
+        $(document).on('click', '.card_lgnd7', function () {
+            var ChildTitle = $(this).find(".title").text();
+            var ChildSubTitle = $(this).find(".subtitle").text();
+            var ChildCont = $(this).find(".cont").text();
+            $('<div class="scrim">').appendTo('body')
+    
+            $('<div class="dlg d_lgnd7">').appendTo('.scrim')
+            $('<div class="dlg_bar tt_lgnd7">').appendTo('.dlg')
+            $('<div class="lbl">').appendTo('.dlg_bar')
+    
+            $('<div class="dlg_cta i_lgnd7">').appendTo('.dlg')
+            $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
+            $('<div class="btn-sys-close">').appendTo('.dlg_cta')
+    
+            $('<div class="dlg_cnt">').appendTo('.dlg')
+            $('<div class="dl1">').appendTo('.dlg_cnt')
+            $('<div class="dl2>').appendTo('.dlg_cnt')
+            $('<div class="dl31">').appendTo('.dlg_cnt')
+            $('<div class="dl32">').appendTo('.dlg_cnt')
+    
+            $('<div class="dlg_tx">').appendTo('.dl2')
+    
+            $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
+    
+            contentCard(ChildCont)
+        })
+    
+        $(document).on('click', '.card_contr', function () {
+            var ChildTitle = $(this).find(".title").text();
+            var ChildCont = $(this).find(".cont").text();
+            $('<div class="scrim">').appendTo('body')
+    
+            $('<div class="dlg_c d_lgnd0">').appendTo('.scrim')
+            $('<div class="dlg_bar tt_lgnd0">').appendTo('.dlg_c')
+            $('<div class="lbl">').appendTo('.dlg_bar')
+    
+            $('<div class="dlg_cta i_lgnd0">').appendTo('.dlg_c')
+            $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
+            $('<div class="btn-sys-close">').appendTo('.dlg_cta')
+    
+            $('<div class="dlg_cnt">').appendTo('.dlg_c')
+    
+            $('<div class="dlg_tx">').appendTo('.dlg_cnt')
+    
+            $('.dlg_bar').children().html(ChildTitle)
+            $('.dlg_tx').html(ChildCont)
+        })
+    */
     $(document).on('click', '.btn-sys-edit', function () { })
 
     if ($(".ipdf").hasClass(".disabled")) {

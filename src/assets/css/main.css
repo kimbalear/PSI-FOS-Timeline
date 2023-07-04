@@ -4,6 +4,12 @@
 $clrbk_lgnd1_p: #4472C4;
 $clrbk_lgnd1_s: rgba(68, 114, 196, 0.2);
 */
+.dlgtypetoobtns {
+  border-color: #FF7C80;
+  background-color: #FF7C80;
+  color: #FDF4E7;
+}
+
 .d_lgnd0 {
   border-color: #292626 !important;
 }
@@ -17,7 +23,7 @@ $clrbk_lgnd1_s: rgba(68, 114, 196, 0.2);
   border-color: #FF7C80 !important;
 }
 
-.tt_lgnd1, .i_lgnd1 {
+.lgn1_g {
   color: #FDF4E7 !important;
   background-color: #FF7C80 !important;
 }
@@ -17451,7 +17457,7 @@ label.checkbox.lgnd7 span {
   grid-area: dlg_cnt;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: minmax(0, 90px) 1fr;
+  grid-template-rows: 108px 1fr;
   grid-auto-columns: 1fr;
   gap: 8px 0px;
   grid-auto-flow: row;
@@ -17460,8 +17466,70 @@ label.checkbox.lgnd7 span {
 }
 .scrim .dlg .dlg_cnt .cnt_header {
   grid-area: cnt_header;
-  padding: 8px;
   border-bottom: 1px solid #77716A;
+}
+.scrim .dlg .dlg_cnt .cnt_header .wrapper-dlg {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  align-items: stretch;
+  grid-template-areas: "header-dlg";
+}
+.scrim .dlg .dlg_cnt .cnt_header .wrapper-dlg .header-dlg {
+  display: grid;
+  grid-template-columns: 1fr 1fr minmax(36px, auto);
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "top-l-dlg top-c-dlg top-r-dlg" "cnt-dlg cnt-dlg top-r-dlg";
+  grid-area: header-dlg;
+}
+.scrim .dlg .dlg_cnt .cnt_header .wrapper-dlg .header-dlg .top-l-dlg {
+  grid-area: top-l-dlg;
+  padding: 8px;
+}
+.scrim .dlg .dlg_cnt .cnt_header .wrapper-dlg .header-dlg .top-c-dlg {
+  grid-area: top-c-dlg;
+  padding: 8px;
+}
+.scrim .dlg .dlg_cnt .cnt_header .wrapper-dlg .header-dlg .top-r-dlg {
+  grid-area: top-r-dlg;
+  padding-top: 8px;
+  justify-content: end;
+}
+.scrim .dlg .dlg_cnt .cnt_header .wrapper-dlg .header-dlg .top-r-dlg .toggle-btn-dlg {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px 0px 0px 9px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  padding: 5px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+.scrim .dlg .dlg_cnt .cnt_header .wrapper-dlg .header-dlg .top-r-dlg .toggle-btn-dlg .icon {
+  width: 20px;
+  height: 20px;
+  background-color: aqua;
+}
+.scrim .dlg .dlg_cnt .cnt_header .wrapper-dlg .header-dlg .top-r-dlg .toggle-btn-dlg .label {
+  display: none;
+  margin: 0 0 0 8px;
+}
+.scrim .dlg .dlg_cnt .cnt_header .wrapper-dlg .header-dlg .top-r-dlg .toggle-btn-dlg.active .label {
+  display: inline;
+}
+.scrim .dlg .dlg_cnt .cnt_header .wrapper-dlg .header-dlg .cnt-dlg {
+  grid-area: cnt-dlg;
+  padding: 8px;
 }
 .scrim .dlg .dlg_cnt .cnt_sections {
   grid-area: cnt_sections;
@@ -17469,9 +17537,12 @@ label.checkbox.lgnd7 span {
 }
 .scrim .dlg .dlg_cnt .cnt_sections .sections {
   width: 100%;
-  height: 100%; /* Ajusta este valor a la altura que quieras */
-  max-height: 250px; /* Asegúrate de que este valor sea igual a la altura */
-  overflow-y: auto; /* Esto permitirá el scroll si el contenido excede la altura */
+  height: 100%;
+  /* Ajusta este valor a la altura que quieras */
+  max-height: 250px;
+  /* Asegúrate de que este valor sea igual a la altura */
+  overflow-y: auto;
+  /* Esto permitirá el scroll si el contenido excede la altura */
   overflow-x: hidden;
   padding: 0 8px;
 }

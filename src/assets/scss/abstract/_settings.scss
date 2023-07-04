@@ -47,7 +47,11 @@ $color_7: #9E53A8;
 $shadow-left: -3px 0px 15px -3px rgba(0,0,0,0.1);
 $shadow-lb: -3px 3px 15px -3px rgba(0,0,0,0.1);
 
-
+.dlgtypetoobtns {
+    border-color: $clrbk_lgnd1_p;
+    background-color: $clrbk_lgnd1_p;
+    color: $clr2;
+}
 .d_lgnd0 {
     border-color: $clr3!important;
 }
@@ -61,7 +65,7 @@ $shadow-lb: -3px 3px 15px -3px rgba(0,0,0,0.1);
     border-color: $clrbk_lgnd1_p!important;
 }
 
-.tt_lgnd1,.i_lgnd1 {
+.lgn1_g {
     color:  $clr2!important;
     background-color: $clrbk_lgnd1_p!important;
 }
