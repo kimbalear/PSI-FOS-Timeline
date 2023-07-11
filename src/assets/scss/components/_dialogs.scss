@@ -82,7 +82,7 @@
 
                     .header-dlg {
                         display: grid;
-                        grid-template-columns: 1fr 1fr 118px;
+                        grid-template-columns: 1fr 1fr 130px;
                         grid-template-rows: 1fr 1fr;
                         gap: 0px 0px;
                         grid-auto-flow: row;
@@ -109,7 +109,7 @@
                                 clear: both;
                                 width: 36px;
                                 height: 36px;
-                                border-radius: 9px 0px 0px 9px;
+                                border-radius: 6px 0px 0px 6px;
                                 border-left: 1px solid;
                                 border-bottom: 1px solid;
                                 border-top: 1px solid;
@@ -117,13 +117,11 @@
                                 margin-bottom: 8px;
                                 float: right;
                                 cursor: pointer;
+                                transition: all 0.5s ease;                                
                             
-                                .icon {
-                                    width: 20px;
-                                    height: 20px;
-                                    background-color: aqua;
+                                .i_dlg_doc, .i_dlg_imgs {
                                     float: left;
-                                    margin: 2px 0 0;
+                                    //margin: 2px 0 0;
                                 }
                             
                                 .label {

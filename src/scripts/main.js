@@ -1463,17 +1463,6 @@ $(document).ready(function () {
         }
     })
 
-    /*
-    <div class="toggle-btn-dlg" id="button1">
-        <i class="icon" id="icon1"></i>
-        <span class="label" id="label1">Etiqueta 1</span>
-    </div>
-    <div class="toggle-btn-dlg" id="button2">
-        <i class="icon" id="icon2"></i>
-        <span class="label" id="label2">Etiqueta 2</span>
-    </div>
-    */
-
     function contentCard(dlgtype, dlgNeed, dlgTitle, groupStyle, imgs) {
         console.log('dlgtype: ' + dlgtype)
         console.log('dlgNeed: ' + dlgNeed)
@@ -1505,11 +1494,11 @@ $(document).ready(function () {
         $('<div class="top-r-dlg">').appendTo('.header-dlg')
 
         $('<div class="toggle-btn-dlg ' + groupStyle + '" id="button1">').appendTo('.top-r-dlg')
-        $('<div class="icon" id="icon1">').appendTo('#button1')
+        $('<div class="i_dlg_doc">').appendTo('#button1')
         $('<span class="label" id="label1">').appendTo('#button1')
 
         $('<div class="toggle-btn-dlg ' + groupStyle + '" id="button2">').appendTo('.top-r-dlg')
-        $('<div class="icon" id="icon2">').appendTo('#button2')
+        $('<div class="i_dlg_imgs">').appendTo('#button2')
         $('<span class="label" id="label2">').appendTo('#button2')
 
         $('<div class="cnt-dlg">').appendTo('.header-dlg')
@@ -1612,25 +1601,13 @@ $(document).ready(function () {
                 console.log('esta')
             }else{
                 $('.toggle-btn-dlg').removeClass('active').css('width', '36px')
-                $(this).addClass('active').css('width', '120px')
+                $(this).addClass('active').css('width', 'max-content')
                 console.log('otra')
             }
         } else {
             console.log('3 :- Ini')
-
-            // ok
-            $(this).addClass('active').css('width', '120px')
+            $(this).addClass('active').css('width', 'max-content')
         }
-/*
-
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            $('.toggle-btn-dlg').css('width', '36px');
-        } else {
-            $(this).addClass('active');
-            $(this).css('width', '120px');
-        }
-        */
     })
 
     /*
