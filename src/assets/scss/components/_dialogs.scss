@@ -19,7 +19,7 @@
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr auto;
-        grid-template-rows: auto auto;
+        grid-template-rows: 48px auto;
         grid-auto-rows: 1fr;
         gap: 0px 0px;
         grid-auto-flow: column;
@@ -27,7 +27,7 @@
         border: 2px solid;
         border-radius: 12px;
         box-sizing: border-box;
-        overflow-y: hidden;
+        overflow: hidden;
         grid-template-areas:
             "dlg_bar dlg_cta"
             "dlg_cnt dlg_cnt";
@@ -108,30 +108,30 @@
                         .top-r-dlg {
                             grid-area: top-r-dlg;
                             padding-top: 8px;
-                            justify-content: end;
                             
                             .toggle-btn-dlg {
-                                width: 36px;
+                                clear: both;
+                                width: max-content;
                                 height: 36px;
                                 border-radius: 9px 0px 0px 9px;
-                                display: flex;
-                                align-items: center;
-                                justify-content: flex-start;
                                 border-left: 1px solid;
                                 border-bottom: 1px solid;
                                 border-top: 1px solid;
                                 padding: 5px;
                                 margin-bottom: 8px;
+                                float: right;
                                 cursor: pointer;
                             
                                 .icon {
                                     width: 20px;
                                     height: 20px;
                                     background-color: aqua;
+                                    float: left;
+                                    margin: 2px 0 0;
                                 }
                             
                                 .label {
-                                    display: none;
+                                    visibility: hidden;
                                     margin: 0 0 0 8px;
                                 }
                             }
@@ -139,7 +139,7 @@
                             .toggle-btn-dlg.active {
                                 
                                 .label {
-                                    display: inline;
+                                    visibility: visible;
                                 }
                             }
                             

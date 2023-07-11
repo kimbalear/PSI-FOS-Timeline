@@ -17424,7 +17424,7 @@ label.checkbox.lgnd7 span {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: auto auto;
+  grid-template-rows: 48px auto;
   grid-auto-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: column;
@@ -17432,7 +17432,7 @@ label.checkbox.lgnd7 span {
   border: 2px solid;
   border-radius: 12px;
   box-sizing: border-box;
-  overflow-y: hidden;
+  overflow: hidden;
   grid-template-areas: "dlg_bar dlg_cta" "dlg_cnt dlg_cnt";
 }
 .scrim .dlg .dlg_bar {
@@ -17499,33 +17499,33 @@ label.checkbox.lgnd7 span {
 .scrim .dlg .dlg_cnt .cnt_header .wrapper-dlg .header-dlg .top-r-dlg {
   grid-area: top-r-dlg;
   padding-top: 8px;
-  justify-content: end;
 }
 .scrim .dlg .dlg_cnt .cnt_header .wrapper-dlg .header-dlg .top-r-dlg .toggle-btn-dlg {
-  width: 36px;
+  clear: both;
+  width: max-content;
   height: 36px;
   border-radius: 9px 0px 0px 9px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   border-left: 1px solid;
   border-bottom: 1px solid;
   border-top: 1px solid;
   padding: 5px;
   margin-bottom: 8px;
+  float: right;
   cursor: pointer;
 }
 .scrim .dlg .dlg_cnt .cnt_header .wrapper-dlg .header-dlg .top-r-dlg .toggle-btn-dlg .icon {
   width: 20px;
   height: 20px;
   background-color: aqua;
+  float: left;
+  margin: 2px 0 0;
 }
 .scrim .dlg .dlg_cnt .cnt_header .wrapper-dlg .header-dlg .top-r-dlg .toggle-btn-dlg .label {
-  display: none;
+  visibility: hidden;
   margin: 0 0 0 8px;
 }
 .scrim .dlg .dlg_cnt .cnt_header .wrapper-dlg .header-dlg .top-r-dlg .toggle-btn-dlg.active .label {
-  display: inline;
+  visibility: visible;
 }
 .scrim .dlg .dlg_cnt .cnt_header .wrapper-dlg .header-dlg .cnt-dlg {
   grid-area: cnt-dlg;
