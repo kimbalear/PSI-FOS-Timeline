@@ -492,6 +492,7 @@ $(document).ready(function () {
         $('<div class="scrim">').appendTo('body')
 
         $('<div class="dlg">').appendTo('.scrim')
+        // dialog bar
         $('<div class="dlg_bar">').appendTo('.dlg')
         $('<div class="lbl">').appendTo('.dlg_bar')
 
@@ -1484,9 +1485,9 @@ $(document).ready(function () {
         $('<div class="scrim">').appendTo('body')
 
         $('<div class="dlg ' + dlgtype + '">').appendTo('.scrim')
-        $('<div class="dlg_bar '+ groupStyle + '">').appendTo('.dlg')
-        $('<div class="lbl">').appendTo('.dlg_bar')
-        $('<div class="dlg_cta '+ groupStyle + '">').appendTo('.dlg')
+        $('<div class="dlg_bar ' + groupStyle + '">').appendTo('.dlg')
+        $('<div class="dlg_title">').appendTo('.dlg_bar')
+        $('<div class="dlg_cta ' + groupStyle + '">').appendTo('.dlg_bar')
         $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
         $('<div class="btn-sys-close">').appendTo('.dlg_cta')
         $('<div class="dlg_cnt">').appendTo('.dlg')
@@ -1503,17 +1504,18 @@ $(document).ready(function () {
         $('<div class="top-c-dlg">').appendTo('.header-dlg')
         $('<div class="top-r-dlg">').appendTo('.header-dlg')
 
-        $('<div class="toggle-btn-dlg '+ groupStyle + '" id="button1">').appendTo('.top-r-dlg')
+        $('<div class="toggle-btn-dlg ' + groupStyle + '" id="button1">').appendTo('.top-r-dlg')
         $('<div class="icon" id="icon1">').appendTo('#button1')
         $('<span class="label" id="label1">').appendTo('#button1')
 
-        $('<div class="toggle-btn-dlg '+ groupStyle + '" id="button2">').appendTo('.top-r-dlg')
+        $('<div class="toggle-btn-dlg ' + groupStyle + '" id="button2">').appendTo('.top-r-dlg')
         $('<div class="icon" id="icon2">').appendTo('#button2')
         $('<span class="label" id="label2">').appendTo('#button2')
 
         $('<div class="cnt-dlg">').appendTo('.header-dlg')
 
         $('.top-l-dlg').html("<label>Advocacy Tracker</label>")
+        $('.dlg_title').html(dlgNeed)
         $('.top-c-dlg').html("##/##/####")
         $('.cnt-dlg').html("[ Advocacy Stage ]")
         $('#label1').html("Documents")
@@ -1600,13 +1602,35 @@ $(document).ready(function () {
 
     $(document).on('click', '.toggle-btn-dlg', function () {
 
-        // Remove 'active' class from all buttons
-        $('.toggle-btn-dlg').removeClass('active');
-        $('.toggle-btn-dlg').css('width', '36px');
+        var numElementosActivos = $('.toggle-btn-dlg.active').length
 
-        // Add 'active' class to the clicked button
-        $(this).addClass('active');
-        $(this).css('width', '120px');
+        if (numElementosActivos == 1) {
+            console.log('2 :- Solo un elemento con la clase "toggle-btn-dlg" tiene la clase "active".')
+
+            if ($(this).hasClass('active')){
+                $('.toggle-btn-dlg').removeClass('active').css('width', '36px')
+                console.log('esta')
+            }else{
+                $('.toggle-btn-dlg').removeClass('active').css('width', '36px')
+                $(this).addClass('active').css('width', '120px')
+                console.log('otra')
+            }
+        } else {
+            console.log('3 :- Ini')
+
+            // ok
+            $(this).addClass('active').css('width', '120px')
+        }
+/*
+
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $('.toggle-btn-dlg').css('width', '36px');
+        } else {
+            $(this).addClass('active');
+            $(this).css('width', '120px');
+        }
+        */
     })
 
     /*
@@ -1793,7 +1817,7 @@ $(document).ready(function () {
             $('.dlg_tx').html(ChildCont)
         })
     */
-    $(document).on('click', '.btn-sys-edit', function () { })
+    //$(document).on('click', '.btn-sys-edit', function () { })
 
     if ($(".ipdf").hasClass(".disabled")) {
         $(function () {
