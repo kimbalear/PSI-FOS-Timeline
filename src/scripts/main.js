@@ -1535,7 +1535,7 @@ $(document).ready(function () {
         $('<div id="f_icon1" class="f_icon">').appendTo('#file1')
         $('<div class="doc_file">').appendTo('#f_icon1')
         $('<div id="f_name1" class="f_name">').appendTo('#file1')
-        
+
         $('#f_name1').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
 
         //--------------------------
@@ -1546,40 +1546,28 @@ $(document).ready(function () {
         $('#f_name2').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
 
         $('<div id="file3" class="dl3files">').appendTo('.dl3')
-                $('<div id="f_icon3" class="f_icon">').appendTo('#file3')
-                $('<div class="xls_file">').appendTo('#f_icon3')
-                $('<div id="f_name3" class="f_name">').appendTo('#file3')
-                $('#f_name3').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
+        $('<div id="f_icon3" class="f_icon">').appendTo('#file3')
+        $('<div class="xls_file">').appendTo('#f_icon3')
+        $('<div id="f_name3" class="f_name">').appendTo('#file3')
+        $('#f_name3').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
 
         /////////////////////////////////////////////////////////////
         $('<div class="dl4">').appendTo('.sections').css({
             'visibility': 'hidden',
             'height': '0px'
         })
+        $('<div class="dl4title">').appendTo('.dl4')
+        $('<div class="dl4cont">').appendTo('.dl4')
+
+        $('<div class="i1">').appendTo('.dl4cont')
+        $('<div class="i2">').appendTo('.dl4cont')
+        $('<div class="i3">').appendTo('.dl4cont')
+
+        $('.dl4title').html("Images")
+        $(".i1").html("<img src='" + url + imgs[0] + "' style='width:100%; height:auto;'>");
+        $(".i2").html("<img src='" + url + imgs[1] + "' style='width:100%; height:auto;'>");
+        $(".i3").html("<img src='" + url + imgs[2] + "' style='width:100%; height:auto;'>");
         /*
-        
-        
-                $('<div id="file3" class="dl32files">').appendTo('.dl32')
-                $('<div id="f_icon3" class="f_icon">').appendTo('#file3')
-                $('<div class="xls_file">').appendTo('#f_icon3')
-                $('<div id="f_name3" class="f_name">').appendTo('#file3')
-                $('#f_name3').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
-        
-                $('<div id="file4" class="dl32files">').appendTo('.dl32')
-                $('<div id="f_icon4" class="f_icon">').appendTo('#file4')
-                $('<div class="xls_file">').appendTo('#f_icon4')
-                $('<div id="f_name4" class="f_name">').appendTo('#file4')
-                $('#f_name4').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
-        
-                $('<div id="file5" class="dl32files">').appendTo('.dl32')
-                $('<div id="f_icon5" class="f_icon">').appendTo('#file5')
-                $('<div class="xls_file">').appendTo('#f_icon5')
-                $('<div id="f_name5" class="f_name">').appendTo('#file5')
-                $('#f_name5').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
-        
-        
-        
-        
                 $('<div class="dl4">').appendTo('.dlg_cnt')
         
                 $('<div class="dl4title">').appendTo('.dl4')
@@ -1608,21 +1596,109 @@ $(document).ready(function () {
     $(document).on('click', '.toggle-btn-dlg', function () {
 
         var numElementosActivos = $('.toggle-btn-dlg.active').length
+        var labelContent = $(this).children(".label").html();
 
         if (numElementosActivos == 1) {
-            console.log('2 :- Solo un elemento con la clase "toggle-btn-dlg" tiene la clase "active".')
 
             if ($(this).hasClass('active')) {
                 $('.toggle-btn-dlg').removeClass('active').css('width', '36px')
-                console.log('esta')
+                console.log("1 " + labelContent);
+                if (labelContent == "Documents") {
+                    console.log("1-1 " + labelContent);
+                    $('.dl2').css({
+                        'visibility': 'visible',
+                        'height': 'auto'
+                    })
+                    $('.dl3').css({
+                        'visibility': 'hidden',
+                        'height': '0px'
+                    })
+                    $('.dl4').css({
+                        'visibility': 'hidden',
+                        'height': '0px'
+                    })
+                } else {
+                    console.log("1-2 " + labelContent);
+                    $('.dl2').css({
+                        'visibility': 'visible',
+                        'height': '0px'
+                    })
+                    $('.dl3').css({
+                        'visibility': 'hidden',
+                        'height': '0px'
+                    })
+                    $('.dl4').css({
+                        'visibility': 'hidden',
+                        'height': 'auto'
+                    })
+                }
             } else {
                 $('.toggle-btn-dlg').removeClass('active').css('width', '36px')
                 $(this).addClass('active').css('width', 'max-content')
-                console.log('otra')
+                console.log("2 " + labelContent);
+                if (labelContent == "Documents") {
+                    console.log("2-1 Doc " + labelContent);
+                    $('.dl2').css({
+                        'visibility': 'hidden',
+                        'height': '0px'
+                    })
+                    $('.dl3').css({
+                        'visibility': 'visible',
+                        'height': 'auto'
+                    })
+                    $('.dl4').css({
+                        'visibility': 'hidden',
+                        'height': '0px'
+                    })
+                } else if(labelContent == "Images"){
+                    console.log("2-2 Images " + labelContent);
+                    $('.dl2').css({
+                        'visibility': 'hidden',
+                        'height': '0px'
+                    })
+                    $('.dl3').css({
+                        'visibility': 'hidden',
+                        'height': '0px'
+                    })
+                    $('.dl4').css({
+                        'visibility': 'visible',
+                        'height': 'auto'
+                    })
+
+                }
             }
         } else {
-            console.log('3 :- Ini')
             $(this).addClass('active').css('width', 'max-content')
+            console.log("3 " + labelContent);
+            if (labelContent == "Documents") {
+                console.log("3-1 " + labelContent);
+                $('.dl2').css({
+                    'visibility': 'hidden',
+                    'height': '0px'
+                })
+                $('.dl3').css({
+                    'visibility': 'visible',
+                    'height': 'auto'
+                })
+                $('.dl4').css({
+                    'visibility': 'hidden',
+                    'height': '0px'
+                })
+            } else {
+                console.log("3-2 " + labelContent);
+                $('.dl2').css({
+                    'visibility': 'hidden',
+                    'height': '0px'
+                })
+                $('.dl3').css({
+                    'visibility': 'hidden',
+                    'height': '0px'
+                })
+                $('.dl4').css({
+                    'visibility': 'visible',
+                    'height': 'auto'
+                })
+            }
         }
     })
 
