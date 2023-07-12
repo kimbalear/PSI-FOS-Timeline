@@ -1509,9 +1509,6 @@ $(document).ready(function () {
         $('.cnt-dlg').html("[ Advocacy Stage ]")
         $('#label1').html("Documents")
         $('#label2').html("Images")
-
-
-
         $('<div class="dl2">').appendTo('.sections')
 
         ////////////////////////////////////////////////////////
@@ -1524,24 +1521,43 @@ $(document).ready(function () {
         //$('.cnt_sections').html("cnt_sections Tracker")
 
         $('.dl2').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel blandit libero, non suscipit ligula. Maecenas molestie finibus scelerisque. Curabitur luctus vel orci sed pulvinar. Suspendisse potenti. Donec orci velit, mollis eget arcu a, feugiat aliquam nunc. Morbi a consectetur ligula. Nunc mattis, metus sed dictum venenatis, quam felis placerat odio, at vulputate mauris eros sed mi. Aenean ut augue vestibulum, sollicitudin arcu tincidunt, ultrices sem. Suspendisse quis lobortis felis. Etiam tincidunt congue viverra. Pellentesque sapien nisl, condimentum sit amet diam at, finibus consectetur sapien. Quisque pretium suscipit felis et laoreet. Quisque tincidunt lectus leo, et aliquam arcu pretium vel. Cras finibus tincidunt tincidunt. Praesent eu luctus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;Duis elit nisi, commodo et ornare eget, ultricies et turpis. Curabitur ullamcorper lacinia urna at mollis. Duis accumsan, mauris vitae posuere pulvinar, tortor ligula facilisis ex, at ultricies justo neque in dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan ante vitae neque imperdiet, a maximus nulla cursus. Nam facilisis scelerisque purus, vitae ornare neque placerat non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin vel ante eget arcu pulvinar vehicula at at nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus.Aenean mattis ultricies imperdiet. Nulla rhoncus, est sit amet commodo ullamcorper, augue arcu laoreet dolor, tristique dictum velit orci in dui. Nulla ut libero ut tellus porta convallis ut ultrices odio. Ut non volutpat risus, et consectetur justo. Aliquam consequat ut erat vitae tincidunt. Donec fringilla posuere quam, sed aliquet quam rutrum quis. Aenean euismod nulla non sem pharetra, sit amet luctus tortor pulvinar. Quisque consectetur lectus vitae hendrerit euismod. Sed non lobortis eros. Sed accumsan eget justo eu varius. Curabitur consequat, orci eget interdum luctus, turpis purus dictum ipsum, at egestas magna dui sit amet eros. Suspendisse quis sollicitudin sem.Phasellus mi turpis, posuere eget justo quis, maximus laoreet lectus. Praesent tempor urna orci, in auctor nunc porttitor id. Vivamus imperdiet odio non ultricies auctor.")
+
+        $('<div class="dl3">').appendTo('.sections').css({
+            'visibility': 'hidden',
+            'height': '0px'
+        })
+
+        $('<div class="dl3title">').appendTo('.dl3')
+        $('.dl3title').html("Documents => Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
+
+        $('<div id="file1" class="dl3files">').appendTo('.dl3')
+
+        $('<div id="f_icon1" class="f_icon">').appendTo('#file1')
+        $('<div class="doc_file">').appendTo('#f_icon1')
+        $('<div id="f_name1" class="f_name">').appendTo('#file1')
+        
+        $('#f_name1').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
+
+        //--------------------------
+        $('<div id="file2" class="dl3files">').appendTo('.dl3')
+        $('<div id="f_icon2" class="f_icon">').appendTo('#file2')
+        $('<div class="pdf_file">').appendTo('#f_icon2')
+        $('<div id="f_name2" class="f_name">').appendTo('#file2')
+        $('#f_name2').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
+
+        $('<div id="file3" class="dl3files">').appendTo('.dl3')
+                $('<div id="f_icon3" class="f_icon">').appendTo('#file3')
+                $('<div class="xls_file">').appendTo('#f_icon3')
+                $('<div id="f_name3" class="f_name">').appendTo('#file3')
+                $('#f_name3').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
+
+        /////////////////////////////////////////////////////////////
+        $('<div class="dl4">').appendTo('.sections').css({
+            'visibility': 'hidden',
+            'height': '0px'
+        })
         /*
-                $('<div class="dl31">').appendTo('.dlg_cnt')
-                $('<div class="l31title">').appendTo('.dl31')
-                $('.l31title').html("Documents => Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
         
-                $('<div class="dl32">').appendTo('.dlg_cnt')
-        
-                $('<div id="file1" class="dl32files">').appendTo('.dl32')
-                $('<div id="f_icon1" class="f_icon">').appendTo('#file1')
-                $('<div class="doc_file">').appendTo('#f_icon1')
-                $('<div id="f_name1" class="f_name">').appendTo('#file1')
-                $('#f_name1').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
-        
-                $('<div id="file2" class="dl32files">').appendTo('.dl32')
-                $('<div id="f_icon2" class="f_icon">').appendTo('#file2')
-                $('<div class="pdf_file">').appendTo('#f_icon2')
-                $('<div id="f_name2" class="f_name">').appendTo('#file2')
-                $('#f_name2').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
         
                 $('<div id="file3" class="dl32files">').appendTo('.dl32')
                 $('<div id="f_icon3" class="f_icon">').appendTo('#file3')
@@ -1596,10 +1612,10 @@ $(document).ready(function () {
         if (numElementosActivos == 1) {
             console.log('2 :- Solo un elemento con la clase "toggle-btn-dlg" tiene la clase "active".')
 
-            if ($(this).hasClass('active')){
+            if ($(this).hasClass('active')) {
                 $('.toggle-btn-dlg').removeClass('active').css('width', '36px')
                 console.log('esta')
-            }else{
+            } else {
                 $('.toggle-btn-dlg').removeClass('active').css('width', '36px')
                 $(this).addClass('active').css('width', 'max-content')
                 console.log('otra')

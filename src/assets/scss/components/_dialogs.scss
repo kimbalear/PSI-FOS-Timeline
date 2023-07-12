@@ -27,28 +27,29 @@
             "dlg_bar"
             "dlg_cnt";
 
-            .dlg_bar {  display: grid;
-                grid-template-columns: 1fr 90px;
-                grid-template-rows: 1fr;
-                gap: 0px 0px;
-                grid-auto-flow: row;
-                grid-template-areas:
-                  "dlg_title dlg_cta";
-              }
-              
-              .dlg_title {
-                justify-self: start;
-                align-self: center;
-                grid-area: dlg_title;
-                padding-left: 8px;
-              }
-              
-              .dlg_cta {
-                justify-self: end;
-                align-self: center;
-                grid-area: dlg_cta;
-              }
-              
+        .dlg_bar {
+            display: grid;
+            grid-template-columns: 1fr 90px;
+            grid-template-rows: 1fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "dlg_title dlg_cta";
+        }
+
+        .dlg_title {
+            justify-self: start;
+            align-self: center;
+            grid-area: dlg_title;
+            padding-left: 8px;
+        }
+
+        .dlg_cta {
+            justify-self: end;
+            align-self: center;
+            grid-area: dlg_cta;
+        }
+
 
         .dlg_cnt {
             grid-area: dlg_cnt;
@@ -104,7 +105,7 @@
                         .top-r-dlg {
                             grid-area: top-r-dlg;
                             padding-top: 8px;
-                            
+
                             .toggle-btn-dlg {
                                 clear: both;
                                 width: 36px;
@@ -117,26 +118,27 @@
                                 margin-bottom: 8px;
                                 float: right;
                                 cursor: pointer;
-                                transition: all 0.5s ease;                                
-                            
-                                .i_dlg_doc, .i_dlg_imgs {
+                                transition: all 0.5s ease;
+
+                                .i_dlg_doc,
+                                .i_dlg_imgs {
                                     float: left;
                                     //margin: 2px 0 0;
                                 }
-                            
+
                                 .label {
                                     visibility: hidden;
                                     margin: 0 0 0 8px;
                                 }
                             }
-                            
+
                             .toggle-btn-dlg.active {
-                                
+
                                 .label {
                                     visibility: visible;
                                 }
                             }
-                            
+
                         }
 
                         .cnt-dlg {
@@ -154,19 +156,48 @@
                 .sections {
                     width: 100%;
                     height: 100%;
-                    /* Ajusta este valor a la altura que quieras */
                     max-height: 310px;
-                    /* Asegúrate de que este valor sea igual a la altura */
                     overflow-y: auto;
-                    /* Esto permitirá el scroll si el contenido excede la altura */
                     overflow-x: hidden;
-                    //background-color: red;
                     padding: 0 8px;
 
-                    .dl2 {
-                        //background-color: greenyellow;
+                    .dl2,
+                    .dl3,
+                    .dl4 {
                         width: 100%;
                         height: auto;
+                    }
+
+                    .dl3 {
+
+                        .dl3title {
+                            font-weight: 500;
+                            margin-bottom: 20px;
+                        }
+
+                        .dl3files {
+                            margin-bottom: 8px;
+                            display: grid;
+                            grid-template-columns: 24px 1fr;
+                            grid-template-rows: 24px;
+                            grid-auto-columns: 1fr;
+                            gap: 0px 8px;
+                            grid-auto-flow: row;
+                            grid-template-areas:
+                                "f_icon f_name";
+
+                            .f_icon {
+                                grid-area: f_icon;
+                            }
+
+                            .f_name {
+                                grid-area: f_name;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                            }
+
+                        }
                     }
                 }
             }

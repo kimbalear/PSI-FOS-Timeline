@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /*
 $clrbk_lgnd1_p: #4472C4;
@@ -17523,7 +17522,8 @@ label.checkbox.lgnd7 span {
   cursor: pointer;
   transition: all 0.5s ease;
 }
-.scrim .dlg .dlg_cnt .cnt_header .wrapper-dlg .header-dlg .top-r-dlg .toggle-btn-dlg .i_dlg_doc, .scrim .dlg .dlg_cnt .cnt_header .wrapper-dlg .header-dlg .top-r-dlg .toggle-btn-dlg .i_dlg_imgs {
+.scrim .dlg .dlg_cnt .cnt_header .wrapper-dlg .header-dlg .top-r-dlg .toggle-btn-dlg .i_dlg_doc,
+.scrim .dlg .dlg_cnt .cnt_header .wrapper-dlg .header-dlg .top-r-dlg .toggle-btn-dlg .i_dlg_imgs {
   float: left;
 }
 .scrim .dlg .dlg_cnt .cnt_header .wrapper-dlg .header-dlg .top-r-dlg .toggle-btn-dlg .label {
@@ -17544,17 +17544,39 @@ label.checkbox.lgnd7 span {
 .scrim .dlg .dlg_cnt .cnt_sections .sections {
   width: 100%;
   height: 100%;
-  /* Ajusta este valor a la altura que quieras */
   max-height: 310px;
-  /* Asegúrate de que este valor sea igual a la altura */
   overflow-y: auto;
-  /* Esto permitirá el scroll si el contenido excede la altura */
   overflow-x: hidden;
   padding: 0 8px;
 }
-.scrim .dlg .dlg_cnt .cnt_sections .sections .dl2 {
+.scrim .dlg .dlg_cnt .cnt_sections .sections .dl2,
+.scrim .dlg .dlg_cnt .cnt_sections .sections .dl3,
+.scrim .dlg .dlg_cnt .cnt_sections .sections .dl4 {
   width: 100%;
   height: auto;
+}
+.scrim .dlg .dlg_cnt .cnt_sections .sections .dl3 .dl3title {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.scrim .dlg .dlg_cnt .cnt_sections .sections .dl3 .dl3files {
+  margin-bottom: 8px;
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  grid-template-rows: 24px;
+  grid-auto-columns: 1fr;
+  gap: 0px 8px;
+  grid-auto-flow: row;
+  grid-template-areas: "f_icon f_name";
+}
+.scrim .dlg .dlg_cnt .cnt_sections .sections .dl3 .dl3files .f_icon {
+  grid-area: f_icon;
+}
+.scrim .dlg .dlg_cnt .cnt_sections .sections .dl3 .dl3files .f_name {
+  grid-area: f_name;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .scrim .dlg_cnt {
   grid-area: dlg_cnt;
