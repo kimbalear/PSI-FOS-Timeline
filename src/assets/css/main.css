@@ -17578,6 +17578,13 @@ label.checkbox.lgnd7 span {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.scrim .dlg .dlg_cnt .cnt_sections .sections .dl4 .dl4title {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.scrim .dlg .dlg_cnt .cnt_sections .sections .dl4 .dl4cont .i1, .scrim .dlg .dlg_cnt .cnt_sections .sections .dl4 .dl4cont .i2 {
+  margin-bottom: 20px;
+}
 .scrim .dlg_cnt {
   grid-area: dlg_cnt;
   display: grid;

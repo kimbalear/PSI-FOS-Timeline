@@ -1481,12 +1481,10 @@ $(document).ready(function () {
         $('<div class="btn-sys-close">').appendTo('.dlg_cta')
         $('<div class="dlg_cnt">').appendTo('.dlg')
 
-        ////////////////////////////////////////////////////////
         $('<div class="cnt_header">').appendTo('.dlg_cnt')
         $('<div class="cnt_sections">').appendTo('.dlg_cnt')
         $('<div class="sections">').appendTo('.cnt_sections')
 
-        //ACA $('<div class="dl1">').appendTo('.cnt_header')
         $('<div class="wrapper-dlg">').appendTo('.cnt_header')
         $('<div class="header-dlg">').appendTo('.wrapper-dlg')
         $('<div class="top-l-dlg">').appendTo('.header-dlg')
@@ -1511,14 +1509,9 @@ $(document).ready(function () {
         $('#label2').html("Images")
         $('<div class="dl2">').appendTo('.sections')
 
-        ////////////////////////////////////////////////////////
-
         $('<div class="dl1_title">').appendTo('.dl1')
         $('<div class="dl1_end_d">').appendTo('.dl1')
         $('<div class="dl1_cont">').appendTo('.dl1')
-
-
-        //$('.cnt_sections').html("cnt_sections Tracker")
 
         $('.dl2').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel blandit libero, non suscipit ligula. Maecenas molestie finibus scelerisque. Curabitur luctus vel orci sed pulvinar. Suspendisse potenti. Donec orci velit, mollis eget arcu a, feugiat aliquam nunc. Morbi a consectetur ligula. Nunc mattis, metus sed dictum venenatis, quam felis placerat odio, at vulputate mauris eros sed mi. Aenean ut augue vestibulum, sollicitudin arcu tincidunt, ultrices sem. Suspendisse quis lobortis felis. Etiam tincidunt congue viverra. Pellentesque sapien nisl, condimentum sit amet diam at, finibus consectetur sapien. Quisque pretium suscipit felis et laoreet. Quisque tincidunt lectus leo, et aliquam arcu pretium vel. Cras finibus tincidunt tincidunt. Praesent eu luctus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;Duis elit nisi, commodo et ornare eget, ultricies et turpis. Curabitur ullamcorper lacinia urna at mollis. Duis accumsan, mauris vitae posuere pulvinar, tortor ligula facilisis ex, at ultricies justo neque in dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan ante vitae neque imperdiet, a maximus nulla cursus. Nam facilisis scelerisque purus, vitae ornare neque placerat non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin vel ante eget arcu pulvinar vehicula at at nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus.Aenean mattis ultricies imperdiet. Nulla rhoncus, est sit amet commodo ullamcorper, augue arcu laoreet dolor, tristique dictum velit orci in dui. Nulla ut libero ut tellus porta convallis ut ultrices odio. Ut non volutpat risus, et consectetur justo. Aliquam consequat ut erat vitae tincidunt. Donec fringilla posuere quam, sed aliquet quam rutrum quis. Aenean euismod nulla non sem pharetra, sit amet luctus tortor pulvinar. Quisque consectetur lectus vitae hendrerit euismod. Sed non lobortis eros. Sed accumsan eget justo eu varius. Curabitur consequat, orci eget interdum luctus, turpis purus dictum ipsum, at egestas magna dui sit amet eros. Suspendisse quis sollicitudin sem.Phasellus mi turpis, posuere eget justo quis, maximus laoreet lectus. Praesent tempor urna orci, in auctor nunc porttitor id. Vivamus imperdiet odio non ultricies auctor.")
 
@@ -1551,47 +1544,20 @@ $(document).ready(function () {
         $('<div id="f_name3" class="f_name">').appendTo('#file3')
         $('#f_name3').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
 
-        /////////////////////////////////////////////////////////////
         $('<div class="dl4">').appendTo('.sections').css({
             'visibility': 'hidden',
             'height': '0px'
         })
         $('<div class="dl4title">').appendTo('.dl4')
         $('<div class="dl4cont">').appendTo('.dl4')
-
         $('<div class="i1">').appendTo('.dl4cont')
         $('<div class="i2">').appendTo('.dl4cont')
         $('<div class="i3">').appendTo('.dl4cont')
-
         $('.dl4title').html("Images")
         $(".i1").html("<img src='" + url + imgs[0] + "' style='width:100%; height:auto;'>");
         $(".i2").html("<img src='" + url + imgs[1] + "' style='width:100%; height:auto;'>");
         $(".i3").html("<img src='" + url + imgs[2] + "' style='width:100%; height:auto;'>");
-        /*
-                $('<div class="dl4">').appendTo('.dlg_cnt')
-        
-                $('<div class="dl4title">').appendTo('.dl4')
-                $('<div class="dl4cont">').appendTo('.dl4')
-        
-                $('<div class="i1">').appendTo('.dl4cont')
-                $('<div class="i2">').appendTo('.dl4cont')
-                $('<div class="i3">').appendTo('.dl4cont')
-        
-                $('.dl4title').html("Images")
-                $(".i1").html("<img src='" + url + imgs[0] + "' style='width:100%; height:auto;'>");
-                $(".i2").html("<img src='" + url + imgs[1] + "' style='width:100%; height:auto;'>");
-                $(".i3").html("<img src='" + url + imgs[2] + "' style='width:100%; height:auto;'>");
-                */
-
     }
-
-    $(document).on('click', '.card_lgnd1', function () {
-        var dlgtype = 'd_lgnd1' //border
-        var dlgNeed = $(this).find(".subtitle").text()
-        var dlgTitle = $(this).find(".title").text()
-        var groupStyle = 'lgn1_g'
-        contentCard(dlgtype, dlgNeed, dlgTitle, groupStyle)
-    })
 
     $(document).on('click', '.toggle-btn-dlg', function () {
 
@@ -1650,7 +1616,7 @@ $(document).ready(function () {
                         'visibility': 'hidden',
                         'height': '0px'
                     })
-                } else if(labelContent == "Images"){
+                } else if (labelContent == "Images") {
                     console.log("2-2 Images " + labelContent);
                     $('.dl2').css({
                         'visibility': 'hidden',
@@ -1702,191 +1668,70 @@ $(document).ready(function () {
         }
     })
 
-    /*
-        $(document).on('click', '.card_lgnd2', function () {
-            var ChildTitle = $(this).find(".title").text();
-            var ChildSubTitle = $(this).find(".subtitle").text();
-            var ChildCont = $(this).find(".cont").text();
-    
-            $('<div class="scrim">').appendTo('body')
-            $('<div class="dlg d_lgnd2">').appendTo('.scrim')
-            $('<div class="dlg_bar tt_lgnd2">').appendTo('.dlg')
-            $('<div class="lbl">').appendTo('.dlg_bar')
-            $('<div class="dlg_cta i_lgnd2">').appendTo('.dlg')
-            $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
-            $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-    
-            $('<div class="dlg_cnt">').appendTo('.dlg')
-    
-            $('<div class="dl1">').appendTo('.dlg_cnt')
-            $('<div class="dl2>').appendTo('.dlg_cnt')
-            $('<div class="dl31">').appendTo('.dlg_cnt')
-            $('<div class="dl32">').appendTo('.dlg_cnt')
-    
-            $('<div class="dlg_tx">').appendTo('.dl2')
-    
-            $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-    
-            contentCard(ChildCont)
-        })
-    
-        $(document).on('click', '.card_lgnd3', function () {
-            var ChildTitle = $(this).find(".title").text();
-            var ChildSubTitle = $(this).find(".subtitle").text();
-            var ChildCont = $(this).find(".cont").text();
-            $('<div class="scrim">').appendTo('body')
-    
-            $('<div class="dlg d_lgnd3">').appendTo('.scrim')
-            $('<div class="dlg_bar tt_lgnd3">').appendTo('.dlg')
-            $('<div class="lbl">').appendTo('.dlg_bar')
-    
-            $('<div class="dlg_cta i_lgnd3">').appendTo('.dlg')
-            $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
-            $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-    
-            $('<div class="dlg_cnt">').appendTo('.dlg')
-            $('<div class="dl1">').appendTo('.dlg_cnt')
-            $('<div class="dl2>').appendTo('.dlg_cnt')
-            $('<div class="dl31">').appendTo('.dlg_cnt')
-            $('<div class="dl32">').appendTo('.dlg_cnt')
-    
-            $('<div class="dlg_tx">').appendTo('.dl2')
-    
-            $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-    
-            contentCard(ChildCont)
-        })
-    
-        $(document).on('click', '.card_lgnd4', function () {
-            var ChildTitle = $(this).find(".title").text();
-            var ChildSubTitle = $(this).find(".subtitle").text();
-            var ChildCont = $(this).find(".cont").text();
-            $('<div class="scrim">').appendTo('body')
-    
-            $('<div class="dlg d_lgnd4">').appendTo('.scrim')
-            $('<div class="dlg_bar tt_lgnd4">').appendTo('.dlg')
-            $('<div class="lbl">').appendTo('.dlg_bar')
-    
-            $('<div class="dlg_cta i_lgnd4">').appendTo('.dlg')
-            $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
-            $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-    
-            $('<div class="dlg_cnt">').appendTo('.dlg')
-            $('<div class="dl1">').appendTo('.dlg_cnt')
-            $('<div class="dl2>').appendTo('.dlg_cnt')
-            $('<div class="dl31">').appendTo('.dlg_cnt')
-            $('<div class="dl32">').appendTo('.dlg_cnt')
-    
-            $('<div class="dlg_tx">').appendTo('.dl2')
-    
-            $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-    
-            contentCard(ChildCont)
-        })
-    
-        $(document).on('click', '.card_lgnd5', function () {
-            var ChildTitle = $(this).find(".title").text();
-            var ChildSubTitle = $(this).find(".subtitle").text();
-            var ChildCont = $(this).find(".cont").text();
-            $('<div class="scrim">').appendTo('body')
-    
-            $('<div class="dlg d_lgnd5">').appendTo('.scrim')
-            $('<div class="dlg_bar tt_lgnd5">').appendTo('.dlg')
-            $('<div class="lbl">').appendTo('.dlg_bar')
-    
-            $('<div class="dlg_cta i_lgnd5">').appendTo('.dlg')
-            $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
-            $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-    
-            $('<div class="dlg_cnt">').appendTo('.dlg')
-            $('<div class="dl1">').appendTo('.dlg_cnt')
-            $('<div class="dl2>').appendTo('.dlg_cnt')
-            $('<div class="dl31">').appendTo('.dlg_cnt')
-            $('<div class="dl32">').appendTo('.dlg_cnt')
-    
-            $('<div class="dlg_tx">').appendTo('.dl2')
-    
-            $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-    
-            contentCard(ChildCont)
-        })
-    
-        $(document).on('click', '.card_lgnd6', function () {
-            var ChildTitle = $(this).find(".title").text();
-            var ChildSubTitle = $(this).find(".subtitle").text();
-            var ChildCont = $(this).find(".cont").text();
-            $('<div class="scrim">').appendTo('body')
-    
-            $('<div class="dlg d_lgnd6">').appendTo('.scrim')
-            $('<div class="dlg_bar tt_lgnd6">').appendTo('.dlg')
-            $('<div class="lbl">').appendTo('.dlg_bar')
-    
-            $('<div class="dlg_cta i_lgnd6">').appendTo('.dlg')
-            $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
-            $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-    
-            $('<div class="dlg_cnt">').appendTo('.dlg')
-            $('<div class="dl1">').appendTo('.dlg_cnt')
-            $('<div class="dl2>').appendTo('.dlg_cnt')
-            $('<div class="dl31">').appendTo('.dlg_cnt')
-            $('<div class="dl32">').appendTo('.dlg_cnt')
-    
-            $('<div class="dlg_tx">').appendTo('.dl2')
-    
-            $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-    
-            contentCard(ChildCont)
-        })
-    
-        $(document).on('click', '.card_lgnd7', function () {
-            var ChildTitle = $(this).find(".title").text();
-            var ChildSubTitle = $(this).find(".subtitle").text();
-            var ChildCont = $(this).find(".cont").text();
-            $('<div class="scrim">').appendTo('body')
-    
-            $('<div class="dlg d_lgnd7">').appendTo('.scrim')
-            $('<div class="dlg_bar tt_lgnd7">').appendTo('.dlg')
-            $('<div class="lbl">').appendTo('.dlg_bar')
-    
-            $('<div class="dlg_cta i_lgnd7">').appendTo('.dlg')
-            $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
-            $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-    
-            $('<div class="dlg_cnt">').appendTo('.dlg')
-            $('<div class="dl1">').appendTo('.dlg_cnt')
-            $('<div class="dl2>').appendTo('.dlg_cnt')
-            $('<div class="dl31">').appendTo('.dlg_cnt')
-            $('<div class="dl32">').appendTo('.dlg_cnt')
-    
-            $('<div class="dlg_tx">').appendTo('.dl2')
-    
-            $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-    
-            contentCard(ChildCont)
-        })
-    
-        $(document).on('click', '.card_contr', function () {
-            var ChildTitle = $(this).find(".title").text();
-            var ChildCont = $(this).find(".cont").text();
-            $('<div class="scrim">').appendTo('body')
-    
-            $('<div class="dlg_c d_lgnd0">').appendTo('.scrim')
-            $('<div class="dlg_bar tt_lgnd0">').appendTo('.dlg_c')
-            $('<div class="lbl">').appendTo('.dlg_bar')
-    
-            $('<div class="dlg_cta i_lgnd0">').appendTo('.dlg_c')
-            $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
-            $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-    
-            $('<div class="dlg_cnt">').appendTo('.dlg_c')
-    
-            $('<div class="dlg_tx">').appendTo('.dlg_cnt')
-    
-            $('.dlg_bar').children().html(ChildTitle)
-            $('.dlg_tx').html(ChildCont)
-        })
-    */
-    //$(document).on('click', '.btn-sys-edit', function () { })
+    var dlgtype, dlgNeed, dlgTitle, groupStyle
+
+    $(document).on('click', '.card_lgnd1', function () {
+        dlgtype = 'd_lgnd1'
+        dlgNeed = $(this).find(".subtitle").text()
+        dlgTitle = $(this).find(".title").text()
+        groupStyle = 'lgn1_g'
+        contentCard(dlgtype, dlgNeed, dlgTitle, groupStyle)
+    })
+
+
+    $(document).on('click', '.card_lgnd2', function () {
+        dlgtype = 'd_lgnd2'
+        dlgNeed = $(this).find(".subtitle").text()
+        dlgTitle = $(this).find(".title").text()
+        groupStyle = 'lgn2_g'
+        contentCard(dlgtype, dlgNeed, dlgTitle, groupStyle)
+     })
+
+    $(document).on('click', '.card_lgnd3', function () {
+        dlgtype = 'd_lgnd3'
+        dlgNeed = $(this).find(".subtitle").text()
+        dlgTitle = $(this).find(".title").text()
+        groupStyle = 'lgn3_g'
+        contentCard(dlgtype, dlgNeed, dlgTitle, groupStyle)
+    })
+
+    $(document).on('click', '.card_lgnd4', function () {
+        dlgtype = 'd_lgnd4'
+        dlgNeed = $(this).find(".subtitle").text()
+        dlgTitle = $(this).find(".title").text()
+        groupStyle = 'lgn4_g'
+        contentCard(dlgtype, dlgNeed, dlgTitle, groupStyle)
+    })
+
+    $(document).on('click', '.card_lgnd5', function () {
+        dlgtype = 'd_lgnd5'
+        dlgNeed = $(this).find(".subtitle").text()
+        dlgTitle = $(this).find(".title").text()
+        groupStyle = 'lgn5_g'
+        contentCard(dlgtype, dlgNeed, dlgTitle, groupStyle)
+    })
+
+    $(document).on('click', '.card_lgnd6', function () {
+        dlgtype = 'd_lgnd6'
+        dlgNeed = $(this).find(".subtitle").text()
+        dlgTitle = $(this).find(".title").text()
+        groupStyle = 'lgn6_g'
+        contentCard(dlgtype, dlgNeed, dlgTitle, groupStyle)
+    })
+
+    $(document).on('click', '.card_lgnd7', function () {
+        dlgtype = 'd_lgnd7'
+        dlgNeed = $(this).find(".subtitle").text()
+        dlgTitle = $(this).find(".title").text()
+        groupStyle = 'lgn7_g'
+        contentCard(dlgtype, dlgNeed, dlgTitle, groupStyle)
+    })
+
+    $(document).on('click', '.card_contr', function () {
+        dlgNeed = $(this).find(".subtitle").text()
+        dlgTitle = $(this).find(".title").text()
+        contentCard(dlgtype, dlgNeed, dlgTitle, groupStyle)
+    })
 
     if ($(".ipdf").hasClass(".disabled")) {
         $(function () {
