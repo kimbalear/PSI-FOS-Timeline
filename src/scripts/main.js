@@ -1275,14 +1275,6 @@ $(document).ready(function () {
         }
     }
 
-    const mySwitch = document.getElementById("mySwitch");
-    mySwitch.addEventListener("change", function () {
-
-        //$('.ounit').remove()
-        //sortyears(arrYear)
-    });
-
-
     function timeline(ou, year) {
         $('.ounit').remove()
 
@@ -1507,7 +1499,9 @@ $(document).ready(function () {
         $('.cnt-dlg').html("[ Advocacy Stage ]")
         $('#label1').html("Documents")
         $('#label2').html("Images")
-        $('<div class="dl2">').appendTo('.sections')
+
+        $('<div class="sec1">').appendTo('.sections')
+        $('<div class="dl2">').appendTo('.sec1')
 
         $('<div class="dl1_title">').appendTo('.dl1')
         $('<div class="dl1_end_d">').appendTo('.dl1')
@@ -1515,10 +1509,11 @@ $(document).ready(function () {
 
         $('.dl2').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel blandit libero, non suscipit ligula. Maecenas molestie finibus scelerisque. Curabitur luctus vel orci sed pulvinar. Suspendisse potenti. Donec orci velit, mollis eget arcu a, feugiat aliquam nunc. Morbi a consectetur ligula. Nunc mattis, metus sed dictum venenatis, quam felis placerat odio, at vulputate mauris eros sed mi. Aenean ut augue vestibulum, sollicitudin arcu tincidunt, ultrices sem. Suspendisse quis lobortis felis. Etiam tincidunt congue viverra. Pellentesque sapien nisl, condimentum sit amet diam at, finibus consectetur sapien. Quisque pretium suscipit felis et laoreet. Quisque tincidunt lectus leo, et aliquam arcu pretium vel. Cras finibus tincidunt tincidunt. Praesent eu luctus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;Duis elit nisi, commodo et ornare eget, ultricies et turpis. Curabitur ullamcorper lacinia urna at mollis. Duis accumsan, mauris vitae posuere pulvinar, tortor ligula facilisis ex, at ultricies justo neque in dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan ante vitae neque imperdiet, a maximus nulla cursus. Nam facilisis scelerisque purus, vitae ornare neque placerat non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin vel ante eget arcu pulvinar vehicula at at nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus.Aenean mattis ultricies imperdiet. Nulla rhoncus, est sit amet commodo ullamcorper, augue arcu laoreet dolor, tristique dictum velit orci in dui. Nulla ut libero ut tellus porta convallis ut ultrices odio. Ut non volutpat risus, et consectetur justo. Aliquam consequat ut erat vitae tincidunt. Donec fringilla posuere quam, sed aliquet quam rutrum quis. Aenean euismod nulla non sem pharetra, sit amet luctus tortor pulvinar. Quisque consectetur lectus vitae hendrerit euismod. Sed non lobortis eros. Sed accumsan eget justo eu varius. Curabitur consequat, orci eget interdum luctus, turpis purus dictum ipsum, at egestas magna dui sit amet eros. Suspendisse quis sollicitudin sem.Phasellus mi turpis, posuere eget justo quis, maximus laoreet lectus. Praesent tempor urna orci, in auctor nunc porttitor id. Vivamus imperdiet odio non ultricies auctor.")
 
-        $('<div class="dl3">').appendTo('.sections').css({
+        $('<div class="sec2">').appendTo('.sections').css({
             'visibility': 'hidden',
             'height': '0px'
         })
+        $('<div class="dl3">').appendTo('.sec2')
 
         $('<div class="dl3title">').appendTo('.dl3')
         $('.dl3title').html("Documents => Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
@@ -1544,10 +1539,11 @@ $(document).ready(function () {
         $('<div id="f_name3" class="f_name">').appendTo('#file3')
         $('#f_name3').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
 
-        $('<div class="dl4">').appendTo('.sections').css({
+        $('<div class="sec3">').appendTo('.sections').css({
             'visibility': 'hidden',
             'height': '0px'
         })
+        $('<div class="dl4">').appendTo('.sec3')
         $('<div class="dl4title">').appendTo('.dl4')
         $('<div class="dl4cont">').appendTo('.dl4')
         $('<div class="i1">').appendTo('.dl4cont')
@@ -1571,31 +1567,31 @@ $(document).ready(function () {
                 console.log("1 " + labelContent);
                 if (labelContent == "Documents") {
                     console.log("1-1 " + labelContent);
-                    $('.dl2').css({
+                    $('.sec1').css({
                         'visibility': 'visible',
-                        'height': 'auto'
+                        'height': '100%'
                     })
-                    $('.dl3').css({
+                    $('.sec2').css({
                         'visibility': 'hidden',
                         'height': '0px'
                     })
-                    $('.dl4').css({
+                    $('.sec3').css({
                         'visibility': 'hidden',
                         'height': '0px'
                     })
                 } else {
                     console.log("1-2 " + labelContent);
-                    $('.dl2').css({
+                    $('.sec1').css({
                         'visibility': 'visible',
-                        'height': '0px'
+                        'height': '100%'
                     })
-                    $('.dl3').css({
+                    $('.sec2').css({
                         'visibility': 'hidden',
                         'height': '0px'
                     })
-                    $('.dl4').css({
+                    $('.sec3').css({
                         'visibility': 'hidden',
-                        'height': 'auto'
+                        'height': '0px'
                     })
                 }
             } else {
@@ -1604,31 +1600,31 @@ $(document).ready(function () {
                 console.log("2 " + labelContent);
                 if (labelContent == "Documents") {
                     console.log("2-1 Doc " + labelContent);
-                    $('.dl2').css({
+                    $('.sec1').css({
                         'visibility': 'hidden',
                         'height': '0px'
                     })
-                    $('.dl3').css({
+                    $('.sec2').css({
                         'visibility': 'visible',
-                        'height': 'auto'
+                        'height': '100%'
                     })
-                    $('.dl4').css({
+                    $('.sec3').css({
                         'visibility': 'hidden',
                         'height': '0px'
                     })
                 } else if (labelContent == "Images") {
                     console.log("2-2 Images " + labelContent);
-                    $('.dl2').css({
+                    $('.sec1').css({
                         'visibility': 'hidden',
                         'height': '0px'
                     })
-                    $('.dl3').css({
+                    $('.sec2').css({
                         'visibility': 'hidden',
                         'height': '0px'
                     })
-                    $('.dl4').css({
+                    $('.sec3').css({
                         'visibility': 'visible',
-                        'height': 'auto'
+                        'height': '100%'
                     })
 
                 }
@@ -1638,31 +1634,32 @@ $(document).ready(function () {
             console.log("3 " + labelContent);
             if (labelContent == "Documents") {
                 console.log("3-1 " + labelContent);
-                $('.dl2').css({
+                $('.sec1').css({
                     'visibility': 'hidden',
                     'height': '0px'
                 })
-                $('.dl3').css({
+                $('.sec2').css({
                     'visibility': 'visible',
-                    'height': 'auto'
+                    'height': '100%'
                 })
-                $('.dl4').css({
+                $('.sec3').css({
                     'visibility': 'hidden',
                     'height': '0px'
                 })
+                console.log("3-1 ?? " + labelContent);
             } else {
                 console.log("3-2 " + labelContent);
-                $('.dl2').css({
+                $('.sec1').css({
                     'visibility': 'hidden',
                     'height': '0px'
                 })
-                $('.dl3').css({
+                $('.sec2').css({
                     'visibility': 'hidden',
                     'height': '0px'
                 })
-                $('.dl4').css({
+                $('.sec3').css({
                     'visibility': 'visible',
-                    'height': 'auto'
+                    'height': '100%'
                 })
             }
         }

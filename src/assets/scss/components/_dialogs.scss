@@ -157,58 +157,87 @@
                     width: 100%;
                     height: 100%;
                     max-height: 310px;
-                    overflow-y: auto;
+                    overflow-y: hidden;
                     overflow-x: hidden;
                     padding: 0 8px;
 
-                    .dl2,
-                    .dl3,
-                    .dl4 {
+                    .sec1 {
+                        visibility: visible;
+                        height: 100%;
+                    }
+
+                    .sec2 {
+                        visibility: hidden;
+                        height: 0px;
+                    }
+
+                    .sec3 {
+                        visibility: hidden;
+                        height: 0px;
+                    }
+
+                    .sec1, .sec2, .sec3 {
                         width: 100%;
-                        height: auto;
-                    }
+                        height: 100%;
+                        overflow-y: auto;
+                        overflow-x: hidden;
+                        padding: 0 8px;
+                        position: relative;
 
-                    .dl3 {
-
-                        .dl3title {
-                            font-weight: 500;
-                            margin-bottom: 20px;
+                        .dl2,
+                        .dl3,
+                        .dl4 {
+                            width: 100%;
+                            height: auto;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
                         }
 
-                        .dl3files {
-                            margin-bottom: 8px;
-                            display: grid;
-                            grid-template-columns: 24px 1fr;
-                            grid-template-rows: 24px;
-                            grid-auto-columns: 1fr;
-                            gap: 0px 8px;
-                            grid-auto-flow: row;
-                            grid-template-areas:
-                                "f_icon f_name";
+                        .dl3 {
 
-                            .f_icon {
-                                grid-area: f_icon;
-                            }
-
-                            .f_name {
-                                grid-area: f_name;
-                                overflow: hidden;
-                                white-space: nowrap;
-                                text-overflow: ellipsis;
-                            }
-
-                        }
-                    }
-
-                    .dl4 {
-                        .dl4title {
-                            font-weight: 500;
-                            margin-bottom: 20px;
-                        }
-
-                        .dl4cont {
-                            .i1, .i2 {
+                            .dl3title {
+                                font-weight: 500;
                                 margin-bottom: 20px;
+                            }
+    
+                            .dl3files {
+                                margin-bottom: 8px;
+                                display: grid;
+                                grid-template-columns: 24px 1fr;
+                                grid-template-rows: 24px;
+                                grid-auto-columns: 1fr;
+                                gap: 0px 8px;
+                                grid-auto-flow: row;
+                                grid-template-areas:
+                                    "f_icon f_name";
+    
+                                .f_icon {
+                                    grid-area: f_icon;
+                                }
+    
+                                .f_name {
+                                    grid-area: f_name;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                }
+    
+                            }
+                        }
+    
+                        .dl4 {
+                            .dl4title {
+                                font-weight: 500;
+                                margin-bottom: 20px;
+                            }
+    
+                            .dl4cont {
+    
+                                .i1,
+                                .i2 {
+                                    margin-bottom: 20px;
+                                }
                             }
                         }
                     }
