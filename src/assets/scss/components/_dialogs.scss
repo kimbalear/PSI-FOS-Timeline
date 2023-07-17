@@ -176,7 +176,9 @@
                         height: 0px;
                     }
 
-                    .sec1, .sec2, .sec3 {
+                    .sec1,
+                    .sec2,
+                    .sec3 {
                         width: 100%;
                         height: 100%;
                         overflow-y: auto;
@@ -200,7 +202,7 @@
                                 font-weight: 500;
                                 margin-bottom: 20px;
                             }
-    
+
                             .dl3files {
                                 margin-bottom: 8px;
                                 display: grid;
@@ -211,29 +213,29 @@
                                 grid-auto-flow: row;
                                 grid-template-areas:
                                     "f_icon f_name";
-    
+
                                 .f_icon {
                                     grid-area: f_icon;
                                 }
-    
+
                                 .f_name {
                                     grid-area: f_name;
                                     overflow: hidden;
                                     white-space: nowrap;
                                     text-overflow: ellipsis;
                                 }
-    
+
                             }
                         }
-    
+
                         .dl4 {
                             .dl4title {
                                 font-weight: 500;
                                 margin-bottom: 20px;
                             }
-    
+
                             .dl4cont {
-    
+
                                 .i1,
                                 .i2 {
                                     margin-bottom: 20px;
@@ -246,25 +248,65 @@
         }
     }
 
-    .dlg_cnt {
+    .dlg_contr {
         grid-area: dlg_cnt;
+        width: 600px;
+        height: 500px;
+        margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr;
-        grid-auto-columns: 1fr;
+        grid-template-rows: 48px auto;
         gap: 0px 0px;
         grid-auto-flow: row;
-        align-items: stretch;
+        background-color: $clr2;
+        border: 2px solid;
+        border-radius: 12px;
+        box-sizing: border-box;
+        overflow: hidden;
         grid-template-areas:
-            "cnt_header"
-            "cnt_sections";
+            "dlg_bar"
+            "dlg_cnt";
 
-        .cnt_header {
-            grid-area: cnt_header;
+        .dlg_bar {
+            display: grid;
+            grid-template-columns: 1fr 90px;
+            grid-template-rows: 1fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "dlg_title dlg_cta";
         }
 
-        .cnt_sections {
-            grid-area: cnt_sections;
+        .dlg_title {
+            justify-self: start;
+            align-self: center;
+            grid-area: dlg_title;
+            padding-left: 8px;
+        }
+
+        .dlg_cta {
+            justify-self: end;
+            align-self: center;
+            grid-area: dlg_cta;
+        }
+
+
+        .dlg_cnt {
+            grid-area: dlg_cnt;
+            padding: 8px 8px 0 8px;
+
+            .cnt_sections {
+                width: 100%;
+                height: 429px;
+                padding: 8px;
+                overflow-y: auto;
+                overflow-x: hidden;
+
+                .scrs {
+                    width: 100%;
+                    height: auto;
+                }
+            }
         }
     }
 

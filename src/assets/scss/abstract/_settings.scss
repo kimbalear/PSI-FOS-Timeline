@@ -51,6 +51,12 @@ $shadow-lb: -3px 3px 15px -3px rgba(0, 0, 0, 0.1);
 
 .d_lgnd0 {
     border-color: $clr3 !important;
+    border-color: $clr1 !important;
+}
+
+.lgn0_g {
+    color: $clr2 !important;
+    background-color: $clrbk_lgnd0_p !important;
 }
 
 .tt_lgnd0,
