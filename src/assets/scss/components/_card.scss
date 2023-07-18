@@ -35,7 +35,7 @@
     }
 }
 
-.card_lgnd1 {
+.card_lgn1 {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr;
@@ -378,7 +378,7 @@
     }
 }
 
-.card_contr, .card_lgnd1, .card_lgnd2, .card_lgnd3, .card_lgnd4, .card_lgnd5, .card_lgnd6, .card_lgnd7 {
+.card_contr, .card_lgn1, .card_lgnd2, .card_lgnd3, .card_lgnd4, .card_lgnd5, .card_lgnd6, .card_lgnd7 {
     &:hover {
         cursor: pointer;
     }

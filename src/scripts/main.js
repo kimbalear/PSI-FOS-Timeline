@@ -486,72 +486,13 @@ $(document).ready(function () {
 
 
     $('.btn-lgnd-inf').on('click', function () {
-        var lgnd_text = $(this).parent().parent().find(".checkbox").text()
-        var lgnd = $(this).parent().parent().find("input").attr('id')
 
-        $('<div class="scrim">').appendTo('body')
+        dlgtype = 'd_' + $(this).parent().parent().find("input").attr('id')
+        dlgTitle = $(this).parent().parent().find(".checkbox").text()
+        groupStyle = $(this).parent().parent().find("input").attr('id') + '_g'
 
-        $('<div class="dlg">').appendTo('.scrim')
-        // dialog bar
-        $('<div class="dlg_bar">').appendTo('.dlg')
-        $('<div class="lbl">').appendTo('.dlg_bar')
-
-        $('<div class="dlg_cta">').appendTo('.dlg')
-        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-
-        $('<div class="dlg_cnt">').appendTo('.dlg')
-
-        switch (lgnd) {
-            case "lgnd0":
-                $('.dlg').addClass("d_" + lgnd)
-                $('.dlg_bar').addClass("tt_" + lgnd)
-                $('.dlg_cta').addClass("i_" + lgnd)
-                break;
-            case "lgnd1":
-                $('.dlg').addClass("d_" + lgnd)
-                $('.dlg_bar').addClass("tt_" + lgnd)
-                $('.dlg_cta').addClass("i_" + lgnd)
-                break;
-            case "lgnd2":
-                $('.dlg').addClass("d_" + lgnd)
-                $('.dlg_bar').addClass("tt_" + lgnd)
-                $('.dlg_cta').addClass("i_" + lgnd)
-                break;
-            case "lgnd3":
-                $('.dlg').addClass("d_" + lgnd)
-                $('.dlg_bar').addClass("tt_" + lgnd)
-                $('.dlg_cta').addClass("i_" + lgnd)
-                break;
-            case "lgnd4":
-                $('.dlg').addClass("d_" + lgnd)
-                $('.dlg_bar').addClass("tt_" + lgnd)
-                $('.dlg_cta').addClass("i_" + lgnd)
-                break;
-            case "lgnd5":
-                $('.dlg').addClass("d_" + lgnd)
-                $('.dlg_bar').addClass("tt_" + lgnd)
-                $('.dlg_cta').addClass("i_" + lgnd)
-                break;
-            case "lgnd6":
-                $('.dlg').addClass("d_" + lgnd)
-                $('.dlg_bar').addClass("tt_" + lgnd)
-                $('.dlg_cta').addClass("i_" + lgnd)
-                break;
-            case "lgnd7":
-                $('.dlg').addClass("d_" + lgnd)
-                $('.dlg_bar').addClass("tt_" + lgnd)
-                $('.dlg_cta').addClass("i_" + lgnd)
-                break;
-            case "lgnd8":
-                $('.dlg').addClass("d_" + lgnd)
-                $('.dlg_bar').addClass("tt_" + lgnd)
-                $('.dlg_cta').addClass("i_" + lgnd)
-                break;
-        }
-
-        $('.dlg_bar').children().html(lgnd_text)
-
-        //$('.dlg_cnt').html("This is")
+        console.log('PASO: ' + 'dlgtype: ' + dlgtype + ' groupStyle: ' + groupStyle)
+        contentCards_i(dlgtype, dlgTitle, groupStyle)
 
     })
 
@@ -611,20 +552,11 @@ $(document).ready(function () {
     }
 
     function timeline_structure(id_ou, nameOu, year, tLtype) {
-        /*
-                console.log("-------------------------------------");
-                console.log("id_ou: " + id_ou);
-                console.log("nameOu: " + nameOu);
-                console.log("year: " + year);
-                console.log("tLtype: " + tLtype);
-                console.log("-------------------------------------");
-                */
-        //var lblYr = '<div id="' + id_ou + tLtype + 'lbl" class="lbl"></div>'
+
         var timeline = '<div id="' + id_ou + tLtype + 'tl" class="timeline"></div>'
         var tpyr = '<div id="' + id_ou + tLtype + 'tpyr" class="tp_yr"></div>'
         var cebtn = '<div id="' + id_ou + tLtype + 'cebtn" class="ce_btn"></div>'
         var topl = '<div id="' + id_ou + tLtype + 'topl" class="top_timeline">'
-        //var topTl = '<div id="' + id_ou + tLtype + 'lbou" class="lb_ou">' + nameOu + '</div>'
         var btnhs = '<div id="' + id_ou + tLtype + 'btnhs" class="btn_hs"></div>'
         var ctabtn = '<div id="' + id_ou + tLtype + 'btn" class="btn ignore">Hide year</div>'
         var tline = '<div id="' + id_ou + tLtype + 'tline" class="t_line">'
@@ -635,7 +567,6 @@ $(document).ready(function () {
         $(tpyr).appendTo('#' + id_ou + tLtype + 'tl')
         $(cebtn).appendTo('#' + id_ou + tLtype + 'tl')
         $(topl).appendTo('#' + id_ou + tLtype + 'cebtn')
-        //$(topTl).appendTo('#' + id_ou + tLtype + 'topl')
         $(btnhs).appendTo('#' + id_ou + tLtype + 'topl')
         $(ctabtn).appendTo('#' + id_ou + tLtype + 'btnhs')
         for (itp = 1; itp <= 12; itp++) {
@@ -706,7 +637,7 @@ $(document).ready(function () {
         var tlBttm12 = '<div class="pnl_bttm12"><div class="impacts"><div id="' + id_ou + tLtype + 'cards12" class="cards12"></div></div><div class="line"></div></div>'
 
         // Bottom
-        var tlcard1 = '<div class="card_lgnd1"><div class="title">Need</div><div class="subtitle">Regression Introduced</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
+        var tlcard1 = '<div class="card_lgn1"><div class="title">Need</div><div class="subtitle">Regression Introduced</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
         var tlcard2 = '<div class="card_lgnd2"><div class="title">Need</div><div class="subtitle">Loss</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
         var tlcard3 = '<div class="card_lgnd3"><div class="title">Need</div><div class="subtitle">Defended</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
         var tlcard4 = '<div class="card_lgnd4"><div class="title">Need</div><div class="subtitle">Reform Introduced</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
@@ -898,7 +829,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards1').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd4').length;
@@ -928,7 +859,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards2').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards2').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards2').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards2').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards2').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards2').find('.card_lgnd4').length;
@@ -957,7 +888,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards3').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards3').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards3').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards3').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards3').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards3').find('.card_lgnd4').length;
@@ -986,7 +917,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards4').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards4').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards4').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards4').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards4').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards4').find('.card_lgnd4').length;
@@ -1015,7 +946,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards5').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards5').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards5').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards5').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards5').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards5').find('.card_lgnd4').length;
@@ -1044,7 +975,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards6').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards6').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards6').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards6').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards6').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards6').find('.card_lgnd4').length;
@@ -1073,7 +1004,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards7').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards7').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards7').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards7').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards7').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards7').find('.card_lgnd4').length;
@@ -1102,7 +1033,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards8').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards8').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards8').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards8').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards8').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards8').find('.card_lgnd4').length;
@@ -1131,7 +1062,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards9').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards9').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards9').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards9').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards9').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards9').find('.card_lgnd4').length;
@@ -1160,7 +1091,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards10').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards10').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards10').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards10').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards10').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards10').find('.card_lgnd4').length;
@@ -1189,7 +1120,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards11').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards11').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards11').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards11').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards11').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards11').find('.card_lgnd4').length;
@@ -1218,7 +1149,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards12').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards12').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards12').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards12').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards12').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards12').find('.card_lgnd4').length;
@@ -1300,7 +1231,7 @@ $(document).ready(function () {
     });
 
     $('#lgnd1').click(function () {
-        $(".card_lgnd1").toggle(this.checked)
+        $(".card_lgn1").toggle(this.checked)
         pnlLgnds();
     });
 
@@ -1456,10 +1387,6 @@ $(document).ready(function () {
     })
 
     function contentCards_need(dlgtype, dlgNeed, dlgTitle, groupStyle, imgs) {
-        console.log('dlgtype: ' + dlgtype)
-        console.log('dlgNeed: ' + dlgNeed)
-        console.log('dlgTitle: ' + dlgTitle)
-        console.log('groupStyle: ' + groupStyle)
         var imgs = ["1.jpg", "2.jpg", "3.jpg"]
         var url = "https://knowtechture.com/timeline/src/assets/imgs/"
         $('<div class="scrim">').appendTo('body')
@@ -1555,9 +1482,6 @@ $(document).ready(function () {
     }
 
     function contentCards_cont(dlgtype, dlgTitle, groupStyle) {
-        console.log('dlgtype: ' + dlgtype)
-        console.log('dlgTitle: ' + dlgTitle)
-        console.log('groupStyle: ' + groupStyle)
 
         $('<div class="scrim">').appendTo('body')
 
@@ -1575,6 +1499,24 @@ $(document).ready(function () {
         $('.scrs').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel blandit libero, non suscipit ligula. Maecenas molestie finibus scelerisque. Curabitur luctus vel orci sed pulvinar. Suspendisse potenti. Donec orci velit, mollis eget arcu a, feugiat aliquam nunc. Morbi a consectetur ligula. Nunc mattis, metus sed dictum venenatis, quam felis placerat odio, at vulputate mauris eros sed mi. Aenean ut augue vestibulum, sollicitudin arcu tincidunt, ultrices sem. Suspendisse quis lobortis felis. Etiam tincidunt congue viverra. Pellentesque sapien nisl, condimentum sit amet diam at, finibus consectetur sapien. Quisque pretium suscipit felis et laoreet. Quisque tincidunt lectus leo, et aliquam arcu pretium vel. Cras finibus tincidunt tincidunt. Praesent eu luctus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;Duis elit nisi, commodo et ornare eget, ultricies et turpis. Curabitur ullamcorper lacinia urna at mollis. Duis accumsan, mauris vitae posuere pulvinar, tortor ligula facilisis ex, at ultricies justo neque in dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan ante vitae neque imperdiet, a maximus nulla cursus. Nam facilisis scelerisque purus, vitae ornare neque placerat non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin vel ante eget arcu pulvinar vehicula at at nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus.Aenean mattis ultricies imperdiet. Nulla rhoncus, est sit amet commodo ullamcorper, augue arcu laoreet dolor, tristique dictum velit orci in dui. Nulla ut libero ut tellus porta convallis ut ultrices odio. Ut non volutpat risus, et consectetur justo. Aliquam consequat ut erat vitae tincidunt. Donec fringilla posuere quam, sed aliquet quam rutrum quis. Aenean euismod nulla non sem pharetra, sit amet luctus tortor pulvinar. Quisque consectetur lectus vitae hendrerit euismod. Sed non lobortis eros. Sed accumsan eget justo eu varius. Curabitur consequat, orci eget interdum luctus, turpis purus dictum ipsum, at egestas magna dui sit amet eros. Suspendisse quis sollicitudin sem.Phasellus mi turpis, posuere eget justo quis, maximus laoreet lectus. Praesent tempor urna orci, in auctor nunc porttitor id. Vivamus imperdiet odio non ultricies auctor.")
     }
 
+    function contentCards_i(dlgtype, dlgTitle, groupStyle) {
+
+        $('<div class="scrim">').appendTo('body')
+
+        $('<div class="dlg_i ' + dlgtype + '">').appendTo('.scrim')
+        $('<div class="dlg_bar ' + groupStyle + '">').appendTo('.dlg_i')
+        $('<div class="dlg_title">').appendTo('.dlg_bar')
+        $('<div class="dlg_cta ' + groupStyle + '">').appendTo('.dlg_bar')
+        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
+        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
+        $('<div class="dlg_cnt">').appendTo('.dlg_i')
+        $('<div class="cnt_sections">').appendTo('.dlg_cnt')
+        $('<div class="scrs">').appendTo('.cnt_sections')
+
+        $('.dlg_title').html(dlgTitle)
+        $('.scrs').html("Aliquam consequat ut erat vitae tincidunt. Donec fringilla posuere quam, sed aliquet quam rutrum quis. Aenean euismod nulla non sem pharetra, sit amet luctus tortor pulvinar. Quisque consectetur lectus vitae hendrerit euismod. Sed non lobortis eros. Sed accumsan eget justo eu varius.")
+    }
+
     $(document).on('click', '.toggle-btn-dlg', function () {
 
         var numElementosActivos = $('.toggle-btn-dlg.active').length
@@ -1584,9 +1526,7 @@ $(document).ready(function () {
 
             if ($(this).hasClass('active')) {
                 $('.toggle-btn-dlg').removeClass('active').css('width', '36px')
-                console.log("1 " + labelContent);
                 if (labelContent == "Documents") {
-                    console.log("1-1 " + labelContent);
                     $('.sec1').css({
                         'visibility': 'visible',
                         'height': '100%'
@@ -1600,7 +1540,6 @@ $(document).ready(function () {
                         'height': '0px'
                     })
                 } else {
-                    console.log("1-2 " + labelContent);
                     $('.sec1').css({
                         'visibility': 'visible',
                         'height': '100%'
@@ -1617,9 +1556,7 @@ $(document).ready(function () {
             } else {
                 $('.toggle-btn-dlg').removeClass('active').css('width', '36px')
                 $(this).addClass('active').css('width', 'max-content')
-                console.log("2 " + labelContent);
                 if (labelContent == "Documents") {
-                    console.log("2-1 Doc " + labelContent);
                     $('.sec1').css({
                         'visibility': 'hidden',
                         'height': '0px'
@@ -1633,7 +1570,6 @@ $(document).ready(function () {
                         'height': '0px'
                     })
                 } else if (labelContent == "Images") {
-                    console.log("2-2 Images " + labelContent);
                     $('.sec1').css({
                         'visibility': 'hidden',
                         'height': '0px'
@@ -1651,9 +1587,7 @@ $(document).ready(function () {
             }
         } else {
             $(this).addClass('active').css('width', 'max-content')
-            console.log("3 " + labelContent);
             if (labelContent == "Documents") {
-                console.log("3-1 " + labelContent);
                 $('.sec1').css({
                     'visibility': 'hidden',
                     'height': '0px'
@@ -1666,9 +1600,7 @@ $(document).ready(function () {
                     'visibility': 'hidden',
                     'height': '0px'
                 })
-                console.log("3-1 ?? " + labelContent);
             } else {
-                console.log("3-2 " + labelContent);
                 $('.sec1').css({
                     'visibility': 'hidden',
                     'height': '0px'
@@ -1687,11 +1619,11 @@ $(document).ready(function () {
 
     var dlgtype, dlgNeed, dlgTitle, groupStyle
 
-    $(document).on('click', '.card_lgnd1', function () {
+    $(document).on('click', '.card_lgn1', function () {
         dlgtype = 'd_lgnd1'
         dlgNeed = $(this).find(".subtitle").text()
         dlgTitle = $(this).find(".title").text()
-        groupStyle = 'lgn1_g'
+        groupStyle = 'lgnd1_g'
         contentCards_need(dlgtype, dlgNeed, dlgTitle, groupStyle)
     })
 
@@ -1700,7 +1632,7 @@ $(document).ready(function () {
         dlgtype = 'd_lgnd2'
         dlgNeed = $(this).find(".subtitle").text()
         dlgTitle = $(this).find(".title").text()
-        groupStyle = 'lgn2_g'
+        groupStyle = 'lgnd2_g'
         contentCards_need(dlgtype, dlgNeed, dlgTitle, groupStyle)
     })
 
@@ -1708,7 +1640,7 @@ $(document).ready(function () {
         dlgtype = 'd_lgnd3'
         dlgNeed = $(this).find(".subtitle").text()
         dlgTitle = $(this).find(".title").text()
-        groupStyle = 'lgn3_g'
+        groupStyle = 'lgnd3_g'
         contentCards_need(dlgtype, dlgNeed, dlgTitle, groupStyle)
     })
 
@@ -1716,7 +1648,7 @@ $(document).ready(function () {
         dlgtype = 'd_lgnd4'
         dlgNeed = $(this).find(".subtitle").text()
         dlgTitle = $(this).find(".title").text()
-        groupStyle = 'lgn4_g'
+        groupStyle = 'lgnd4_g'
         contentCards_need(dlgtype, dlgNeed, dlgTitle, groupStyle)
     })
 
@@ -1724,7 +1656,7 @@ $(document).ready(function () {
         dlgtype = 'd_lgnd5'
         dlgNeed = $(this).find(".subtitle").text()
         dlgTitle = $(this).find(".title").text()
-        groupStyle = 'lgn5_g'
+        groupStyle = 'lgnd5_g'
         contentCards_need(dlgtype, dlgNeed, dlgTitle, groupStyle)
     })
 
@@ -1732,7 +1664,7 @@ $(document).ready(function () {
         dlgtype = 'd_lgnd6'
         dlgNeed = $(this).find(".subtitle").text()
         dlgTitle = $(this).find(".title").text()
-        groupStyle = 'lgn6_g'
+        groupStyle = 'lgnd6_g'
         contentCards_need(dlgtype, dlgNeed, dlgTitle, groupStyle)
     })
 
@@ -1740,14 +1672,14 @@ $(document).ready(function () {
         dlgtype = 'd_lgnd7'
         dlgNeed = $(this).find(".subtitle").text()
         dlgTitle = $(this).find(".title").text()
-        groupStyle = 'lgn7_g'
+        groupStyle = 'lgnd7_g'
         contentCards_need(dlgtype, dlgNeed, dlgTitle, groupStyle)
     })
 
     $(document).on('click', '.card_contr', function () {
         dlgtype = 'd_lgnd0'
         dlgTitle = $(this).find(".title").text()
-        groupStyle = 'lgn0_g'
+        groupStyle = 'lgnd0_g'
         contentCards_cont(dlgtype, dlgTitle, groupStyle)
     })
 
