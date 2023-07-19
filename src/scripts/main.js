@@ -1315,6 +1315,90 @@ $(document).ready(function () {
         }
     }
 
+    function pdfStyle(status) {
+        switch (status.toLowerCase()) {
+            case 'on':
+                $(".contributions").css("max-height", "none");
+                $(".contributions > div").css("overflow", "hidden");
+                $("html").css({
+                    'width': 'auto',
+                    'height': 'auto'
+                })
+                $("body").css({
+                    'width': 'auto',
+                    'height': 'auto'
+                })
+                $(".wrapper").css({
+                    'width': 'auto',
+                    'height': 'auto'
+                })
+                $(".content").css({
+                    'width': 'auto',
+                    'height': 'auto'
+                })
+                $(".timelines").css({
+                    'width': 'auto',
+                    'height': 'auto'
+                })
+                $(".ounit").css({
+                    'width': 'auto',
+                    'height': 'auto'
+                })
+                $(".timeline").css({
+                    'width': 'auto',
+                    'grid-template-rows': '36px auto 44px auto'
+                })
+                $(".impacts").css({
+                    'max-height': 'none',
+                    'height': 'auto'
+                })
+                $(".impacts > div").css("overflow", "hidden")
+                break;
+            case 'off':
+                $(".contributions").css("max-height", "35vh")
+                $(".contributions > div").css("overflow-x", "auto")
+
+
+                $(".impacts").css({
+                    'max-height': '35vh',
+                    'height': 'auto'
+                })
+                $(".impacts > div").css("overflow", "auto")
+
+                $("html").css({
+                    'width': '100%',
+                    'height': '100%'
+                })
+                $("body").css({
+                    'width': '100%',
+                    'height': '100%'
+                })
+                $(".wrapper").css({
+                    'width': '100%',
+                    'height': '100%'
+                })
+                $(".content").css({
+                    'width': 'auto',
+                    'height': 'calc(100% - 65px)'
+                })
+                $(".timelines").css({
+                    'width': 'auto',
+                    'height': '100%'
+                })
+                $(".ounit").css({
+                    'width': 'auto',
+                    'height': '100%'
+                })
+                $(".timeline").css({
+                    'width': 'auto',
+                    'height': '100%',
+                    'grid-template-rows': '36px 1fr 44px 1fr'
+                })
+                break;
+            default: return '';
+        }
+    }
+
     $(".ipdf").click(function () {
         if (!$(this).hasClass("disabled")) {
             $('<div class="scrim">').appendTo('body')
@@ -1354,13 +1438,10 @@ $(document).ready(function () {
 
             $('.dlg_pdf_bar').children().html("Export to PDF")
 
-            $(".contributions").css("max-height", "none")
-            $(".contributions > div").css("overflow", "none")
 
-            $(".impacts").css("max-height", "none")
-            $(".impacts > div").css("overflow", "none")
             $(".ignore").hide()
 
+            pdfStyle('on')
 
             html2canvas(document.querySelector(".timeline")).then(canvas => {
                 canvas.id = "myCanvas";
@@ -1377,10 +1458,14 @@ $(document).ready(function () {
                     pdf.save($('.lb_ou').text());
                     $('div.scrim').remove()
                 })
+
+                pdfStyle('off')
+                /*
                 $(".contributions").css("max-height", "35vh")
                 $(".contributions > div").css("overflow-x", "auto")
                 $(".impacts").css("max-height", "35vh")
                 $(".impacts > div").css("overflow-x", "auto")
+                */
                 $(".ignore").show()
             })
         }
