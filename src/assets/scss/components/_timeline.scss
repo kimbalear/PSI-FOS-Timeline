@@ -1,1334 +1,1335 @@
 .timelines {
-    width: auto;
+  width: auto;
+  height: 100%;
+  overflow: auto;
+
+  .ounit {
+    display: flex;
+    flex-direction: row;
     height: 100%;
-    overflow: auto;
-
-    .ounit {
-        display: flex;
-        flex-direction: row;
-        height: 100%;
-        padding-bottom: 20px;
-
-        .timeline {
-            height: 100%;
-            display: grid;
-            grid-template-columns: 60px 220px 220px 220px 220px 220px 220px 220px 220px 220px 220px 220px 220px;
-            grid-template-rows: 36px 1fr 44px 1fr;
-            gap: 0px 0px;
-            grid-auto-flow: row;
-            padding-bottom: 20px;
-            border-bottom: 1px solid $clrgba15;
-            grid-template-areas:
-                "tp_yr ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn"
-                "tp_yr tp1 tp2 tp3 tp4 tp5 tp6 tp7 tp8 tp9 tp10 tp11 tp12"
-                "line line line line line line line line line line line line line"
-                "btm_yr btm1 btm2 btm3 btm4 btm5 btm6 btm7 btm8 btm9 btm10 btm11 btm12";
-
-
-            .ce_btn {
-                grid-area: ce_btn;
-
-            }
-
-            .tp_yr {
-                grid-area: tp_yr;
-                background: rgba(119, 113, 106, 0.06);
-            }
-
-            .tp1 {
-                grid-area: tp1;
-                padding: 0 4px 0 23px;
-                align-self: end;
-            }
-
-            .tp2 {
-                grid-area: tp2;
-                padding: 0 4px 0 23px;
-                align-self: end;
-            }
-
-            .tp3 {
-                grid-area: tp3;
-                padding: 0 4px 0 23px;
-                align-self: end;
-            }
-
-            .tp4 {
-                grid-area: tp4;
-                padding: 0 4px 0 23px;
-                align-self: end;
-            }
-
-            .tp5 {
-                grid-area: tp5;
-                padding: 0 4px 0 23px;
-                align-self: end;
-            }
-
-            .tp6 {
-                grid-area: tp6;
-                padding: 0 4px 0 23px;
-                align-self: end;
-            }
-
-            .tp7 {
-                grid-area: tp7;
-                padding: 0 4px 0 23px;
-                align-self: end;
-            }
-
-            .tp8 {
-                grid-area: tp8;
-                padding: 0 4px 0 23px;
-                align-self: end;
-            }
-
-            .tp9 {
-                grid-area: tp9;
-                padding: 0 4px 0 23px;
-                align-self: end;
-            }
-
-            .tp10 {
-                grid-area: tp10;
-                padding: 0 4px 0 23px;
-                align-self: end;
-            }
-
-            .tp11 {
-                grid-area: tp11;
-                padding: 0 4px 0 23px;
-                align-self: end;
-            }
-
-            .tp12 {
-                grid-area: tp12;
-                padding: 0 4px 0 23px;
-                align-self: end;
-            }
-
-            .t_line {
-                grid-area: line;
-                position: relative;
-
-                .yr_start {
-                    float: left;
-                    width: 60px;
-                    height: 44px;
-                    background-color: $clr1;
-
-                    .lbl {
-                        float: left;
-                        width: 100%;
-                        font-size: 16px;
-                        font-weight: 600;
-                        line-height: 44px;
-                        color: $clr2;
-                        text-align: center;
-                        text-transform: uppercase;
-                    }
-                }
-
-                .next_yr {
-                    background-color: $clr2;
-                    background-image: url("data:image/svg+xml,%3Csvg width='60' height='44' viewBox='0 0 60 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 0H60V44H2V0Z' fill='%2377716A'/%3E%3C/svg%3E");
-                }
-
-                .tl_jan {
-                    float: left;
-                    width: 220px;
-                    height: auto;
-
-                    .cntr_top1 {
-                        position: relative;
-                        width: 100%;
-                        height: auto;
-
-                        .dots_contr1 {
-                            position: absolute;
-                            left: 68px;
-                            top: -7px;
-                            width: 100px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot1 {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                background-color: $clr2;
-                                font-size: 10px;
-                                font-weight: 400;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                            }
-                        }
-
-                    }
-
-                    .cnt {
-                        max-width: 220px;
-                        height: 44px;
-                        background-image: url("data:image/svg+xml,%3Csvg width='220' height='44' viewBox='0 0 220 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_60_2829)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0V44H0.995475L17.9186 21L0.995475 0H0ZM19.9094 21L2.98633 0H220L220 1H5L21.0748 21L5 43H220L220 44H2.98633L19.9094 21Z' fill='%2377716A'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_60_2829'%3E%3Crect width='220' height='44' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
-
-                        .lbl {
-                            float: left;
-                            width: 100%;
-                            font-size: 16px;
-                            font-weight: 600;
-                            line-height: 44px;
-                            color: $clr1;
-                            text-align: center;
-                            text-transform: uppercase;
-                        }
-                    }
-
-                    .cntr_bttm1 {
-                        position: relative;
-                        width: 100%;
-                        height: auto;
-
-                        .activ_1 {
-                            position: absolute;
-                            left: 75px;
-                            top: -7px;
-                            width: 70px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot1 {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 400;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                            }
-                        }
-
-                        .activ_2 {
-                            position: absolute;
-                            left: 70px;
-                            top: -7px;
-                            width: 80px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 400;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                                margin-left: 2px;
-                            }
-                        }
-
-                        .activ_3 {
-                            position: absolute;
-                            left: 60px;
-                            top: -7px;
-                            width: 100px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 400;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                                margin-left: 2px;
-                            }
-                        }
-
-                        .activ_4 {
-                            position: absolute;
-                            left: 60px;
-                            top: -7px;
-                            width: 105px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 400;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                                margin-left: 2px;
-                            }
-                        }
-
-                        .activ_5 {
-                            position: absolute;
-                            left: 50px;
-                            top: -7px;
-                            width: 116px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 400;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                                margin-left: 2px;
-                            }
-                        }
-
-                        .activ_6 {
-                            position: absolute;
-                            left: 48px;
-                            bottom: -7px;
-                            width: 140px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 500;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                                margin-left: 2px;
-                            }
-                        }
-
-                        .activ_7 {
-                            position: absolute;
-                            left: 40px;
-                            bottom: -7px;
-                            width: 145px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 500;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                                margin-left: 2px;
-                            }
-                        }
-
-                        .activ_8 {
-                            position: absolute;
-                            left: 32px;
-                            bottom: -7px;
-                            width: 160px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 500;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                                margin-left: 2px;
-                            }
-                        }
-                    }
-                }
-
-                .tl_feb,
-                .tl_mar,
-                .tl_apr,
-                .tl_may,
-                .tl_jun,
-                .tl_jul,
-                .tl_aug,
-                .tl_sep,
-                .tl_oct,
-                .tl_nov {
-                    float: left;
-                    width: 220px;
-                    height: auto;
-
-                    .cntr_top2,
-                    .cntr_top3,
-                    .cntr_top4,
-                    .cntr_top5,
-                    .cntr_top6,
-                    .cntr_top7,
-                    .cntr_top8,
-                    .cntr_top9,
-                    .cntr_top10,
-                    .cntr_top11 {
-                        position: relative;
-                        width: 100%;
-                        height: auto;
-
-                        .dots_contr2,
-                        .dots_contr3,
-                        .dots_contr4,
-                        .dots_contr5,
-                        .dots_contr6,
-                        .dots_contr7,
-                        .dots_contr8,
-                        .dots_contr9,
-                        .dots_contr10,
-                        .dots_contr11 {
-                            position: absolute;
-                            left: 68px;
-                            top: -7px;
-                            width: 100px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot2,
-                            .dot3,
-                            .dot4,
-                            .dot5,
-                            .dot6,
-                            .dot7,
-                            .dot8,
-                            .dot9,
-                            .dot10,
-                            .dot11 {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 400;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                            }
-                        }
-
-                        .activ_6 {
-                            position: absolute;
-                            left: 68px;
-                            top: -7px;
-                            width: 100px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                background-color: $clr2;
-                                font-size: 10px;
-                                font-weight: 400;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                            }
-                        }
-                    }
-
-                    .cnt {
-                        max-width: 220px;
-                        height: 44px;
-                        background-image: url("data:image/svg+xml,%3Csvg width='220' height='44' viewBox='0 0 220 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_60_2838)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 43.0039V44H0.995475L17.9186 21L0.995475 0H0V0.996094H0.671875L16.8652 21.0137L0.734375 43.0039H0Z' fill='%2377716A'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.98633 0L19.9094 21L2.98633 44H220L220 43H5L21.0748 21L5 1H220L220 0H2.98633Z' fill='%2377716A'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_60_2838'%3E%3Crect width='220' height='44' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
-
-                        .lbl {
-                            float: left;
-                            width: 100%;
-                            font-size: 16px;
-                            font-weight: 600;
-                            line-height: 44px;
-                            color: $clr1;
-                            text-align: center;
-                            text-transform: uppercase;
-                        }
-                    }
-
-                    .cntr_bttm1,
-                    .cntr_bttm2,
-                    .cntr_bttm3,
-                    .cntr_bttm4,
-                    .cntr_bttm5,
-                    .cntr_bttm6,
-                    .cntr_bttm7,
-                    .cntr_bttm8,
-                    .cntr_bttm9,
-                    .cntr_bttm10,
-                    .cntr_bttm11 {
-                        position: relative;
-                        width: 100%;
-                        height: auto;
-
-                        .activ_1 {
-                            position: absolute;
-                            left: 75px;
-                            top: -7px;
-                            width: 70px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 400;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                            }
-                        }
-
-                        .activ_2 {
-                            position: absolute;
-                            left: 70px;
-                            top: -7px;
-                            width: 80px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 400;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                                margin-left: 2px;
-                            }
-                        }
-
-                        .activ_3 {
-                            position: absolute;
-                            left: 60px;
-                            top: -7px;
-                            width: 100px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 400;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                                margin-left: 2px;
-                            }
-                        }
-
-                        .activ_4 {
-                            position: absolute;
-                            left: 60px;
-                            top: -7px;
-                            width: 105px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 400;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                                margin-left: 2px;
-                            }
-                        }
-
-                        .activ_5 {
-                            position: absolute;
-                            left: 50px;
-                            top: -7px;
-                            width: 116px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 400;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                                margin-left: 2px;
-                            }
-                        }
-
-                        .activ_6 {
-                            position: absolute;
-                            left: 48px;
-                            bottom: -7px;
-                            width: 140px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 500;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                                margin-left: 2px;
-                            }
-                        }
-
-                        .activ_7 {
-                            position: absolute;
-                            left: 40px;
-                            bottom: -7px;
-                            width: 145px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 500;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                                margin-left: 2px;
-                            }
-                        }
-
-                        .dots_impacts {
-                            position: absolute;
-                            left: 32px;
-                            bottom: -7px;
-                            width: 160px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 500;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                                margin-left: 2px;
-                            }
-                        }
-                    }
-
-                }
-
-                .tl_dic {
-                    float: left;
-                    width: 220px;
-                    height: auto;
-
-                    .cntr_top12 {
-                        position: relative;
-                        width: 100%;
-                        height: auto;
-
-                        .dots_contr12 {
-                            position: absolute;
-                            left: 68px;
-                            top: -7px;
-                            width: 100px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot12 {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                background-color: $clr2;
-                                font-size: 10px;
-                                font-weight: 400;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                            }
-                        }
-                    }
-
-                    .cnt {
-                        max-width: 220px;
-                        height: 44px;
-                        background-image: url("data:image/svg+xml,%3Csvg width='220' height='45' viewBox='0 0 220 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_60_2845)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 43.5039V44.5H0.995475L17.9186 21.5L0.995475 0.5H0V1.49609H0.671875L16.8652 21.5137L0.734375 43.5039H0Z' fill='%2377716A'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.98633 0.5L19.9094 21.5L2.98633 44.5H220V0.5H2.98633ZM5 1.5L21 21.5L5 43.5H219V1.5H5Z' fill='%2377716A'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_60_2845'%3E%3Crect width='220' height='44' fill='white' transform='translate(0 0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
-
-
-
-                        .lbl {
-                            float: left;
-                            width: 100%;
-                            font-size: 16px;
-                            font-weight: 600;
-                            line-height: 44px;
-                            color: $clr1;
-                            text-align: center;
-                            text-transform: uppercase;
-                        }
-                    }
-
-                    .cntr_bttm12 {
-                        position: relative;
-                        width: 100%;
-                        height: auto;
-
-                        .activ_1 {
-                            position: absolute;
-                            left: 75px;
-                            top: -7px;
-                            width: 70px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 400;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                            }
-                        }
-
-                        .activ_2 {
-                            position: absolute;
-                            left: 70px;
-                            top: -7px;
-                            width: 80px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 400;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                                margin-left: 2px;
-                            }
-                        }
-
-                        .activ_3 {
-                            position: absolute;
-                            left: 60px;
-                            top: -7px;
-                            width: 100px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 400;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                                margin-left: 2px;
-                            }
-                        }
-
-                        .activ_4 {
-                            position: absolute;
-                            left: 60px;
-                            top: -7px;
-                            width: 105px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 400;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                                margin-left: 2px;
-                            }
-                        }
-
-                        .activ_5 {
-                            position: absolute;
-                            left: 50px;
-                            top: -7px;
-                            width: 116px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 400;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                                margin-left: 2px;
-                            }
-                        }
-
-                        .activ_6 {
-                            position: absolute;
-                            left: 48px;
-                            bottom: -7px;
-                            width: 140px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 500;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                                margin-left: 2px;
-                            }
-                        }
-
-                        .activ_7 {
-                            position: absolute;
-                            left: 40px;
-                            bottom: -7px;
-                            width: 145px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 500;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                                margin-left: 2px;
-                            }
-                        }
-
-                        .dots_impacts {
-                            position: absolute;
-                            left: 32px;
-                            bottom: -7px;
-                            width: 160px;
-                            height: 16px;
-                            background-color: $clr1;
-                            border-radius: 7px;
-                            padding: 2px 2px 0 8px;
-
-                            .lbl {
-                                float: left;
-                                width: min-content;
-                                font-size: 10px;
-                                font-weight: 600;
-                                line-height: 12px;
-                                color: $clr2;
-                            }
-
-                            .dot {
-                                width: min-content;
-                                float: right;
-                                width: 12px;
-                                height: 12px;
-                                border-radius: 6px;
-                                font-size: 10px;
-                                font-weight: 500;
-                                line-height: 12px;
-                                text-align: center;
-                                color: $clr1;
-                                margin-left: 2px;
-                            }
-                        }
-                    }
-
-                }
-
-                .dot1,
-                .dot2,
-                .dot3,
-                .dot4,
-                .dot5,
-                .dot6,
-                .dot7,
-                .dot8,
-                .dot9,
-                .dot10,
-                .dot11,
-                .dot12 {
-                    width: min-content;
-                    float: right;
-                    width: 12px;
-                    height: 12px;
-                    border-radius: 6px;
-                    font-size: 10px;
-                    font-weight: 400;
-                    line-height: 12px;
-                    text-align: center;
-                    color: $clr1;
-                    background-color: $clr2;
-                }
-            }
-
-            .btm_yr {
-                grid-area: btm_yr;
-                background: rgba(119, 113, 106, 0.06);
-            }
-
-            .btm1 {
-                grid-area: btm1;
-                padding: 0 4px 0 23px;
-            }
-
-            .btm2 {
-                grid-area: btm2;
-                padding: 0 4px 0 23px;
-            }
-
-            .btm3 {
-                grid-area: btm3;
-                padding: 0 4px 0 23px;
-            }
-
-            .btm4 {
-                grid-area: btm4;
-                padding: 0 4px 0 23px;
-            }
-
-            .btm5 {
-                grid-area: btm5;
-                padding: 0 4px 0 23px;
-            }
-
-            .btm6 {
-                grid-area: btm6;
-                padding: 0 4px 0 23px;
-            }
-
-            .btm7 {
-                grid-area: btm7;
-                padding: 0 4px 0 23px;
-            }
-
-            .btm8 {
-                grid-area: btm8;
-                padding: 0 4px 0 23px;
-            }
-
-            .btm9 {
-                grid-area: btm9;
-                padding: 0 4px 0 23px;
-            }
-
-            .btm10 {
-                grid-area: btm10;
-                padding: 0 4px 0 23px;
-            }
-
-            .btm11 {
-                grid-area: btm11;
-                padding: 0 4px 0 23px;
-            }
-
-            .btm12 {
-                grid-area: btm12;
-                padding: 0 4px 0 23px;
-            }
+    padding-bottom: 20px;
+
+    .timeline {
+      height: 100%;
+      display: grid;
+      grid-template-columns: 60px 220px 220px 220px 220px 220px 220px 220px 220px 220px 220px 220px 220px;
+      grid-template-rows: 36px 1fr 44px 1fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $clrgba15;
+      grid-template-areas:
+        "tp_yr ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn ce_btn"
+        "tp_yr tp1 tp2 tp3 tp4 tp5 tp6 tp7 tp8 tp9 tp10 tp11 tp12"
+        "line line line line line line line line line line line line line"
+        "btm_yr btm1 btm2 btm3 btm4 btm5 btm6 btm7 btm8 btm9 btm10 btm11 btm12";
+
+      .ce_btn {
+        grid-area: ce_btn;
+
+        .top_timeline {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          .title_ou {
+            padding: 0 16px;
+          }
+        }
+      }
+
+      .tp_yr {
+        grid-area: tp_yr;
+        background: rgba(119, 113, 106, 0.06);
+      }
+
+      .tp1 {
+        grid-area: tp1;
+        padding: 0 4px 0 23px;
+        align-self: end;
+      }
+
+      .tp2 {
+        grid-area: tp2;
+        padding: 0 4px 0 23px;
+        align-self: end;
+      }
+
+      .tp3 {
+        grid-area: tp3;
+        padding: 0 4px 0 23px;
+        align-self: end;
+      }
+
+      .tp4 {
+        grid-area: tp4;
+        padding: 0 4px 0 23px;
+        align-self: end;
+      }
+
+      .tp5 {
+        grid-area: tp5;
+        padding: 0 4px 0 23px;
+        align-self: end;
+      }
+
+      .tp6 {
+        grid-area: tp6;
+        padding: 0 4px 0 23px;
+        align-self: end;
+      }
+
+      .tp7 {
+        grid-area: tp7;
+        padding: 0 4px 0 23px;
+        align-self: end;
+      }
+
+      .tp8 {
+        grid-area: tp8;
+        padding: 0 4px 0 23px;
+        align-self: end;
+      }
+
+      .tp9 {
+        grid-area: tp9;
+        padding: 0 4px 0 23px;
+        align-self: end;
+      }
+
+      .tp10 {
+        grid-area: tp10;
+        padding: 0 4px 0 23px;
+        align-self: end;
+      }
+
+      .tp11 {
+        grid-area: tp11;
+        padding: 0 4px 0 23px;
+        align-self: end;
+      }
+
+      .tp12 {
+        grid-area: tp12;
+        padding: 0 4px 0 23px;
+        align-self: end;
+      }
+
+      .t_line {
+        grid-area: line;
+        position: relative;
+
+        .yr_start {
+          float: left;
+          width: 60px;
+          height: 44px;
+          background-color: $clr1;
+
+          .lbl {
+            float: left;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 44px;
+            color: $clr2;
+            text-align: center;
+            text-transform: uppercase;
+          }
         }
 
+        .next_yr {
+          background-color: $clr2;
+          background-image: url("data:image/svg+xml,%3Csvg width='60' height='44' viewBox='0 0 60 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 0H60V44H2V0Z' fill='%2377716A'/%3E%3C/svg%3E");
+        }
+
+        .tl_jan {
+          float: left;
+          width: 220px;
+          height: auto;
+
+          .cntr_top1 {
+            position: relative;
+            width: 100%;
+            height: auto;
+
+            .dots_contr1 {
+              position: absolute;
+              left: 68px;
+              top: -7px;
+              width: 100px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot1 {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                background-color: $clr2;
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+              }
+            }
+          }
+
+          .cnt {
+            max-width: 220px;
+            height: 44px;
+            background-image: url("data:image/svg+xml,%3Csvg width='220' height='44' viewBox='0 0 220 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_60_2829)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0V44H0.995475L17.9186 21L0.995475 0H0ZM19.9094 21L2.98633 0H220L220 1H5L21.0748 21L5 43H220L220 44H2.98633L19.9094 21Z' fill='%2377716A'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_60_2829'%3E%3Crect width='220' height='44' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+
+            .lbl {
+              float: left;
+              width: 100%;
+              font-size: 16px;
+              font-weight: 600;
+              line-height: 44px;
+              color: $clr1;
+              text-align: center;
+              text-transform: uppercase;
+            }
+          }
+
+          .cntr_bttm1 {
+            position: relative;
+            width: 100%;
+            height: auto;
+
+            .activ_1 {
+              position: absolute;
+              left: 75px;
+              top: -7px;
+              width: 70px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot1 {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+              }
+            }
+
+            .activ_2 {
+              position: absolute;
+              left: 70px;
+              top: -7px;
+              width: 80px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+                margin-left: 2px;
+              }
+            }
+
+            .activ_3 {
+              position: absolute;
+              left: 60px;
+              top: -7px;
+              width: 100px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+                margin-left: 2px;
+              }
+            }
+
+            .activ_4 {
+              position: absolute;
+              left: 60px;
+              top: -7px;
+              width: 105px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+                margin-left: 2px;
+              }
+            }
+
+            .activ_5 {
+              position: absolute;
+              left: 50px;
+              top: -7px;
+              width: 116px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+                margin-left: 2px;
+              }
+            }
+
+            .activ_6 {
+              position: absolute;
+              left: 48px;
+              bottom: -7px;
+              width: 140px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 500;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+                margin-left: 2px;
+              }
+            }
+
+            .activ_7 {
+              position: absolute;
+              left: 40px;
+              bottom: -7px;
+              width: 145px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 500;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+                margin-left: 2px;
+              }
+            }
+
+            .activ_8 {
+              position: absolute;
+              left: 32px;
+              bottom: -7px;
+              width: 160px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 500;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+                margin-left: 2px;
+              }
+            }
+          }
+        }
+
+        .tl_feb,
+        .tl_mar,
+        .tl_apr,
+        .tl_may,
+        .tl_jun,
+        .tl_jul,
+        .tl_aug,
+        .tl_sep,
+        .tl_oct,
+        .tl_nov {
+          float: left;
+          width: 220px;
+          height: auto;
+
+          .cntr_top2,
+          .cntr_top3,
+          .cntr_top4,
+          .cntr_top5,
+          .cntr_top6,
+          .cntr_top7,
+          .cntr_top8,
+          .cntr_top9,
+          .cntr_top10,
+          .cntr_top11 {
+            position: relative;
+            width: 100%;
+            height: auto;
+
+            .dots_contr2,
+            .dots_contr3,
+            .dots_contr4,
+            .dots_contr5,
+            .dots_contr6,
+            .dots_contr7,
+            .dots_contr8,
+            .dots_contr9,
+            .dots_contr10,
+            .dots_contr11 {
+              position: absolute;
+              left: 68px;
+              top: -7px;
+              width: 100px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot2,
+              .dot3,
+              .dot4,
+              .dot5,
+              .dot6,
+              .dot7,
+              .dot8,
+              .dot9,
+              .dot10,
+              .dot11 {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+              }
+            }
+
+            .activ_6 {
+              position: absolute;
+              left: 68px;
+              top: -7px;
+              width: 100px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                background-color: $clr2;
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+              }
+            }
+          }
+
+          .cnt {
+            max-width: 220px;
+            height: 44px;
+            background-image: url("data:image/svg+xml,%3Csvg width='220' height='44' viewBox='0 0 220 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_60_2838)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 43.0039V44H0.995475L17.9186 21L0.995475 0H0V0.996094H0.671875L16.8652 21.0137L0.734375 43.0039H0Z' fill='%2377716A'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.98633 0L19.9094 21L2.98633 44H220L220 43H5L21.0748 21L5 1H220L220 0H2.98633Z' fill='%2377716A'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_60_2838'%3E%3Crect width='220' height='44' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+
+            .lbl {
+              float: left;
+              width: 100%;
+              font-size: 16px;
+              font-weight: 600;
+              line-height: 44px;
+              color: $clr1;
+              text-align: center;
+              text-transform: uppercase;
+            }
+          }
+
+          .cntr_bttm1,
+          .cntr_bttm2,
+          .cntr_bttm3,
+          .cntr_bttm4,
+          .cntr_bttm5,
+          .cntr_bttm6,
+          .cntr_bttm7,
+          .cntr_bttm8,
+          .cntr_bttm9,
+          .cntr_bttm10,
+          .cntr_bttm11 {
+            position: relative;
+            width: 100%;
+            height: auto;
+
+            .activ_1 {
+              position: absolute;
+              left: 75px;
+              top: -7px;
+              width: 70px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+              }
+            }
+
+            .activ_2 {
+              position: absolute;
+              left: 70px;
+              top: -7px;
+              width: 80px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+                margin-left: 2px;
+              }
+            }
+
+            .activ_3 {
+              position: absolute;
+              left: 60px;
+              top: -7px;
+              width: 100px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+                margin-left: 2px;
+              }
+            }
+
+            .activ_4 {
+              position: absolute;
+              left: 60px;
+              top: -7px;
+              width: 105px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+                margin-left: 2px;
+              }
+            }
+
+            .activ_5 {
+              position: absolute;
+              left: 50px;
+              top: -7px;
+              width: 116px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+                margin-left: 2px;
+              }
+            }
+
+            .activ_6 {
+              position: absolute;
+              left: 48px;
+              bottom: -7px;
+              width: 140px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 500;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+                margin-left: 2px;
+              }
+            }
+
+            .activ_7 {
+              position: absolute;
+              left: 40px;
+              bottom: -7px;
+              width: 145px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 500;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+                margin-left: 2px;
+              }
+            }
+
+            .dots_impacts {
+              position: absolute;
+              left: 32px;
+              bottom: -7px;
+              width: 160px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 500;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+                margin-left: 2px;
+              }
+            }
+          }
+        }
+
+        .tl_dic {
+          float: left;
+          width: 220px;
+          height: auto;
+
+          .cntr_top12 {
+            position: relative;
+            width: 100%;
+            height: auto;
+
+            .dots_contr12 {
+              position: absolute;
+              left: 68px;
+              top: -7px;
+              width: 100px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot12 {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                background-color: $clr2;
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+              }
+            }
+          }
+
+          .cnt {
+            max-width: 220px;
+            height: 44px;
+            background-image: url("data:image/svg+xml,%3Csvg width='220' height='45' viewBox='0 0 220 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_60_2845)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 43.5039V44.5H0.995475L17.9186 21.5L0.995475 0.5H0V1.49609H0.671875L16.8652 21.5137L0.734375 43.5039H0Z' fill='%2377716A'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.98633 0.5L19.9094 21.5L2.98633 44.5H220V0.5H2.98633ZM5 1.5L21 21.5L5 43.5H219V1.5H5Z' fill='%2377716A'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_60_2845'%3E%3Crect width='220' height='44' fill='white' transform='translate(0 0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+
+            .lbl {
+              float: left;
+              width: 100%;
+              font-size: 16px;
+              font-weight: 600;
+              line-height: 44px;
+              color: $clr1;
+              text-align: center;
+              text-transform: uppercase;
+            }
+          }
+
+          .cntr_bttm12 {
+            position: relative;
+            width: 100%;
+            height: auto;
+
+            .activ_1 {
+              position: absolute;
+              left: 75px;
+              top: -7px;
+              width: 70px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+              }
+            }
+
+            .activ_2 {
+              position: absolute;
+              left: 70px;
+              top: -7px;
+              width: 80px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+                margin-left: 2px;
+              }
+            }
+
+            .activ_3 {
+              position: absolute;
+              left: 60px;
+              top: -7px;
+              width: 100px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+                margin-left: 2px;
+              }
+            }
+
+            .activ_4 {
+              position: absolute;
+              left: 60px;
+              top: -7px;
+              width: 105px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+                margin-left: 2px;
+              }
+            }
+
+            .activ_5 {
+              position: absolute;
+              left: 50px;
+              top: -7px;
+              width: 116px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+                margin-left: 2px;
+              }
+            }
+
+            .activ_6 {
+              position: absolute;
+              left: 48px;
+              bottom: -7px;
+              width: 140px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 500;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+                margin-left: 2px;
+              }
+            }
+
+            .activ_7 {
+              position: absolute;
+              left: 40px;
+              bottom: -7px;
+              width: 145px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 500;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+                margin-left: 2px;
+              }
+            }
+
+            .dots_impacts {
+              position: absolute;
+              left: 32px;
+              bottom: -7px;
+              width: 160px;
+              height: 16px;
+              background-color: $clr1;
+              border-radius: 7px;
+              padding: 2px 2px 0 8px;
+
+              .lbl {
+                float: left;
+                width: min-content;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 12px;
+                color: $clr2;
+              }
+
+              .dot {
+                width: min-content;
+                float: right;
+                width: 12px;
+                height: 12px;
+                border-radius: 6px;
+                font-size: 10px;
+                font-weight: 500;
+                line-height: 12px;
+                text-align: center;
+                color: $clr1;
+                margin-left: 2px;
+              }
+            }
+          }
+        }
+
+        .dot1,
+        .dot2,
+        .dot3,
+        .dot4,
+        .dot5,
+        .dot6,
+        .dot7,
+        .dot8,
+        .dot9,
+        .dot10,
+        .dot11,
+        .dot12 {
+          width: min-content;
+          float: right;
+          width: 12px;
+          height: 12px;
+          border-radius: 6px;
+          font-size: 10px;
+          font-weight: 400;
+          line-height: 12px;
+          text-align: center;
+          color: $clr1;
+          background-color: $clr2;
+        }
+      }
+
+      .btm_yr {
+        grid-area: btm_yr;
+        background: rgba(119, 113, 106, 0.06);
+      }
+
+      .btm1 {
+        grid-area: btm1;
+        padding: 0 4px 0 23px;
+      }
+
+      .btm2 {
+        grid-area: btm2;
+        padding: 0 4px 0 23px;
+      }
+
+      .btm3 {
+        grid-area: btm3;
+        padding: 0 4px 0 23px;
+      }
+
+      .btm4 {
+        grid-area: btm4;
+        padding: 0 4px 0 23px;
+      }
+
+      .btm5 {
+        grid-area: btm5;
+        padding: 0 4px 0 23px;
+      }
+
+      .btm6 {
+        grid-area: btm6;
+        padding: 0 4px 0 23px;
+      }
+
+      .btm7 {
+        grid-area: btm7;
+        padding: 0 4px 0 23px;
+      }
+
+      .btm8 {
+        grid-area: btm8;
+        padding: 0 4px 0 23px;
+      }
+
+      .btm9 {
+        grid-area: btm9;
+        padding: 0 4px 0 23px;
+      }
+
+      .btm10 {
+        grid-area: btm10;
+        padding: 0 4px 0 23px;
+      }
+
+      .btm11 {
+        grid-area: btm11;
+        padding: 0 4px 0 23px;
+      }
+
+      .btm12 {
+        grid-area: btm12;
+        padding: 0 4px 0 23px;
+      }
     }
+  }
 }

@@ -90,7 +90,11 @@ $(document).ready(function () {
     let tL3btm11 = [];
     let tL3btm12 = [];
 
+    let id_ou
+    let nameOu
     let qry1, qry2, qry3
+    let arrYear
+    let sortedYears
 
     $('.msbx-ou').each(function (e) {
         var self = $(this)
@@ -436,7 +440,7 @@ $(document).ready(function () {
 
     function SetOrgUnits(st, typ) {
 
-        var nameOu = ""
+        nameOu = ""
         for (var i = 0; i < st.length; i++) {
 
             if (i >= 1) {
@@ -482,71 +486,13 @@ $(document).ready(function () {
 
 
     $('.btn-lgnd-inf').on('click', function () {
-        var lgnd_text = $(this).parent().parent().find(".checkbox").text()
-        var lgnd = $(this).parent().parent().find("input").attr('id')
 
-        $('<div class="scrim">').appendTo('body')
+        dlgtype = 'd_' + $(this).parent().parent().find("input").attr('id')
+        dlgTitle = $(this).parent().parent().find(".checkbox").text()
+        groupStyle = $(this).parent().parent().find("input").attr('id') + '_g'
 
-        $('<div class="dlg">').appendTo('.scrim')
-        $('<div class="dlg_bar">').appendTo('.dlg')
-        $('<div class="lbl">').appendTo('.dlg_bar')
-
-        $('<div class="dlg_cta">').appendTo('.dlg')
-        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-
-        $('<div class="dlg_cnt">').appendTo('.dlg')
-        
-        switch (lgnd) {
-            case "lgnd0":
-                $('.dlg').addClass("d_" + lgnd)
-                $('.dlg_bar').addClass("tt_" + lgnd)
-                $('.dlg_cta').addClass("i_" + lgnd)
-                break;
-            case "lgnd1":
-                $('.dlg').addClass("d_" + lgnd)
-                $('.dlg_bar').addClass("tt_" + lgnd)
-                $('.dlg_cta').addClass("i_" + lgnd)
-                break;
-            case "lgnd2":
-                $('.dlg').addClass("d_" + lgnd)
-                $('.dlg_bar').addClass("tt_" + lgnd)
-                $('.dlg_cta').addClass("i_" + lgnd)
-                break;
-            case "lgnd3":
-                $('.dlg').addClass("d_" + lgnd)
-                $('.dlg_bar').addClass("tt_" + lgnd)
-                $('.dlg_cta').addClass("i_" + lgnd)
-                break;
-            case "lgnd4":
-                $('.dlg').addClass("d_" + lgnd)
-                $('.dlg_bar').addClass("tt_" + lgnd)
-                $('.dlg_cta').addClass("i_" + lgnd)
-                break;
-            case "lgnd5":
-                $('.dlg').addClass("d_" + lgnd)
-                $('.dlg_bar').addClass("tt_" + lgnd)
-                $('.dlg_cta').addClass("i_" + lgnd)
-                break;
-            case "lgnd6":
-                $('.dlg').addClass("d_" + lgnd)
-                $('.dlg_bar').addClass("tt_" + lgnd)
-                $('.dlg_cta').addClass("i_" + lgnd)
-                break;
-            case "lgnd7":
-                $('.dlg').addClass("d_" + lgnd)
-                $('.dlg_bar').addClass("tt_" + lgnd)
-                $('.dlg_cta').addClass("i_" + lgnd)
-                break;
-            case "lgnd8":
-                $('.dlg').addClass("d_" + lgnd)
-                $('.dlg_bar').addClass("tt_" + lgnd)
-                $('.dlg_cta').addClass("i_" + lgnd)
-                break;
-        }
-
-        $('.dlg_bar').children().html(lgnd_text)
-
-        //$('.dlg_cnt').html("This is")
+        console.log('PASO: ' + 'dlgtype: ' + dlgtype + ' groupStyle: ' + groupStyle)
+        contentCards_i(dlgtype, dlgTitle, groupStyle)
 
     })
 
@@ -585,32 +531,35 @@ $(document).ready(function () {
         }
 
         if (typeof qry1 === 'string' && qry1 != "") {
+
             if (typeof qry3 === 'string' && qry3 != "") {
                 allCheckboxes.prop('disabled', false)
-                timeline(qry1, qry3)
+                $('.irun').removeClass('disabled');
+                $('.ipdf').removeClass('disabled');
             } else {
                 allCheckboxes.prop('checked', true)
                 allCheckboxes.prop('disabled', true)
-                $('.ounit').remove()
+                $('.irun').addClass('disabled');
+                $('.ipdf').addClass('disabled');
             }
         } else {
             allCheckboxes.prop('checked', true)
             allCheckboxes.prop('disabled', true)
-            $('.ounit').remove()
+            $('.irun').addClass('disabled');
+            $('.ipdf').addClass('disabled');
         }
 
     }
 
     function timeline_structure(id_ou, nameOu, year, tLtype) {
 
-        //var lblYr = '<div id="' + id_ou + tLtype + 'lbl" class="lbl"></div>'
         var timeline = '<div id="' + id_ou + tLtype + 'tl" class="timeline"></div>'
         var tpyr = '<div id="' + id_ou + tLtype + 'tpyr" class="tp_yr"></div>'
         var cebtn = '<div id="' + id_ou + tLtype + 'cebtn" class="ce_btn"></div>'
         var topl = '<div id="' + id_ou + tLtype + 'topl" class="top_timeline">'
-        //var topTl = '<div id="' + id_ou + tLtype + 'lbou" class="lb_ou">' + nameOu + '</div>'
-        var btnhs = '<div id="' + id_ou + tLtype + 'btnhs" class="btn_hs"></div>'
-        var ctabtn = '<div id="' + id_ou + tLtype + 'btn" class="btn ignore">Hide year</div>'
+        var titleou = '<div id="' + id_ou + tLtype + 'titleou" class="title_ou">' + nameOu + '</div>'
+        var btnhs = '<div id="' + id_ou + tLtype + 'btnhs" class="btn_hs">Hide year</div>'
+        var btnaddnew = '<div id="' + id_ou + tLtype + 'btnaddnew" class="btn_addnew">Add New</div>'
         var tline = '<div id="' + id_ou + tLtype + 'tline" class="t_line">'
         var yrstart = '<div id="' + id_ou + tLtype + 'yrstart" class="yr_start">'
         var btmyr = '<div id="' + id_ou + tLtype + 'btmyr" class="btm_yr">'
@@ -619,9 +568,9 @@ $(document).ready(function () {
         $(tpyr).appendTo('#' + id_ou + tLtype + 'tl')
         $(cebtn).appendTo('#' + id_ou + tLtype + 'tl')
         $(topl).appendTo('#' + id_ou + tLtype + 'cebtn')
-        //$(topTl).appendTo('#' + id_ou + tLtype + 'topl')
+        $(titleou).appendTo('#' + id_ou + tLtype + 'topl')
         $(btnhs).appendTo('#' + id_ou + tLtype + 'topl')
-        $(ctabtn).appendTo('#' + id_ou + tLtype + 'btnhs')
+        $(btnaddnew).appendTo('#' + id_ou + tLtype + 'topl')
         for (itp = 1; itp <= 12; itp++) {
             var tp = '<div id="' + id_ou + tLtype + 'tp' + itp + '" class="tp' + itp + '">'
             $(tp).appendTo('#' + id_ou + tLtype + 'tl')
@@ -657,7 +606,7 @@ $(document).ready(function () {
         var tlTp10 = '<div id="' + id_ou + tLtype + 'pnl_top10" class="panel_top"><div id="' + id_ou + tLtype + 'contns10" class="contributions"><div id="' + id_ou + tLtype + '10cnstr" class="contrs10"></div></div><div id="' + id_ou + tLtype + 'lc10" class="line"></div></div>'
         var tlTp11 = '<div id="' + id_ou + tLtype + 'pnl_top11" class="panel_top"><div id="' + id_ou + tLtype + 'contns11" class="contributions"><div id="' + id_ou + tLtype + '11cnstr" class="contrs11"></div></div><div id="' + id_ou + tLtype + 'lc11" class="line"></div></div>'
         var tlTp12 = '<div id="' + id_ou + tLtype + 'pnl_top12" class="panel_top"><div id="' + id_ou + tLtype + 'contns12" class="contributions"><div id="' + id_ou + tLtype + '12cnstr" class="contrs12"></div></div><div id="' + id_ou + tLtype + 'lc12" class="line"></div></div>'
-        var contrs = '<div id="' + id_ou + tLtype + 'card_cntr" class="card_contr"><div class="title">Title</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>';
+        var contrs = '<div id="' + id_ou + tLtype + 'card_cntr" class="card_contr"><div class="partner">Partner</div><div class="title">Title</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>';
 
         // Line
         var tlJan = '<div id="' + id_ou + tLtype + 'jan" class="tl_jan"><div id="' + id_ou + tLtype + 'cntr_top1" class="cntr_top1"></div><div class="cnt"><div class="lbl">jan</div></div><div id="' + id_ou + tLtype + 'cntr_bttm1" class="cntr_bttm1"></div></div>'
@@ -690,13 +639,13 @@ $(document).ready(function () {
         var tlBttm12 = '<div class="pnl_bttm12"><div class="impacts"><div id="' + id_ou + tLtype + 'cards12" class="cards12"></div></div><div class="line"></div></div>'
 
         // Bottom
-        var tlcard1 = '<div class="card_lgnd1"><div class="title">Need</div><div class="subtitle">Regression Introduced</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
-        var tlcard2 = '<div class="card_lgnd2"><div class="title">Need</div><div class="subtitle">Loss</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
-        var tlcard3 = '<div class="card_lgnd3"><div class="title">Need</div><div class="subtitle">Defended</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
-        var tlcard4 = '<div class="card_lgnd4"><div class="title">Need</div><div class="subtitle">Reform Introduced</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
-        var tlcard5 = '<div class="card_lgnd5"><div class="title">Need</div><div class="subtitle">Advanced</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div> </div>'
-        var tlcard6 = '<div class="card_lgnd6"><div class="title">Need</div><div class="subtitle">Approved</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
-        var tlcard7 = '<div class="card_lgnd7"><div class="title">Need</div><div class="subtitle">Implemented</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
+        var tlcard1 = '<div class="card_lgn1"><div class="partner">Partner</div><div class="title">Need</div><div class="subtitle">Regression Introduced</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
+        var tlcard2 = '<div class="card_lgnd2"><div class="partner">Partner</div><div class="title">Need</div><div class="subtitle">Loss</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
+        var tlcard3 = '<div class="card_lgnd3"><div class="partner">Partner</div><div class="title">Need</div><div class="subtitle">Defended</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
+        var tlcard4 = '<div class="card_lgnd4"><div class="partner">Partner</div><div class="title">Need</div><div class="subtitle">Reform Introduced</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
+        var tlcard5 = '<div class="card_lgnd5"><div class="partner">Partner</div><div class="title">Need</div><div class="subtitle">Advanced</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div> </div>'
+        var tlcard6 = '<div class="card_lgnd6"><div class="partner">Partner</div><div class="title">Need</div><div class="subtitle">Approved</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
+        var tlcard7 = '<div class="card_lgnd7"><div class="partner">Partner</div><div class="title">Need</div><div class="subtitle">Implemented</div><div class="cont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem ipsum, cond consectetur adipisci (MAX 120 caracters).</div></div>'
 
         var dtImpacts = '<div class="lbl">Impact</div>'
 
@@ -882,7 +831,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards1').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards1').find('.card_lgnd4').length;
@@ -912,7 +861,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards2').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards2').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards2').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards2').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards2').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards2').find('.card_lgnd4').length;
@@ -941,7 +890,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards3').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards3').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards3').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards3').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards3').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards3').find('.card_lgnd4').length;
@@ -970,7 +919,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards4').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards4').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards4').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards4').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards4').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards4').find('.card_lgnd4').length;
@@ -999,7 +948,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards5').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards5').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards5').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards5').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards5').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards5').find('.card_lgnd4').length;
@@ -1028,7 +977,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards6').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards6').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards6').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards6').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards6').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards6').find('.card_lgnd4').length;
@@ -1057,7 +1006,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards7').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards7').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards7').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards7').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards7').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards7').find('.card_lgnd4').length;
@@ -1086,7 +1035,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards8').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards8').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards8').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards8').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards8').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards8').find('.card_lgnd4').length;
@@ -1115,7 +1064,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards9').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards9').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards9').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards9').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards9').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards9').find('.card_lgnd4').length;
@@ -1144,7 +1093,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards10').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards10').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards10').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards10').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards10').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards10').find('.card_lgnd4').length;
@@ -1173,7 +1122,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards11').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards11').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards11').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards11').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards11').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards11').find('.card_lgnd4').length;
@@ -1202,7 +1151,7 @@ $(document).ready(function () {
                 $('#' + id_ou + tLtype + 'cards12').append(randomBtm)
             }
 
-            var lg1 = $('#' + id_ou + tLtype + 'cards12').find('.card_lgnd1').length;
+            var lg1 = $('#' + id_ou + tLtype + 'cards12').find('.card_lgn1').length;
             var lg2 = $('#' + id_ou + tLtype + 'cards12').find('.card_lgnd2').length;
             var lg3 = $('#' + id_ou + tLtype + 'cards12').find('.card_lgnd3').length;
             var lg4 = $('#' + id_ou + tLtype + 'cards12').find('.card_lgnd4').length;
@@ -1225,21 +1174,20 @@ $(document).ready(function () {
     }
 
     function building_timeline(id_ou, nameOu, year) {
-        var arrYear = year.split("/");
+        arrYear = year.split("/");
 
         if (arrYear.length == 1) {
-            timeline_structure(id_ou, nameOu, year, '0')
+            //SOLO
+            timeline_structure(id_ou, nameOu, year, '0');
         } else {
+            //VARIOS
             let prefix = arrYear[0].slice(0, 2);
             for (var i = 0; i < arrYear.length; i++) {
                 if (i !== 0) {
                     arrYear[i] = prefix + arrYear[i];
                 }
             }
-
-            var sortedYears = arrYear.slice().sort(function (a, b) {
-                return b - a;
-            });
+            sortyears(arrYear)
 
             for (var i = 0; i < sortedYears.length; i++) {
                 timeline_structure(id_ou, nameOu, sortedYears[i], i)
@@ -1247,32 +1195,21 @@ $(document).ready(function () {
         }
     }
 
-    function toggleDisabled(var1, var2) {
-        var arrOu = var1.split(',');
-        var arryear = var2.split('/');
+    function sortyears(arrYear) {
 
-        if ((Array.isArray(arrOu) && arrOu.length == 1) || (Array.isArray(arryear) && arryear.length == 1)) {
-            $('.btn_print').removeClass('disabled')
-        }
-
-        if ((Array.isArray(arrOu) && arrOu.length == 1) && (Array.isArray(arryear) && arryear.length > 1)) {
-            if ($('.btn_print').hasClass('disabled')) {
-                $('.btn_print').removeClass('disabled')
-            }
-            $('.btn_print').addClass('disabled')
-        }
-
-        if ((Array.isArray(arrOu) && arrOu.length > 1) && (Array.isArray(arryear) && arryear.length == 1)) {
-            if ($('.btn_print').hasClass('disabled')) {
-                $('.btn_print').removeClass('disabled')
-            }
-            $('.btn_print').addClass('disabled')
+        if (mySwitch.checked) {
+            sortedYears = arrYear.slice().sort(function (a, b) {
+                return b - a;
+            });
+        } else {
+            sortedYears = arrYear.slice().sort(function (a, b) {
+                return a - b;
+            });
         }
     }
 
     function timeline(ou, year) {
         $('.ounit').remove()
-        toggleDisabled(ou, year)
 
         if (ou.indexOf(',') !== -1) {
             var arrOu = ou.split(',');
@@ -1296,7 +1233,7 @@ $(document).ready(function () {
     });
 
     $('#lgnd1').click(function () {
-        $(".card_lgnd1").toggle(this.checked)
+        $(".card_lgn1").toggle(this.checked)
         pnlLgnds();
     });
 
@@ -1335,9 +1272,11 @@ $(document).ready(function () {
         pnlLgnds();
     });
 
-    $(document).on('click', '.btn', function () {
+    $(document).on('click', '.btn_hs', function () {
         id = $(this).prop("id")
+        console.log("id: " + id)
         var firstTwoChars = id.substring(0, 2);
+        console.log("firstTwoChars: " + firstTwoChars)
         $('#' + firstTwoChars + 'tpyr').toggle();
         $('#' + firstTwoChars + 'btmyr').toggle();
         for (itp = 1; itp <= 12; itp++) {
@@ -1352,9 +1291,18 @@ $(document).ready(function () {
 
         if ($('#' + firstTwoChars + 'tpyr').is(":visible")) {
             $(this).text("Hide year");//Hide all years
+            console.log("firstTwoChars: " + firstTwoChars)
         } else {
             $(this).text("Show year");//Show all years
         }
+//todo
+/*
+        if ($('#' + firstTwoChars + 'tpyr').is(":visible")) {
+            $(this).text("Hide year");//Hide all years
+        } else {
+            $(this).text("Show year");//Show all years
+        }
+        */
     })
 
     function pnlLgnds() {
@@ -1380,7 +1328,91 @@ $(document).ready(function () {
         }
     }
 
-    $(".btn_print").click(function () {
+    function pdfStyle(status) {
+        switch (status.toLowerCase()) {
+            case 'on':
+                $(".contributions").css("max-height", "none");
+                $(".contributions > div").css("overflow", "hidden");
+                $("html").css({
+                    'width': 'auto',
+                    'height': 'auto'
+                })
+                $("body").css({
+                    'width': 'auto',
+                    'height': 'auto'
+                })
+                $(".wrapper").css({
+                    'width': 'auto',
+                    'height': 'auto'
+                })
+                $(".content").css({
+                    'width': 'auto',
+                    'height': 'auto'
+                })
+                $(".timelines").css({
+                    'width': 'auto',
+                    'height': 'auto'
+                })
+                $(".ounit").css({
+                    'width': 'auto',
+                    'height': 'auto'
+                })
+                $(".timeline").css({
+                    'width': 'auto',
+                    'grid-template-rows': '36px auto 44px auto'
+                })
+                $(".impacts").css({
+                    'max-height': 'none',
+                    'height': 'auto'
+                })
+                $(".impacts > div").css("overflow", "hidden")
+                break;
+            case 'off':
+                $(".contributions").css("max-height", "35vh")
+                $(".contributions > div").css("overflow-x", "auto")
+
+
+                $(".impacts").css({
+                    'max-height': '35vh',
+                    'height': 'auto'
+                })
+                $(".impacts > div").css("overflow", "auto")
+
+                $("html").css({
+                    'width': '100%',
+                    'height': '100%'
+                })
+                $("body").css({
+                    'width': '100%',
+                    'height': '100%'
+                })
+                $(".wrapper").css({
+                    'width': '100%',
+                    'height': '100%'
+                })
+                $(".content").css({
+                    'width': 'auto',
+                    'height': 'calc(100% - 65px)'
+                })
+                $(".timelines").css({
+                    'width': 'auto',
+                    'height': '100%'
+                })
+                $(".ounit").css({
+                    'width': 'auto',
+                    'height': '100%'
+                })
+                $(".timeline").css({
+                    'width': 'auto',
+                    'height': '100%',
+                    'grid-template-rows': '36px 1fr 44px 1fr'
+                })
+                break;
+            default: return '';
+        }
+    }
+
+    $(".ipdf").click(function () {
         if (!$(this).hasClass("disabled")) {
             $('<div class="scrim">').appendTo('body')
 
@@ -1419,13 +1451,10 @@ $(document).ready(function () {
 
             $('.dlg_pdf_bar').children().html("Export to PDF")
 
-            $(".contributions").css("max-height", "none")
-            $(".contributions > div").css("overflow", "none")
 
-            $(".impacts").css("max-height", "none")
-            $(".impacts > div").css("overflow", "none")
             $(".ignore").hide()
 
+            pdfStyle('on')
 
             html2canvas(document.querySelector(".timeline")).then(canvas => {
                 canvas.id = "myCanvas";
@@ -1442,309 +1471,330 @@ $(document).ready(function () {
                     pdf.save($('.lb_ou').text());
                     $('div.scrim').remove()
                 })
+
+                pdfStyle('off')
+                /*
                 $(".contributions").css("max-height", "35vh")
                 $(".contributions > div").css("overflow-x", "auto")
                 $(".impacts").css("max-height", "35vh")
                 $(".impacts > div").css("overflow-x", "auto")
+                */
                 $(".ignore").show()
             })
         }
     })
 
-    function contentCard(ChildCont, imgs) {
+    function contentCards_need(dlgtype, dlgNeed, dlgTitle, groupStyle, imgs) {
         var imgs = ["1.jpg", "2.jpg", "3.jpg"]
         var url = "https://knowtechture.com/timeline/src/assets/imgs/"
+        $('<div class="scrim">').appendTo('body')
 
-        $('<div class="dl1">').appendTo('.dlg_cnt')
+        $('<div class="dlg ' + dlgtype + '">').appendTo('.scrim')
+        $('<div class="dlg_bar ' + groupStyle + '">').appendTo('.dlg')
+        $('<div class="dlg_title">').appendTo('.dlg_bar')
+        $('<div class="dlg_cta ' + groupStyle + '">').appendTo('.dlg_bar')
+        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
+        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
+        $('<div class="dlg_cnt">').appendTo('.dlg')
+
+        $('<div class="cnt_header">').appendTo('.dlg_cnt')
+        $('<div class="cnt_sections">').appendTo('.dlg_cnt')
+        $('<div class="sections">').appendTo('.cnt_sections')
+
+        $('<div class="wrapper-dlg">').appendTo('.cnt_header')
+        $('<div class="header-dlg">').appendTo('.wrapper-dlg')
+        $('<div class="top-l-dlg">').appendTo('.header-dlg')
+        $('<div class="top-c-dlg">').appendTo('.header-dlg')
+        $('<div class="top-r-dlg">').appendTo('.header-dlg')
+
+        $('<div class="toggle-btn-dlg ' + groupStyle + '" id="button1">').appendTo('.top-r-dlg')
+        $('<div class="i_dlg_doc">').appendTo('#button1')
+        $('<span class="label" id="label1">').appendTo('#button1')
+
+        $('<div class="toggle-btn-dlg ' + groupStyle + '" id="button2">').appendTo('.top-r-dlg')
+        $('<div class="i_dlg_imgs">').appendTo('#button2')
+        $('<span class="label" id="label2">').appendTo('#button2')
+
+        $('<div class="cnt-dlg">').appendTo('.header-dlg')
+
+        $('.top-l-dlg').html("<label>Advocacy Tracker</label>")
+        $('.dlg_title').html(dlgNeed)
+        $('.top-c-dlg').html("##/##/####")
+        $('.cnt-dlg').html("[ Advocacy Stage ]")
+        $('#label1').html("Documents")
+        $('#label2').html("Images")
+
+        $('<div class="sec1">').appendTo('.sections')
+        $('<div class="dl2">').appendTo('.sec1')
+
         $('<div class="dl1_title">').appendTo('.dl1')
         $('<div class="dl1_end_d">').appendTo('.dl1')
         $('<div class="dl1_cont">').appendTo('.dl1')
 
-        $('.dl1_title').html("Advocacy Tracker")
-        $('.dl1_end_d').html("##/##/####")
-        $('.dl1_cont').html("<label>Advocacy Stage</label><br>[ Advocacy Stage ]")
+        $('.dl2').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel blandit libero, non suscipit ligula. Maecenas molestie finibus scelerisque. Curabitur luctus vel orci sed pulvinar. Suspendisse potenti. Donec orci velit, mollis eget arcu a, feugiat aliquam nunc. Morbi a consectetur ligula. Nunc mattis, metus sed dictum venenatis, quam felis placerat odio, at vulputate mauris eros sed mi. Aenean ut augue vestibulum, sollicitudin arcu tincidunt, ultrices sem. Suspendisse quis lobortis felis. Etiam tincidunt congue viverra. Pellentesque sapien nisl, condimentum sit amet diam at, finibus consectetur sapien. Quisque pretium suscipit felis et laoreet. Quisque tincidunt lectus leo, et aliquam arcu pretium vel. Cras finibus tincidunt tincidunt. Praesent eu luctus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;Duis elit nisi, commodo et ornare eget, ultricies et turpis. Curabitur ullamcorper lacinia urna at mollis. Duis accumsan, mauris vitae posuere pulvinar, tortor ligula facilisis ex, at ultricies justo neque in dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan ante vitae neque imperdiet, a maximus nulla cursus. Nam facilisis scelerisque purus, vitae ornare neque placerat non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin vel ante eget arcu pulvinar vehicula at at nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus.Aenean mattis ultricies imperdiet. Nulla rhoncus, est sit amet commodo ullamcorper, augue arcu laoreet dolor, tristique dictum velit orci in dui. Nulla ut libero ut tellus porta convallis ut ultrices odio. Ut non volutpat risus, et consectetur justo. Aliquam consequat ut erat vitae tincidunt. Donec fringilla posuere quam, sed aliquet quam rutrum quis. Aenean euismod nulla non sem pharetra, sit amet luctus tortor pulvinar. Quisque consectetur lectus vitae hendrerit euismod. Sed non lobortis eros. Sed accumsan eget justo eu varius. Curabitur consequat, orci eget interdum luctus, turpis purus dictum ipsum, at egestas magna dui sit amet eros. Suspendisse quis sollicitudin sem.Phasellus mi turpis, posuere eget justo quis, maximus laoreet lectus. Praesent tempor urna orci, in auctor nunc porttitor id. Vivamus imperdiet odio non ultricies auctor.")
 
-        $('<div class="dl2">').appendTo('.dlg_cnt')
-        $('<div class="bxtext">').appendTo('.dl2')
-        $('.bxtext').html(ChildCont + "<div class='lbl'>Lorem ipsum dolor sit amet</div><div class='content'>Consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel.</div><div class='lbl'>Curabitur eget euismod nisl</div><div class='content'>Et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum. Ut quis ornare orci, finibus convallis enim. Nullam elementum metus non lacinia convallis. Duis blandit orci non neque semper egestas. Phasellus et turpis sed nulla vulputate gravida. In vehicula sem diam, ut mattis risus lacinia sed.</div>")
+        $('<div class="sec2">').appendTo('.sections').css({
+            'visibility': 'hidden',
+            'height': '0px'
+        })
+        $('<div class="dl3">').appendTo('.sec2')
 
-        $('<div class="dl31">').appendTo('.dlg_cnt')
-        $('<div class="l31title">').appendTo('.dl31')
-        $('.l31title').html("Documents => Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
+        $('<div class="dl3title">').appendTo('.dl3')
+        $('.dl3title').html("Documents => Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
 
-        $('<div class="dl32">').appendTo('.dlg_cnt')
+        $('<div id="file1" class="dl3files">').appendTo('.dl3')
 
-        $('<div id="file1" class="dl32files">').appendTo('.dl32')
         $('<div id="f_icon1" class="f_icon">').appendTo('#file1')
         $('<div class="doc_file">').appendTo('#f_icon1')
         $('<div id="f_name1" class="f_name">').appendTo('#file1')
+
         $('#f_name1').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
 
-        $('<div id="file2" class="dl32files">').appendTo('.dl32')
+        //--------------------------
+        $('<div id="file2" class="dl3files">').appendTo('.dl3')
         $('<div id="f_icon2" class="f_icon">').appendTo('#file2')
         $('<div class="pdf_file">').appendTo('#f_icon2')
         $('<div id="f_name2" class="f_name">').appendTo('#file2')
         $('#f_name2').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
 
-        $('<div id="file3" class="dl32files">').appendTo('.dl32')
+        $('<div id="file3" class="dl3files">').appendTo('.dl3')
         $('<div id="f_icon3" class="f_icon">').appendTo('#file3')
         $('<div class="xls_file">').appendTo('#f_icon3')
         $('<div id="f_name3" class="f_name">').appendTo('#file3')
         $('#f_name3').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
 
-        $('<div id="file4" class="dl32files">').appendTo('.dl32')
-        $('<div id="f_icon4" class="f_icon">').appendTo('#file4')
-        $('<div class="xls_file">').appendTo('#f_icon4')
-        $('<div id="f_name4" class="f_name">').appendTo('#file4')
-        $('#f_name4').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
-
-        $('<div id="file5" class="dl32files">').appendTo('.dl32')
-        $('<div id="f_icon5" class="f_icon">').appendTo('#file5')
-        $('<div class="xls_file">').appendTo('#f_icon5')
-        $('<div id="f_name5" class="f_name">').appendTo('#file5')
-        $('#f_name5').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit ultricies dui, vel mattis risus sollicitudin vel. Curabitur eget euismod nisl, et luctus ipsum. Integer neque erat, ullamcorper non posuere a, dignissim a mi. Sed odio libero, convallis ut venenatis vitae, vehicula sed nunc. Praesent fringilla mollis purus at placerat. Sed volutpat et elit vel dignissim. Sed ut interdum magna. Nullam finibus velit ipsum.")
-
-
-
-
-        $('<div class="dl4">').appendTo('.dlg_cnt')
-
+        $('<div class="sec3">').appendTo('.sections').css({
+            'visibility': 'hidden',
+            'height': '0px'
+        })
+        $('<div class="dl4">').appendTo('.sec3')
         $('<div class="dl4title">').appendTo('.dl4')
         $('<div class="dl4cont">').appendTo('.dl4')
-
         $('<div class="i1">').appendTo('.dl4cont')
         $('<div class="i2">').appendTo('.dl4cont')
         $('<div class="i3">').appendTo('.dl4cont')
-
         $('.dl4title').html("Images")
         $(".i1").html("<img src='" + url + imgs[0] + "' style='width:100%; height:auto;'>");
         $(".i2").html("<img src='" + url + imgs[1] + "' style='width:100%; height:auto;'>");
         $(".i3").html("<img src='" + url + imgs[2] + "' style='width:100%; height:auto;'>");
-
     }
 
-    $(document).on('click', '.card_lgnd1', function () {
-        var ChildTitle = $(this).find(".title").text()
-        var ChildSubTitle = $(this).find(".subtitle").text()
-        var ChildCont = $(this).find(".cont").text()
+    function contentCards_cont(dlgtype, dlgTitle, groupStyle) {
 
         $('<div class="scrim">').appendTo('body')
-        $('<div class="dlg d_lgnd1">').appendTo('.scrim')
-        $('<div class="dlg_bar tt_lgnd1">').appendTo('.dlg')
-        $('<div class="lbl">').appendTo('.dlg_bar')
-        $('<div class="dlg_cta i_lgnd1">').appendTo('.dlg')
+
+        $('<div class="dlg_contr ' + dlgtype + '">').appendTo('.scrim')
+        $('<div class="dlg_bar ' + groupStyle + '">').appendTo('.dlg_contr')
+        $('<div class="dlg_title">').appendTo('.dlg_bar')
+        $('<div class="dlg_cta ' + groupStyle + '">').appendTo('.dlg_bar')
         $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
         $('<div class="btn-sys-close">').appendTo('.dlg_cta')
+        $('<div class="dlg_cnt">').appendTo('.dlg_contr')
+        $('<div class="cnt_sections">').appendTo('.dlg_cnt')
+        $('<div class="scrs">').appendTo('.cnt_sections')
 
-        $('<div class="dlg_cnt">').appendTo('.dlg')
-        $('<div class="dl1">').appendTo('.dlg_cnt')
-        $('<div class="dl2>').appendTo('.dlg_cnt')
-        $('<div class="dl31">').appendTo('.dlg_cnt')
-        $('<div class="dl32">').appendTo('.dlg_cnt')
+        $('.dlg_title').html(dlgTitle)
+        $('.scrs').html("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel blandit libero, non suscipit ligula. Maecenas molestie finibus scelerisque. Curabitur luctus vel orci sed pulvinar. Suspendisse potenti. Donec orci velit, mollis eget arcu a, feugiat aliquam nunc. Morbi a consectetur ligula. Nunc mattis, metus sed dictum venenatis, quam felis placerat odio, at vulputate mauris eros sed mi. Aenean ut augue vestibulum, sollicitudin arcu tincidunt, ultrices sem. Suspendisse quis lobortis felis. Etiam tincidunt congue viverra. Pellentesque sapien nisl, condimentum sit amet diam at, finibus consectetur sapien. Quisque pretium suscipit felis et laoreet. Quisque tincidunt lectus leo, et aliquam arcu pretium vel. Cras finibus tincidunt tincidunt. Praesent eu luctus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;Duis elit nisi, commodo et ornare eget, ultricies et turpis. Curabitur ullamcorper lacinia urna at mollis. Duis accumsan, mauris vitae posuere pulvinar, tortor ligula facilisis ex, at ultricies justo neque in dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan ante vitae neque imperdiet, a maximus nulla cursus. Nam facilisis scelerisque purus, vitae ornare neque placerat non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin vel ante eget arcu pulvinar vehicula at at nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus.Aenean mattis ultricies imperdiet. Nulla rhoncus, est sit amet commodo ullamcorper, augue arcu laoreet dolor, tristique dictum velit orci in dui. Nulla ut libero ut tellus porta convallis ut ultrices odio. Ut non volutpat risus, et consectetur justo. Aliquam consequat ut erat vitae tincidunt. Donec fringilla posuere quam, sed aliquet quam rutrum quis. Aenean euismod nulla non sem pharetra, sit amet luctus tortor pulvinar. Quisque consectetur lectus vitae hendrerit euismod. Sed non lobortis eros. Sed accumsan eget justo eu varius. Curabitur consequat, orci eget interdum luctus, turpis purus dictum ipsum, at egestas magna dui sit amet eros. Suspendisse quis sollicitudin sem.Phasellus mi turpis, posuere eget justo quis, maximus laoreet lectus. Praesent tempor urna orci, in auctor nunc porttitor id. Vivamus imperdiet odio non ultricies auctor.")
+    }
 
-        $('<div class="dlg_tx">').appendTo('.dl2')
+    function contentCards_i(dlgtype, dlgTitle, groupStyle) {
 
-        $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
+        $('<div class="scrim">').appendTo('body')
 
-        $('<div class="dlg_cnt">').appendTo('.dlg1')
-        contentCard(ChildCont)
+        $('<div class="dlg_i ' + dlgtype + '">').appendTo('.scrim')
+        $('<div class="dlg_bar ' + groupStyle + '">').appendTo('.dlg_i')
+        $('<div class="dlg_title">').appendTo('.dlg_bar')
+        $('<div class="dlg_cta ' + groupStyle + '">').appendTo('.dlg_bar')
+        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
+        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
+        $('<div class="dlg_cnt">').appendTo('.dlg_i')
+        $('<div class="cnt_sections">').appendTo('.dlg_cnt')
+        $('<div class="scrs">').appendTo('.cnt_sections')
+
+        $('.dlg_title').html(dlgTitle)
+        $('.scrs').html("Aliquam consequat ut erat vitae tincidunt. Donec fringilla posuere quam, sed aliquet quam rutrum quis. Aenean euismod nulla non sem pharetra, sit amet luctus tortor pulvinar. Quisque consectetur lectus vitae hendrerit euismod. Sed non lobortis eros. Sed accumsan eget justo eu varius.")
+    }
+
+    $(document).on('click', '.toggle-btn-dlg', function () {
+
+        var numElementosActivos = $('.toggle-btn-dlg.active').length
+        var labelContent = $(this).children(".label").html();
+
+        if (numElementosActivos == 1) {
+
+            if ($(this).hasClass('active')) {
+                $('.toggle-btn-dlg').removeClass('active').css('width', '36px')
+                if (labelContent == "Documents") {
+                    $('.sec1').css({
+                        'visibility': 'visible',
+                        'height': '100%'
+                    })
+                    $('.sec2').css({
+                        'visibility': 'hidden',
+                        'height': '0px'
+                    })
+                    $('.sec3').css({
+                        'visibility': 'hidden',
+                        'height': '0px'
+                    })
+                } else {
+                    $('.sec1').css({
+                        'visibility': 'visible',
+                        'height': '100%'
+                    })
+                    $('.sec2').css({
+                        'visibility': 'hidden',
+                        'height': '0px'
+                    })
+                    $('.sec3').css({
+                        'visibility': 'hidden',
+                        'height': '0px'
+                    })
+                }
+            } else {
+                $('.toggle-btn-dlg').removeClass('active').css('width', '36px')
+                $(this).addClass('active').css('width', 'max-content')
+                if (labelContent == "Documents") {
+                    $('.sec1').css({
+                        'visibility': 'hidden',
+                        'height': '0px'
+                    })
+                    $('.sec2').css({
+                        'visibility': 'visible',
+                        'height': '100%'
+                    })
+                    $('.sec3').css({
+                        'visibility': 'hidden',
+                        'height': '0px'
+                    })
+                } else if (labelContent == "Images") {
+                    $('.sec1').css({
+                        'visibility': 'hidden',
+                        'height': '0px'
+                    })
+                    $('.sec2').css({
+                        'visibility': 'hidden',
+                        'height': '0px'
+                    })
+                    $('.sec3').css({
+                        'visibility': 'visible',
+                        'height': '100%'
+                    })
+
+                }
+            }
+        } else {
+            $(this).addClass('active').css('width', 'max-content')
+            if (labelContent == "Documents") {
+                $('.sec1').css({
+                    'visibility': 'hidden',
+                    'height': '0px'
+                })
+                $('.sec2').css({
+                    'visibility': 'visible',
+                    'height': '100%'
+                })
+                $('.sec3').css({
+                    'visibility': 'hidden',
+                    'height': '0px'
+                })
+            } else {
+                $('.sec1').css({
+                    'visibility': 'hidden',
+                    'height': '0px'
+                })
+                $('.sec2').css({
+                    'visibility': 'hidden',
+                    'height': '0px'
+                })
+                $('.sec3').css({
+                    'visibility': 'visible',
+                    'height': '100%'
+                })
+            }
+        }
     })
 
+    var dlgtype, dlgNeed, dlgTitle, groupStyle
+
+    $(document).on('click', '.card_lgn1', function () {
+        dlgtype = 'd_lgnd1'
+        dlgNeed = $(this).find(".subtitle").text()
+        dlgTitle = $(this).find(".title").text()
+        groupStyle = 'lgnd1_g'
+        contentCards_need(dlgtype, dlgNeed, dlgTitle, groupStyle)
+    })
+
+
     $(document).on('click', '.card_lgnd2', function () {
-        var ChildTitle = $(this).find(".title").text();
-        var ChildSubTitle = $(this).find(".subtitle").text();
-        var ChildCont = $(this).find(".cont").text();
-
-        $('<div class="scrim">').appendTo('body')
-        $('<div class="dlg d_lgnd2">').appendTo('.scrim')
-        $('<div class="dlg_bar tt_lgnd2">').appendTo('.dlg')
-        $('<div class="lbl">').appendTo('.dlg_bar')
-        $('<div class="dlg_cta i_lgnd2">').appendTo('.dlg')
-        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
-        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-
-        $('<div class="dlg_cnt">').appendTo('.dlg')
-        $('<div class="dl1">').appendTo('.dlg_cnt')
-        $('<div class="dl2>').appendTo('.dlg_cnt')
-        $('<div class="dl31">').appendTo('.dlg_cnt')
-        $('<div class="dl32">').appendTo('.dlg_cnt')
-
-        $('<div class="dlg_tx">').appendTo('.dl2')
-
-        $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-
-        contentCard(ChildCont)
+        dlgtype = 'd_lgnd2'
+        dlgNeed = $(this).find(".subtitle").text()
+        dlgTitle = $(this).find(".title").text()
+        groupStyle = 'lgnd2_g'
+        contentCards_need(dlgtype, dlgNeed, dlgTitle, groupStyle)
     })
 
     $(document).on('click', '.card_lgnd3', function () {
-        var ChildTitle = $(this).find(".title").text();
-        var ChildSubTitle = $(this).find(".subtitle").text();
-        var ChildCont = $(this).find(".cont").text();
-        $('<div class="scrim">').appendTo('body')
-
-        $('<div class="dlg d_lgnd3">').appendTo('.scrim')
-        $('<div class="dlg_bar tt_lgnd3">').appendTo('.dlg')
-        $('<div class="lbl">').appendTo('.dlg_bar')
-
-        $('<div class="dlg_cta i_lgnd3">').appendTo('.dlg')
-        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
-        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-
-        $('<div class="dlg_cnt">').appendTo('.dlg')
-        $('<div class="dl1">').appendTo('.dlg_cnt')
-        $('<div class="dl2>').appendTo('.dlg_cnt')
-        $('<div class="dl31">').appendTo('.dlg_cnt')
-        $('<div class="dl32">').appendTo('.dlg_cnt')
-
-        $('<div class="dlg_tx">').appendTo('.dl2')
-
-        $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-
-        contentCard(ChildCont)
+        dlgtype = 'd_lgnd3'
+        dlgNeed = $(this).find(".subtitle").text()
+        dlgTitle = $(this).find(".title").text()
+        groupStyle = 'lgnd3_g'
+        contentCards_need(dlgtype, dlgNeed, dlgTitle, groupStyle)
     })
 
     $(document).on('click', '.card_lgnd4', function () {
-        var ChildTitle = $(this).find(".title").text();
-        var ChildSubTitle = $(this).find(".subtitle").text();
-        var ChildCont = $(this).find(".cont").text();
-        $('<div class="scrim">').appendTo('body')
-
-        $('<div class="dlg d_lgnd4">').appendTo('.scrim')
-        $('<div class="dlg_bar tt_lgnd4">').appendTo('.dlg')
-        $('<div class="lbl">').appendTo('.dlg_bar')
-
-        $('<div class="dlg_cta i_lgnd4">').appendTo('.dlg')
-        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
-        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-
-        $('<div class="dlg_cnt">').appendTo('.dlg')
-        $('<div class="dl1">').appendTo('.dlg_cnt')
-        $('<div class="dl2>').appendTo('.dlg_cnt')
-        $('<div class="dl31">').appendTo('.dlg_cnt')
-        $('<div class="dl32">').appendTo('.dlg_cnt')
-
-        $('<div class="dlg_tx">').appendTo('.dl2')
-
-        $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-
-        contentCard(ChildCont)
+        dlgtype = 'd_lgnd4'
+        dlgNeed = $(this).find(".subtitle").text()
+        dlgTitle = $(this).find(".title").text()
+        groupStyle = 'lgnd4_g'
+        contentCards_need(dlgtype, dlgNeed, dlgTitle, groupStyle)
     })
 
     $(document).on('click', '.card_lgnd5', function () {
-        var ChildTitle = $(this).find(".title").text();
-        var ChildSubTitle = $(this).find(".subtitle").text();
-        var ChildCont = $(this).find(".cont").text();
-        $('<div class="scrim">').appendTo('body')
-
-        $('<div class="dlg d_lgnd5">').appendTo('.scrim')
-        $('<div class="dlg_bar tt_lgnd5">').appendTo('.dlg')
-        $('<div class="lbl">').appendTo('.dlg_bar')
-
-        $('<div class="dlg_cta i_lgnd5">').appendTo('.dlg')
-        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
-        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-
-        $('<div class="dlg_cnt">').appendTo('.dlg')
-        $('<div class="dl1">').appendTo('.dlg_cnt')
-        $('<div class="dl2>').appendTo('.dlg_cnt')
-        $('<div class="dl31">').appendTo('.dlg_cnt')
-        $('<div class="dl32">').appendTo('.dlg_cnt')
-
-        $('<div class="dlg_tx">').appendTo('.dl2')
-
-        $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-
-        contentCard(ChildCont)
+        dlgtype = 'd_lgnd5'
+        dlgNeed = $(this).find(".subtitle").text()
+        dlgTitle = $(this).find(".title").text()
+        groupStyle = 'lgnd5_g'
+        contentCards_need(dlgtype, dlgNeed, dlgTitle, groupStyle)
     })
 
     $(document).on('click', '.card_lgnd6', function () {
-        var ChildTitle = $(this).find(".title").text();
-        var ChildSubTitle = $(this).find(".subtitle").text();
-        var ChildCont = $(this).find(".cont").text();
-        $('<div class="scrim">').appendTo('body')
-
-        $('<div class="dlg d_lgnd6">').appendTo('.scrim')
-        $('<div class="dlg_bar tt_lgnd6">').appendTo('.dlg')
-        $('<div class="lbl">').appendTo('.dlg_bar')
-
-        $('<div class="dlg_cta i_lgnd6">').appendTo('.dlg')
-        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
-        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-
-        $('<div class="dlg_cnt">').appendTo('.dlg')
-        $('<div class="dl1">').appendTo('.dlg_cnt')
-        $('<div class="dl2>').appendTo('.dlg_cnt')
-        $('<div class="dl31">').appendTo('.dlg_cnt')
-        $('<div class="dl32">').appendTo('.dlg_cnt')
-
-        $('<div class="dlg_tx">').appendTo('.dl2')
-
-        $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-
-        contentCard(ChildCont)
+        dlgtype = 'd_lgnd6'
+        dlgNeed = $(this).find(".subtitle").text()
+        dlgTitle = $(this).find(".title").text()
+        groupStyle = 'lgnd6_g'
+        contentCards_need(dlgtype, dlgNeed, dlgTitle, groupStyle)
     })
 
     $(document).on('click', '.card_lgnd7', function () {
-        var ChildTitle = $(this).find(".title").text();
-        var ChildSubTitle = $(this).find(".subtitle").text();
-        var ChildCont = $(this).find(".cont").text();
-        $('<div class="scrim">').appendTo('body')
-
-        $('<div class="dlg d_lgnd7">').appendTo('.scrim')
-        $('<div class="dlg_bar tt_lgnd7">').appendTo('.dlg')
-        $('<div class="lbl">').appendTo('.dlg_bar')
-
-        $('<div class="dlg_cta i_lgnd7">').appendTo('.dlg')
-        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
-        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-
-        $('<div class="dlg_cnt">').appendTo('.dlg')
-        $('<div class="dl1">').appendTo('.dlg_cnt')
-        $('<div class="dl2>').appendTo('.dlg_cnt')
-        $('<div class="dl31">').appendTo('.dlg_cnt')
-        $('<div class="dl32">').appendTo('.dlg_cnt')
-
-        $('<div class="dlg_tx">').appendTo('.dl2')
-
-        $('.dlg_bar').children().html(ChildTitle + " - " + ChildSubTitle)
-
-        contentCard(ChildCont)
+        dlgtype = 'd_lgnd7'
+        dlgNeed = $(this).find(".subtitle").text()
+        dlgTitle = $(this).find(".title").text()
+        groupStyle = 'lgnd7_g'
+        contentCards_need(dlgtype, dlgNeed, dlgTitle, groupStyle)
     })
 
     $(document).on('click', '.card_contr', function () {
-        var ChildTitle = $(this).find(".title").text();
-        var ChildCont = $(this).find(".cont").text();
-        $('<div class="scrim">').appendTo('body')
-
-        $('<div class="dlg_c d_lgnd0">').appendTo('.scrim')
-        $('<div class="dlg_bar tt_lgnd0">').appendTo('.dlg_c')
-        $('<div class="lbl">').appendTo('.dlg_bar')
-
-        $('<div class="dlg_cta i_lgnd0">').appendTo('.dlg_c')
-        $('<div class="btn-sys-edit">').appendTo('.dlg_cta')
-        $('<div class="btn-sys-close">').appendTo('.dlg_cta')
-
-        $('<div class="dlg_cnt">').appendTo('.dlg_c')
-
-        $('<div class="dlg_tx">').appendTo('.dlg_cnt')
-
-        $('.dlg_bar').children().html(ChildTitle)
-        $('.dlg_tx').html(ChildCont)
+        dlgtype = 'd_lgnd0'
+        dlgTitle = $(this).find(".title").text()
+        groupStyle = 'lgnd0_g'
+        contentCards_cont(dlgtype, dlgTitle, groupStyle)
     })
 
-    $(document).on('click', '.btn-sys-edit', function () { })
-
-    if ($(".btn_print").hasClass(".disabled")) {
+    if ($(".ipdf").hasClass(".disabled")) {
         $(function () {
             $('[data-toggle="tooltip"]').tooltip({ delay: { "show": 500, "hide": 100 } })
         })
     } else {
         // ---
 
-        $('#cta_search').on('click', function () {
+        $('.cnt_ipanel').on('click', function () {
             $('#search-menu').toggleClass('open');
             $('#panel_sh').toggleClass('open');
         });
-    }
 
+        $('.cnt_irun').on('click', function () {
+            timeline(qry1, qry3)
+        });
+    }
 })

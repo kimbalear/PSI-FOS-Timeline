@@ -6,9 +6,10 @@
     <title>FosFem - advocacy timeline</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js'></script>
-
     <link rel="stylesheet" href="src/assets/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
     <script src="src/scripts/main.js"></script>
     <script src="src/scripts/html2canvas.js"></script>
     <script src="src/scripts/jspdf.js"></script>
@@ -21,12 +22,7 @@
 
         <div class="top_bar">
 
-            <div class="top_ctrs">
-                <a class="btn_print disabled" data-toggle="tooltip" data-placement="top" data-trigger="hover"
-                    title="Only one org unit and one year can be exported to pdf"></a>
-                <a class="btn_plus" data-toggle="tooltip" data-placement="top" data-trigger="hover"
-                    title="Only one org unit and one year can be exported to pdf"></a>
-            </div>
+            <div class="top_ctrs"></div>
 
             <div class="top_lgnds">
 
@@ -147,13 +143,26 @@
         </div>
 
         <div id="search-menu" class="search_menu">
-            <div id="cta_search" class="cta_area">
-                <div class="cta_i">
-                    <div id="panel_sh" class="panel_sh"></div>
+            <div class="cta_area">
+                <div class="cnt_ipanel">
+                    <div class="ipanel" title="Search">
+                        <div id="panel_sh" class="panel_sh"></div>
+                    </div>
                 </div>
+                <div class="cnt_irun">
+                    <div class="irun disabled" title="Run">
+                        <div id="panel_tl" class="panel_tl"></div>
+                    </div>
+                </div>
+                <div class="cnt_ipdf">
+                    <div class="ipdf disabled" title="Expot to pdf">
+                        <div id="panel_pdf" class="panel_pdf"></div>
+                    </div>
+                </div>
+
             </div>
             <div class="cnt_options">
-                <div class="grd_sort">
+                <div class="grd_srh">
                     <div class="cnt_sort">
                         <div class="grd_ou">
                             <div class="msbx-ou">
@@ -184,6 +193,16 @@
                                     <option value="2020">2020</option>
                                 </select>
                             </div>
+                        </div>
+                        <div class="disabled">
+                            <div class="grd_sort">Sort Timeline</div>
+                            <label class="label">Ascending
+                            </label>
+                            <label class="switch">
+                                <input type="checkbox" id="mySwitch">
+                                <span class="slider round"></span>
+                            </label>
+                            <label class="label">Descending</label>
                         </div>
                     </div>
                 </div>

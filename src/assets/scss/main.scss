@@ -17,7 +17,8 @@
 "components/dialogs",
 "components/btns",
 "components/multiselect",
-'components/search_menu';
+"components/search_menu",
+"components/switch";
 
 
 ::-webkit-scrollbar {
@@ -44,3 +45,20 @@
 ::-webkit-scrollbar-button {
     display: none;
 }
+/*
+.custom-tooltip {
+    //background: blue;
+    color: $clr3;
+    width: max-content;
+    padding: 8px;
+    z-index: 999;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 8px 0px 0px 8px;
+}
+*/
+/*
+.timeline_section {
+    width: 100%;
+    height: auto;
+}*/
