@@ -396,6 +396,14 @@ body .wrapper .content ::-webkit-scrollbar-button {
 .timelines .ounit .timeline .ce_btn {
   grid-area: ce_btn;
 }
+.timelines .ounit .timeline .ce_btn .top_timeline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.timelines .ounit .timeline .ce_btn .top_timeline .title_ou {
+  padding: 0 16px;
+}
 .timelines .ounit .timeline .tp_yr {
   grid-area: tp_yr;
   background: rgba(119, 113, 106, 0.06);
@@ -16762,16 +16770,24 @@ body .wrapper .content ::-webkit-scrollbar-button {
 .card_contr {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto auto 1fr;
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: column;
-  grid-template-areas: "title" "cont";
+  grid-template-areas: "partner" "title" "cont";
   border: 1px solid #77716A;
   border-radius: 6px;
   margin: 4px 0;
   background: rgba(119, 113, 106, 0.06);
+}
+.card_contr .partner {
+  grid-area: partner;
+  padding: 0 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #444f5b;
 }
 .card_contr .title {
   grid-area: title;
@@ -16781,7 +16797,6 @@ body .wrapper .content ::-webkit-scrollbar-button {
   font-size: 12px;
   line-height: 16px;
   color: #FDF4E7;
-  border-radius: 5px 5px 0 0;
 }
 .card_contr .cont {
   grid-area: cont;
@@ -16794,16 +16809,24 @@ body .wrapper .content ::-webkit-scrollbar-button {
 .card_lgn1 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto auto auto 1fr;
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: column;
-  grid-template-areas: "title" "subtitle" "cont";
+  grid-template-areas: "partner" "title" "subtitle" "cont";
   border: 1px solid #FF7C80;
   border-radius: 6px;
   margin: 4px 0;
   background: rgba(119, 113, 106, 0.06);
+}
+.card_lgn1 .partner {
+  grid-area: partner;
+  padding: 0 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FF7C80;
 }
 .card_lgn1 .title {
   grid-area: title;
@@ -16813,7 +16836,6 @@ body .wrapper .content ::-webkit-scrollbar-button {
   font-size: 12px;
   line-height: 16px;
   color: #FDF4E7;
-  border-radius: 5px 5px 0 0;
   background: #FF7C80;
 }
 .card_lgn1 .subtitle {
@@ -16836,16 +16858,24 @@ body .wrapper .content ::-webkit-scrollbar-button {
 .card_lgnd2 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto auto auto 1fr;
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: column;
-  grid-template-areas: "title" "subtitle" "cont";
+  grid-template-areas: "partner" "title" "subtitle" "cont";
   border: 1px solid #FF5050;
   border-radius: 6px;
   margin: 4px 0;
   background: rgba(119, 113, 106, 0.06);
+}
+.card_lgnd2 .partner {
+  grid-area: partner;
+  padding: 0 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FF5050;
 }
 .card_lgnd2 .title {
   grid-area: title;
@@ -16855,7 +16885,6 @@ body .wrapper .content ::-webkit-scrollbar-button {
   font-size: 12px;
   line-height: 16px;
   color: #FDF4E7;
-  border-radius: 5px 5px 0 0;
   background: #FF5050;
 }
 .card_lgnd2 .subtitle {
@@ -16878,16 +16907,24 @@ body .wrapper .content ::-webkit-scrollbar-button {
 .card_lgnd3 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto auto auto 1fr;
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: column;
-  grid-template-areas: "title" "subtitle" "cont";
+  grid-template-areas: "partner" "title" "subtitle" "cont";
   border: 1px solid orange;
   border-radius: 6px;
   margin: 4px 0;
   background: rgba(119, 113, 106, 0.06);
+}
+.card_lgnd3 .partner {
+  grid-area: partner;
+  padding: 0 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: orange;
 }
 .card_lgnd3 .title {
   grid-area: title;
@@ -16897,7 +16934,6 @@ body .wrapper .content ::-webkit-scrollbar-button {
   font-size: 12px;
   line-height: 16px;
   color: #FDF4E7;
-  border-radius: 5px 5px 0 0;
   background: orange;
 }
 .card_lgnd3 .subtitle {
@@ -16920,16 +16956,24 @@ body .wrapper .content ::-webkit-scrollbar-button {
 .card_lgnd4 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto auto auto 1fr;
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: column;
-  grid-template-areas: "title" "subtitle" "cont";
+  grid-template-areas: "partner" "title" "subtitle" "cont";
   border: 1px solid #93BF85;
   border-radius: 6px;
   margin: 4px 0;
   background: rgba(119, 113, 106, 0.06);
+}
+.card_lgnd4 .partner {
+  grid-area: partner;
+  padding: 0 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #93BF85;
 }
 .card_lgnd4 .title {
   grid-area: title;
@@ -16939,7 +16983,6 @@ body .wrapper .content ::-webkit-scrollbar-button {
   font-size: 12px;
   line-height: 16px;
   color: #FDF4E7;
-  border-radius: 5px 5px 0 0;
   background: #93BF85;
 }
 .card_lgnd4 .subtitle {
@@ -16962,16 +17005,24 @@ body .wrapper .content ::-webkit-scrollbar-button {
 .card_lgnd5 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto auto auto 1fr;
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: column;
-  grid-template-areas: "title" "subtitle" "cont";
+  grid-template-areas: "partner" "title" "subtitle" "cont";
   border: 1px solid #6EAA5E;
   border-radius: 6px;
   margin: 4px 0;
   background: rgba(119, 113, 106, 0.06);
+}
+.card_lgnd5 .partner {
+  grid-area: partner;
+  padding: 0 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #6EAA5E;
 }
 .card_lgnd5 .title {
   grid-area: title;
@@ -16981,7 +17032,6 @@ body .wrapper .content ::-webkit-scrollbar-button {
   font-size: 12px;
   line-height: 16px;
   color: #FDF4E7;
-  border-radius: 5px 5px 0 0;
   background: #6EAA5E;
 }
 .card_lgnd5 .subtitle {
@@ -17004,16 +17054,24 @@ body .wrapper .content ::-webkit-scrollbar-button {
 .card_lgnd6 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto auto auto 1fr;
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: column;
-  grid-template-areas: "title" "subtitle" "cont";
+  grid-template-areas: "partner" "title" "subtitle" "cont";
   border: 1px solid #008000;
   border-radius: 6px;
   margin: 4px 0;
   background: rgba(119, 113, 106, 0.06);
+}
+.card_lgnd6 .partner {
+  grid-area: partner;
+  padding: 0 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #008000;
 }
 .card_lgnd6 .title {
   grid-area: title;
@@ -17023,7 +17081,6 @@ body .wrapper .content ::-webkit-scrollbar-button {
   font-size: 12px;
   line-height: 16px;
   color: #FDF4E7;
-  border-radius: 5px 5px 0 0;
   background: #008000;
 }
 .card_lgnd6 .subtitle {
@@ -17046,16 +17103,24 @@ body .wrapper .content ::-webkit-scrollbar-button {
 .card_lgnd7 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto auto auto 1fr;
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: column;
-  grid-template-areas: "title" "subtitle" "cont";
+  grid-template-areas: "partner" "title" "subtitle" "cont";
   border: 1px solid #14540D;
   border-radius: 6px;
   margin: 4px 0;
   background: rgba(119, 113, 106, 0.06);
+}
+.card_lgnd7 .partner {
+  grid-area: partner;
+  padding: 0 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #14540D;
 }
 .card_lgnd7 .title {
   grid-area: title;
@@ -17065,7 +17130,6 @@ body .wrapper .content ::-webkit-scrollbar-button {
   font-size: 12px;
   line-height: 16px;
   color: #FDF4E7;
-  border-radius: 5px 5px 0 0;
   background: #14540D;
 }
 .card_lgnd7 .subtitle {
@@ -17085,7 +17149,14 @@ body .wrapper .content ::-webkit-scrollbar-button {
   padding: 8px;
 }
 
-.card_contr:hover, .card_lgn1:hover, .card_lgnd2:hover, .card_lgnd3:hover, .card_lgnd4:hover, .card_lgnd5:hover, .card_lgnd6:hover, .card_lgnd7:hover {
+.card_contr:hover,
+.card_lgn1:hover,
+.card_lgnd2:hover,
+.card_lgnd3:hover,
+.card_lgnd4:hover,
+.card_lgnd5:hover,
+.card_lgnd6:hover,
+.card_lgnd7:hover {
   cursor: pointer;
 }
 
@@ -17957,15 +18028,10 @@ label.checkbox.lgnd7 span {
   cursor: not-allowed;
 }
 .btn_print:hover {
-  background-color: #FF5050;
+  background-color: #ff5050;
 }
 
 .btn_hs {
-  align-self: center;
-  grid-area: btn_hs;
-  margin-left: 10px;
-}
-.btn_hs .btn {
   width: max-content;
   height: 24px;
   border-radius: 6px;
@@ -17976,7 +18042,22 @@ label.checkbox.lgnd7 span {
   padding: 5px 8px;
   color: #FDF4E7;
 }
-.btn_hs .btn:hover {
+.btn_hs:hover {
+  background-color: #4073FF;
+}
+
+.btn_addnew {
+  width: max-content;
+  height: 24px;
+  border-radius: 6px;
+  padding: 8px 8px;
+  background-color: #4073FF;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 5px 8px;
+  color: #FDF4E7;
+}
+.btn_addnew:hover {
   background-color: #4073FF;
 }
 
