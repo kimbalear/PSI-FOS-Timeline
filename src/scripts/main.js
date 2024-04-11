@@ -594,7 +594,14 @@ $(document).ready(function () {
 
         // Top
 
-        var tlTp1 = '<div id="' + id_ou + tLtype + 'pnl_top1" class="panel_top"><div id="' + id_ou + tLtype + 'contns1" class="contributions"><div id="' + id_ou + tLtype + '1cnstr" class="contrs1"></div></div><div id="' + id_ou + tLtype + 'lc1" class="line"></div></div>'
+        var tlTp1 = 
+        `<div id="' + id_ou + tLtype + 'pnl_top1" class="panel_top">
+            <div id="' + id_ou + tLtype + 'contns1" class="contributions">
+                <div id="' + id_ou + tLtype + '1cnstr" class="contrs1"></div>
+            </div>
+            <div id="' + id_ou + tLtype + 'lc1" class="line"></div>
+        </div>`
+        
         var tlTp2 = '<div id="' + id_ou + tLtype + 'pnl_top2" class="panel_top"><div id="' + id_ou + tLtype + 'contns2" class="contributions"><div id="' + id_ou + tLtype + '2cnstr" class="contrs2"></div></div><div id="' + id_ou + tLtype + 'lc2" class="line"></div></div>'
         var tlTp3 = '<div id="' + id_ou + tLtype + 'pnl_top3" class="panel_top"><div id="' + id_ou + tLtype + 'contns3" class="contributions"><div id="' + id_ou + tLtype + '3cnstr" class="contrs3"></div></div><div id="' + id_ou + tLtype + 'lc3" class="line"></div></div>'
         var tlTp4 = '<div id="' + id_ou + tLtype + 'pnl_top4" class="panel_top"><div id="' + id_ou + tLtype + 'contns4" class="contributions"><div id="' + id_ou + tLtype + '4cnstr" class="contrs4"></div></div><div id="' + id_ou + tLtype + 'lc4" class="line"></div></div>'
